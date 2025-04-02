@@ -1,0 +1,258 @@
+\documentclass{report}
+\usepackage[spanish,es-noquoting]{babel}
+\usepackage{graphicx}
+\usepackage{libertine}
+\usepackage[scaled=0.8]{beramono}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}  
+    \geometry{left=24mm,right=24mm,top=24mm,bottom=24mm}
+\usepackage[style=ieee]{biblatex}
+    \addbibresource{bibliography.bib}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage[text=Borrador \\ confidencial, fontsize=0.15\paperwidth, colorspec=0.96]{draftwatermark}
+\usepackage{glossaries}
+\usepackage{enumitem}
+
+\input{config}
+\input{acronyms}
+
+\title{Unidad Técnica de Transporte Público Inteligente \\ \large{Propuesta Técnica y Financiera del Plan de Implementación}}
+\author{Escuela de Ingeniería Eléctrica \\ Universidad de Costa Rica}
+\date{Febrero 2025}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+\maketitle
+
+%%%%%%%%
+\section*{Resumen ejecutivo}
+%%%%%%%%
+
+\tableofcontents
+
+% --------------------
+\chapter{Introducción}
+% --------------------
+
+Los sistemas inteligentes de transporte público utilizan tecnologías de información y comunicación para facilitar la recolección y uso de datos masivos con diferentes objetivos y públicos meta \cite{visan2022towards}. Los \textit{sistemas de información}, por su parte, son estrategias y tecnologías que ofrecen canales de comunicación e información oportuna a las personas usuarias para utilizar eficazmente el servicio \cite{barfield1998human} antes, durante y después de un viaje. 
+
+Este propuesta ofrece una arquitectura tecnológica y una estrategia organizacional para abordar de forma integral el problema de la disponibilidad de información para utilizar el servicio de transporte público en Costa Rica.
+
+La propuesta busca responder preguntas como:
+
+\begin{itemize}
+    \item ¿Cómo ser compatibles con aplicaciones de planificación de viajes intermodales --como Google Maps, Moovit o Transit App-- y otros servicios que consumen y despliegan datos del transporte público en sitios web, aplicaciones o pantallas, ampliando así la oferta disponible para las personas usuarias?
+    \item ¿Cómo crear un sistema de información que no esté limitado a unos componentes tecnológicos aislados sino uno que sea parte de una estrategia integral de atención y satisfacción de las personas usuarias?
+    \item ¿Cómo maximizar el aprovechamiento de los datos recopilados, para que sean utilizados también para la operación (empresas concesionarias), gestión (CTP), planificación (MOPT), regulación (ARESEP) e investigación (academia y prensa) del servicio, entre múltiples usos posibles?
+    \item ¿Cómo reducir los costos iniciales del sistema, habilitando una implementación gradual y ofreciendo alternativas de bajo costo para las etapas iniciales?
+    \item ¿Cómo promover en la implementación del sistema la participación y competencia de distintos proveedores tecnológicos, así como la libertad de elegir los componentes mejor adaptados a las necesidades para evitar la monopolización innecesaria del servicio?
+\end{itemize}
+
+%%%%%%%%
+\section{Objetivos del proyecto}
+%%%%%%%%
+
+%%%%%%%%
+\section{Alcance del proyecto}
+%%%%%%%%
+
+
+
+%%%%%%%%
+\section{Beneficios y retorno de inversión}
+%%%%%%%%
+
+\begin{description}
+    \item[Garantía contractual] Cualquier servicio puede ser brindado mediante un contrato de las partes interesadas con la Rectoría de la UCR, con una definición clara de plazos y entregables.
+    
+    \item[Flexibilidad de financiamiento] Por medio de la estructura administrativa propuesta (sección \ref{S:estructura}), la Unidad puede recibir financiamiento de distintas fuentes, promoviendo la agilidad de la ejecución. Inclusive, la propuesta incluye varias opciones de monetización que pueden ayudar a financiar parte de los servicios (sección \ref{S:monetizacion}).
+
+    \item[Flexibilidad de implementación] permite la coexistencia con otros servicios y proveedores del mercado, facilitando una implementación gradual.
+
+    \item[Soluciones a la medida] En coordinación estrecha con las autoridades nacionales, el sistema implementado puede satisfacer las demandas específicas de las partes interesadas.
+
+    \item[Agilidad] Independencia de ciclos anuales de asignación de presupuestos.
+
+    \item[Estandarización] La arquitectura de la propuesta técnica mostrada en la sección XYZ está basada en
+
+    \item[Enfoque en seguridad y robustez] El sistema tiene un diseño orientado a la seguridad de los datos y la confiabilidad (ver sección \ref{S:riesgos}).
+
+    \item[Consistencia y unicidad] Toda la información al público en distintos medios sería consistente entre sí y con los datos oficiales de la fuente única del CTP. El manejo unificado de todos los ``puntos de contacto'' de los usuarios con el sistema permite mejorar la experiencia del servicio (ver sección \ref{S:experiencia}).
+
+    \item[Respaldo académico] Esta propuesta está hecha por la Escuela de Ingeniería Eléctrica en alianza con Lanamme y ProDUS.
+
+    \item[Tiempo de lanzamiento reducido] 
+
+    \item[Código abierto] 
+    
+\end{description}
+
+%%%%%%%%
+\section{Estructura de la unidad técnica}
+%%%%%%%%
+\label{S:estructura}
+
+% -----------------
+\chapter{Servicios}
+% -----------------
+
+La propuesta incluye la gestión de un ``sistema de información'' orientado a las personas usuarias, con la información oportuna para promover el uso del transporte público y mejorar la percepción de satisfacción con el servicio. Además, incluye el análisis de los datos del servicio.
+
+%%%%%%%%
+\section{Sistema de información}
+%%%%%%%%
+
+La oferta completa incluye los siguientes servicios:
+
+\begin{enumerate}[noitemsep]
+    \item Administración de datos abiertos y estandarizados del sistema de transporte público
+    \item Desarrollo y gestión de medios \textit{electrónicos} para difusión de información, incluyendo:
+    \begin{itemize}
+        \item Página web
+        \item Aplicaciones móviles (propias y de terceros)
+        \item Pantallas informativas
+    \end{itemize}
+    \item Diseño de medios \textit{impresos} para difusión de información y para promoción, incluyendo:
+    \begin{itemize}
+        \item Rotulación (\textit{señalética}) en paradas y otros lugares
+        \item Folletos para distribución y vallas informativas en exteriores
+    \end{itemize}
+    \item Gestión de los medios de atención al cliente
+    \item Diseño de un sistema de identidad visual
+    \item Gestión de campañas de comunicación en redes sociales
+    \item Desarrollo e implementación de tecnologías de telemetría y rastreo de vehículos para información en tiempo real
+\end{enumerate}
+
+\subsection{Datos estáticos del servicio}
+
+\subsection{Datos en tiempo real}
+
+%%%%%%%%
+\section{Divulgación de datos}
+%%%%%%%%
+
+
+
+%%%%%%%%
+\section{Análisis de datos}
+%%%%%%%%
+
+Auditorías
+
+%%%%%%%%
+\section{Diseño de la experiencia de usuario}
+%%%%%%%%
+\label{S:experiencia}
+
+\subsection{Atención al cliente}
+
+\subsection{Identidad visual}
+
+\subsection{Campañas de comunicación}
+
+%%%%%%%%
+\section{Monetización}
+%%%%%%%%
+\label{S:monetizacion}
+
+\subsection{Publicidad en medios electrónicos}
+
+\subsection{Uso del API}
+
+\subsection{Análisis especializado de datos}
+
+\subsection{Integración con servicios de movilidad}
+
+\subsection{Información patrocinada}
+
+% ----------------------
+\chapter{Implementación}
+% ----------------------
+
+%%%%%%%%
+\section{Metodología}
+%%%%%%%%
+
+La propuesta está desarrollada con base en la investigación sobre transporte público inteligente y sus estándares y arquitecturas tecnológicas, en la investigación en técnicas modernas de análisis de datos, en las buenas prácticas de diseño de software y en diseño de servicios en general. Para atender las preguntas generadoras es necesario comenzar con la adopción de ciertos principios de diseño, que son:
+
+\begin{description}
+    \item[Interoperabilidad] para ser compatibles con estándares y arquitecturas internacionales \cite{davies2019state} y facilitar en el presente y en el futuro la modernización y actualización del sistema.
+    \item[Neutralidad tecnológica] para evitar el \textit{vendor lock-in} (uso restringido o propietario de una tecnología o servicio), en el cual un distribuidor de una marca tiene un control manipulador –a menudo extorsivo– de todo el sistema, lo cual es una ocurrencia típica en grandes sistemas informáticos en el país.
+    \item[Unicidad del sistema] para evitar fraccionamiento de la información por causa de la multiplicidad de empresas concesionarias y la atomización de la administración del transporte público en el país, lo cual no debe ser un obstáculo para la calidad de la información para las personas usuarias.
+\end{description}
+
+La propuesta adopta los principios de interoperabilidad de datos de movilidad \acrdef{mdip} \cite{mdip2023modernizing} establecidos por una asociación de agencias de Estados Unidos líderes en transporte público inteligente. En esencia, estos principios promueven la interoperabilidad por medio del desarrollo, la adopción y la implementación generalizada de estándares abiertos, el acceso a herramientas con datos de movilidad de alta calidad, la posibilidad de seleccionar los componentes tecnológicos mejor adaptados a las necesidades y el empoderamiento del público general con datos de movilidad de calidad y bien distribuidos.
+
+
+%%%%%%%%
+\section{Arquitectura}
+%%%%%%%%
+
+La arquitectura 
+
+\begin{figure}
+\centering
+\input{img/arquitectura}
+\caption{Diagrama tecnológico de la implementación del sistema de información}
+\label{F:arquitectura}
+\end{figure}
+
+%%%%%%%%
+\section{Recursos y presupuestos}
+%%%%%%%%
+
+\subsection{Software provisto}
+
+La Universidad de Costa Rica ofrece en esta propuesta, sin costo adicional, el desarrollo de las siguientes piezas de software, valoradas en \$ 123456:
+
+Infraestructura informática
+
+Instalaciones
+
+- Oficina de al menos 10 metros cuadrados
+
+Personal
+
+- Desarrollador \textit{senior}
+- Dos desarrolladores \textit{junior}
+
+Servicios profesionales
+
+- Servicios de diseño gráfico
+
+Equipo
+
+Mobiliario
+
+
+%%%%%%%%
+\section{Riesgos y estrategias de mitigación}
+%%%%%%%%
+\label{S:riesgos}
+
+\subsection{Seguridad informática}
+
+%%%%%%%%
+\section{Plan de seguimiento y evaluación}
+%%%%%%%%
+
+%%%%%%%%
+\section{Cronograma}
+%%%%%%%%
+
+\appendix
+
+%%%%%%%%
+\chapter{Software desarrollado}
+%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%
+\printbibliography
+%%%%%%%%%%%%%%%%%%
+
+\end{document}

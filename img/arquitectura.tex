@@ -1,0 +1,56 @@
+\begin{tikzpicture}[node distance=4cm]
+    \draw[dashed, gray] (-6, -8) -- (10, -8) node[anchor=south east, font=\tiny\scshape]{Producción de datos \faIcon{arrow-alt-circle-up}} node[anchor=north east, font=\tiny\scshape]{Consumo de datos \faIcon{arrow-alt-circle-down}};
+
+    \node[container](obe){Equipo en \\ el vehículo \\\vspace{2mm} \faIcon{mobile} \faIcon{file-alt}};
+    \node[user, right of=obe](operator){Conductor \\ \faIcon{user}};
+    \node[container, below of=obe](realtime){Servidor en tiempo real \\\vspace{2mm} \faIcon{server} \faIcon{database} \faIcon{cogs} \faIcon{laptop} \faIcon{file-alt}};
+    \node[legend, left of=realtime](legend){\textbf{Componentes} \\\vspace{2mm} \faIcon{server} Servidor \\ \faIcon{database} Base de datos \\ \faIcon{cogs} API \\ \faIcon{laptop} Administración \\ \faIcon{box-open} Paquete \\ \faIcon{chart-bar} Visualización \\ \faIcon{mobile} App móvil \\ \faIcon{hdd} Controlador \\ \faIcon{desktop} Navegador web \\ \faIcon{file-alt} Documentación};
+    \node[container, right of=realtime](editor){Editor de \\ GTFS \textit{Schedule} \\\vspace{2mm} \faIcon{server} \faIcon{database} \faIcon{box-open} \faIcon{laptop} \faIcon{file-alt}};
+    \node[user, right of=editor](agency){Administración \\ \faIcon{users}};
+    \node[gtfs, below of=realtime](gtfs-rt){GTFS \textit{Realtime}};
+    \node[gtfs, right of=gtfs-rt](gtfs-s){GTFS \textit{Schedule}};
+    \node[container, below of=gtfs-rt](datahub){Concentrador \\ de datos \\\vspace{2mm} \faIcon{server} \faIcon{database} \faIcon{cogs} \faIcon{laptop} \faIcon{file-alt}};
+    \node[external, right of=datahub](google){Google Maps};
+    \node[external, right of=google](moovit){Moovit};
+    \node[external, left of=datahub](data){Otros datos};
+    \node[container, below of=datahub](screens){Servidor de pantallas \\\vspace{2mm} \faIcon{server} \faIcon{database} \faIcon{laptop} \faIcon{file-alt}};
+    \node[container, right of=screens](website){Sitio web \\ del servicio \\\vspace{2mm} \faIcon{desktop} \faIcon{file-alt}};
+    \node[external, right of=website](services){Otros servicios};
+    \node[container, left of=screens](analysis){Servidor de análisis de datos \\\vspace{2mm} \faIcon{server} \faIcon{database} \faIcon{cogs} \faIcon{box-open} \faIcon{chart-bar} \faIcon{file-alt}};
+    \node[container, below of=screens](screen){Pantalla en buses o paradas \\\vspace{2mm} \faIcon{hdd} \faIcon{desktop} \faIcon{file-alt}};
+    \node[user, below of=analysis](researcher){Investigador \\ \faIcon{user}};
+    \node[user, below of=website](passenger){Pasajero \\ \faIcon{user}};
+    \node[container, below of=services](signage){Editor de señalética \\\vspace{2mm} \faIcon{box-open} \faIcon{file-alt}};
+
+    \path[every node/.style={
+            font=\tiny,
+            text centered,
+  		fill=white,
+  		align=center,
+        }, >=latex
+    ]
+        (operator) edge[->, dashed] (obe)
+        (obe) edge[->] node{https / api \\ \faIcon{code}} (realtime)
+        (agency) edge[->, dashed] (editor)
+        (editor) edge[<->] (realtime)
+        (editor) edge[->] node{.txt / .zip \\ \faIcon{table}} (gtfs-s)
+        (realtime) edge[->] node{protobuf \\ \faIcon{shapes}} (gtfs-rt)
+        (gtfs-rt) edge[->] node[near start]{https \\ \faIcon{file-download}} (moovit)
+        (gtfs-rt) edge[->] node[near start]{https \\ \faIcon{file-download}} (google)
+        (gtfs-rt) edge[->] node[near start]{https \\ \faIcon{file-download}} (datahub)
+        (gtfs-s) edge[->] node[near end]{https \\ \faIcon{file-download}} (moovit)
+        (gtfs-s) edge[->] node[near end]{https \\ \faIcon{file-download}} (google)
+        (gtfs-s) edge[->] node[near end]{https \\ \faIcon{file-download}} (datahub)
+        (data) edge[->] (datahub)
+        (datahub) edge[->] node{https / api / rss / ws / ngsi-ld \\ \faIcon{rss}} (services)
+        (datahub) edge[->] node{https / api \\ \faIcon{code}} (website)
+        (datahub) edge[->] node{https / api \\ \faIcon{code}} (screens)
+        (datahub) edge[->] node{https / api \\ \faIcon{code}} (analysis)
+        (screens) edge[->] node{https / websocket \\ \faIcon{compress-alt}} (screen)
+        (analysis) edge[<-, dashed] (researcher)
+        (passenger) edge[->, dashed] node[]{\faIcon[regular]{eye}} (screen)
+        (passenger) edge[->, dashed] node[]{\faIcon[regular]{eye}} (website)
+        (passenger) edge[->, dashed] node[]{\faIcon[regular]{eye}} (services)
+        (services) edge[->] node{https / api \\ \faIcon{code}} (signage)
+    ;
+\end{tikzpicture}
