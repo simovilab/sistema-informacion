@@ -1,44 +1,45 @@
-# Proyecto de diseño
+---
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
 
-::: info Escenario
+hero:
+  name: "SITP"
+  text: "Sistemas de información para el transporte público inteligente"
+  tagline: Una guía práctica de diseño para tomadores de decisiones
+  image:
+    src: /K.png
+    alt: Logo Kalouk
+  actions:
+    - theme: brand
+      text: Demostración
+      link: /demo
+    - theme: alt
+      text: Objetivos
+      link: /proyecto/objetivos
 
-Hemos sido contratados como empresa de consultoría para generar un reporte sobre sistemas de información para el transporte público inteligente, con el objetivo de evaluar las posibilidades de implementación.
-
-:::
-
-Entes contratantes:
-
-- Ministerio de Obras Públicas y Transportes (MOPT)
-- Consejo de Transporte Público (CTP)
-- Autoridad Reguladora de los Servicios Públicos (ARESEP)
-- Cámara Nacional de Transportistas (CANATRANS)
-- Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT)
-- Comisión Nacional de Prevención de Riesgos y Atención de Emergencias (CNE)
-- Municipalidades
-
-## Entregables
-
-- Análisis de prefactibilidad técnica y económica
-- Una guía práctica para tomadores de decisiones
-- Pruebas de concepto
-
-## Contexto básico
-
-- No existen unidades especializadas en tecnologías de información y comunicación para el transporte público inteligente dentro de las entidades responsables de la gestión del servicio.
-- Los recursos económicos son limitados.
-- Ya hay avances en el pago electrónico y otros planes piloto.
-- La gestión del servicio la hacen más de 300 empresas individuales.
-
-## Primera propuesta de estructura
-
-
-- Resumen ejecutivo
-- Transporte público inteligente
-- Sistemas de información
-  - Componentes esenciales
-  - Experiencia de usuario
-  - Monetización
-- Análisis de datos
-- Arquitectura propuesta
-- Modelo de gobernanza
-- Plan piloto
+features:
+  - icon: <span class="material-symbols-outlined">assignment</span>
+    title: Proyecto
+    details: Información general, antecedentes, justificación y objetivos.
+    link: /proyecto/
+  - icon: <span class="material-symbols-outlined">draw</span>
+    title: Diseño
+    details: Comparación y selección de características y diseño docente.
+    link: /diseno/
+  - icon: <span class="material-symbols-outlined">rocket_launch</span>
+    title: Desarrollo
+    details: Descripción de metodología y de la selección tecnológica.
+    link: /desarrollo/
+  - icon: <span class="material-symbols-outlined">calculate</span>
+    title: Contenidos
+    details: Material con la teoría del curso y guía pedagógica para su implementación.
+    link: /contenidos/
+  - icon: <span class="material-symbols-outlined">insert_chart</span>
+    title: Resultados
+    details: Evaluación técnica y pedagógica del sistema y análisis de la implementación.
+    link: /resultados/
+  - icon: <span class="material-symbols-outlined">lightbulb</span>
+    title: Conclusiones
+    details: Conclusiones, agradecimientos y referencias bibliográficas para el proyecto.
+    link: /conclusiones/
+---
