@@ -3,43 +3,43 @@
 layout: home
 
 hero:
-  name: "SITP"
+  name: "TPi"
   text: "Sistemas de información para el transporte público inteligente"
-  tagline: Una guía práctica de diseño para tomadores de decisiones
+  tagline: Una guía práctica de diseño e implementación para tomadores de decisiones
   image:
-    src: /K.png
+    src: ./images/TPi_blanco.png
     alt: Logo Kalouk
   actions:
     - theme: brand
-      text: Demostración
-      link: /demo
+      text: Resumen ejecutivo
+      link: /resumen/
     - theme: alt
       text: Objetivos
       link: /proyecto/objetivos
 
 features:
   - icon: <span class="material-symbols-outlined">assignment</span>
-    title: Proyecto
+    title: Presentación
     details: Información general, antecedentes, justificación y objetivos.
-    link: /proyecto/
-  - icon: <span class="material-symbols-outlined">draw</span>
-    title: Diseño
+    link: /
+  - icon: <span class="material-symbols-outlined">departure_board</span>
+    title: Transporte público inteligente
     details: Comparación y selección de características y diseño docente.
+    link: /transporte-publico-inteligente/
+  - icon: <span class="material-symbols-outlined">draw</span>
+    title: Diseño del sistema
+    details: Consideraciones sobre tecnologías y el servicio para el diseño.
     link: /diseno/
   - icon: <span class="material-symbols-outlined">rocket_launch</span>
-    title: Desarrollo
-    details: Descripción de metodología y de la selección tecnológica.
-    link: /desarrollo/
-  - icon: <span class="material-symbols-outlined">calculate</span>
-    title: Contenidos
-    details: Material con la teoría del curso y guía pedagógica para su implementación.
-    link: /contenidos/
+    title: Desarrollo e implementación
+    details: Fases de desarrollo tecnológico y estrategias de implementación y monetización.
+    link: /implementacion/
   - icon: <span class="material-symbols-outlined">insert_chart</span>
-    title: Resultados
-    details: Evaluación técnica y pedagógica del sistema y análisis de la implementación.
-    link: /resultados/
+    title: Operación y mantenimiento
+    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución.
+    link: /operacion/
   - icon: <span class="material-symbols-outlined">lightbulb</span>
-    title: Conclusiones
+    title: Conclusiones y recomendaciones
     details: Conclusiones, agradecimientos y referencias bibliográficas para el proyecto.
     link: /conclusiones/
 ---

@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "SITP",
+  title: "Movilidad inteligente",
   description: "Sistemas de información para el transporte público",
   lang: 'es-ES',
   cleanUrls: true,
@@ -18,10 +18,16 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: './images/TPi_blanco.png',
     nav: [
       { text: 'Inicio', link: '/' },
       { text: 'Enunciado', link: '/enunciado/' },
-      { text: 'Resumen ejecutivo', link: '/resumen/' }
+      { text: 'Resumen ejecutivo', link: '/resumen/' },
+      { text: 'TPi', link: '/transporte-publico-inteligente/' },
+      { text: 'Diseño', link: '/diseno/' },
+      { text: 'Implementación', link: '/implementacion/' },
+      { text: 'Operación', link: '/operacion/' },
+      { text: 'Conclusiones', link: '/conclusiones/' }
     ],
 
     sidebar: [
@@ -41,7 +47,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'TPI',
+        text: 'Transporte público inteligente',
         collapsed: true,
         items: [
           { text: 'Introducción', link: '/transporte-publico-inteligente/' },
@@ -49,7 +55,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Diseño',
+        text: 'Diseño del sistema',
         collapsed: true,
         items: [
           { text: 'Principios', link: '/diseno/' },
@@ -60,7 +66,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Implementación',
+        text: 'Desarrollo e implementación',
         collapsed: true,
         items: [
           { text: 'Introducción', link: '/implementacion/' },
@@ -69,20 +75,22 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Operación',
+        text: 'Operación y mantenimiento',
         collapsed: true,
         items: [
           { text: 'Introducción', link: '/operacion/' },
           { text: 'Seguimiento y evaluación', link: '/operacion/seguimiento/' },
           { text: 'Riesgos y mitigación', link: '/operacion/riesgos/' },
-          { text: 'Introducción', link: 'operacion/gobernanza/' }
+          { text: 'Gobernanza', link: 'operacion/gobernanza/' },
+          { text: 'Evolución', link: 'operacion/evolucion/' }
         ]
       },
       {
-        text: 'Conclusiones',
+        text: 'Conclusiones y recomendaciones',
         collapsed: true,
         items: [
-          { text: 'Conclusiones', link: '/conclusiones/' }
+          { text: 'Conclusiones', link: '/conclusiones/' },
+          { text: 'Recomendaciones', link: '/conclusiones/recomendaciones' }
         ]
       }
     ],
