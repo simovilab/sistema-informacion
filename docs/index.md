@@ -7,7 +7,7 @@ hero:
   text: "Sistemas de información para el transporte público inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones
   image:
-    src: ./images/TPi_blanco.png
+    src: /TPi.png
     alt: Logo Kalouk
   actions:
     - theme: brand
