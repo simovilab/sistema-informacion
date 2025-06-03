@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Movilidad inteligente",
+  title: "SITPI",
   description: "Sistemas de información para el transporte público",
   lang: "es-ES",
   cleanUrls: true,

@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "TPi"
-  text: "Sistemas de información para el transporte público inteligente"
+  name: "SITPI"
+  text: "Sistema de información para el transporte público inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones
   image:
     src: /TPi.png

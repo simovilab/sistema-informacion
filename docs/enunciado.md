@@ -31,7 +31,6 @@ Entes contratantes:
 
 ## Primera propuesta de estructura
 
-
 - Resumen ejecutivo
 - Transporte público inteligente
 - Sistemas de información
@@ -42,3 +41,16 @@ Entes contratantes:
 - Arquitectura propuesta
 - Modelo de gobernanza
 - Plan piloto
+
+## Asignación de secciones
+
+| Tema                                      | Nombre                               | Directorio                       |
+| ----------------------------------------- | ------------------------------------ | -------------------------------- |
+| Digitalización de la sociedad             | Morales Quesada José Fabian          | `presentations/3-digitalization` |
+| Pensamiento sistémico                     | Alfaro Herrera Brandon Andrey        | `presentations/4-thinking`       |
+| Complejidad técnica y social              | Cambronero Hernández Gabriel Antonio | `presentations/5-complexity`     |
+| Comportamiento humano, roles y procesos   | Blanco Arias José Luis               | `presentations/6-behavior`       |
+| Riesgo, incertidumbre e ignorancia        | Valdés Céspedes Johnnixia            | `presentations/7-risk`           |
+| Propiedades de los sistemas de ingeniería | Guzmán Carranza Denzel Darío         | `presentations/8-properties`     |
+| Objetivos de diseño y necesidades         | Esquivel Guadamuz Andrés Josué       | `presentations/9-goals`          |
+| Formulación de requisitos                 | Ulate Jarquín Ángeles                | `presentations/10-requirements`  |
