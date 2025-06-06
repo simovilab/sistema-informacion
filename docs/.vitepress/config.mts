@@ -142,6 +142,12 @@ export default defineConfig({
         link: "https://github.com/simovilab/sistema-informacion",
       },
     ],
+
+    footer: {
+      message: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)",
+      copyright: "Derechos reservados © 2025 Universidad de Costa&nbsp;Rica",
+    },
+
     outlineTitle: "En esta página",
     lastUpdatedText: "Última actualización",
     darkModeSwitchLabel: "Apariencia",
