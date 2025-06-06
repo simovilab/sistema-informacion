@@ -1,4 +1,4 @@
-# Arquitectura del sistema
+# Propuesta del plan piloto
 
 ::: info Puntos clave
 

@@ -45,6 +45,8 @@ export default defineConfig({
           { text: "Resumen ejecutivo", link: "/resumen" },
           { text: "Objetivos", link: "/objetivos" },
           { text: "Requisitos", link: "/requisitos" },
+          { text: "Glosario", link: "/glosario" },
+          { text: "Referencias", link: "/referencias" },
         ],
       },
       {
@@ -64,7 +66,6 @@ export default defineConfig({
         items: [
           { text: "Introducción", link: "/diseno" },
           { text: "Principios", link: "/diseno/principios" },
-          { text: "Arquitectura", link: "/diseno/arquitectura" },
           {
             text: "Experiencia del usuario",
             link: "/diseno/experiencia",
@@ -111,6 +112,15 @@ export default defineConfig({
         items: [
           { text: "Principios", link: "/desarrollo" },
           { text: "Tecnologías", link: "/desarrollo/tecnologias" },
+          {
+            text: "Arquitectura",
+            collapsed: true,
+            items: [
+              { text: "Descripción", link: "/desarrollo/arquitectura" },
+              { text: "Databús", link: "/desarrollo/arquitectura/databus" },
+              { text: "Infobús", link: "/desarrollo/arquitectura/infobus" },
+            ],
+          },
           { text: "Pruebas", link: "/desarrollo/pruebas" },
         ],
       },
@@ -124,6 +134,14 @@ export default defineConfig({
           { text: "Gobernanza", link: "/operacion/gobernanza" },
           { text: "Monetización", link: "/operacion/monetizacion" },
           { text: "Evolución", link: "/operacion/evolucion" },
+        ],
+      },
+      {
+        text: "Plan piloto",
+        collapsed: true,
+        items: [
+          { text: "Descripción", link: "/piloto" },
+          { text: "Propuesta", link: "/piloto/propuesta" },
         ],
       },
       {

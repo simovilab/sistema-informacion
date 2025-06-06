@@ -19,11 +19,11 @@ hero:
 
 features:
   - icon: <span class="material-symbols-outlined">assignment</span>
-    title: Presentación
+    title: Proyecto
     details: Información general, antecedentes, justificación y objetivos.
     link: /
   - icon: <span class="material-symbols-outlined">departure_board</span>
-    title: Transporte público inteligente
+    title: Movilidad inteligente
     details: Comparación y selección de características y diseño docente.
     link: /transporte-publico-inteligente/
   - icon: <span class="material-symbols-outlined">draw</span>
