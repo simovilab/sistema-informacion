@@ -32,7 +32,7 @@ jobs:
           version: 9 # Specify the pnpm version
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        working-directory: site # Use the docs/ directory where pnpm-lock.yaml is located
+        working-directory: docs/ # Use the docs/ directory where pnpm-lock.yaml is located
       - name: Build with VitePress
         run: pnpm docs:build
         working-directory: docs/ # Use the docs/ directory
