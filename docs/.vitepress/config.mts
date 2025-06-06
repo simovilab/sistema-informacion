@@ -6,6 +6,8 @@ export default defineConfig({
   description: "Sistema de información para la movilidad inteligente",
   lang: "es-ES",
   cleanUrls: true,
+  base: "/sistema-informacion/",
+
   head: [
     [
       "link",
