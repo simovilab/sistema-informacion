@@ -38,15 +38,15 @@ export default defineConfig({
         items: [{ text: "Enunciado", link: "/enunciado" }],
       },
       {
-        text: "Proyecto",
+        text: "Informe",
         collapsed: true,
         items: [
           { text: "Inicio", link: "/" },
           { text: "Resumen ejecutivo", link: "/resumen" },
           { text: "Objetivos", link: "/objetivos" },
-          { text: "Requisitos", link: "/requisitos" },
           { text: "Glosario", link: "/glosario" },
           { text: "Referencias", link: "/referencias" },
+          { text: "Créditos", link: "/creditos" },
         ],
       },
       {
@@ -66,6 +66,7 @@ export default defineConfig({
         items: [
           { text: "Introducción", link: "/diseno" },
           { text: "Principios", link: "/diseno/principios" },
+          { text: "Requisitos", link: "/diseno/requisitos" },
           {
             text: "Experiencia del usuario",
             link: "/diseno/experiencia",
@@ -161,6 +162,37 @@ export default defineConfig({
         link: "https://github.com/simovilab/sistema-informacion",
       },
     ],
+
+    search: {
+      provider: "local",
+      options: {
+        locales: {
+          root: {
+            translations: {
+              button: {
+                buttonText: "Buscar",
+                buttonAriaLabel: "Buscar",
+              },
+              modal: {
+                displayDetails: "Mostrar lista detallada",
+                resetButtonTitle: "Restablecer búsqueda",
+                backButtonTitle: "Cerrar búsqueda",
+                noResultsText: "Sin resultados",
+                footer: {
+                  selectText: "Seleccionar",
+                  selectKeyAriaLabel: "Intro",
+                  navigateText: "Navegar",
+                  navigateUpKeyAriaLabel: "Flecha arriba",
+                  navigateDownKeyAriaLabel: "Flecha abajo",
+                  closeText: "Cerrar",
+                  closeKeyAriaLabel: "Esc",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
 
     footer: {
       message: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)",
