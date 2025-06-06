@@ -12,3 +12,5 @@ El transporte público es un servicio esencial para la movilidad de las personas
 ## Redes sociales
 
 Las redes sociales son una herramienta poderosa para la comunicación con los usuarios. Se deben utilizar plataformas como Facebook, Twitter e Instagram para informar sobre novedades, cambios en el servicio y otros aspectos relevantes del sistema de transporte público.
+
+## Ejemplo del plan piloto de la Universidad de Costa Rica

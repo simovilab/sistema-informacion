@@ -104,6 +104,7 @@ export default defineConfig({
               },
             ],
           },
+          { text: "Inteligencia artificial", link: "/diseno/ia" },
         ],
       },
       {

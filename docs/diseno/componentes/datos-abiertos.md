@@ -12,3 +12,5 @@
 ## Divulgación
 
 ## Análisis de datos
+
+## Ejemplo del plan piloto de la Universidad de Costa Rica

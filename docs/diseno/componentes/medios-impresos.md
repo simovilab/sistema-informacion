@@ -14,3 +14,5 @@
 ## Folletos
 
 ## Vallas
+
+## Ejemplo del plan piloto de la Universidad de Costa Rica

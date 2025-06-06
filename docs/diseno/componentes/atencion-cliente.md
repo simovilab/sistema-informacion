@@ -12,3 +12,5 @@
 ## Correo electrónico
 
 ## Redes sociales
+
+## Ejemplo del plan piloto de la Universidad de Costa Rica
