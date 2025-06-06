@@ -1,5 +1,12 @@
 # Componentes del sistema de información
 
+::: info Puntos clave
+
+- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
+- Síntesis de toda esta página
+
+:::
+
 1. Datos abiertos y estandarizados
 2. Medios digitales para difusión de información
    - Páginas web

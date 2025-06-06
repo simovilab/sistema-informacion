@@ -1,5 +1,12 @@
 # Diseño del sistema
 
+::: info Puntos clave
+
+- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
+- Síntesis de toda esta página
+
+:::
+
 ## Preguntas generadoras
 
 - ¿Cómo ser compatibles con aplicaciones de planificación de viajes intermodales —como Google Maps, Moovit o Transit App— y otros servicios que consumen y despliegan datos del transporte público en sitios web, aplicaciones o pantallas, ampliando así la oferta disponible para las personas usuarias?
