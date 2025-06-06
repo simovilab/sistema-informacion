@@ -7,6 +7,3 @@
 - ¿Cómo maximizar el aprovechamiento de los datos recopilados, para que sean utilizados también para la operación (empresas concesionarias), gestión (CTP), planificación (MOPT), regulación (ARESEP) e investigación (academia y prensa) del servicio, entre múltiples usos posibles?
 - ¿Cómo reducir los costos iniciales del sistema, habilitando una implementación gradual y ofreciendo alternativas de bajo costo para las etapas iniciales?
 - ¿Cómo promover en la implementación del sistema la participación y competencia de distintos proveedores tecnológicos, así como la libertad de elegir los componentes mejor adaptados a las necesidades para evitar la monopolización innecesaria del servicio?
-
-## Principios de diseño
-

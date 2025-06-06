@@ -3,11 +3,11 @@
 layout: home
 
 hero:
-  name: "SITPI"
-  text: "Sistema de información para el transporte público inteligente"
+  name: "SIMI"
+  text: "Sistema de información para la movilidad inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones
   image:
-    src: /TPi.png
+    src: /i.png
     alt: Logo Kalouk
   actions:
     - theme: brand

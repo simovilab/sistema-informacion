@@ -1,4 +1,4 @@
-# Seguimiento y evaluación
+# Medios digitales para difusión de información
 
 ::: info Puntos clave
 
@@ -6,3 +6,9 @@
 - Síntesis de toda esta página
 
 :::
+
+## Páginas web
+
+## Aplicaciones móviles
+
+## Pantallas informativas

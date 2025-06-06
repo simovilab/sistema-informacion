@@ -1,4 +1,4 @@
-# Seguimiento y evaluación
+# Experiencia del usuario
 
 ::: info Puntos clave
 
@@ -6,3 +6,7 @@
 - Síntesis de toda esta página
 
 :::
+
+_Ease of Travel_ (EoT).
+
+## Canales de atención al cliente

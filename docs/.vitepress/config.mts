@@ -2,8 +2,8 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "SITPI",
-  description: "Sistemas de información para el transporte público",
+  title: "SIMI",
+  description: "Sistema de información para la movilidad inteligente",
   lang: "es-ES",
   cleanUrls: true,
   head: [
@@ -18,40 +18,43 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/TPi.png",
+    logo: "/i.png",
     nav: [
       { text: "Inicio", link: "/" },
       { text: "Enunciado", link: "/enunciado/" },
-      { text: "Resumen ejecutivo", link: "/resumen/" },
-      { text: "TPi", link: "/transporte-publico-inteligente/" },
+      { text: "Resumen", link: "/resumen/" },
+      { text: "Movilidad", link: "/movilidad/" },
       { text: "Diseño", link: "/diseno/" },
-      { text: "Implementación", link: "/implementacion/" },
+      { text: "Desarrollo", link: "/desarrollo/" },
       { text: "Operación", link: "/operacion/" },
+      { text: "Plan piloto", link: "/piloto/" },
       { text: "Conclusiones", link: "/conclusiones/" },
     ],
 
     sidebar: [
       {
-        text: "Proyecto",
+        text: "IDSI",
         collapsed: true,
-        items: [{ text: "Enunciado", link: "/enunciado/" }],
+        items: [{ text: "Enunciado", link: "/enunciado" }],
       },
       {
-        text: "Informe",
+        text: "Proyecto",
         collapsed: true,
         items: [
           { text: "Inicio", link: "/" },
-          { text: "Resumen ejecutivo", link: "/resumen/" },
+          { text: "Resumen ejecutivo", link: "/resumen" },
+          { text: "Objetivos", link: "/objetivos" },
+          { text: "Requisitos", link: "/requisitos" },
         ],
       },
       {
-        text: "Transporte público inteligente",
+        text: "Movilidad inteligente",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/transporte-publico-inteligente/" },
+          { text: "Introducción", link: "/movilidad" },
           {
             text: "Sistemas de información",
-            link: "/transporte-publico-inteligente/sistemas-informacion/",
+            link: "/movilidad/informacion",
           },
         ],
       },
@@ -59,51 +62,85 @@ export default defineConfig({
         text: "Diseño del sistema",
         collapsed: true,
         items: [
-          { text: "Principios", link: "/diseno/" },
+          { text: "Introducción", link: "/diseno" },
+          { text: "Principios", link: "/diseno/principios" },
+          { text: "Arquitectura", link: "/diseno/arquitectura" },
           {
             text: "Experiencia del usuario",
-            link: "/diseno/experiencia-usuario/",
+            link: "/diseno/experiencia",
           },
-          { text: "Datos", link: "/diseno/datos/" },
-          { text: "Arquitectura", link: "/diseno/arquitectura/" },
-          { text: "Estrategia de comunicación", link: "/diseno/comunicacion/" },
+          {
+            text: "Componentes",
+            collapsed: true,
+            items: [
+              {
+                text: "Datos abiertos",
+                link: "/diseno/componentes/datos-abiertos",
+              },
+              {
+                text: "Medios digitales",
+                link: "/diseno/componentes/medios-digitales",
+              },
+              {
+                text: "Medios impresos",
+                link: "/diseno/componentes/medios-impresos",
+              },
+              {
+                text: "Atención al cliente",
+                link: "/diseno/componentes/atencion-cliente",
+              },
+              {
+                text: "Identidad visual",
+                link: "/diseno/componentes/identidad-visual",
+              },
+              {
+                text: "Estrategia de comunicación",
+                link: "/diseno/componentes/comunicacion",
+              },
+              {
+                text: "Datos en tiempo real",
+                link: "/diseno/componentes/datos-tiempo-real",
+              },
+            ],
+          },
         ],
       },
       {
         text: "Desarrollo e implementación",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/implementacion/" },
-          {
-            text: "Desarrollo tecnológico",
-            link: "/implementacion/desarrollo/",
-          },
-          { text: "Monetización", link: "/implementacion/monetizacion/" },
+          { text: "Principios", link: "/desarrollo" },
+          { text: "Tecnologías", link: "/desarrollo/tecnologias" },
+          { text: "Pruebas", link: "/desarrollo/pruebas" },
         ],
       },
       {
         text: "Operación y mantenimiento",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/operacion/" },
-          { text: "Seguimiento y evaluación", link: "/operacion/seguimiento/" },
-          { text: "Riesgos y mitigación", link: "/operacion/riesgos/" },
-          { text: "Gobernanza", link: "operacion/gobernanza/" },
-          { text: "Evolución", link: "operacion/evolucion/" },
+          { text: "Introducción", link: "/operacion" },
+          { text: "Seguimiento y evaluación", link: "/operacion/seguimiento" },
+          { text: "Riesgos y mitigación", link: "/operacion/riesgos" },
+          { text: "Gobernanza", link: "/operacion/gobernanza" },
+          { text: "Monetización", link: "/operacion/monetizacion" },
+          { text: "Evolución", link: "/operacion/evolucion" },
         ],
       },
       {
         text: "Conclusiones y recomendaciones",
         collapsed: true,
         items: [
-          { text: "Conclusiones", link: "/conclusiones/" },
+          { text: "Conclusiones", link: "/conclusiones" },
           { text: "Recomendaciones", link: "/conclusiones/recomendaciones" },
         ],
       },
     ],
 
     socialLinks: [
-      { icon: "github", link: "https://github.com/fabianabarca/propuesta" },
+      {
+        icon: "github",
+        link: "https://github.com/simovilab/sistema-informacion",
+      },
     ],
     outlineTitle: "En esta página",
     lastUpdatedText: "Última actualización",

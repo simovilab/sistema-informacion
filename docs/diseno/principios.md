@@ -1,4 +1,4 @@
-# Seguimiento y evaluación
+# Principios de diseño
 
 ::: info Puntos clave
 

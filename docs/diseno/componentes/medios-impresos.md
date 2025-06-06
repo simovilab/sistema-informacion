@@ -1,4 +1,4 @@
-# Seguimiento y evaluación
+# Medios impresos para difusión de información
 
 ::: info Puntos clave
 
@@ -6,3 +6,11 @@
 - Síntesis de toda esta página
 
 :::
+
+## Rotulación (señalética)
+
+## Mapas
+
+## Folletos
+
+## Vallas
