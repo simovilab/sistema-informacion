@@ -1,4 +1,4 @@
-# Pruebas de funcionalidad y rendimiento
+# Tecnologías de telecomunicaciones
 
 ::: info Puntos clave
 
@@ -7,4 +7,4 @@
 
 :::
 
-Laboratorio de Sistemas Inteligentes de Movilidad
+## Red celular

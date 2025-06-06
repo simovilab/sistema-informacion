@@ -23,7 +23,6 @@ export default defineConfig({
     logo: "/i.png",
     nav: [
       { text: "Inicio", link: "/" },
-      { text: "Enunciado", link: "/enunciado/" },
       { text: "Resumen", link: "/resumen/" },
       { text: "Movilidad", link: "/movilidad/" },
       { text: "Diseño", link: "/diseno/" },
@@ -35,15 +34,9 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "IDSI",
-        collapsed: true,
-        items: [{ text: "Enunciado", link: "/enunciado" }],
-      },
-      {
         text: "Informe",
         collapsed: true,
         items: [
-          { text: "Inicio", link: "/" },
           { text: "Resumen ejecutivo", link: "/resumen" },
           { text: "Objetivos", link: "/objetivos" },
           { text: "Glosario", link: "/glosario" },
@@ -60,6 +53,7 @@ export default defineConfig({
             text: "Sistemas de información",
             link: "/movilidad/informacion",
           },
+          { text: "MaaS", link: "/movilidad/maas" },
         ],
       },
       {
@@ -70,8 +64,22 @@ export default defineConfig({
           { text: "Principios", link: "/diseno/principios" },
           { text: "Requisitos", link: "/diseno/requisitos" },
           {
-            text: "Experiencia del usuario",
-            link: "/diseno/experiencia",
+            text: "Experiencia de usuario",
+            collapsed: true,
+            items: [
+              {
+                text: "Principios",
+                link: "/diseno/experiencia",
+              },
+              {
+                text: "Accesibilidad",
+                link: "/diseno/experiencia/accesibilidad",
+              },
+              {
+                text: "Género",
+                link: "/diseno/experiencia/genero",
+              },
+            ],
           },
           {
             text: "Componentes",
@@ -107,7 +115,6 @@ export default defineConfig({
               },
             ],
           },
-          { text: "Inteligencia artificial", link: "/diseno/ia" },
         ],
       },
       {
@@ -115,7 +122,29 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Principios", link: "/desarrollo" },
-          { text: "Tecnologías", link: "/desarrollo/tecnologias" },
+          {
+            text: "Tecnologías",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/desarrollo/tecnologias" },
+              {
+                text: "Telecomunicaciones",
+                link: "/desarrollo/tecnologias/telecomunicaciones",
+              },
+              {
+                text: "Software",
+                link: "/desarrollo/tecnologias/software",
+              },
+              {
+                text: "Hardware",
+                link: "/desarrollo/tecnologias/hardware",
+              },
+              {
+                text: "Inteligencia artificial",
+                link: "/desarrollo/tecnologias/ia",
+              },
+            ],
+          },
           {
             text: "Arquitectura",
             collapsed: true,
@@ -125,7 +154,7 @@ export default defineConfig({
               { text: "Infobús", link: "/desarrollo/arquitectura/infobus" },
             ],
           },
-          { text: "Pruebas", link: "/desarrollo/pruebas" },
+          { text: "Validación", link: "/desarrollo/validacion" },
         ],
       },
       {
