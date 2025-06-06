@@ -1,7 +1,7 @@
 {
-  "name": "SITP",
+  "name": "SIMI",
   "version": "1.0.0",
-  "description": "Sistemas de información para el transporte público",
+  "description": "Sistema de información la movilidad inteligente",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -14,5 +14,11 @@
   "devDependencies": {
     "vitepress": "^1.6.3",
     "vue": "^3.5.13"
+  },
+  "dependencies": {
+    "@citation-js/core": "^0.7.18",
+    "@citation-js/plugin-bibtex": "^0.7.18",
+    "@citation-js/plugin-csl": "^0.7.18",
+    "@citation-js/plugin-doi": "^0.7.18"
   }
 }
