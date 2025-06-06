@@ -90,16 +90,8 @@ export default defineConfig({
                 link: "/diseno/componentes/datos-abiertos",
               },
               {
-                text: "Medios digitales",
-                link: "/diseno/componentes/medios-digitales",
-              },
-              {
-                text: "Medios impresos",
-                link: "/diseno/componentes/medios-impresos",
-              },
-              {
-                text: "Atención al cliente",
-                link: "/diseno/componentes/atencion-cliente",
+                text: "Datos en tiempo real",
+                link: "/diseno/componentes/datos-tiempo-real",
               },
               {
                 text: "Identidad visual",
@@ -110,8 +102,16 @@ export default defineConfig({
                 link: "/diseno/componentes/comunicacion",
               },
               {
-                text: "Datos en tiempo real",
-                link: "/diseno/componentes/datos-tiempo-real",
+                text: "Medios digitales",
+                link: "/diseno/componentes/medios-digitales",
+              },
+              {
+                text: "Medios impresos",
+                link: "/diseno/componentes/medios-impresos",
+              },
+              {
+                text: "Atención al cliente",
+                link: "/diseno/componentes/atencion-cliente",
               },
             ],
           },

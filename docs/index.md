@@ -43,3 +43,9 @@ features:
     details: Conclusiones, agradecimientos y referencias bibliográficas para el proyecto.
     link: /conclusiones/
 ---
+
+::: warning Trabajo en progreso
+
+El informe en este sitio web es un trabajo en progreso. Para sugerencias o comentarios, por favor, hacerlo a través de nuestro [repositorio de GitHub](https://github.com/simovilab/sistema-informacion), en la sección _Issues_, o al correo electrónico <a href="mailto:fabian.abarca@ucr.ac.cr">fabian.abarca@ucr.ac.cr</a>.
+
+:::

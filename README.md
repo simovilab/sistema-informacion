@@ -51,13 +51,13 @@ Entes contratantes:
 
 ## Asignación de secciones
 
-| Tema                                      | Nombre                               | Directorio                       |
-| ----------------------------------------- | ------------------------------------ | -------------------------------- |
-| Digitalización de la sociedad             | Morales Quesada José Fabian          | `presentations/3-digitalization` |
-| Pensamiento sistémico                     | Alfaro Herrera Brandon Andrey        | `presentations/4-thinking`       |
-| Complejidad técnica y social              | Cambronero Hernández Gabriel Antonio | `presentations/5-complexity`     |
-| Comportamiento humano, roles y procesos   | Blanco Arias José Luis               | `presentations/6-behavior`       |
-| Riesgo, incertidumbre e ignorancia        | Valdés Céspedes Johnnixia            | `presentations/7-risk`           |
-| Propiedades de los sistemas de ingeniería | Guzmán Carranza Denzel Darío         | `presentations/8-properties`     |
-| Objetivos de diseño y necesidades         | Esquivel Guadamuz Andrés Josué       | `presentations/9-goals`          |
-| Formulación de requisitos                 | Ulate Jarquín Ángeles                | `presentations/10-requirements`  |
+| Tema                  | Nombre             | Archivo                          |
+| --------------------- | ------------------ | -------------------------------- |
+| Digitalización        | Fabián Morales     | `docs/movilidad/maas.md`         |
+| Pensamiento sistémico | Brandon Alfaro     | `docs/operacion/evolucion.md`    |
+| Complejidad           | Gabriel Cambronero | `docs/operacion/gobernanza.md`   |
+| Comportamiento        | José Luis Blanco   | `docs/experiencia/principios.md` |
+| Riesgos               | Johnnixia Valdés   | `docs/operacion/riesgos.md`      |
+| Propiedades           | Darío Guzmán       | `docs/diseno/propiedades.md`     |
+| Objetivos             | Andrés Esquivel    | `docs/objetivos.md`              |
+| Requisitos            | Ángeles Ulate      | `docs/diseno/requisitos.md`      |
