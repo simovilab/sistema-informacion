@@ -41,6 +41,7 @@ export default defineConfig({
           { text: "Objetivos", link: "/objetivos" },
           { text: "Glosario", link: "/glosario" },
           { text: "Referencias", link: "/referencias" },
+          { text: "Cómo contribuir", link: "/contribuir" },
           { text: "Créditos", link: "/creditos" },
         ],
       },
