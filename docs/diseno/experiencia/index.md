@@ -9,4 +9,9 @@
 
 _Ease of Travel_ (EoT).
 
-## Canales de atención al cliente
+- Asignación: José Luis Blanco
+- Enfoque: desde la perspectiva del comportamiento humano, cómo se relaciona el diseño del sistema con las personas que lo usan y cómo se pueden mejorar sus experiencias.
+
+### Referencias
+
+<Citation doi="10.1007/978-3-030-81159-4" />

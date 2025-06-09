@@ -51,13 +51,13 @@ Entes contratantes:
 
 ## Asignación de secciones
 
-| Tema                  | Nombre             | Archivo                          |
-| --------------------- | ------------------ | -------------------------------- |
-| Digitalización        | Fabián Morales     | `docs/movilidad/maas.md`         |
-| Pensamiento sistémico | Brandon Alfaro     | `docs/operacion/evolucion.md`    |
-| Complejidad           | Gabriel Cambronero | `docs/operacion/gobernanza.md`   |
-| Comportamiento        | José Luis Blanco   | `docs/experiencia/principios.md` |
-| Riesgos               | Johnnixia Valdés   | `docs/operacion/riesgos.md`      |
-| Propiedades           | Darío Guzmán       | `docs/diseno/propiedades.md`     |
-| Objetivos             | Andrés Esquivel    | `docs/objetivos.md`              |
-| Requisitos            | Ángeles Ulate      | `docs/diseno/requisitos.md`      |
+| Tema                  | Nombre             | Archivo                            |
+| --------------------- | ------------------ | ---------------------------------- |
+| Digitalización        | Fabián Morales     | `docs/movilidad/maas.md`           |
+| Pensamiento sistémico | Brandon Alfaro     | `docs/operacion/evolucion.md`      |
+| Complejidad           | Gabriel Cambronero | `docs/operacion/gobernanza.md`     |
+| Comportamiento        | José Luis Blanco   | `docs/diseno/experiencia/index.md` |
+| Riesgos               | Johnnixia Valdés   | `docs/operacion/riesgos.md`        |
+| Propiedades           | Darío Guzmán       | `docs/diseno/propiedades.md`       |
+| Objetivos             | Andrés Esquivel    | `docs/objetivos.md`                |
+| Requisitos            | Ángeles Ulate      | `docs/diseno/requisitos.md`        |

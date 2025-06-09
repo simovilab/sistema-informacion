@@ -1,5 +1,15 @@
 # Créditos
 
+::: info Contacto
+
+**Fabián Abarca Calderón** <br>
+_Editor del informe_ <br>
+Profesor Escuela de Ingeniería Eléctrica <br>
+Universidad de Costa Rica <br>
+[fabian.abarca@ucr.ac.cr](mailto:fabian.abarca@ucr.ac.cr)
+
+:::
+
 ### Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
 
 - Fabián Abarca Calderón, M.Sc. (coordinador)

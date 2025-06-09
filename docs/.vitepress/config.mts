@@ -124,6 +124,15 @@ export default defineConfig({
         items: [
           { text: "Principios", link: "/desarrollo" },
           {
+            text: "Arquitectura",
+            collapsed: true,
+            items: [
+              { text: "Descripción", link: "/desarrollo/arquitectura" },
+              { text: "Databús", link: "/desarrollo/arquitectura/databus" },
+              { text: "Infobús", link: "/desarrollo/arquitectura/infobus" },
+            ],
+          },
+          {
             text: "Tecnologías",
             collapsed: true,
             items: [
@@ -147,12 +156,37 @@ export default defineConfig({
             ],
           },
           {
-            text: "Arquitectura",
+            text: "Componentes",
             collapsed: true,
             items: [
-              { text: "Descripción", link: "/desarrollo/arquitectura" },
-              { text: "Databús", link: "/desarrollo/arquitectura/databus" },
-              { text: "Infobús", link: "/desarrollo/arquitectura/infobus" },
+              {
+                text: "Sitios web",
+                link: "/desarrollo/componentes/web",
+              },
+              {
+                text: "Aplicaciones móviles",
+                link: "/desarrollo/componentes/aplicaciones",
+              },
+              {
+                text: "Pantallas informativas",
+                link: "/desarrollo/componentes/pantallas",
+              },
+              {
+                text: "Chatbots",
+                link: "/desarrollo/componentes/chatbots",
+              },
+              {
+                text: "Servidores",
+                link: "/desarrollo/componentes/servidores",
+              },
+              {
+                text: "API",
+                link: "/desarrollo/componentes/api",
+              },
+              {
+                text: "Centros de administración",
+                link: "/desarrollo/componentes/admin",
+              },
             ],
           },
           { text: "Validación", link: "/desarrollo/validacion" },
