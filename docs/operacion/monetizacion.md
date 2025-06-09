@@ -7,6 +7,8 @@
 
 :::
 
+**Asignación**: Jennifer Nicolle Alvarado López
+
 ### Publicidad en medios electrónicos
 
 ### Uso del API

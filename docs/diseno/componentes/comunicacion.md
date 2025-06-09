@@ -7,6 +7,8 @@
 
 :::
 
+**Asignación**: Santiago Mora Rivas
+
 El transporte público es un servicio esencial para la movilidad de las personas y el desarrollo sostenible de las ciudades. La comunicación efectiva es clave para garantizar que los usuarios comprendan y utilicen adecuadamente el sistema de transporte público.
 
 ## Redes sociales

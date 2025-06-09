@@ -7,6 +7,9 @@
 
 :::
 
-## Espacios de datos de movilidad (MDS)
+**Asignación**: Abel Jesús Gutiérrez Martínez y Josué Daniel Barrantes Fonseca
 
-Los espacios de datos de movilidad (MDS) son un conjunto de especificaciones técnicas que permiten a las ciudades y a los proveedores de servicios de movilidad compartir datos de manera estandarizada. Estos espacios facilitan la interoperabilidad entre diferentes sistemas y fomentan la innovación en el sector de la movilidad.
+### Referencias
+
+<Citation citekey="macedo2021real" />
+<Citation citekey="abarca2024system" />

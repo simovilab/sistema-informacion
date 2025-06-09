@@ -7,4 +7,6 @@
 
 :::
 
+**Asignación**: David Segura Cruz y Josué Vargas Céspedes
+
 Infobús&reg; es una marca registrada de la Universidad de Costa Rica.

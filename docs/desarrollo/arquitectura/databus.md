@@ -7,4 +7,6 @@
 
 :::
 
+**Asignación**: Adrián Cordero Méndez y Edson Murillo Mamani
+
 Databús&reg; es una marca registrada de la Universidad de Costa Rica.
