@@ -120,6 +120,31 @@ Si está usando Visual Studio Code, puede usar la interfaz gráfica para hacer l
 - Completar el formulario con un título y una descripción de los cambios.
 - Hacer clic en "Create pull request" para enviar la solicitud.
 
+## Referencias
+
+- Los contenidos deben tener abundantes referencias a fuentes académicas y documentales, confiables y relevantes. Para citar, por favor recopilar las referencias en el formato BibTeX y agregarlas al archivo `docs/public/references.bib` y luego usarlas en la sección de referencias de la página correspondiente con la sintaxis `<Citation citekey="clave_de_cita" />`, donde `clave_de_cita` es la clave de la referencia en el archivo BibTeX. [Google Scholar](https://scholar.google.com/) es una buena fuente para encontrar referencias y exportarlas en formato BibTeX.
+
+Por ejemplo, la referencia:
+
+```bibtex
+@inproceedings{abarca2024system,
+  author    = {Abarca, Fabián and Murillo, David and Segura, David and Vargas, Josué and Cordero, Adrián and Murillo, Edson and Núñez, Gustavo and Coto, Marvin},
+  booktitle = {XLII Convención IEEE de Centroamérica y Panamá (CONCAPAN)},
+  date      = {2024},
+  title     = {A System-Level Design for a Public Transportation Information System in Costa Rica}
+}
+```
+
+citada como:
+
+```html
+<Citation citekey="abarca2024system" />
+```
+
+genera:
+
+<Citation citekey="abarca2024system" />
+
 ## ¡Gracias por contribuir!
 
 Los cambios serán revisados por el equipo de SIMOVI y se integrarán al proyecto si son aprobados. Si tiene alguna pregunta o necesita ayuda, no dude en contactarnos a través de los canales mencionados anteriormente.
