@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "SIMI"
   text: "Sistema de información para la movilidad inteligente"
-  tagline: Una guía práctica de diseño e implementación para tomadores de decisiones
+  tagline: Una guía práctica de diseño e implementación para tomadores de decisiones.
   image:
     src: /i.png
     alt: Logo Kalouk
@@ -15,37 +15,37 @@ hero:
       link: /resumen/
     - theme: alt
       text: Objetivos
-      link: /proyecto/objetivos
+      link: /objetivos
 
 features:
   - icon: <span class="material-symbols-outlined">assignment</span>
-    title: Proyecto
-    details: Información general, antecedentes, justificación y objetivos.
+    title: Informe
+    details: Resumen ejecutivo, objetivos e información general del informe.
     link: /
   - icon: <span class="material-symbols-outlined">departure_board</span>
     title: Movilidad inteligente
-    details: Comparación y selección de características y diseño docente.
+    details: Conceptos y tendencias en la movilidad inteligente utilizados como referencia.
     link: /transporte-publico-inteligente/
   - icon: <span class="material-symbols-outlined">draw</span>
     title: Diseño del sistema
-    details: Consideraciones sobre tecnologías y el servicio para el diseño.
+    details: Consideraciones sobre tecnologías y el servicio de transporte público para el diseño.
     link: /diseno/
   - icon: <span class="material-symbols-outlined">rocket_launch</span>
     title: Desarrollo e implementación
-    details: Fases de desarrollo tecnológico y estrategias de implementación y monetización.
+    details: Fases de desarrollo tecnológico y estrategias de implementación.
     link: /implementacion/
   - icon: <span class="material-symbols-outlined">insert_chart</span>
     title: Operación y mantenimiento
-    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución.
+    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución, entre otros.
     link: /operacion/
   - icon: <span class="material-symbols-outlined">lightbulb</span>
     title: Conclusiones y recomendaciones
-    details: Conclusiones, agradecimientos y referencias bibliográficas para el proyecto.
+    details: Síntesis de la investigación y desarrollo realizados para el informe.
     link: /conclusiones/
 ---
 
 ::: warning Trabajo en progreso
 
-El informe en este sitio web es un trabajo en progreso. Para sugerencias o comentarios, por favor, hacerlo a través de nuestro [repositorio de GitHub](https://github.com/simovilab/sistema-informacion), en la sección _Issues_, o al correo electrónico <a href="mailto:fabian.abarca@ucr.ac.cr">fabian.abarca@ucr.ac.cr</a>.
+El informe en este sitio web es un trabajo en progreso, con una fecha estimada de primera publicación para la segunda mitad de julio de 2025. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
 
 :::

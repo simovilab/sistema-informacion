@@ -1,6 +1,6 @@
 # Cómo contribuir
 
-Este informe acepta (y agradece) la colaboración de la comunidad. Para contribuir, por favor siga la guía a continuación.
+Este informe es coordinado por el Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) y acepta (y agradece) la colaboración de la comunidad. Para contribuir, por favor siga la guía a continuación.
 
 ::: info Contribuyendo al código
 
