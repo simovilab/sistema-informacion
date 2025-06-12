@@ -9,6 +9,7 @@
 
 - Asignación: Brandon Alfaro
 - Enfoque: desde la perspectiva del pensamiento sistémico, cómo será el manejo de largo plazo del sistema y qué factores son importantes considerar (emergencia, etc.).
+- Consultar ADM de TOGAF y enfocarse en la sección H. _Architecture Change Management_.
 
 ### Referencias
 

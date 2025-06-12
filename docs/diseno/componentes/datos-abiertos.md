@@ -21,4 +21,6 @@ Los espacios de datos de movilidad (MDS) son un conjunto de especificaciones té
 
 https://docs.internationaldataspaces.org/ids-knowledgebase/idsa-rulebook/idsa-rulebook/3_interoperability
 
+https://ckan.org/
+
 ## Ejemplo del plan piloto de la Universidad de Costa Rica
