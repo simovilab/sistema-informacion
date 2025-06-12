@@ -184,7 +184,7 @@ export default defineConfig({
                 link: "/desarrollo/componentes/api",
               },
               {
-                text: "Centros de administración",
+                text: "Paneles de administración",
                 link: "/desarrollo/componentes/admin",
               },
             ],
@@ -202,6 +202,7 @@ export default defineConfig({
           { text: "Gobernanza", link: "/operacion/gobernanza" },
           { text: "Monetización", link: "/operacion/monetizacion" },
           { text: "Evolución", link: "/operacion/evolucion" },
+          { text: "Unidad técnica de datos", link: "/operacion/unidad" },
         ],
       },
       {
