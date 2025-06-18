@@ -141,6 +141,7 @@ La información debe ser relevante y clara. Aunque no se especifica un estilo de
 **Aplicación en transporte urbano**:
 
 En caso de problemas, el sistema debe facilitar la solución. La entidad "Alerts" de GTFS Realtime es un componente clave para informar sobre interrupciones, ayudando a los usuarios a comprender la situación y ajustar sus planes [3].
+
 ---
 
 ## 10. Ayuda y documentación
