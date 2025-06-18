@@ -2,11 +2,10 @@
 
 ::: info Puntos clave
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
-- Las 10 heurísticas de Nielsen ayudan a identificar oportunidades para mejorar la experiencia de usuario en plataformas digitales de transporte urbano.
-- Aplicadas al caso costarricense, permiten guiar el diseño de interfaces accesibles, seguras y centradas en el ciudadano.
-- Estas heurísticas son especialmente relevantes al desarrollar apps de movilidad, portales de consulta de rutas y sistemas de gestión para operadores y entes reguladores.
+- Las 10 heurísticas de Nielsen permiten mejorar la experiencia de usuario en plataformas digitales de transporte urbano, guiando el diseño de interfaces accesibles, seguras y centradas en las personas usuarias en el contexto costarricense.
+- El enfoque considera distintos perfiles de uso —ciudadanía, desarrolladores y entes reguladores—, con interfaces accesibles, lenguaje natural, visualización clara y APIs bien documentadas, promoviendo una experiencia coherente y soporte en tiempo real.
+- Estas heurísticas son clave en el desarrollo de soluciones como apps de movilidad, portales de consulta y sistemas de gestión, donde es fundamental integrar principios como accesibilidad, prevención de errores y flexibilidad para diferentes niveles de experiencia.
+- El uso de estándares abiertos como GTFS y el principio de “Unicidad de la información” aseguran una fuente confiable y común de datos en tiempo real, accesible tanto desde interfaces tradicionales como desde asistentes con inteligencia artificial multilingüe.
 
 :::
 
