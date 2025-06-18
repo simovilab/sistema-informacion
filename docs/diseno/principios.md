@@ -45,3 +45,124 @@
 - Incremental (_incremental_)
 - Abierto (_open_)
 - Autónomo (_autonomous_)
+
+
+# Principios de diseño
+
+::: info Puntos clave
+
+- Las 10 heurísticas de Nielsen ayudan a identificar oportunidades para mejorar la experiencia de usuario en plataformas digitales de transporte urbano.
+- Aplicadas al caso costarricense, permiten guiar el diseño de interfaces accesibles, seguras y centradas en el ciudadano.
+- Estas heurísticas son especialmente relevantes al desarrollar apps de movilidad, portales de consulta de rutas y sistemas de gestión para operadores y entes reguladores.
+
+:::
+
+## 1. Visibilidad del estado del sistema
+
+> Los usuarios deben estar siempre informados sobre lo que está ocurriendo mediante retroalimentación adecuada y oportuna.
+
+**Aplicación en transporte urbano**:
+
+- Mostrar tiempos estimados de llegada actualizados en tiempo real.
+- Confirmaciones visibles tras realizar una acción, como recarga de saldo o solicitud de ruta.
+
+---
+
+## 2. Concordancia entre el sistema y el mundo real
+
+> El sistema debe hablar el lenguaje del usuario, con palabras, frases y conceptos familiares.
+
+**Aplicación en transporte urbano**:
+
+- Usar nombres populares de paradas y rutas, no solo códigos técnicos.
+- Incluir mapas con puntos de referencia conocidos (universidades, hospitales, etc.).
+
+---
+
+## 3. Control y libertad del usuario
+
+> Los usuarios necesitan "salidas de emergencia" para abandonar acciones por error.
+
+**Aplicación en transporte urbano**:
+
+- Posibilidad de cancelar acciones como la planificación de una ruta o una compra de tiquete.
+- Botón de “volver” claro y funcional en cada sección de la app.
+
+---
+
+## 4. Consistencia y estándares
+
+> Los usuarios no deberían tener que preguntarse si diferentes palabras, situaciones o acciones significan lo mismo.
+
+**Aplicación en transporte urbano**:
+
+- Uso uniforme de iconografía y colores (ej. icono de bus, metro, tren).
+- Interfaz coherente entre distintas plataformas (web, móvil).
+
+---
+
+## 5. Prevención de errores
+
+> Mejor que buenos mensajes de error es un diseño que evite que ocurran.
+
+**Aplicación en transporte urbano**:
+
+- No permitir seleccionar horarios pasados o rutas inexistentes.
+- Validación de datos al recargar saldo o crear una cuenta.
+
+---
+
+## 6. Reconocer antes que recordar
+
+> Minimizar la carga de memoria del usuario mostrando elementos relevantes.
+
+**Aplicación en transporte urbano**:
+
+- Mostrar rutas usadas recientemente o paradas favoritas.
+- Menú de navegación visible y accesible todo el tiempo.
+
+---
+
+## 7. Flexibilidad y eficiencia de uso
+
+> El sistema debe atender tanto a usuarios novatos como a expertos.
+
+**Aplicación en transporte urbano**:
+
+- Atajos para usuarios frecuentes (ej. “ir a casa” o “mi trabajo”).
+- Opciones de búsqueda avanzada para planificadores o reguladores.
+
+---
+
+## 8. Diseño estético y minimalista
+
+> Las interfaces no deben contener información irrelevante o raramente necesaria.
+
+**Aplicación en transporte urbano**:
+
+- Mostrar solo rutas disponibles en el momento o desde la ubicación actual.
+- Interfaz limpia que priorice la información clave: hora, lugar, tipo de transporte.
+
+---
+
+## 9. Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores
+
+> Los mensajes de error deben estar redactados en lenguaje claro, sin códigos técnicos.
+
+**Aplicación en transporte urbano**:
+
+- Mensajes como “No se encontraron rutas activas desde esta ubicación” en lugar de “Error 404”.
+- Instrucciones sugeridas para corregir el error (ej. “Intenta seleccionar otra hora”).
+
+---
+
+## 10. Ayuda y documentación
+
+> Aunque idealmente no deberían necesitarla, los usuarios pueden requerir ayuda.
+
+**Aplicación en transporte urbano**:
+
+- Tutoriales breves al primer uso de la app.
+- Sección de preguntas frecuentes accesible desde el menú principal.
+- Chat o contacto para asistencia en línea.
+
