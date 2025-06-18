@@ -95,6 +95,6 @@ La correcta formulación de requisitos en sistemas sociotécnicos complejos como
 ## Referencias
 
 <Citation doi="10.1007/978-3-030-81159-4" />  
-<Citation doi="10.1007/978-3-662-69207-3" />  
+<Citation doi="10.1007/978-3-642-12578-2" />  
 <Citation doi="10.1007/978-3-031-62194-9" />
 <Citation doi="10.1007/978-3-031-57327-9" />
