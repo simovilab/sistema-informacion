@@ -51,7 +51,7 @@
 - Autónomo (_autonomous_)
 
 
-# Principios de diseño
+## Heurísticas de Nielsen aplicadas a la modernización del sistema de transporte público en Costa Rica.
 
 
 ## 1. Visibilidad del estado del sistema
@@ -161,4 +161,3 @@ La disponibilidad de documentación clara es esencial. Las APIs Databús e Infob
 - [5] Abarca Calderón, F., & Araya Salazar, M. A. (s.f.). Estudio de la información del servicio de transporte público en Costa Rica: Study of Public Transportation Service Information in Costa Rica. Universidad de Costa Rica.
 - [6] Abarca Calderón, F., Segura Cruz, J. D., & Vargas Céspedes, E. J. (s.f.). Concentrador de datos en tiempo real para servicios de información en el transporte público: Real-time Data Hub for Information Services in Public Transportation. Universidad de Costa Rica.
 - [7] Maier, A., Oehmen, J., & Vermaas, P. E. (Eds.). (2022). *Handbook of Engineering Systems Design*. Springer Nature. https://doi.org/10.1007/978-3-030-81159-4
--  
