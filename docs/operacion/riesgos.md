@@ -1,79 +1,82 @@
 # Riesgos y mitigación
 
-::: info Puntos clave
+Un sistema de transporte público inteligente es una red compleja sujeta a múltiples variables que generan riesgos, incertidumbres e incluso ignorancia en aspectos críticos como la gobernanza, la calidad de los datos y la sostenibilidad tecnológica. Estos desafíos desde la fragmentación institucional y las TIC hasta la dependencia de modelos de IA con limitaciones, pueden comprometer su eficiencia y confiabilidad. Por ello, es esencial desarrollar una estrategia integral de mitigación que aborde no solo las amenazas técnicas (como fallos en GPS o vendor lock-in), sino también las organizativas (falta de coordinación entre actores) y sociales (seguridad de usuarios o riesgos sanitarios). La combinación de gobernanza centralizada, estándares de datos abiertos, pilotos escalables y tecnologías interoperables se presenta como un enfoque clave para reducir incertidumbre y garantizar un servicio resiliente, inclusivo y adaptable a contextos dinámicos como el de Costa Rica.
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+## Puntos clave
+### Riesgos Principales
+#### Gobernanza
+Descoordinación institucional y TIC desactualizados. 
+#### Datos
+Fragmentación, baja calidad y falta de estandarización (GTFS).
+####Tecnología
+Costos altos, dependencia de proveedores y limitaciones de IA.
+#### Operacionales
+Fallos técnicos, inseguridad y riesgos sanitarios.
 
-:::
-
-- Asignación: Johnnixia Valdés
-- Enfoque: desde la perspectiva del análisis de riesgos, incertidumbre e ignorancia, cómo se pueden identificar y mitigar los riesgos asociados con el sistema de información de transporte público inteligente.
+### Mitigación efectiva
+#### Gobernanza
+Comité técnico multisectorial y marco legal claro.
+####Datos
+Obligar estándares abiertos (GTFS) y APIs públicas.
+####Tecnología
+Pilotos escalables, interoperabilidad y evitar vendor lock-in.
+#### Seguridad
+Minería de datos para riesgos y políticas sanitarias.
 
 ## Análisis de riesgos e incertidumbre
 
-**Riesgos Identificados**
-1.	Gobernanza y Organización
-1.1.	Falta de coordinación: No hay una estrategia unificada ni una entidad técnica responsable del diseño de sistemas de información para el     transporte público en Costa Rica.
-1.2.	 Departamentos de TIC obsoletos: Solo gestionan tareas administrativas, sin capacidad para implementar sistemas complejos.
-1.3.	Políticas públicas desactualizadas: Documentos clave (como el SITGAM 2020-2035) ignoran el rol de las TIC en el transporte. [2], [3]
-2.	Datos e Información
-2.1.	Fragmentación: Cada empresa gestiona sus datos, resultando en inconsistencia (menos del 15% de rutas tienen datos completos).
-2.2.	Acceso limitado: Iniciativas como GIS o seguimiento de autobuses no llegan a los usuarios por falta de integración.
-2.3.	Complejidad técnica: Estándares como GTFS son difíciles de interpretar sin interfaces amigables. [1], [2], [5]
-3.	Financieros y Tecnológicos
-3.1.	Costos elevados: La implementación de tecnologías puede ser insostenible para concesionarias con modelos económicos frágiles.
-3.2.	Dependencia de proveedores: Riesgo de vendor lock-in y obsolescencia rápida.
-3.3.	Limitaciones de IA: Modelos como LLMs no pueden proveer datos en tiempo real.  [3], [4], [6]
-**Estrategias de Mitigación**
-1.	Gobernanza Centralizada
-1.1.	Crear un Comité Técnico multisectorial para guiar el desarrollo tecnológico.
-1.2.	Adoptar Arquitecturas Empresariales para alinear TIC con necesidades del negocio.
-1.3.	Legislar la gobernanza digital en transporte, definiendo responsabilidades claras. [3]
-2.	Gestión de Datos
-2.1.	Unificación: Exigir a todas las concesionarias compartir datos bajo estándares como GTFS.
-2.2.	Datos abiertos: Publicar información en formatos accesibles para usuarios y desarrolladores.
-2.3.	Vocabulario común: Usar definiciones consistentes [1], [2], [5]
+### Riesgos identificados
+#### Gobernanza y Organización
+1. Falta de coordinación: Ausencia de estrategia unificada y entidad técnica responsable del diseño de sistemas de información en Costa Rica.
+2. Departamentos de TIC: Limitados a tareas administrativas, sin capacidad para implementar sistemas complejos.
+3. Políticas públicas desactualizadas: Documentos clave (ej. SITGAM 2020-2035) no incorporan el rol de las TIC en transporte. [2], [3]
 
-3.	Implementación Práctica
-3.1.	Plan piloto: Comenzar con rutas específicas para validar el modelo con bajo costo.
-3.2.	APIs abiertas: Diseñar interfaces (Infobús/Databús) para integrar datos heterogéneos.
-3.3.	Telemetría económica: Usar apps móviles como alternativa a sistemas de rastreo costosos. [1], [4], [3]
+#### Datos e información
+1. Fragmentación: Datos dispersos entre empresas, con inconsistencias (menos del 15% de rutas tienen información completa).
+2. Acceso limitado: Iniciativas como GIS o seguimiento de autobuses no llegan a usuarios por falta de integración. 
+3. Complejidad técnica: Estándares como GTFS son difíciles de implementar sin interfaces amigables. [1], [2], [5]
 
-4.	Innovación Tecnológica
-4.1.	Interoperabilidad: Priorizar estándares abiertos para evitar dependencia.
-4.2.	IA accesible: Combinar LLMs con APIs en tiempo real para responder consultas en lenguaje natural. [6], [3]
+#### Riesgos financieros y tecnológicos
+1. Costos elevados: Tecnologías pueden ser insostenibles para concesionarias con modelos económicos frágiles.
+2. Dependencia de proveedores: Riesgo de vendor lock-in y obsolescencia acelerada.
+3. Limitaciones de IA: Modelos como LLMs no proveen datos en tiempo real. [3], [4], [6]
 
-REFERENCIAS EXTERNAS 
-**Identificación riesgos**
-En un Sistema de Información para Transporte Público Inteligente (SITPI), los riesgos pueden clasificarse en tres categorías principales: operacionales y de seguridad, relacionados con datos e inferencias, y de salud pública (especialmente en pandemias).
-1.	Riesgos operacionales y de seguridad
-Incluyen fallos técnicos en las unidades, accidentes de tránsito, inseguridad dentro del        vehículo (delincuencia, exceso de pasajeros, desperfectos), retrasos causados por malas condiciones viales, y conflictos entre el           personal y los usuarios. Estos factores generan incertidumbre y reducen la calidad del servicio.
-2.	Riesgos relacionados con los datos
-Abarcan errores en la calidad de la señal GPS, incertidumbre sobre el comportamiento de los       pasajeros (como paradas o destinos no conocidos), y la ignorancia derivada de datos faltantes en los registros. Esto complica la            inferencia de modos de transporte y análisis de comportamiento.
-3.	Riesgos de contagio
-En contextos sanitarios se refieren a la transmisión de enfermedades infecciosas en espacios cerrados con alta   densidad de personas. La ignorancia sobre quién está infectado impide conocer con certeza la cantidad de contactos cercanos. [7], [8], [9], [10]
+#### Riesgos operacionales y de seguridad
+1. Fallos técnicos: Averías en unidades, accidentes de tránsito y retrasos por mal estado de vías.
+2. Inseguridad: Delincuencia, sobrecupo y conflictos entre usuarios y personal.
+3. Problemas de datos: Errores en GPS, comportamiento impredecible de pasajeros y datos faltantes. [7], [8], [9], [10]
 
-**Mitigación de riesgos**:
-1.	Planificación y mantenimiento: Incluye revisiones mecánicas frecuentes, capacitación del personal, y cumplimiento de normativas de     transporte.
-2.	Tecnologías inteligentes: El uso de datos GPS y GIS mejora la inferencia de modos de transporte y el análisis del flujo vehicular.     Algoritmos de aprendizaje automático permiten clasificar trayectorias y estimar datos faltantes.
-3.	Minería de datos para salud pública: Se aplican modelos de simulación para reducir interacciones cercanas (por ejemplo, políticas de   asignación de asientos) y se emplea clustering (como k-means) para identificar patrones de riesgo por ruta.
-4.	Otras estrategias: Mejor infraestructura vial, limpieza de unidades, sistemas de comunicación con el usuario, y mejoras en la          comodidad y seguridad general del servicio.  [7], [8], [9], [10]
-En conjunto, la gestión de riesgos en un SITPI requiere una estrategia integral que combine mantenimiento, formación humana y herramientas tecnológicas avanzadas para anticipar fallos, reducir incertidumbre, y mejorar la experiencia y seguridad del usuario.
+#### Riesgos sanitarios
+1. Contagio en espacios cerrados: Alta densidad de pasajeros facilita transmisión de enfermedades. 
+2. Ignorancia sobre infectados: Dificultad para rastrear contactos cercanos. [7], [8], [9], [10]
 
-ABREVIATURAS
-TIC (Tecnologías de Información y Comunicación)
-IPTS (Sistemas de Transporte Público Inteligente)
-GIS (Sistema de Información Geográfica)
-CTP (Consejo de Transporte Público)
-GTFS (General Transit Feed Specification)
-ARC-IT (Architecture Reference for Cooperative and Intelligent Transportation)
-SDM (Smart Data Models)
-LLMs (Large Language Models o Modelos Extensos de Lenguaje)
+### Estrategias de mitigación
+#### Gobernanza y estructura
+1. Comité técnico multisectorial: Coordinar desarrollo tecnológico entre actores clave. [3]
+2. Arquitecturas empresariales: Alinear TIC con objetivos operativos y de negocio. [3]
+3. Marco legal claro: Legislar la gobernanza digital con responsabilidades definidas. [3]
+
+#### Gestión de datos
+1. Unificación bajo estándares: Exigir GTFS u otros formatos abiertos a concesionarias. [1], [2], [5]
+2. Datos abiertos: Publicar información en formatos accesibles para usuarios y desarrolladores. [1], [2], [5]
+3. Vocabulario común: Establecer definiciones consistentes para evitar ambigüedades. [1], [2], [5]
+
+#### Implementación práctica
+1. Pilotos escalables: Validar modelos en rutas específicas con bajo costo. [1], [3], [4]
+2. APIs abiertas (Infobús/Databús): Integrar datos heterogéneos mediante interfaces estandarizadas. [1], [3], [4]
+3. Telemetría económica: Usar apps móviles como alternativa a sistemas de rastreo costosos. [1], [3], [4]
+
+#### Innovación tecnológica
+1. Interoperabilidad: Priorizar estándares abiertos para evitar dependencia de proveedores. [3], [6]
+2. IA + APIs en tiempo real: Combinar LLMs con datos actualizados para respuestas en lenguaje natural. [3], [6]
+
+#### Seguridad y salud pública
+1. Mantenimiento preventivo: Revisiones mecánicas frecuentes y capacitación del personal.
+2. Tecnologías inteligentes: GPS/GIS para análisis de flujo vehicular y algoritmos de ML para estimar datos faltantes.Al gual que la minería de Datos Sanitarios como modelos de simulación (ej. asignación de asientos) y clustering (k-means) para identificar rutas de alto riesgo. [7], [8], [9], [10]
 
 
 
-### Referencias
+## Referencias
 
 <Citation doi="10.1007/978-3-030-81159-4" />
 
