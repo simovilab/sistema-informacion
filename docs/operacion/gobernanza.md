@@ -37,5 +37,10 @@ Frente a esta situación, la creación de un **Comité Directivo Técnico** se p
 
 [6] Maier, A., Oehmen, J., & Vermaas, P. E. (2022). Handbook of Engineering Systems Design. Cap.8 Technical and Social Complexity. En Springer eBooks. https://doi.org/10.1007/978-3-030-81159-4
 
-
+<Citation key="abarca2024jornadas" />
+<Citation key="abarca2024ieeexplore" />
 <Citation doi="10.15517/iv.v25i44.54872" />
+<Citation key="devries2021idi" />
+<Citation key="longo2010clad" />
+<Citation doi="10.1007/978-3-030-81159-4" />
+
