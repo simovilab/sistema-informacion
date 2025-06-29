@@ -10,5 +10,12 @@
   "SaaS": "Software as a Service, un modelo de distribución de software en el que las aplicaciones se alojan en la nube y se accede a ellas a través de Internet.",
   "Open Data": "Datos abiertos, información que se puede acceder, utilizar y compartir libremente.",
   "Interoperabilidad": "Capacidad de diferentes sistemas para trabajar juntos y compartir información de manera efectiva.",
-  "API REST": "Representational State Transfer, un estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP."
+  "API REST": "Representational State Transfer, un estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP.",
+  "Mantenibilidad": "Capacidad de brindar un mantenimiento al sistema y realizar actualizaciones funcionales o visuales" ,
+  "Seguridad": "Protección de información y datos sensibles de usuarios, trabajadores o de la empresa" ,
+  "Flexibilidad": "El sistema debe ser capaz de adaptarse a cambios futuros de cualquier tipo",
+  "Sostenibilidad": " El sistema de ser capaz de ser rentable durante su ciclo de vida",
+  "Tiempo de respuesta": "Rapidez con la que responde el sistema, debe ser lo más rápida posible"
+
+  
 }
