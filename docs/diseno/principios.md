@@ -1,7 +1,8 @@
 # Principios de diseño
 
 ::: info Puntos clave
-
+- Desde su formulación en los años 90, las heurísticas de Nielsen han sido un referente en el diseño de interfaces centradas en el usuario, y mantienen su vigencia en procesos como la digitalización del transporte urbano, donde la usabilidad y la accesibilidad representan factores clave para mejorar la experiencia de uso.
+- Las 10 heurísticas de Nielsen fueron seleccionadas por su eficacia en procesos de evaluación rápida de interfaces, permitiendo detectar problemas de usabilidad de forma accesible y con bajo requerimiento de recursos técnicos, lo que resulta adecuado para entornos en desarrollo.
 - Las 10 heurísticas de Nielsen permiten mejorar la experiencia de usuario en plataformas digitales de transporte urbano, guiando el diseño de interfaces accesibles, seguras y centradas en las personas usuarias en el contexto costarricense.
 - El enfoque considera distintos perfiles de uso —ciudadanía, desarrolladores y entes reguladores—, con interfaces accesibles, lenguaje natural, visualización clara y APIs bien documentadas, promoviendo una experiencia coherente y soporte en tiempo real.
 - Estas heurísticas son clave en el desarrollo de soluciones como apps de movilidad, portales de consulta y sistemas de gestión, donde es fundamental integrar principios como accesibilidad, prevención de errores y flexibilidad para diferentes niveles de experiencia.
@@ -51,16 +52,22 @@
 - Autónomo (_autonomous_)
 
 
-## Heurísticas de Nielsen aplicadas a la modernización del sistema de transporte público en Costa Rica.
+## Heurísticas de Nielsen aplicadas a la modernización del sistema de transporte público en Costa Rica
+
+
+
+---
+---
+---
 
 
 ## 1. Visibilidad del estado del sistema
 
-> Los usuarios deben estar siempre informados sobre lo que está ocurriendo mediante retroalimentación adecuada y oportuna.
+> Los usuarios deben estar siempre informados sobre lo que está ocurriendo mediante **retroalimentación adecuada y oportuna**.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-Las aplicaciones y sitios web deben informar a los usuarios sobre lo que está ocurriendo. El sistema propuesto busca esto mediante la entrega de datos GTFS Realtime, que incluyen la posición geoespacial del vehículo, estimaciones actualizadas de tiempos de llegada y alertas de interrupciones  [1]. Esta información en tiempo real, distribuida por la API Infobús, es fundamental para páginas web, aplicaciones móviles y pantallas en paradas [1].
+Las aplicaciones y sitios web deben informar a los usuarios sobre lo que está ocurriendo. El sistema propuesto busca esto mediante la entrega de datos **GTFS Realtime**, que incluyen la **posición geoespacial del vehículo**, **estimaciones actualizadas de tiempos de llegada** y alertas de interrupciones \[1]. Esta información en tiempo real, distribuida por la **API Infobús**, es fundamental para páginas web, aplicaciones móviles y **pantallas en paradas** \[1].
 
 ---
 
@@ -68,9 +75,9 @@ Las aplicaciones y sitios web deben informar a los usuarios sobre lo que está o
 
 > El sistema debe hablar el lenguaje del usuario, con palabras, frases y conceptos familiares.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-El lenguaje y los conceptos deben ser familiares para el usuario. GTFS es el estándar de facto para describir el servicio de transporte público para los usuarios, facilitando una comprensión intuitiva en aplicaciones de planificación de viajes como Google Maps o Moovit [1]. La propuesta de una interfaz de chat con inteligencia artificial generativa, que utiliza el Protocolo de Contexto de Modelos (MCP), permite a los usuarios interactuar usando lenguaje natural y consultas desestructuradas en casi cualquier idioma, lo que se alinea con la forma en que las personas se comunican naturalmente [2].
+El lenguaje y los conceptos deben ser familiares para el usuario. **GTFS** es el estándar de facto para describir el servicio de transporte público para los usuarios, facilitando una comprensión intuitiva en aplicaciones de planificación de viajes como Google Maps o Moovit \[1]. La propuesta de una interfaz de chat con inteligencia artificial generativa, que utiliza el **Protocolo de Contexto de Modelos (MCP)**, permite a los usuarios interactuar usando lenguaje natural y consultas desestructuradas en casi cualquier idioma, lo que se alinea con la forma en que las personas se comunican naturalmente \[2].
 
 ---
 
@@ -78,9 +85,9 @@ El lenguaje y los conceptos deben ser familiares para el usuario. GTFS es el est
 
 > Los usuarios necesitan "salidas de emergencia" para abandonar acciones por error.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-Los usuarios deben poder deshacer acciones o salir fácilmente. Si bien no se detalla explícitamente en términos de "deshacer", el sistema se diseña para que los usuarios puedan planificar viajes multimodales [1] y elegir entre diversas aplicaciones (propias o de terceros como Google Maps y Moovit) para acceder a la información, promoviendo la libertad de elección[1].
+Los usuarios deben poder deshacer acciones o salir fácilmente. Si bien no se detalla explícitamente en términos de "deshacer", el sistema se diseña para que los usuarios puedan planificar viajes multimodales \[1] y elegir entre diversas aplicaciones (propias o de terceros como Google Maps y Moovit) para acceder a la información, promoviendo la libertad de elección\[1].
 
 ---
 
@@ -88,9 +95,9 @@ Los usuarios deben poder deshacer acciones o salir fácilmente. Si bien no se de
 
 > Los usuarios no deberían tener que preguntarse si diferentes palabras, situaciones o acciones significan lo mismo.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-La adhesión a estándares es clave para la interoperabilidad. La propuesta enfatiza el uso de GTFS (Schedule y Realtime) como referencia principal, así como ARC-IT, Smart Data Models, CAP y MDS. Se establece el principio de "Unicidad de la Información" para asegurar datos consistentes y de una única fuente, y el de "Vocabulario y Definiciones de Datos Comunes" para la coherencia en todo el sistema [1].
+La adhesión a estándares es clave para la interoperabilidad. La propuesta enfatiza el uso de **GTFS (Schedule y Realtime)** como referencia principal, así como **ARC-IT**, **Smart Data Models**, **CAP** y **MDS**. Se establece el principio de "**Unicidad de la Información**" para asegurar datos consistentes y de una única fuente, y el de "**Vocabulario y Definiciones de Datos Comunes**" para la coherencia en todo el sistema \[1].
 
 ---
 
@@ -98,9 +105,9 @@ La adhesión a estándares es clave para la interoperabilidad. La propuesta enfa
 
 > Mejor que buenos mensajes de error es un diseño que evite que ocurran.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-Es mejor evitar que los errores ocurran. Al proporcionar información consistente y precisa [1], y mediante la capacidad de la entidad "Alerts" de GTFS Realtime para informar sobre afectaciones al servicio [3] [4] , se ayuda a los usuarios a evitar problemas en sus viajes. El editor GTFS también incluye validación de datos [1].
+Es mejor evitar que los errores ocurran. Al proporcionar información consistente y precisa \[1], y mediante la capacidad de la entidad "**Alerts**" de **GTFS Realtime** para informar sobre afectaciones al servicio \[3] \[4], se ayuda a los usuarios a evitar problemas en sus viajes. El editor **GTFS** también incluye validación de datos \[1].
 
 ---
 
@@ -108,9 +115,9 @@ Es mejor evitar que los errores ocurran. Al proporcionar información consistent
 
 > Minimizar la carga de memoria del usuario mostrando elementos relevantes.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-Minimizar la carga de memoria del usuario. La información del servicio (horarios, rutas, paradas, tarifas) se propone esté disponible de forma visible y accesible a través de páginas web, aplicaciones móviles y pantallas informativas, en lugar de requerir que el usuario la recuerde[5]. Un sistema de identidad visual y señalética también contribuye a esto.
+Minimizar la carga de memoria del usuario. La información del servicio (**horarios**, **rutas**, **paradas**, **tarifas**) se propone esté disponible de forma visible y accesible a través de páginas web, aplicaciones móviles y **pantallas informativas**, en lugar de requerir que el usuario la recuerde\[5]. Un sistema de **identidad visual** y **señalética** también contribuye a esto.
 
 ---
 
@@ -118,9 +125,9 @@ Minimizar la carga de memoria del usuario. La información del servicio (horario
 
 > El sistema debe atender tanto a usuarios novatos como a expertos.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-El sistema debe ser útil para usuarios principiantes y avanzados. Las APIs Databús e Infobús permiten a desarrolladores y científicos de datos acceder y utilizar la información de diversas maneras, desde análisis hasta la creación de nuevas aplicaciones [4]. La interfaz de chat con IA ofrece una forma rápida y desestructurada de obtener información, adaptándose a diferentes necesidades.
+El sistema debe ser útil para usuarios principiantes y avanzados. Las APIs **Databús** e **Infobús** permiten a desarrolladores y científicos de datos acceder y utilizar la información de diversas maneras, desde análisis hasta la creación de nuevas aplicaciones \[4]. La interfaz de chat con IA ofrece una forma rápida y desestructurada de obtener información, adaptándose a diferentes necesidades.
 
 ---
 
@@ -128,9 +135,9 @@ El sistema debe ser útil para usuarios principiantes y avanzados. Las APIs Data
 
 > Las interfaces no deben contener información irrelevante o raramente necesaria.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-La información debe ser relevante y clara. Aunque no se especifica un estilo de diseño, los principios de "Maximizar Beneficios para los Usuarios" [1] y "Facilidad de Uso y Accesibilidad" implican un diseño claro y sin sobrecarga de información en las plataformas digitales.
+La información debe ser relevante y clara. Aunque no se especifica un estilo de diseño, los principios de "**Maximizar Beneficios para los Usuarios**" \[1] y "**Facilidad de Uso y Accesibilidad**" implican un diseño claro y sin sobrecarga de información en las plataformas digitales.
 
 ---
 
@@ -138,9 +145,9 @@ La información debe ser relevante y clara. Aunque no se especifica un estilo de
 
 > Los mensajes de error deben estar redactados en lenguaje claro, sin códigos técnicos.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-En caso de problemas, el sistema debe facilitar la solución. La entidad "Alerts" de GTFS Realtime es un componente clave para informar sobre interrupciones, ayudando a los usuarios a comprender la situación y ajustar sus planes [3].
+En caso de problemas, el sistema debe facilitar la solución. La entidad "**Alerts**" de **GTFS Realtime** es un componente clave para informar sobre interrupciones, ayudando a los usuarios a comprender la situación y ajustar sus planes \[3].
 
 ---
 
@@ -148,9 +155,44 @@ En caso de problemas, el sistema debe facilitar la solución. La entidad "Alerts
 
 > Aunque idealmente no deberían necesitarla, los usuarios pueden requerir ayuda.
 
-**Aplicación en transporte urbano**:
+### Aplicación en transporte urbano
 
-La disponibilidad de documentación clara es esencial. Las APIs Databús e Infobús cuentan con documentación completa [6], y los proyectos están disponibles como código abierto en GitHub, lo que facilita su comprensión y uso por parte de desarrolladores y otros interesados.
+La disponibilidad de documentación clara es esencial. Las APIs **Databús** e **Infobús** cuentan con documentación completa \[6], y los proyectos están disponibles como código abierto en GitHub, lo que facilita su comprensión y uso por parte de desarrolladores y otros interesados.
+
+---
+
+### Términos para el glosario
+
+* **GTFS Realtime**
+* **posición geoespacial del vehículo**
+* **estimaciones actualizadas de tiempos de llegada**
+* **API Infobús**
+* **pantallas en paradas**
+* **GTFS**
+* **Protocolo de Contexto de Modelos (MCP)**
+* **GTFS (Schedule y Realtime)**
+* **ARC-IT**
+* **Smart Data Models**
+* **CAP**
+* **MDS**
+* **Unicidad de la Información**
+* **Vocabulario y Definiciones de Datos Comunes**
+* **Alerts**
+* **horarios**
+* **rutas**
+* **paradas**
+* **tarifas**
+* **pantallas informativas**
+* **identidad visual**
+* **señalética**
+* **Databús**
+* **Infobús**
+* **Maximizar Beneficios para los Usuarios**
+* **Facilidad de Uso y Accesibilidad**
+
+---
+
+
 
 
 ## Referencias
