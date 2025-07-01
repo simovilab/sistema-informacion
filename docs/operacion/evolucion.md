@@ -1,99 +1,112 @@
-# Evolución
+# Evolución 
 
 ::: info Puntos clave
+- Los sistemas como el transporte público evolucionan de manera impredecible debido a interacciones dinámicas entre componentes técnicos, sociales y ambientales.
 
-- La evolución de sistemas socio-técnicos como el transporte público es inherentemente no lineal e impredecible, emergiendo de interacciones dinámicas entre componentes técnicos, sociales y ambientales que generan comportamientos imposibles de deducir de sus partes aisladas. Esta complejidad exige una gestión continua que reconozca la ausencia de soluciones definitivas, integrando enfoques sistémicos (como las cuatro olas del pensamiento sistémico) para navegar interdependencias no lineales y retroalimentación, junto con marcos estructurados como TOGAF ADM. Específicamente, su fase de Architecture Change Management proporciona herramientas para monitorear desencadenantes de cambio, gobernar transiciones arquitectónicas y validar principios clave como interoperabilidad y neutralidad tecnológica.
+- Las cuatro olas del pensamiento sistémico proporcionan herramientas para gestionar complejidad, retroalimentación y emergencia, donde el todo es más que la suma de sus partes.
 
-- Los sistemas complejos como el transporte público evolucionan de manera impredecible a través de interacciones dinámicas entre componentes técnicos, sociales y ambientales. Pequeños cambios pueden generar efectos desproporcionados. Gestionar esta incertidumbre requiere monitoreo continuo y adaptación constante.
+- La fase Gestión del Cambio de Arquitectura de TOGAF ofrece mecanismos para monitorear desencadenantes de cambio, gobernar transiciones arquitectónicas y validar principios como interoperabilidad y neutralidad tecnológica.
 
-- Las cuatro olas del pensamiento sistémico desde optimización técnica hasta alineación de modelos mentales permiten navegar la complejidad. Soluciones como estándares abiertos (GTFS) y arquitecturas flexibles habilitan co-evolución con cambios imprevistos.
+- Arquitecturas flexibles y estándares abiertos permiten coevolución con cambios imprevistos, mientras bucles de aprendizaje convierten datos en acciones iterativas.
 
-- El éxito depende de coordinar actores (CTP, MOPT, municipios) mediante gobernanza policéntrica y alinear modelos mentales con campañas de comunicación y diseño participativo.
+- El éxito depende de alinear modelos mentales de actores (usuarios, operadores, reguladores) mediante comunicación estratégica y coordinación multinivel (CTP, municipios, MOPT).
 
-- Bucles de aprendizaje convierten datos en acción. Indicadores sistémicos detectan crisis tempranas, activando respuestas ágiles.
+- Coordinar actores (CTP, MOPT, municipios) mediante gobernanza policéntrica y alinear modelos mentales con campañas de comunicación y diseño participativo.
 
-- La sostenibilidad exige arquitecturas que "recalibren brújulas" en cada interacción. El destino no es un sistema terminado, sino un proceso de aprendizaje colectivo donde cada viaje redefine el camino.
+- Protocolos como CAP (Protocolo de alerta común) y redundancia funcional, mitigan riesgos de eventos disruptivos, desde huelgas hasta desastres naturales.
+
+- La sostenibilidad no reside en un sistema "terminado", sino en la capacidad de recalibrar estrategias en cada interacción donde se redefine el sistema y se vuelve más eficiente.
 
 :::
 
-La evolución de sistemas complejos no es previsible, ni lineal, ni predecible, se pueden inducir ciertos patrones pero no el comportamiento general del sistema. Es un fenomeno emergente que resulta de cada interaccion entre los componentes del sistema, que a su vez no son intecciones estáticas, sino que cambian, son interacciones dinámicas. Entre los elementos o componenetes del sistema estan los tecnicos, sociales y ambientales.
+## Introducción
 
-En este caso, un sistema de naturaleza socio-tecnica como lo es el transporte público, el constante cambio es intríseco por lo cual debe gestionarse con periodicidad. Los sistemas complejos no tiene una solución rápida, ni única, ni definitiva, y menos cuando se esta hablando de un sistema socio-tecnico.
+La evolución de sistemas complejos no es previsible, ni lineal, ni predecible, se pueden inducir ciertos patrones, pero no el comportamiento general del sistema. Es un fenómeno emergente que resulta de cada interacción entre los componentes del sistema, que a su vez no son interacciones estáticas, sino que cambian, son interacciones dinámicas. Entre los elementos o componentes del sistema están los técnicos, sociales y ambientales.
+
+En este caso, un sistema de naturaleza socio-técnica como lo es el transporte público, el constante cambio es intrínseco por lo cual debe gestionarse con periodicidad. Los sistemas complejos no tienen una solución rápida, ni única, ni definitiva, y menos cuando se está hablando de un sistema socio-técnico.
 
 Cambios regulares es necesario para una correcta evolución del sistema de trasporte público. Entre estas variaciones se encuentran las mejoras tecnológicas, necesidades de los usuarios, regulaciones del transporte, condiciones ambientales, entre otros.
 
-Desde el punto de vista del pensamiento sistémico, gestionar la inevitable evolución requiere comprender patrones de cambio, retroalimentación y emergencia, donde todo es más que la suma de sus partes[1]. Para esto se deben tener en cuenta los principios del diseño basado en sistemas (System-Led Design)[1] y el marco teorico método de desarrollo de la arquitectura (ADM - Architecture Development Method) de TOGAF [2].
+Desde el punto de vista del pensamiento sistémico, gestionar la inevitable evolución requiere comprender patrones de cambio, retroalimentación y emergencia, donde todo es más que la suma de sus partes [1]. Para esto se deben tener en cuenta los principios del diseño basado en sistemas (System-Led Design) [1] y el marco teórico método de desarrollo de la arquitectura (ADM - Architecture Development Method) de TOGAF [2].
 
-## Fundamentos del pensamiento sistemico para la gestion evolutiva.
+## La naturaleza no lineal de los sistemas sociotécnicos
+Los sistemas de transporte público exhiben comportamientos emergentes que surgen de interacciones dinámicas entre componentes técnicos (tecnologías, infraestructura), sociales (usuarios, operadores) y ambientales (clima, urbanización). Estas interacciones generan patrones no lineales donde pequeños cambios pueden producir efectos desproporcionados (Cilliers, 2000) [7]. La gestión efectiva requiere abandonar modelos predictivos rígidos y adoptar enfoques flexibles que reconozcan esta complejidad inherente.
 
-### Cuatro olas de pensamiento sistemico
+## Las cuatro olas del pensamiento sistémico
+El marco evolutivo del pensamiento sistémico ofrece herramientas progresivas para abordar la complejidad:
 
-El pensamiento sistémico ha evolucionado a través de distintas “olas” o enfoques, cada una ampliando la manera en que comprendemos y gestionamos la complejidad. Estas olas representan cambios paradigmáticos en la forma de abordar los sistemas:
+- Sistemas duros (optimización técnica): Aplicación de modelos matemáticos para rutas y horarios
 
-- 1°. Sistemas duros: Se enfoca en control y optimización. 
+- Sistemas blandos (perspectivas humanas): Incorporación de necesidades diversas de usuarios
 
-- 2°. Sistemas Blandos: Incorpora perspectivas humanas y subjetividad.
+- Pensamiento crítico (poder y ética): Consideración de equidad en acceso al transporte
 
-- 3°. Pensamiento critico: Considera el poder, la ética y el pluralismos metodológicos.
+- Enfoque cognitivo (modelos mentales): Alineación de percepciones entre actores (Sevaldson, 2017) [6]
 
-- 4°. Enfoque cognitivo: Aborda cómo los modelos mentales de actores que moldean el sistema.
+## Arquitectura de cambio en TOGAF ADM (Fase H)
 
-### Complejidad y emergencia
+La fase de Gestión del Cambio Arquitectónico proporciona un marco estructurado para:
 
-Los sistemas complejos presentan comportamientos que surgen de la interacción entre múltiples componentes. Fundamentales asociados a esta dinámica:
+- Monitoreo continuo de disparadores tecnológicos y regulatorios
 
-- 1°. Interdependencias no lineales: Las relaciones entre los elementos del sistema no siguen proporciones directas. Un pequeño cambio en un componente puede tener grandes consecuencias en otros, o puede no generar ningún efecto visible. Esta no linealidad dificulta predecir el comportamiento del sistema.
+- Gobernanza de transición entre estados arquitecturales
 
-- 2°. Retroalimentación: Los sistemas complejos están atravesados por bucles de retroalimentación.
-    - Reforzadora: amplifica los efectos de una acción, generando crecimiento o cambio acelerado.
-    - Equilibradora: busca estabilizar el sistema frente a alteraciones, manteniendo cierto equilibrio funcional.
+- Validación de principios como interoperabilidad (The Open Group) [2]
 
-- 3°. Adaptación continua: Los sistemas complejos se adaptan de forma dinámica al contexto. Esta adaptación no es diseñada explícitamente, sino que surge del comportamiento colectivo de los componentes del sistema. Como resultado, aparecen nuevas estructuras o patrones no previstos, conocidos como propiedades emergentes.
+## Diseño para la emergencia y adaptabilidad
 
-## Fundamentos de gestion de cambio de arquitectura de ADM TOGAF
+Estrategias clave incluyen:
 
-La fase H. Architecture Change Management de TOGAF proporciona un marco estructurado para gestionar la evolución sistémica mediante:
+- Arquitecturas flexibles basadas en microservicios para integración ágil de nuevos componentes (ej.: datos climáticos)
 
-### Principios Clave
+- Estándares abiertos (GTFS) que permiten innovación descentralizada
 
-- 1°. Gestión de Capacidades de Cambio: Monitoreo continuo de disparadores evolutivos (ej.: nuevos estándares tecnológicos, cambios regulatorios, etc).
+- Bucles de retroalimentación reforzadores y equilibradores para aprendizaje continuo (Kaur & Craven, 2022) [1]
 
-- 2°. Gobernanza de Transición: Mecanismos para transitar entre estados arquitectónicos (ej.: migración de sistemas propietarios o privados a API abiertas o públicas).
+## Resiliencia operativa y gestión de crisis
 
-- 3°. Alineación con Requisitos de Negocio: Validar que los cambios preserven los principios de interoperabilidad y neutralidad tecnológica[3].
+Mecanismos críticos para sistemas robustos:
 
-### Proceso Adaptativo para Sistemas Complejos
-Fases TOGAF ADM	para aplicación en transporte público:
+- Redundancia funcional en canales de información (electrónicos, físicos)
 
-- 1°. Monitoreo Continuo: Proceso constante de recolección de información del sistema. Ej.: Sensores IoT en buses + feedback usuarios vía app Databús[4].
-- 2.° Evaluación de Impacto: Análisis de cómo nuevos datos GTFS afectan aplicaciones terceras (Moovit, Google Maps).
-- 3°. Implementación Iterativa: Estrategia de desarrollo y despliegue que permite adaptar soluciones progresivamente y reducir riesgos en contextos inciertos o variables (ej.: Rollout gradual de Infobús API en data hub)[5].
-- 4°. Validación Emergente: Proceso de comprobación del funcionamiento y aceptación de una implementación mediante experimentación directa en el sistema real.
+- Protocolos CAP para manejo de eventos extremos
 
-## Factores Críticos para la Gestión Evolutiva a Largo Plazo
+- Indicadores sistémicos tempranos que detectan patrones de crisis (Abarca Calderón) [3]
 
-- Diseño para la Emergencia
-    - Arquitecturas Flexibles: Uso de microservicios en el data hub para integrar nuevas fuentes (redes sociales, clima) sin reingeniería[5].
+## Gobernanza policéntrica y alineación de actores
 
-    - Estándares Abiertos (GTFS): Permiten evolución ecológica del ecosistema (nuevos desarrolladores, apps) sin control centralizado.
+Factores humanos determinantes:
 
-- Retroalimentación como Motor Evolutivo
-    - Bucles de Aprendizaje
-    - Indicadores Sistémicos
+- Modelos mentales compartidos mediante campañas de comunicación
+
+- Coordinación multinivel entre CTP, MOPT y municipios
+
+- Diseño participativo que incorpora diversas perspectivas (Midgley, 2006) [8]
+
+## Sostenibilidad como proceso evolutivo continuo
+
+La gestión exitosa reconoce que:
+
+- No existen "soluciones finales" en sistemas complejos
+
+- Cada interacción redefine el sistema (propiedad emergente)
+
+- El aprendizaje colectivo es el motor principal de mejora (Abarca et al.) [9]
+
+## Desenlace
+
+La evolución de sistemas de transporte requiere integrar:
+
+- Marcos teóricos del pensamiento sistémico
+
+- Herramientas prácticas de TOGAF ADM
+
+- Mecanismos robustos de gobernanza colaborativa. Este enfoque híbrido permite navegar la complejidad mientras se mantiene capacidad de respuesta ante cambios imprevistos, transformando el transporte público en un sistema vivo y en constante aprendizaje.
 
 
-- Resiliencia y Adaptabilidad
-    - Redundancia Funcional: Múltiples canales de información (electrónicos, impresos, atención al cliente) para resistir fallos[3].
-
-    - Detección Temprana de "Dragon Kings": Eventos extremos (ej.: huelgas, desastres) gestionados mediante CAP (Common Alerting Protocol) en el data hub.
-
--  Factores Humanos y de Gobernanza
-    - Modelos Mentales Compartidos: Campañas de comunicación para alinear expectativas de usuarios, conductores y reguladores.
-
-    - Gobernanza Policéntrica: Coordinación entre CTP, MOPT, ARESEP y municipios para evitar fragmentación (principio de "unicidad del sistema").
 
 
-#### Referencias
+## Referencias
 
 [1] Kaur, M., & Craven, L. (2022). Systems Thinking: Practical Insights on Systems-Led Design in Socio-Technical Engineering Systems. En Handbook of Engineering Systems Design (pp. 189-217). Springer International Publishing. https://doi.org/10.1007/978-3-030-81159-4_36
 
@@ -116,3 +129,4 @@ Fases TOGAF ADM	para aplicación en transporte público:
 [10] Abarca Calderón, F., & Araya Salazar, M. A. (s.f.). Estudio de la información del servicio de transporte público en Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
 
 [11] Abarca Calderón, F. (s.f.). Interfaz de lenguaje natural para un sistema de información del transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+
