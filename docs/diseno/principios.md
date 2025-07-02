@@ -59,8 +59,10 @@ La digitalización del transporte urbano requiere interfaces que no solo sean fu
 ---
 ---
 ---
+
+## 1. Visibilidad del estado del sistema
 <details>
-  <summary>## 1. Visibilidad del estado del sistema</summary>
+  <summary> Ampliar </summary>
 
 
 
