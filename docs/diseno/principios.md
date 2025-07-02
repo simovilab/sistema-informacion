@@ -54,7 +54,7 @@
 
 ## Heurísticas de Nielsen aplicadas a la modernización del sistema de transporte público en Costa Rica
 
-
+La digitalización del transporte urbano requiere interfaces que no solo sean funcionales, sino también comprensibles, confiables y centradas en las personas. Las 10 heurísticas de usabilidad de Jakob Nielsen ofrecen un marco práctico para evaluar y mejorar la experiencia de usuario en sistemas digitales. A continuación, se presenta cómo estas heurísticas pueden aplicarse al diseño de plataformas, APIs e interfaces de información para el transporte público en Costa Rica, con el objetivo de garantizar accesibilidad, eficiencia y confianza en el uso de la tecnología por parte de todos los ciudadanos.
 
 ---
 ---
@@ -117,7 +117,8 @@ Es mejor evitar que los errores ocurran. Al proporcionar información consistent
 
 ### Aplicación en transporte urbano
 
-Minimizar la carga de memoria del usuario. La información del servicio (**horarios**, **rutas**, **paradas**, **tarifas**) se propone esté disponible de forma visible y accesible a través de páginas web, aplicaciones móviles y **pantallas informativas**, en lugar de requerir que el usuario la recuerde\[5]. Un sistema de **identidad visual** y **señalética** también contribuye a esto.
+Minimizar la carga de memoria del usuario. La información del servicio (**horarios**, **rutas**, **paradas**, **tarifas**) se propone esté disponible de forma visible y accesible a través de páginas web, aplicaciones móviles y **pantallas informativas**, en lugar de requerir que el usuario la recuerde\[5]. Un sistema de **identidad visual** y **señalética** también contribuye a esto. La identidad visual, con elementos como colores y logotipos consistentes, ayuda a los usuarios a reconocer rápidamente el servicio y reduce la necesidad de memorizar información. La señalética, aplicada en paradas, vehículos y medios digitales, orienta a los usuarios de forma clara y uniforme, facilitando el acceso a la información en distintos espacios y plataformas.
+
 
 ---
 
@@ -192,6 +193,12 @@ La disponibilidad de documentación clara es esencial. Las APIs **Databús** e *
 
 ---
 
+<details>
+  <summary>Texto visible (resumen)</summary>
+  Contenido oculto que se despliega al hacer clic.
+</details>
+
+---
 
 
 
