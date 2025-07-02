@@ -59,9 +59,10 @@ La digitalización del transporte urbano requiere interfaces que no solo sean fu
 ---
 ---
 ---
+<details>
+  <summary>## 1. Visibilidad del estado del sistema</summary>
 
 
-## 1. Visibilidad del estado del sistema
 
 > Los usuarios deben estar siempre informados sobre lo que está ocurriendo mediante **retroalimentación adecuada y oportuna**.
 
@@ -69,6 +70,7 @@ La digitalización del transporte urbano requiere interfaces que no solo sean fu
 
 Las aplicaciones y sitios web deben informar a los usuarios sobre lo que está ocurriendo. El sistema propuesto busca esto mediante la entrega de datos **GTFS Realtime**, que incluyen la **posición geoespacial del vehículo**, **estimaciones actualizadas de tiempos de llegada** y alertas de interrupciones \[1]. Esta información en tiempo real, distribuida por la **API Infobús**, es fundamental para páginas web, aplicaciones móviles y **pantallas en paradas** \[1].
 
+</details>
 ---
 
 ## 2. Concordancia entre el sistema y el mundo real
