@@ -194,6 +194,9 @@ La disponibilidad de documentación clara es esencial. Las APIs **Databús** e *
 
 ### Términos para el glosario
 
+<details>
+  <summary> Ampliar </summary>
+
 * **GTFS Realtime**
 * **posición geoespacial del vehículo**
 * **estimaciones actualizadas de tiempos de llegada**
@@ -222,7 +225,7 @@ La disponibilidad de documentación clara es esencial. Las APIs **Databús** e *
 * **Facilidad de Uso y Accesibilidad**
 
 ---
-
+</details>
 
 
 ## Referencias
