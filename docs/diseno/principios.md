@@ -223,13 +223,6 @@ La disponibilidad de documentación clara es esencial. Las APIs **Databús** e *
 
 ---
 
-<details>
-  <summary>Texto visible (resumen)</summary>
-  Contenido oculto que se despliega al hacer clic.
-</details>
-
----
-
 
 
 ## Referencias
