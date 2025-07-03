@@ -10,7 +10,9 @@ Modelar y desarrollar un **sistema de información para la movilidad inteligente
 
 1. Implementar un **concentrador de datos central para el procesamiento y distribución de información estructurada** y en tiempo real, mediante una API REST desarrollada bajo **especificaciones OpenAPI version 3.0**, con el fin de iterar sana y flexiblemente las plataformas de consulta y análisis de datos.
 
-📖 **Más información** en [desarrollo e implementación / arquitectura](/desarrollo/arquitectura/index.md)
+   📖 **Más información**
+
+   - [desarrollo e implementación / arquitectura](/desarrollo/arquitectura/index.md)
 
 2. Desarrollar un **modelo de arquitectura nacional interoperable para el sistema de información**, mediante la aplicación de **estándares como GTFS, ARC-IT y la metodología TOGAF** todo para permitir la integración eficiente de datos y subsistemas a escala país.
 
@@ -20,7 +22,9 @@ Modelar y desarrollar un **sistema de información para la movilidad inteligente
 
 4. Implementar un **chatbot de apoyo de errores con una interfaz conversacional** basada en **lenguaje natural mediante inteligencia artificial generativa**, utilizando modelos extensos de lenguaje integrados con el protocolo MCP y la API Infobús, para consultas desestructuradas en múltiples idiomas. Esto para facilitar el acceso a información de errores con el chatbot principial, mejorar la experiencia del usuario y garantizar accesibilidad a diversos perfiles de personas usuarias.
 
-📖 **Más información** en [interfaces de usuario / modelo visible](/desarrollo/diseno/experiencia/index.md)
+   📖 **Más información**
+
+   - [interfaces de usuario / modelo visible](/desarrollo/diseno/experiencia/index.md)
 
 ### Proceso de diseño
 
@@ -28,7 +32,9 @@ Modelar y desarrollar un **sistema de información para la movilidad inteligente
 
 6. Asegurar la **escalabilidad, seguridad y sostenibilidad del sistema**, mediante la definición de requisitos funcionales y no funcionales siguiendo los **principios de la ingeniería de sistemas orientada al estándar ISO/IEC/IEEE 24765**, esto para permitir su evolución tecnológica, protección de datos y continuidad operativa a lo largo del ciclo de vida del sistema.
 
-📖 **Más información** en [carácter del diseño / composición](/desarrollo/diseno/componentes/index.md)
+   📖 **Más información**
+
+   - [carácter del diseño / composición](/desarrollo/diseno/componentes/index.md)
 
 ### Desarrollo e implementación
 
@@ -36,7 +42,9 @@ Modelar y desarrollar un **sistema de información para la movilidad inteligente
 
 8. Implementar un **concentrador de datos para distribuir información del transporte público en tiempo real** a través de una **arquitectura basada en estándares abiertos y una API tipo REST**. Para permitir el consumo de información desde diversas plataformas como pantallas, aplicaciones móviles, sitios web y herramientas de análisis de datos.
 
-📖 **Más información** en [realización del proceso / aplicación](/desarrollo/piloto/index.md)
+   📖 **Más información**
+
+   - [realización del proceso / aplicación](/desarrollo/piloto/index.md)
 
 ### Operación y mantenimiento
 
@@ -44,7 +52,9 @@ Modelar y desarrollar un **sistema de información para la movilidad inteligente
 
 10. Operar un **sistema de información unificado y accesible para las personas usuarias** estandarizando los datos y **centralizando la arquitectura de información** para evitar fraccionamientos entre concesionarios. Para mejorar la calidad, consistencia y cobertura de la información disponible sobre el transporte público en Costa Rica.
 
-📖 **Más información** en [evolución del sistema / seguimiento](/desarrollo/operacion/index.md)
+📖 **Más información**
+
+- [evolución del sistema / seguimiento](/desarrollo/operacion/index.md)
 
 ### Referencias
 
