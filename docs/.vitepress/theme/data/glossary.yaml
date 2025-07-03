@@ -1,0 +1,59 @@
+- term: TIC
+  definition: Tecnologías de la Información y la Comunicación
+  translation: Information and Communication Technologies
+  description: Conjunto de tecnologías desarrolladas para gestionar información y enviarla de un lugar a otro.
+
+- term: GTFS
+  definition: General Transit Feed Specification
+  translation: Especificación General del Suministro de Datos de Transporte Público
+  description: Estándar de facto para la distribución de datos abiertos de transporte público dirigidos a las personas usuarias y consumido por aplicaciones de movilidad.
+
+- term: Triaje
+  definition: Priorización y clasificación de requisitos
+  translation: Triage
+  description: Proceso de evaluación y clasificación de elementos según su importancia, urgencia o prioridad para optimizar recursos y tiempo.
+
+- term: Validación
+  definition: Confirmación de que los requisitos cumplen con las necesidades del usuario
+  translation: Validation
+  description: Proceso de verificación que asegura que un producto, sistema o proceso satisface los requisitos especificados y las expectativas del usuario final.
+
+- term: MaaS
+  definition: Mobility as a Service
+  translation: Movilidad como Servicio
+  description: Enfoque que integra diferentes servicios de transporte en una única plataforma digital accesible bajo demanda.
+
+- term: API
+  definition: Application Programming Interface
+  translation: Interfaz de Programación de Aplicaciones
+  description: Conjunto de reglas y protocolos que permite la comunicación e intercambio de datos entre diferentes sistemas y aplicaciones.
+
+- term: UX
+  definition: User Experience
+  translation: Experiencia del Usuario
+  description: Conjunto de emociones, percepciones y respuestas que un usuario experimenta al interactuar con un producto, sistema o servicio.
+
+- term: UI
+  definition: User Interface
+  translation: Interfaz de Usuario
+  description: Medio a través del cual un usuario interactúa con un sistema, incluyendo elementos visuales y controles que facilitan la navegación y operación.
+
+- term: SaaS
+  definition: Software as a Service
+  translation: Software como Servicio
+  description: Modelo de distribución de software en el que las aplicaciones se alojan en la nube y se accede a ellas a través de Internet mediante suscripción.
+
+- term: Open Data
+  definition: Open Data
+  translation: Datos Abiertos
+  description: Información que se puede acceder, utilizar, modificar y compartir libremente por cualquier persona para cualquier propósito.
+
+- term: Interoperabilidad
+  definition: Interoperabilidad
+  translation: Interoperability
+  description: Capacidad de diferentes sistemas, organizaciones o componentes para trabajar juntos y compartir información de manera efectiva y sin restricciones.
+
+- term: API REST
+  definition: Representational State Transfer API
+  translation: API de Transferencia de Estado Representacional
+  description: Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
