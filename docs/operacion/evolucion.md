@@ -2,19 +2,21 @@
 
 ::: info Puntos clave
 
-- Exploración de la evolución no lineal del transporte público como sistema socio-técnico, integrando marcos como el pensamiento sistémico y la fase de Gestión del Cambio de TOGAF para entender su comportamiento emergente y dinámico.
+- Exploración de la evolución no lineal del transporte público como **sistema socio-técnico**, integrando marcos como el pensamiento sistémico y la fase de Gestión del Cambio de TOGAF para entender su comportamiento emergente y dinámico.
 
 - La gestión adaptativa de estos sistemas es crucial para asegurar su resiliencia y sostenibilidad, ya que pequeños cambios pueden generar efectos desproporcionados y requieren respuestas ágiles, éticas y colaborativas.
 
-- La propuesta se implementa mediante arquitecturas flexibles, estándares abiertos, gobernanza policéntrica, retroalimentación continua y alineación de actores clave mediante comunicación estratégica y diseño participativo.
+- La propuesta se implementa mediante arquitecturas flexibles, estándares abiertos, **gobernanza policéntrica**, retroalimentación continua y alineación de actores clave mediante comunicación estratégica y diseño participativo.
 
 :::
 
-## Pensamiento sistémico y Gestión del Cambio Arquitectónico
+## Bases Teóricas
+
+### Pensamiento sistémico
 
 La evolución de los sistemas complejos, como el transporte público, es intrínsecamente no lineal, impredecible y emergente. Estos sistemas están conformados por componentes técnicos (infraestructura, software, hardware), sociales (usuarios, operadores, autoridades) y ambientales (condiciones climáticas, urbanización), cuyas interacciones dinámicas generan comportamientos imposibles de prever desde una visión reduccionista.
 
-Desde la perspectiva del pensamiento sistémico, los sistemas deben entenderse como totalidades organizadas donde el todo es más que la suma de sus partes. Las cuatro olas del pensamiento sistémico (duro, blando, crítico y cognitivo) aportan enfoques complementarios para comprender y actuar sobre esta complejidad (Sevaldson, 2017).
+Desde la perspectiva del **pensamiento sistémico**, los sistemas deben entenderse como totalidades organizadas donde el todo es más que la suma de sus partes. Las cuatro olas del pensamiento sistémico (duro, blando, crítico y cognitivo) aportan enfoques complementarios para comprender y actuar sobre esta complejidad (Kaur & Craven, 2022).
 
 flowchart TD
     A1["**Sistemas duros** 
@@ -26,7 +28,9 @@ flowchart TD
     A3 --> A4["**Enfoque cognitivo**
     Modelos mentales compartidos"]
 
-En este contexto, el marco TOGAF ADM, especialmente su Fase H (Gestión del Cambio Arquitectónico), permite estructurar la evolución mediante:
+### Gestión del Cambio Arquitectónico
+
+En este contexto, el marco **ADM** de TOGAF, especialmente su Fase H,Gestión del Cambio Arquitectónico (The Open Group, s.f.), permite estructurar la evolución mediante:
 
 - Monitoreo de desencadenantes técnicos, sociales o normativos.
 
@@ -45,95 +49,57 @@ flowchart TD
 La gestión de estos sistemas no busca soluciones definitivas, sino una capacidad continua de adaptación y aprendizaje colectivo, donde cada interacción redefine parcialmente el sistema (Cilliers, 2000).
 
 
+## Acciones prácticas para implementar una gestión evolutiva
 
+### 1. Diseñar arquitecturas flexibles
 
+- Uso de microservicios para permitir integración ágil de nuevos módulos.
 
-## Introducción
+- Estándares abiertos como GTFS para interoperabilidad.
 
-La evolución de sistemas complejos no es previsible, ni lineal, ni predecible, se pueden inducir ciertos patrones, pero no el comportamiento general del sistema. Es un fenómeno emergente que resulta de cada interacción entre los componentes del sistema, que a su vez no son interacciones estáticas, sino que cambian, son interacciones dinámicas. Entre los elementos o componentes del sistema están los técnicos, sociales y ambientales.
+### 2. Implementar monitoreo continuo del entorno
 
-En este caso, un sistema de naturaleza socio-técnica como lo es el transporte público, el constante cambio es intrínseco por lo cual debe gestionarse con periodicidad. Los sistemas complejos no tienen una solución rápida, ni única, ni definitiva, y menos cuando se está hablando de un sistema socio-técnico.
+- Sistemas de alerta temprana con indicadores de crisis (sociales, climáticos, técnicos).
 
-Cambios regulares es necesario para una correcta evolución del sistema de trasporte público. Entre estas variaciones se encuentran las mejoras tecnológicas, necesidades de los usuarios, regulaciones del transporte, condiciones ambientales, entre otros.
+- Protocolos como **CAP** para responder ante eventos disruptivos.
 
-Desde el punto de vista del pensamiento sistémico, gestionar la inevitable evolución requiere comprender patrones de cambio, retroalimentación y emergencia, donde todo es más que la suma de sus partes [1]. Para esto se deben tener en cuenta los principios del diseño basado en sistemas (System-Led Design) [1] y el marco teórico método de desarrollo de la arquitectura (ADM - Architecture Development Method) de TOGAF [2].
+### 3. Adoptar bucles de retroalimentación sistémica
 
-## La naturaleza no lineal de los sistemas sociotécnicos
-Los sistemas de transporte público exhiben comportamientos emergentes que surgen de interacciones dinámicas entre componentes técnicos (tecnologías, infraestructura), sociales (usuarios, operadores) y ambientales (clima, urbanización). Estas interacciones generan patrones no lineales donde pequeños cambios pueden producir efectos desproporcionados (Cilliers, 2000) [7]. La gestión efectiva requiere abandonar modelos predictivos rígidos y adoptar enfoques flexibles que reconozcan esta complejidad inherente.
+- Incorporación de mecanismos de aprendizaje: cuadro de mando, indicadores clave de desempeño en tiempo real.
 
-## Las cuatro olas del pensamiento sistémico
-El marco evolutivo del pensamiento sistémico ofrece herramientas progresivas para abordar la complejidad:
+- Evaluaciones participativas con personas usuarias y personas operadoras.
 
-- Sistemas duros (optimización técnica): Aplicación de modelos matemáticos para rutas y horarios
+### 4. Fomentar gobernanza policéntrica y coordinación multinivel
 
-- Sistemas blandos (perspectivas humanas): Incorporación de necesidades diversas de usuarios
+- Incluir al CTP, MOPT, municipios y operadores privados en decisiones estratégicas.
 
-- Pensamiento crítico (poder y ética): Consideración de equidad en acceso al transporte
+- Mesas técnicas permanentes y herramientas de co-creación.
 
-- Enfoque cognitivo (modelos mentales): Alineación de percepciones entre actores (Sevaldson, 2017) [6]
+### 5. Alinear modelos mentales entre actores clave
 
-## Arquitectura de cambio en TOGAF ADM (Fase H)
+- Campañas de comunicación integradas.
 
-La fase de Gestión del Cambio Arquitectónico proporciona un marco estructurado para:
+- Diseño participativo de interfaces y servicios.
 
-- Monitoreo continuo de disparadores tecnológicos y regulatorios
+### 6. Evitar enfoques cerrados o definitivos
 
-- Gobernanza de transición entre estados arquitecturales
+- Planificación iterativa y evolutiva.
 
-- Validación de principios como interoperabilidad (The Open Group) [2]
+- Revisión periódica de principios y supuestos.
 
-## Diseño para la emergencia y adaptabilidad
+flowchart TD
+    A["Condiciones del entorno"] --> B["Interacciones técnicas, sociales y ambientales"]
+    B --> C["Comportamientos emergentes"]
+    C --> D{"¿Se requiere adaptación?"}
+    D -- Sí --> E(["Activar gestión del cambio arquitectónico"])
+    D -- No --> F["Continuar monitoreo"]
+    E --> G["Ajustes arquitectónicos y de gobernanza"]
+    G --> H["Validación y comunicación con actores"]
+    H --> I["Revisión de indicadores y principios"]
+    I --> J["Iteración y evolución del sistema"]
 
-Estrategias clave incluyen:
-
-- Arquitecturas flexibles basadas en microservicios para integración ágil de nuevos componentes (ej.: datos climáticos)
-
-- Estándares abiertos (GTFS) que permiten innovación descentralizada
-
-- Bucles de retroalimentación reforzadores y equilibradores para aprendizaje continuo (Kaur & Craven, 2022) [1]
-
-## Resiliencia operativa y gestión de crisis
-
-Mecanismos críticos para sistemas robustos:
-
-- Redundancia funcional en canales de información (electrónicos, físicos)
-
-- Protocolos CAP para manejo de eventos extremos
-
-- Indicadores sistémicos tempranos que detectan patrones de crisis (Abarca Calderón) [3]
-
-## Gobernanza policéntrica y alineación de actores
-
-Factores humanos determinantes:
-
-- Modelos mentales compartidos mediante campañas de comunicación
-
-- Coordinación multinivel entre CTP, MOPT y municipios
-
-- Diseño participativo que incorpora diversas perspectivas (Midgley, 2006) [8]
-
-## Sostenibilidad como proceso evolutivo continuo
-
-La gestión exitosa reconoce que:
-
-- No existen "soluciones finales" en sistemas complejos
-
-- Cada interacción redefine el sistema (propiedad emergente)
-
-- El aprendizaje colectivo es el motor principal de mejora (Abarca et al.) [9]
-
-## Desenlace
-
-La evolución de sistemas de transporte requiere integrar:
-
-- Marcos teóricos del pensamiento sistémico
-
-- Herramientas prácticas de TOGAF ADM
-
-- Mecanismos robustos de gobernanza colaborativa. Este enfoque híbrido permite navegar la complejidad mientras se mantiene capacidad de respuesta ante cambios imprevistos, transformando el transporte público en un sistema vivo y en constante aprendizaje.
-
-
-
+    A@{ shape: trap-t}
+    J@{ shape: stored-data}
 
 ## Referencias
 
@@ -141,21 +107,24 @@ La evolución de sistemas de transporte requiere integrar:
 
 [2] The Open Group. (s.f.). TOGAF Standard — Architecture Development Method (ADM): H. Architecture Change Management. https://www.opengroup.org/togaf
 
-[3] Abarca Calderón, F. (s.f.). Sistema de información para las personas usuarias del transporte público en Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[3] Cilliers, P. (2000). What Can We Learn From a Theory of Complexity? Emergence, 2(1), 23–33. https://doi.org/10.1207/S15327000EM0201_03
 
-[4]Abarca Calderón, F., Cordero Méndez, A., & Murillo Mamani, E. J. (s.f.). Recolección en tiempo real de datos de telemetría y rastreo en el transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[4] Abarca Calderón, F. (s.f.). Sistema de información para las personas usuarias del transporte público en Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
 
-[5]Abarca Calderón, F., Segura Cruz, J. D., & Vargas Céspedes, E. J. (s.f.). Concentrador de datos en tiempo real para servicios de información en el transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[5]Abarca Calderón, F., Cordero Méndez, A., & Murillo Mamani, E. J. (s.f.). Recolección en tiempo real de datos de telemetría y rastreo en el transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
 
-[6] Sevaldson, B. (2017). Redesigning Systems Thinking. FormAkademisk, 10(1). https://doi.org/10.7577/formakademisk.1755
+[6]Abarca Calderón, F., Segura Cruz, J. D., & Vargas Céspedes, E. J. (s.f.). Concentrador de datos en tiempo real para servicios de información en el transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
 
-[7] Cilliers, P. (2000). What Can We Learn From a Theory of Complexity? Emergence, 2(1), 23–33. https://doi.org/10.1207/S15327000EM0201_03
+[7] Sevaldson, B. (2017). Redesigning Systems Thinking. FormAkademisk, 10(1). https://doi.org/10.7577/formakademisk.1755
 
-[8] Gerald Midgley, “Systemic Intervention for Public Health”, American Journal of Public Health 96, no. 3 (March 1, 2006): pp. 466-472. https://doi.org/10.2105/AJPH.2005.067660
+[8] Cilliers, P. (2000). What Can We Learn From a Theory of Complexity? Emergence, 2(1), 23–33. https://doi.org/10.1207/S15327000EM0201_03
 
-[9] Abarca, F., Murillo, D., Segura, D., Vargas, J., Cordero, A., Murillo, E., Núñez, G., & Coto, M. (s.f.). A System-Level Design for a Public Transportation Information System in Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[9] Gerald Midgley, “Systemic Intervention for Public Health”, American Journal of Public Health 96, no. 3 (March 1, 2006): pp. 466-472. https://doi.org/10.2105/AJPH.2005.067660
 
-[10] Abarca Calderón, F., & Araya Salazar, M. A. (s.f.). Estudio de la información del servicio de transporte público en Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[10] Abarca, F., Murillo, D., Segura, D., Vargas, J., Cordero, A., Murillo, E., Núñez, G., & Coto, M. (s.f.). A System-Level Design for a Public Transportation Information System in Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
 
-[11] Abarca Calderón, F. (s.f.). Interfaz de lenguaje natural para un sistema de información del transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+[11] Abarca Calderón, F., & Araya Salazar, M. A. (s.f.). Estudio de la información del servicio de transporte público en Costa Rica. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+
+[12] Abarca Calderón, F. (s.f.). Interfaz de lenguaje natural para un sistema de información del transporte público. Escuela de Ingeniería Eléctrica, Universidad de Costa Rica.
+
 
