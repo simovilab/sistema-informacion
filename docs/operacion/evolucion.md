@@ -1,23 +1,52 @@
 # Evolución 
 
 ::: info Puntos clave
-- Los sistemas como el transporte público evolucionan de manera impredecible debido a interacciones dinámicas entre componentes técnicos, sociales y ambientales.
 
-- Las cuatro olas del pensamiento sistémico proporcionan herramientas para gestionar complejidad, retroalimentación y emergencia, donde el todo es más que la suma de sus partes.
+- Exploración de la evolución no lineal del transporte público como sistema socio-técnico, integrando marcos como el pensamiento sistémico y la fase de Gestión del Cambio de TOGAF para entender su comportamiento emergente y dinámico.
 
-- La fase Gestión del Cambio de Arquitectura de TOGAF ofrece mecanismos para monitorear desencadenantes de cambio, gobernar transiciones arquitectónicas y validar principios como interoperabilidad y neutralidad tecnológica.
+- La gestión adaptativa de estos sistemas es crucial para asegurar su resiliencia y sostenibilidad, ya que pequeños cambios pueden generar efectos desproporcionados y requieren respuestas ágiles, éticas y colaborativas.
 
-- Arquitecturas flexibles y estándares abiertos permiten coevolución con cambios imprevistos, mientras bucles de aprendizaje convierten datos en acciones iterativas.
-
-- El éxito depende de alinear modelos mentales de actores (usuarios, operadores, reguladores) mediante comunicación estratégica y coordinación multinivel (CTP, municipios, MOPT).
-
-- Coordinar actores (CTP, MOPT, municipios) mediante gobernanza policéntrica y alinear modelos mentales con campañas de comunicación y diseño participativo.
-
-- Protocolos como CAP (Protocolo de alerta común) y redundancia funcional, mitigan riesgos de eventos disruptivos, desde huelgas hasta desastres naturales.
-
-- La sostenibilidad no reside en un sistema "terminado", sino en la capacidad de recalibrar estrategias en cada interacción donde se redefine el sistema y se vuelve más eficiente.
+- La propuesta se implementa mediante arquitecturas flexibles, estándares abiertos, gobernanza policéntrica, retroalimentación continua y alineación de actores clave mediante comunicación estratégica y diseño participativo.
 
 :::
+
+## Pensamiento sistémico y Gestión del Cambio Arquitectónico
+
+La evolución de los sistemas complejos, como el transporte público, es intrínsecamente no lineal, impredecible y emergente. Estos sistemas están conformados por componentes técnicos (infraestructura, software, hardware), sociales (usuarios, operadores, autoridades) y ambientales (condiciones climáticas, urbanización), cuyas interacciones dinámicas generan comportamientos imposibles de prever desde una visión reduccionista.
+
+Desde la perspectiva del pensamiento sistémico, los sistemas deben entenderse como totalidades organizadas donde el todo es más que la suma de sus partes. Las cuatro olas del pensamiento sistémico (duro, blando, crítico y cognitivo) aportan enfoques complementarios para comprender y actuar sobre esta complejidad (Sevaldson, 2017).
+
+flowchart TD
+    A1["**Sistemas duros** 
+    Optimización técnica"] 
+    A1 --> A2["**Sistemas blandos**
+    Perspectivas humanas"]
+    A2 --> A3["**Pensamiento crítico**
+    Poder y Ética"]
+    A3 --> A4["**Enfoque cognitivo**
+    Modelos mentales compartidos"]
+
+En este contexto, el marco TOGAF ADM, especialmente su Fase H (Gestión del Cambio Arquitectónico), permite estructurar la evolución mediante:
+
+- Monitoreo de desencadenantes técnicos, sociales o normativos.
+
+- Gobernanza de transiciones arquitectónicas.
+
+- Validación de principios como la interoperabilidad y la neutralidad tecnológica.
+
+flowchart TD
+    H1[Disparador de cambio] 
+    H1 --> H2[Evaluar impacto del cambio]
+    H2 --> H3[Desarrollar plan de transición]
+    H3 --> H4[Implementar cambios arquitectónicos]
+    H4 --> H5[Monitorear implementación]
+    H5 --> H6[Revisión y retroalimentación]
+
+La gestión de estos sistemas no busca soluciones definitivas, sino una capacidad continua de adaptación y aprendizaje colectivo, donde cada interacción redefine parcialmente el sistema (Cilliers, 2000).
+
+
+
+
 
 ## Introducción
 
