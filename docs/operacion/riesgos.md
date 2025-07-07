@@ -27,3 +27,18 @@ Para contrarrestar estos riesgos, se propone un enfoque multidimensional, donde 
 | Datos              | Exigir estándares abiertos (como GTFS) y publicar información mediante APIs accesibles.       |
 | Tecnología         | Implementar pilotos escalables, evitar vendor lock-in y asegurar interoperabilidad.           |
 | Seguridad y salud  | Usar minería de datos para identificar riesgos, realizar mantenimiento preventivo y usar IA.  |
+
+
+
+## Referencias
+
+1. F. Abarca Calderón, J. D. Segura Cruz y E. J. Vargas Céspedes. [“Concentrador de datos en tiempo real para servicios de información en el transporte público”](https://www.ucr.ac.cr). Universidad de Costa Rica, 2023.
+2. F. Abarca Calderón y M. A. Araya Salazar. [“Estudio de la información del servicio de transporte público en Costa Rica”](https://www.ucr.ac.cr). Universidad de Costa Rica, 2023.
+3. F. Abarca et al. [“A System-Level Design for a Public Transportation Information System in Costa Rica”](https://www.ucr.ac.cr). Universidad de Costa Rica, 2023.
+4. F. Abarca Calderón, A. Cordero Méndez y E. J. Murillo Mamani. [“Recolección en tiempo real de datos de telemetría y rastreo en el transporte público”](https://www.ucr.ac.cr). Universidad de Costa Rica, 2023.
+5. F. Abarca Calderón. [“Sistema de información para las personas usuarias del transporte público en Costa Rica”](https://www.ucr.ac.cr). Universidad de Costa Rica, 2023.
+6. F. Abarca Calderón. [“Interfaz de lenguaje natural para un sistema de información del transporte público”](https://doi.org/10.1007/978-3-030-81159-4). Springer, 2023.
+7. T. Cristóbal et al. [“Using data mining to estimate patterns of contagion-risk interactions in an intercity public road transport system”](https://doi.org/10.1109/ACCESS.2022.3206838). *IEEE Access*, vol. 10, 2022.
+8. J. Li et al. [“Transportation mode identification with GPS trajectory data and GIS information”](https://doi.org/10.26599/TST.2020.9010014). *Tsinghua Science and Technology*, vol. 26, no. 4, 2021.
+9. J. E. Zamora Delgado, M. I. Tercero Betanco y M. A. Zúñiga Cárdenas. *Análisis de la calidad del servicio de transporte público*. [Disponible en sitio académico local](https://www.ucr.ac.cr).
+10. M. Erdoğan e İ. Kaya. [“A systematic approach to evaluate risks and failures of public transport systems”](https://www.worldtransitresearch.info). *World Transit Research*, 2020.
