@@ -1,36 +1,22 @@
 ## Movilidad como Servicio (MaaS)
 
-::: info Puntos clave
+- Esta sección expone cómo el transporte público inteligente en Costa Rica puede evolucionar hacia un modelo de **sistema de sistemas**, donde la interoperabilidad digital y la coordinación entre actores permiten ofrecer servicios integrados y centrados en el usuario.
 
-- Necesidad de mejorar el transporte público.
-- Digitalización de la movilidad como posible solución.
-- Implementación de la movilidad como servicio para mejorar la eficiencia y simplicidad del transporte público.
-- Mejor acceso de la información del servicio para los clientes
-- Mayor facilidad en gestión de datos como la demanda del servicio
-- Tecnologías claves como IoT, pagos sin efectivo, smartphones y 4G/5G.
+- La importancia de este enfoque radica en que crea la base necesaria para la implementación de MaaS, al permitir la conexión fluida entre modos de transporte, plataformas digitales, gestión de datos y experiencia del usuario.
 
-:::
+- La propuesta plantea el uso de tecnologías como Big Data, IoT, pagos digitales y plataformas móviles para mejorar la eficiencia operativa, el acceso a la información y la toma de decisiones en tiempo real.
 
-## El transporte público inteligente como un sistema de sistemas
+- Esta transformación digital no solo mejora la experiencia del usuario, sino que reorganiza el ecosistema del transporte público, promoviendo una gestión coordinada entre operadores, autoridades y plataformas tecnológicas, lo que permite una evolución estructural hacia un sistema MaaS sostenible, eficiente y escalable.
 
-La digitalización es una tendencia de este siglo que ha revolucionado muchos sectores de negocios por los beneficios que aportan. Los sistemas de movilidad han evolucionado por medio de la digitalización a sistemas tan complejos que se consideran **sistemas de sistemas**, logrando pasar de transporte tradicional a poder tener todo un **ecosistema digital** que ayuda a mejorar el producto y servicio, además de generar un valor como el procesamiento de datos y transformar el modelo de negocio del transporte por medio de la digitalización.
 
-El Departamento de Asuntos Económicos y Sociales de la ONU en un informe del 2023 evidencio que en el año 2022 la demanda de transporte urbano ha continuado creciendo exponencialmente, mostrando una necesidad para el transporte público con el fin de lograr una mejorar aspectos como la accesibilidad, eficiencia y sostenibilidad en general. El Centro de Investigación del Transporte (TRANSyT) en un artículo sobre **movilidad inteligente**, remarco la movilidad tradicional es insostenible tiene varios problemas como lo es la contaminación por emisión de CO₂, congestionamiento, accesibilidad, entre otras. Comparado a la movilidad de _Smart Cities_ la cuales por medio de digitalización del sector e implementaciones de **TICs** que logran un transporte más eficiente, sostenible e inclusivo:
+### Definicion de MaaS
 
-### Optimización del transporte
-
-- **Big Data y Cloud**: Analizan datos en tiempo real para mejorar rutas, reducir emisiones y ahorrar tiempo.
-- **Gestión inteligente del tráfico**: Sensores, estacionamientos inteligentes y sistemas de control dinámico.
-- **Logística urbana**: Plataformas digitales para seguimiento de mercancías y flotas sostenibles.
-
-## Definicion de MaaS
-
-La Movilidad como Servicio (**MaaS**) es un modelo de transporte que integra servicios públicos y privados en una plataforma digital única, permitiendo a los usuarios planificar, reservar, pagar y gestionar viajes multimodales. Su objetivo es simplificar la movilidad, reducir la fragmentación entre operadores y mejorar la eficiencia del transporte.
+La Movilidad como Servicio o *Mobility as a Service* (**MaaS**) es un modelo de transporte que integra servicios públicos y privados en una plataforma digital única, permitiendo a los usuarios planificar, reservar, pagar y gestionar viajes multimodales. Su objetivo es simplificar la movilidad, reducir la fragmentación entre operadores y mejorar la eficiencia del transporte.
 
 ### Beneficios del MaaS
 
 **Para usuarios**:  
-Mayor comodidad, ahorro de tiempo y costos a través de una accesibilidad sencilla a la información completa del servicio.
+Mayor comodidad, ahorro de tiempo y costos a través de una accesibilidad sencilla a la información completa del transporte público y sus servicios.
 
 **Para operadores y gobiernos**:  
 Optimización de redes, datos para mejorar la infraestructura, reducción de congestión y emisiones.
@@ -50,11 +36,29 @@ Optimización de redes, datos para mejorar la infraestructura, reducción de con
 
 Es evidente que la digitalización en el sector de la movilidad tiene un gran potencial, ya que cubre gran parte de las necesidades planteadas y cualquier mínima implementaciones estas tecnologías pueden aportar gran avance en el transporte.
 
-### Ejemplo gráfico
+
+## El transporte público inteligente como un sistema de sistemas
+
+La digitalización ha transformado los sistemas de transporte tradicionales en **sistemas de sistemas**, donde múltiples plataformas, tecnologías y actores interactúan para ofrecer servicios más integrados, eficientes y centrados en el usuario. En este contexto, Costa Rica tiene la oportunidad de avanzar hacia un modelo MaaS, que integra diferentes modos de transporte en una única plataforma digital, facilitando su planificación, reserva y pago. 
+
+Un sistema de transporte inteligente no se basa solo en tener autobuses eléctricos o estaciones inteligentes, sino en una infraestructura digital que conecte todos los elementos del **ecosistema de movilidad**: operadores de transporte, usuarios, infraestructura vial, datos en tiempo real, aplicaciones móviles y políticas públicas. Es aquí donde el transporte público inteligente actúa como un **sistema de sistemas**, integrando tecnologías como Big Data, inteligencia artificial, sensores IoT y plataformas en la nube.
+
+
+### ¿Por qué el transporte público de Costa Rica necesita esta transición?
+
+El Departamento de Asuntos Económicos y Sociales de la ONU en un informe del 2023 evidencio que en el año 2022 la demanda de transporte urbano ha continuado creciendo exponencialmente, mostrando una necesidad para el transporte público con el fin de lograr una mejorar aspectos como la accesibilidad, eficiencia y sostenibilidad en general. El Centro de Investigación del Transporte (TRANSyT) en un artículo sobre movilidad inteligente, remarco la movilidad tradicional es insostenible tiene varios problemas como lo es la contaminación por emisión de CO₂, congestionamiento, accesibilidad, entre otras.  En esa línea, el modelo de ciudad inteligente (*Smart City*) promueve una movilidad más sostenible gracias a herramientas como:
+
+- **Big Data y Cloud**: analizan datos en tiempo real para mejorar rutas, reducir tiempo de viajes y emisiones.
+- **Gestión inteligente del tráfico**: mediante sensores, semáforos adaptativos y estacionamientos inteligentes.
+- **Logística urbana**: Plataformas digitales para seguimiento de flotas, cargas y control de operaciones.
+
+ Este enfoque prepara el camino para la implementación de MaaS en Costa Rica, al sentar las bases tecnológicas y organizativas necesarias para la **interoperabilidad** entre servicios, la experiencia de usuario unificada y la toma de decisiones basada en datos actualizados. Sería el primer paso hacia un transporte público inteligente que permita al **ecosistema de movilidad** evolucionar como servicio ofreciendo soluciones básicas al ser más accesible, ágil y centrada en las personas. 
+ 
+### Ejemplo implementeación de Maas
 
 ```mermaid
-graph TD
-    A[Maas] --> |Usuarios|B{App}
+flowchart TD
+A[Maas] --> |Usuarios|B{App}
     B -->|Información| C[-Rutas.
 -Horarios.
 -Costo de los pasaje.
