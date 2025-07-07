@@ -57,3 +57,43 @@
   definition: Representational State Transfer API
   translation: API de Transferencia de Estado Representacional
   description: Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
+
+  - term: Gobernanza
+  definition: Gobierno y gestión de sistemas, procesos y decisiones en el ámbito público
+  translation: Governance
+  description: Conjunto de políticas, procesos y estructuras que aseguran la administración eficaz, transparente y responsable de organizaciones y sistemas públicos.
+
+- term: Comité Directivo Técnico
+  definition: Órgano multisectorial para la coordinación técnica y estratégica
+  translation: Technical Steering Committee
+  description: Grupo formado por representantes de diversos sectores encargado de asesorar, coordinar y supervisar la implementación tecnológica y organizacional en un sistema.
+
+- term: Ciclo ADM
+  definition: Método de Desarrollo de Arquitectura
+  translation: Architecture Development Method (ADM)
+  description: Marco de trabajo del estándar TOGAF que guía el diseño, planificación, implementación y gobernanza de arquitecturas empresariales.
+
+- term: Fragmentación institucional
+  definition: División y falta de coordinación entre entidades
+  translation: Institutional fragmentation
+  description: Situación donde diferentes organismos o entidades actúan de forma aislada o descoordinada, afectando la eficiencia y coherencia de políticas y servicios.
+
+- term: Unicidad de la información
+  definition: Información consistente y única en el sistema
+  translation: Data uniqueness
+  description: Garantía de que los datos son uniformes, sin duplicados ni inconsistencias, para asegurar precisión y confianza en la información disponible.
+
+- term: Estándares abiertos
+  definition: Normas públicas para asegurar compatibilidad y acceso
+  translation: Open standards
+  description: Conjuntos de especificaciones técnicas disponibles públicamente que facilitan la interoperabilidad y evitan la dependencia de proveedores.
+
+- term: Sostenibilidad financiera
+  definition: Capacidad de mantener operaciones con recursos económicos adecuados
+  translation: Financial sustainability
+  description: Capacidad de una organización o sistema para financiar sus actividades y mantenerse operativo a largo plazo sin comprometer su viabilidad.
+
+- term: Personas usuarias
+  definition: Individuos que utilizan un servicio o sistema
+  translation: Users (gender-neutral: people users)
+  description: Personas que interactúan con un sistema o servicio, siendo el foco principal para el diseño y mejora de experiencias y funcionalidades.
