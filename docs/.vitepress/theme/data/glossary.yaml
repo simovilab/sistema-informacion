@@ -57,3 +57,48 @@
   definition: Representational State Transfer API
   translation: API de Transferencia de Estado Representacional
   description: Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
+
+- term: Elicitación
+  definition: Proceso inicial para recopilar las necesidades y expectativas de las partes interesadas.
+  translation: Elicitation
+  description: Actividad mediante la cual se recolecta información relevante de personas usuarias y actores clave, usando entrevistas, encuestas, observación y análisis de procesos.
+
+- term: Especificación de requisitos
+  definition: Formalización escrita y detallada de los requisitos de un sistema.
+  translation: Requirements Specification
+  description: Documento estructurado que describe los requisitos funcionales, no funcionales y de rendimiento, redactados de forma clara, sin ambigüedades y verificables.
+
+- term: Matriz de trazabilidad
+  definition: Herramienta que vincula requisitos con sus fuentes y resultados.
+  translation: Traceability Matrix
+  description: Estructura que permite rastrear el origen, evolución y cumplimiento de cada requisito dentro del proceso de desarrollo de un sistema.
+
+- term: SysML
+  definition: Systems Modeling Language
+  translation: Lenguaje de Modelado de Sistemas
+  description: Lenguaje gráfico basado en UML utilizado para especificar, analizar, diseñar y verificar sistemas complejos en ingeniería de sistemas.
+
+- term: QFD
+  definition: Quality Function Deployment
+  translation: Despliegue de la Función de Calidad
+  description: Metodología estructurada para traducir las necesidades de las personas usuarias en requisitos técnicos del sistema o producto.
+
+- term: Requisito funcional
+  definition: Requisito que describe una función específica que el sistema debe realizar.
+  translation: Functional Requirement
+  description: Indicación concreta de una acción, proceso o comportamiento que el sistema debe ejecutar para satisfacer las necesidades del usuario.
+
+- term: Requisito no funcional
+  definition: Requisito que define cómo debe comportarse el sistema.
+  translation: Non-functional Requirement
+  description: Especificación que describe atributos como rendimiento, seguridad, escalabilidad o accesibilidad del sistema.
+
+- term: Requisito de rendimiento
+  definition: Requisito que establece métricas cuantificables sobre el funcionamiento del sistema.
+  translation: Performance Requirement
+  description: Condición medible que el sistema debe cumplir en términos de eficiencia, tiempo de respuesta, concurrencia o capacidad.
+
+- term: Verificación
+  definition: Evaluación del cumplimiento de requisitos especificados.
+  translation: Verification
+  description: Proceso mediante el cual se comprueba que los requisitos han sido implementados correctamente y que el sistema funciona de acuerdo con ellos.
