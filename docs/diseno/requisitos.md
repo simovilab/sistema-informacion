@@ -100,23 +100,6 @@ flowchart TD
 
 ## Herramientas y metodologías recomendadas
 
-```mermaid
-requirementDiagram
-
-requirement "Cumplimiento WCAG 2.1" {
-    id: NF-01
-    text: "Garantizar accesibilidad digital en interfaces públicas"
-    risk: medium
-    verifymethod: inspection
-}
-
-requirement "Validación regulatoria CTP" {
-    id: F-03
-    text: "Permitir trazabilidad de datos al Consejo de Transporte Público"
-    risk: high
-    verifymethod: test
-}
-```
 
 - **QFD (Quality Function Deployment)**: Mapeo de necesidades de las personas usuarias hacia requisitos técnicos.
 - **SysML**: Lenguaje para modelado visual estructurado de requisitos.
