@@ -57,3 +57,31 @@
   definition: Representational State Transfer API
   translation: API de Transferencia de Estado Representacional
   description: Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
+
+- term: 
+  definition: Maintainability
+  translation: Mantenibilidad
+  description: Capacidad de brindar un mantenimiento al sistema y realizar actualizaciones funcionales o visuales
+
+- term: 
+  definition: Security
+  translation: Seguridad
+  description: Protección de información y datos sensibles de usuarios, trabajadores o de la empresa
+
+- term: 
+  definition: Flexibility
+  translation: Flexibilidad
+  description: El sistema debe ser capaz de adaptarse a cambios futuros de cualquier tipo
+  
+- term: 
+  definition: Sustainability
+  translation: Sostenibilidad
+  description: El sistema de ser capaz de ser rentable durante su ciclo de vida
+
+- term: 
+  definition: Time response
+  translation: Tiempo de respuesta
+  description: Rapidez con la que responde el sistema, debe ser lo más rápida posible
+
+
+
