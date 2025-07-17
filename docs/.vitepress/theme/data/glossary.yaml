@@ -102,3 +102,28 @@
   definition: Evaluación del cumplimiento de requisitos especificados.
   translation: Verification
   description: Proceso mediante el cual se comprueba que los requisitos han sido implementados correctamente y que el sistema funciona de acuerdo con ellos.
+  
+- term: MA
+  definition: Maintainability
+  translation: Mantenibilidad
+  description: Capacidad de brindar un mantenimiento al sistema y realizar actualizaciones funcionales o visuales
+
+- term: SE
+  definition: Security
+  translation: Seguridad
+  description: Protección de información y datos sensibles de usuarios, trabajadores o de la empresa
+
+- term: FL
+  definition: Flexibility
+  translation: Flexibilidad
+  description: El sistema debe ser capaz de adaptarse a cambios futuros de cualquier tipo
+  
+- term: SU
+  definition: Sustainability
+  translation: Sostenibilidad
+  description: El sistema de ser capaz de ser rentable durante su ciclo de vida
+
+- term: TR
+  definition: Time response
+  translation: Tiempo de respuesta
+  description: Rapidez con la que responde el sistema, debe ser lo más rápida posible

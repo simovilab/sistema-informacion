@@ -63,6 +63,7 @@ export default defineConfig({
         items: [
           { text: "Introducción", link: "/diseno" },
           { text: "Principios", link: "/diseno/principios" },
+          { text: "Propiedades", link: "/diseno/propiedades" },
           { text: "Requisitos", link: "/diseno/requisitos" },
           {
             text: "Experiencia de usuario",
