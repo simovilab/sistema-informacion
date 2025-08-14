@@ -8,7 +8,7 @@ hero:
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones.
   image:
     src: /i.png
-    alt: Logo Kalouk
+    alt: Logo SIMI
   actions:
     - theme: brand
       text: Resumen ejecutivo
@@ -24,11 +24,11 @@ features:
     link: /
   - icon: <span class="material-symbols-outlined">departure_board</span>
     title: Movilidad inteligente
-    details: Conceptos y tendencias en la movilidad inteligente utilizados como referencia.
+    details: Conceptos y tendencias en la movilidad inteligente.
     link: /transporte-publico-inteligente/
   - icon: <span class="material-symbols-outlined">draw</span>
     title: Diseño del sistema
-    details: Consideraciones sobre tecnologías y el servicio de transporte público para el diseño.
+    details: Consideraciones sobre el servicio y las tecnologías para el transporte público.
     link: /diseno/
   - icon: <span class="material-symbols-outlined">rocket_launch</span>
     title: Desarrollo e implementación
@@ -44,8 +44,8 @@ features:
     link: /conclusiones/
 ---
 
-::: warning Trabajo en progreso
+::: danger Trabajo en progreso
 
-El informe en este sitio web es un trabajo en progreso, con una fecha estimada de primera publicación para la segunda mitad de julio de 2025. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
+El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para la segunda mitad de agosto de 2025. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
 
 :::

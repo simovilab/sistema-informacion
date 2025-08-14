@@ -66,7 +66,7 @@ export default defineConfig({
           { text: "Propiedades", link: "/diseno/propiedades" },
           { text: "Requisitos", link: "/diseno/requisitos" },
           {
-            text: "Experiencia de usuario",
+            text: "Experiencia del usuario",
             collapsed: true,
             items: [
               {
@@ -123,7 +123,7 @@ export default defineConfig({
         text: "Desarrollo e implementación",
         collapsed: true,
         items: [
-          { text: "Principios", link: "/desarrollo" },
+          { text: "Introducción", link: "/desarrollo" },
           {
             text: "Arquitectura",
             collapsed: true,
