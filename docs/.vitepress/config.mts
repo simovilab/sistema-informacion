@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import UnoCSS from "@unocss/vite";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,6 +8,17 @@ export default defineConfig({
   lang: "es-ES",
   cleanUrls: true,
   base: "/sistema-informacion/",
+
+  markdown: {
+    theme: {
+      light: "min-light",
+      dark: "min-dark",
+    },
+  },
+
+  vite: {
+    plugins: [UnoCSS()],
+  },
 
   head: [
     [
