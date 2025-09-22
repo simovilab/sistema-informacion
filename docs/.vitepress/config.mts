@@ -1,5 +1,5 @@
-import { defineConfig } from "vitepress";
-import UnoCSS from "@unocss/vite";
+import { defineConfig } from "vitepress"
+import UnoCSS from "@unocss/vite"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,7 +17,10 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [UnoCSS()],
+    plugins: [UnoCSS() as any],
+    optimizeDeps: {
+      include: ["mermaid"],
+    },
   },
 
   head: [
@@ -290,4 +293,4 @@ export default defineConfig({
       next: "Página siguiente",
     },
   },
-});
+})
