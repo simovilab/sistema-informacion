@@ -1,4 +1,4 @@
-# Software
+# Portafolio de tecnologías
 
 ::: info Puntos clave
 
@@ -7,9 +7,10 @@
 
 :::
 
-## Tecnologías web
+## Software
 
-```mermaid
+<!-- prettier-ignore -->
+<Mermaid :code="`
 flowchart LR
     subgraph Backend
         Py[Python]
@@ -37,7 +38,6 @@ flowchart LR
         Ca[Capacitor]
         end
     end
-
     D --"usa lenguaje"--> Py
     C --"administrador de tareas de"--> D
     P --"base de datos de"--> D
@@ -52,4 +52,8 @@ flowchart LR
     V --"usa plataforma"--> Ca
     PV --"interfaz web de"--> V
     I --"interfaz móvil de"--> V
-```
+`" />
+
+## Dispositivos móviles
+
+## Sensores de telemetría de vehículos

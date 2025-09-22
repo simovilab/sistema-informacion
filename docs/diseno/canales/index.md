@@ -1,4 +1,4 @@
-# Componentes del sistema de información
+# Estrategia de comunicación y relaciones públicas
 
 ::: info Puntos clave
 

@@ -1,4 +1,4 @@
-# Databús
+# Producción de datos
 
 ::: info Puntos clave
 

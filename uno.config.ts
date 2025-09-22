@@ -1,10 +1,4 @@
-import {
-  defineConfig,
-  presetAttributify,
-  presetIcons,
-  presetUno,
-  presetWebFonts,
-} from "unocss";
+import { defineConfig, presetAttributify, presetIcons, presetUno, presetWebFonts } from "unocss"
 
 export default defineConfig({
   presets: [
@@ -40,4 +34,4 @@ export default defineConfig({
     ["cell-icon", "ml-auto"],
     ["cell-link", "cell text-inherit! no-underline!"],
   ],
-});
+})

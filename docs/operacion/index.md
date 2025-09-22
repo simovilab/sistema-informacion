@@ -1,4 +1,4 @@
-# Operación y mantenimiento
+# Operación del sistema
 
 ::: info Puntos clave
 

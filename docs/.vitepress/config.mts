@@ -4,7 +4,7 @@ import UnoCSS from "@unocss/vite"
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "SIMI",
-  description: "Sistema de información para la movilidad inteligente",
+  description: "Sistemas de información para la movilidad inteligente",
   lang: "es-ES",
   cleanUrls: true,
   base: "/sistema-informacion/",
@@ -38,48 +38,66 @@ export default defineConfig({
     logo: "/i.png",
     nav: [
       { text: "Inicio", link: "/" },
-      { text: "Resumen", link: "/resumen/" },
-      { text: "Movilidad", link: "/movilidad/" },
+      { text: "Introducción", link: "/introduccion" },
       { text: "Diseño", link: "/diseno/" },
       { text: "Desarrollo", link: "/desarrollo/" },
       { text: "Operación", link: "/operacion/" },
       { text: "Plan piloto", link: "/piloto/" },
-      { text: "Conclusiones", link: "/conclusiones/" },
     ],
 
     sidebar: [
       {
-        text: "Informe",
+        text: "Introducción",
         collapsed: true,
         items: [
-          { text: "Resumen ejecutivo", link: "/resumen" },
-          { text: "Objetivos", link: "/objetivos" },
-          { text: "Glosario", link: "/glosario" },
-          { text: "Referencias", link: "/referencias" },
-          { text: "Cómo contribuir", link: "/contribuir" },
-          { text: "Créditos", link: "/creditos" },
+          { text: "Visión", link: "/introduccion" },
+          { text: "Principios", link: "/introduccion/principios" },
         ],
       },
       {
-        text: "Movilidad inteligente",
-        collapsed: true,
-        items: [
-          { text: "Introducción", link: "/movilidad" },
-          {
-            text: "Sistemas de información",
-            link: "/movilidad/informacion",
-          },
-          { text: "MaaS", link: "/movilidad/maas" },
-        ],
-      },
-      {
-        text: "Diseño del sistema",
+        text: "Diseño",
         collapsed: true,
         items: [
           { text: "Introducción", link: "/diseno" },
-          { text: "Principios", link: "/diseno/principios" },
-          { text: "Propiedades", link: "/diseno/propiedades" },
-          { text: "Requisitos", link: "/diseno/requisitos" },
+
+          {
+            text: "Canales de comunicación",
+            collapsed: true,
+            items: [
+              {
+                text: "Introducción",
+                link: "/diseno/canales/",
+              },
+              {
+                text: "Datos abiertos",
+                link: "/diseno/canales/datos-abiertos",
+              },
+              {
+                text: "Datos en tiempo real",
+                link: "/diseno/canales/datos-tiempo-real",
+              },
+              {
+                text: "Identidad visual",
+                link: "/diseno/canales/identidad-visual",
+              },
+              {
+                text: "Redes sociales",
+                link: "/diseno/canales/redes-sociales",
+              },
+              {
+                text: "Medios digitales",
+                link: "/diseno/canales/medios-digitales",
+              },
+              {
+                text: "Medios impresos",
+                link: "/diseno/canales/medios-impresos",
+              },
+              {
+                text: "Atención al cliente",
+                link: "/diseno/canales/atencion-cliente",
+              },
+            ],
+          },
           {
             text: "Experiencia del usuario",
             collapsed: true,
@@ -98,54 +116,21 @@ export default defineConfig({
               },
             ],
           },
-          {
-            text: "Componentes",
-            collapsed: true,
-            items: [
-              {
-                text: "Datos abiertos",
-                link: "/diseno/componentes/datos-abiertos",
-              },
-              {
-                text: "Datos en tiempo real",
-                link: "/diseno/componentes/datos-tiempo-real",
-              },
-              {
-                text: "Identidad visual",
-                link: "/diseno/componentes/identidad-visual",
-              },
-              {
-                text: "Estrategia de comunicación",
-                link: "/diseno/componentes/comunicacion",
-              },
-              {
-                text: "Medios digitales",
-                link: "/diseno/componentes/medios-digitales",
-              },
-              {
-                text: "Medios impresos",
-                link: "/diseno/componentes/medios-impresos",
-              },
-              {
-                text: "Atención al cliente",
-                link: "/diseno/componentes/atencion-cliente",
-              },
-            ],
-          },
         ],
       },
       {
-        text: "Desarrollo e implementación",
+        text: "Desarrollo",
         collapsed: true,
         items: [
           { text: "Introducción", link: "/desarrollo" },
+          { text: "Requisitos", link: "/desarrollo/requisitos" },
           {
             text: "Arquitectura",
             collapsed: true,
             items: [
               { text: "Descripción", link: "/desarrollo/arquitectura" },
-              { text: "Databús", link: "/desarrollo/arquitectura/databus" },
-              { text: "Infobús", link: "/desarrollo/arquitectura/infobus" },
+              { text: "Producción de datos", link: "/desarrollo/arquitectura/produccion" },
+              { text: "Distribución de información", link: "/desarrollo/arquitectura/distribucion" },
             ],
           },
           {
@@ -154,89 +139,77 @@ export default defineConfig({
             items: [
               { text: "Introducción", link: "/desarrollo/tecnologias" },
               {
-                text: "Telecomunicaciones",
-                link: "/desarrollo/tecnologias/telecomunicaciones",
+                text: "Portafolio",
+                link: "/desarrollo/tecnologias/portafolio",
               },
               {
-                text: "Software",
-                link: "/desarrollo/tecnologias/software",
-              },
-              {
-                text: "Hardware",
-                link: "/desarrollo/tecnologias/hardware",
-              },
-              {
-                text: "Inteligencia artificial",
-                link: "/desarrollo/tecnologias/ia",
+                text: "Estándares",
+                link: "/desarrollo/tecnologias/estandares",
               },
             ],
           },
           {
-            text: "Componentes",
+            text: "Aplicaciones",
             collapsed: true,
             items: [
               {
+                text: "Descripción",
+                link: "/desarrollo/aplicaciones/",
+              },
+              {
                 text: "Sitios web",
-                link: "/desarrollo/componentes/web",
+                link: "/desarrollo/aplicaciones/web",
               },
               {
                 text: "Aplicaciones móviles",
-                link: "/desarrollo/componentes/aplicaciones",
+                link: "/desarrollo/aplicaciones/moviles",
               },
               {
                 text: "Pantallas informativas",
-                link: "/desarrollo/componentes/pantallas",
+                link: "/desarrollo/aplicaciones/pantallas",
               },
               {
                 text: "Chatbots",
-                link: "/desarrollo/componentes/chatbots",
+                link: "/desarrollo/aplicaciones/chatbots",
               },
               {
                 text: "Servidores",
-                link: "/desarrollo/componentes/servidores",
+                link: "/desarrollo/aplicaciones/servidores",
               },
               {
                 text: "API",
-                link: "/desarrollo/componentes/api",
+                link: "/desarrollo/aplicaciones/api",
               },
               {
                 text: "Paneles de administración",
-                link: "/desarrollo/componentes/admin",
+                link: "/desarrollo/aplicaciones/admin",
               },
             ],
           },
-          { text: "Validación", link: "/desarrollo/validacion" },
         ],
       },
       {
-        text: "Operación y mantenimiento",
+        text: "Operación",
         collapsed: true,
         items: [
           { text: "Introducción", link: "/operacion" },
-          { text: "Seguimiento y evaluación", link: "/operacion/seguimiento" },
-          { text: "Riesgos y mitigación", link: "/operacion/riesgos" },
           { text: "Gobernanza", link: "/operacion/gobernanza" },
+          { text: "Seguimiento", link: "/operacion/seguimiento" },
           { text: "Monetización", link: "/operacion/monetizacion" },
-          { text: "Evolución", link: "/operacion/evolucion" },
-          { text: "Unidad técnica de datos", link: "/operacion/unidad" },
         ],
       },
       {
         text: "Plan piloto",
         collapsed: true,
         items: [
-          { text: "Descripción", link: "/piloto" },
-          { text: "Propuesta", link: "/piloto/propuesta" },
+          { text: "Introducción", link: "/piloto" },
+          { text: "Propuesta técnica", link: "/piloto/propuesta-tecnica" },
+          { text: "Propuesta financiera", link: "/piloto/propuesta-financiera" },
         ],
       },
-      {
-        text: "Conclusiones y recomendaciones",
-        collapsed: true,
-        items: [
-          { text: "Conclusiones", link: "/conclusiones" },
-          { text: "Recomendaciones", link: "/conclusiones/recomendaciones" },
-        ],
-      },
+      { text: "Glosario", link: "/glosario" },
+      { text: "Cómo contribuir", link: "/contribuir" },
+      { text: "Créditos", link: "/creditos" },
     ],
 
     socialLinks: [

@@ -1,4 +1,4 @@
-# Implementación del sistema
+# Desarrollo del sistema
 
 ::: info Puntos clave
 

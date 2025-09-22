@@ -1,4 +1,4 @@
-# Infobús
+# Distribución de información
 
 ::: info Puntos clave
 

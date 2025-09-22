@@ -58,7 +58,7 @@
   translation: API de Transferencia de Estado Representacional
   description: Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
 
-  - term: Gobernanza
+- term: Gobernanza
   definition: Gobierno y gestión de sistemas, procesos y decisiones en el ámbito público
   translation: Governance
   description: Conjunto de políticas, procesos y estructuras que aseguran la administración eficaz, transparente y responsable de organizaciones y sistemas públicos.
@@ -95,7 +95,7 @@
 
 - term: Personas usuarias
   definition: Individuos que utilizan un servicio o sistema
-  translation: Users (gender-neutral: people users)
+  translation: "Users (gender-neutral: people users)"
   description: Personas que interactúan con un sistema o servicio, siendo el foco principal para el diseño y mejora de experiencias y funcionalidades.
 
 - term: Elicitación
@@ -142,7 +142,7 @@
   definition: Evaluación del cumplimiento de requisitos especificados.
   translation: Verification
   description: Proceso mediante el cual se comprueba que los requisitos han sido implementados correctamente y que el sistema funciona de acuerdo con ellos.
-  
+
 - term: MA
   definition: Maintainability
   translation: Mantenibilidad
@@ -157,7 +157,7 @@
   definition: Flexibility
   translation: Flexibilidad
   description: El sistema debe ser capaz de adaptarse a cambios futuros de cualquier tipo
-  
+
 - term: SU
   definition: Sustainability
   translation: Sostenibilidad

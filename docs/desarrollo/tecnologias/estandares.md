@@ -1,4 +1,4 @@
-# Inteligencia artificial
+# Estándares tecnológicos
 
 ::: info Puntos clave
 
