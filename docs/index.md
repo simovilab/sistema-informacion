@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "SIMI"
-  text: "Sistemas de información para la movilidad inteligente"
+  name: "infotp"
+  text: "Sistemas de información para el transporte público inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones.
   image:
-    src: /i.png
-    alt: Logo SIMI
+    light: /i_light.png
+    dark: /i_dark.png
   actions:
     - theme: brand
-      text: Visión
-      link: /vision
+      text: Introducción
+      link: /introduccion/
     - theme: alt
       text: Plan piloto
       link: /piloto/

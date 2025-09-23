@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount:wght@300&display=swap");
+
+/* Target VitePress hero name */
+.VPHomeHero .name,
+.VPHero .name,
+.hero .name {
+  font-family: "Bitcount", sans-serif !important;
+}
+
+/* Target VitePress site title in navigation */
+.title a {
+  font-family: "Bitcount", sans-serif !important;
+  font-size: 1.33em !important;
+}

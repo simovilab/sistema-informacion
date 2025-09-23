@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="600"
+   height="600"
+   viewBox="0 0 158.75 158.75"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="infotp.svg"
+   inkscape:export-filename="i.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.2102413"
+     inkscape:cx="394.78447"
+     inkscape:cy="561.25984"
+     inkscape:window-width="1496"
+     inkscape:window-height="597"
+     inkscape:window-x="2031"
+     inkscape:window-y="268"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:#1b1b1f;fill-opacity:1;stroke:#dfdfd6;stroke-width:2.71664;stroke-linecap:round;stroke-opacity:1"
+       id="path2"
+       cx="79.375"
+       cy="79.375"
+       r="78.016678" />
+    <text
+       xml:space="preserve"
+       style="font-size:157.023px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke-width:0.817825"
+       x="40.119251"
+       y="125.86647"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:Bitcount;-inkscape-font-specification:'Bitcount Light';fill:#ffffff;fill-opacity:1;stroke-width:0.817825"
+         x="40.119251"
+         y="125.86647">i<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Bitcount;-inkscape-font-specification:Bitcount;fill:#ffffff;fill-opacity:1;stroke-width:0.817825"
+   id="tspan2" /></tspan></text>
+  </g>
+</svg>

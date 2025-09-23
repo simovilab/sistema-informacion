@@ -3,8 +3,8 @@ import UnoCSS from "@unocss/vite"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "SIMI",
-  description: "Sistemas de información para la movilidad inteligente",
+  title: "infotp",
+  description: "Sistemas de información para el transporte público inteligente",
   lang: "es-ES",
   cleanUrls: true,
   base: "/sistema-informacion/",
@@ -35,7 +35,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/i.png",
+    // logo: "/i.png",
     nav: [
       { text: "Inicio", link: "/" },
       { text: "Introducción", link: "/introduccion" },
