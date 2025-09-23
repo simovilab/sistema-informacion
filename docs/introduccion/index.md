@@ -26,8 +26,6 @@ En las siguientes secciones hay una ampliación de estas ideas, con referencias 
 
 Elegir el transporte público es ampliamente reconocido como un impulso para la economía, para el medio ambiente y para nuestro propio bienestar. Queremos promover ese comportamiento e incentivar a las personas a tomar constantemente esa elección.
 
-The <Concept term="api">API</Concept> allows different systems to communicate.
-
 La elección del transporte público es una decisión compleja que requiere de muchos factores como , sin embargo, la información es un factor de peso, y la digitalización una de los formas más efectivas de
 
 Si nos preguntamos ¿por qué digitalizar el transporte público?, hay muchas respuestas.
@@ -45,8 +43,6 @@ Concepto clave: datos abiertos y estandarizados.
 Y hablamos de los medios de comunicación digital del presente y del futuro también. ¿Habrá señales de tránsito holográficas tridimensionales? Estaremos preparados para ese momento, con algunos pequeños ajustes.
 
 Los estudios realizados en la Universidad de Costa Rica demuestran que la **información** es actualmente **el factor más decisivo** en la satisfacción con el servicio de las personas usuarias.
-
-(Diagrama de pesos de SEM)
 
 <Mermaid :code="`
 flowchart LR
@@ -71,7 +67,7 @@ Accesibilidad
 
 <Ref url="./diseno/canales" icon="directions_bus">Canales de comunicación</Ref>
 
-### Una propuesta nacida para esta época
+### Una propuesta contemporánea
 
 Vivimos plenamente en la época de la información y también en un momento de nuevas sensibilidades y conciencia sobre la importancia del transporte público para todos. Debemos diseñar un sistema adaptado a estas circunstancias. Por eso, este sistema es **nativo**.
 
@@ -87,12 +83,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un ecosistema de herramientas computacionales y componentes web para la creación de contenidos interactivos con
-      elementos de matemáticas y programación aplicados al análisis de datos.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/kalouk">Saber más</a>
+      Todos los canales de comunicación digitales deben formar parte de la oferta de información del servicio.
     </div>
   </div>
   <div class="cell">
@@ -106,14 +97,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un servidor web versátil para generación de datos sintéticos utilizados en el curso y sus proyectos, accesibles
-      por medio de diferentes modelos de comunicación (REST API, WebSocket, SSE y webhooks).
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/servicios/kalouk-web">Saber más</a>
-      🌐
-      <a href="https://web.kalouk.xyz/" target="_blank">web.kalouk.xyz</a>
+      La mayoría de consultas de la información del transporte público vienen desde teléfonos celulares, y por eso el diseño debe estar primordialmente para este medio.
     </div>
   </div>
   <div class="cell">
@@ -127,14 +111,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un servidor web con el protocolo de contexto de modelos (MCP) para proveer datos e información de contexto sobre
-      la teoría del curso a agentes de inteligencia artificial.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/servicios/kalouk-mcp">Saber más</a>
-      🌐
-      <a href="https://mcp.kalouk.xyz/" target="_blank">mcp.kalouk.xyz</a>
+      Las nuevas herramientas de inteligencia artificial deben permitir a las personas usuarias a utilizar lenguaje natural para hacer consultas sobre la información del servicio.
     </div>
   </div>
   <div class="cell">
@@ -148,14 +125,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un conjunto de componentes de JavaScript para actividades interactivas en sitios web, tanto en las presentaciones
-      como en el contenido teórico.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-js">Saber más</a>
-      🌐
-      <a href="https://www.npmjs.com/org/kalouk" target="_blank">npm</a>
+      Las redes sociales y los medios de atención al cliente son medios primordiales de comunicación que debe ser explotados por el servicio para informar oportunamente y crear comunidad alrededor del transporte público.
     </div>
   </div>
   <div class="cell">
@@ -169,14 +139,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Una interfaz de línea de comandos (CLI) para interactuar de forma programática con los servicios de Kalouk, como
-      Kalouk WEB y Kalouk MCP.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-cli">Saber más</a>
-      🌐
-      <a href="https://www.npmjs.com/package/@kalouk/cli" target="_blank">@kalouk/cli</a>
+      En un país de vocación turística como Costa Rica, el transporte público no debe poner ningún obstáculo para la información del servicio a las personas usuarias de cualquier parte del mundo. La inteligencia artificial ahora lo permite.
     </div>
   </div>
   <div class="cell">
@@ -190,14 +153,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un paquete de Python para interactuar con los servicios y herramientas de Kalouk, especialmente para la gestión de
-      contenidos y evaluaciones del curso.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-py">Saber más</a>
-      🌐
-      <a href="https://pypi.org/project/kalouk/" target="_blank">PyPI</a>
+      El transporte público es para todos. La información oportuna y con diseño universal puede facilitar la experiencia.
     </div>
   </div>
   <div class="cell">

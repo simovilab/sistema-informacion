@@ -104,7 +104,6 @@ onMounted(async () => {
   border: 1px solid var(--vp-c-divider);
   border-radius: 0.75rem;
   font-size: 0.6875rem;
-  font-weight: 500;
   font-family: var(--vp-font-family-mono);
   color: var(--vp-c-text-2);
   white-space: nowrap;

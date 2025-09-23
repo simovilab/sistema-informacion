@@ -129,7 +129,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: "Descripción", link: "/desarrollo/arquitectura" },
-              { text: "Producción de datos", link: "/desarrollo/arquitectura/produccion" },
+              { text: "Recolección de datos", link: "/desarrollo/arquitectura/recoleccion" },
               { text: "Distribución de información", link: "/desarrollo/arquitectura/distribucion" },
             ],
           },

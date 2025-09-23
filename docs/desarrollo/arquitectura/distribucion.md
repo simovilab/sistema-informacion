@@ -2,11 +2,13 @@
 
 ::: info Puntos clave
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+1. Lista de conclusiones importantes o mensajes clave (_key takeaways_)
+1. Síntesis de toda esta página
 
 :::
 
-**Asignación**: David Segura Cruz y Josué Vargas Céspedes
+## Servidor de distribución de información
 
-Infobús&reg; es una marca registrada de la Universidad de Costa Rica.
+### Interfaz de programación de aplicaciones (API)
+
+### Base de datos

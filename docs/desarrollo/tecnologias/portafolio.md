@@ -9,6 +9,8 @@
 
 ## Software
 
+asdf asdfadsf
+
 <!-- prettier-ignore -->
 <Mermaid :code="`
 flowchart LR
@@ -53,6 +55,8 @@ flowchart LR
     PV --"interfaz web de"--> V
     I --"interfaz móvil de"--> V
 `" />
+
+asdfasdf asd
 
 ## Dispositivos móviles
 

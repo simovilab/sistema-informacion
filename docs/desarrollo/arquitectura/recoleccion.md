@@ -1,0 +1,228 @@
+# Recolección de datos
+
+::: info Objetivo
+La acción básica de este subsistema es recopilar los datos del servicio de transporte público y recolectar y transformar los datos de telemetría y rastreo de los vehículos para publicación en un suministro de datos GTFS _Schedule_ y GTFS _Realtime_.
+:::
+
+La siguiente es la tabla resumen de los componentes de la arquitectura.
+
+| Nombre                           | Clasificación ADM   |
+| -------------------------------- | ------------------- |
+| Servidor en tiempo real          | Aplicación          |
+| Base de datos                    | Componente de datos |
+| Base de datos en memoria         | Componente de datos |
+| API REST                         | Interfaz            |
+| API GraphQL                      | Interfaz            |
+| Gestor GTFS                      | Aplicación          |
+| Editor GTFS                      | Aplicación          |
+| Herramientas de programación     | Aplicación          |
+| Intermediador de mensajes        | Aplicación          |
+| Aplicación móvil operativa       | Aplicación          |
+| Sistema de gestión de contenidos | Aplicación          |
+| Protocolo de contexto de modelos | Aplicación          |
+| Simulador de datos               | Aplicación          |
+
+A continuación hay una descripción general de cada componente.
+
+## Servidor en tiempo real
+
+Plataforma central de procesamiento que recolecta, valida y transforma datos de rastreo y telemetría del transporte público en tiempo real. Genera y mantiene suministros (_feeds_) actualizados de GTFS _Schedule_ y GTFS _Realtime_ para distribución a aplicaciones cliente y sistemas externos.
+
+### Características
+
+- **Procesamiento en tiempo real:** Latencia menor a 1 segundo para datos críticos
+- **Escalabilidad horizontal:** Capacidad de distribuir carga entre múltiples instancias
+- **Tolerancia a fallos:** Redundancia automática y recuperación ante interrupciones
+- **Validación de datos:** Verificación de integridad y consistencia de datos entrantes
+- **Transformación de protocolos:** Conversión entre formatos de telemetría y estándares GTFS
+- **Monitoreo y alertas:** Sistema de métricas y notificaciones
+- **API de integración:** Conectores para sistemas CAD/AVL y plataformas de terceros
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Base de datos
+
+Sistema de almacenamiento principal para datos operativos e históricos del transporte público, optimizado para consultas geoespaciales, análisis temporal y gestión de grandes volúmenes de información estructurada y semi-estructurada.
+
+### Características
+
+- **Motor relacional:** Transacciones ACID, integridad referencial
+- **Extensión geoespacial:** Consultas espaciales, índices geométricos, análisis de proximidad
+- **Soporte JSON/JSONB:** Almacenamiento flexible de metadatos y configuraciones dinámicas
+- **Series temporales optimizadas:** Particionamiento automático por tiempo, compresión de datos históricos
+- **Respaldo automatizado:** Respaldos incrementales con retención configurable
+- **Indexación avanzada:** Índices compuestos para consultas complejas
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Base de datos en memoria
+
+Caché de alta velocidad para datos temporales de rastreo y telemetría que requieren acceso rápido durante el procesamiento en tiempo real. Actúa como _buffer_ entre la ingesta de datos y el almacenamiento persistente.
+
+### Características
+
+- **Latencia sub-milisegundo:** Acceso inmediato a datos frecuentemente consultados
+- **Estructura de datos especializada:** Tablas con _hash_, conjuntos ordenados para consultas optimizadas
+- **Expiración automática (TTL):** Limpieza automática de datos obsoletos
+- **Persistencia opcional:** _Snapshots_ periódicos para recuperación ante fallos
+- **_Clustering_ y replicación:** Alta disponibilidad mediante distribución de datos
+- **Compresión en memoria:** Optimización del uso de RAM para mayor capacidad
+- **Pub/Sub integrado:** Notificaciones en tiempo real de cambios de estado
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Interfaz de programación de aplicaciones REST
+
+API RESTful que proporciona acceso estructurado y escalable a datos operativos del sistema de transporte público. Diseñada para integración con sistemas externos, aplicaciones móviles y herramientas de administración con patrones estándar de la industria.
+
+### Características
+
+- **Especificación OpenAPI 3.0:** Documentación automática e interactiva de terminales (_endpoints_)
+- **Autenticación OAuth 2.0 / JWT:** _Tokens_ seguros con alcance de acceso (_scope_) granular y renovación automática
+- **Límite de consultas dinámico:** Límites adaptativos por cliente
+- **Versionado semántico:** Compatibilidad hacia atrás con evolución controlada de API
+- **Paginación inteligente:** División en páginas para grandes conjuntos de datos
+- **Filtrado y ordenamiento:** Parámetros flexibles para consultas personalizadas
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Interfaz de programación de aplicaciones GraphQL
+
+API GraphQL que permite consultas flexibles y eficientes mediante un esquema unificado. Optimizada para clientes que requieren datos específicos con mínima transferencia de red y máxima expresividad en las consultas.
+
+### Características
+
+- **Esquema tipado fuerte:** Definición explícita de tipos con validación automática
+- **Suscripciones en tiempo real:** WebSocket connections para actualizaciones instantáneas
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Gestor GTFS
+
+Motor de gestión integral para datos y procesos relacionados con GTFS Schedule y GTFS Realtime. Proporciona un ecosistema completo para la administración del ciclo de vida de datos de transporte público, desde la importación hasta la distribución.
+
+### Características
+
+- **Modelos de datos conformes:** Implementación completa de especificaciones GTFS con validación estricta
+- **Importación robusta:** Procesamiento con validación, transformación y reconciliación de datos
+- **Exportación optimizada:** Generación eficiente de _feeds_ con compresión y versionado
+- **Sincronización tiempo real:** Puente entre GTFS _Schedule_ estático y actualizaciones dinámicas
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Editor GTFS
+
+Herramienta visual especializada para creación y edición de feeds GTFS _Schedule_ y gestión de alertas GTFS _Realtime_. Combina interfaces intuitivas con validación automática para facilitar el mantenimiento de datos de transporte público.
+
+### Características
+
+- **Editor geoespacial avanzado:** Mapas interactivos con capas especializadas para rutas, paradas y trayectorias
+- **Cálculo automático de tiempos:** Algoritmos de estimación basados en distancias, velocidades y patrones históricos
+- **Validación en tiempo real:** Retroalimentación inmediata sobre errores y advertencias durante la edición
+- **Gestión de horarios inteligente:** Plantillas reutilizables, operaciones en masa y propagación de cambios
+- **Visualización de conflictos:** Detección y resolución de solapamientos temporales y espaciales
+- **Auditoría completa:** Trazabilidad de cambios con marcas temporales y responsables
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Herramientas de programación
+
+Suite de desarrollo (SDK, _Software Development Kit_) que proporciona bibliotecas, utilidades y herramientas especializadas para facilitar la integración con el ecosistema de producción de datos de transporte público. Diseñado para acelerar el desarrollo de aplicaciones cliente y extensiones del sistema.
+
+### Características
+
+- **CLI multiplataforma:** Herramientas de línea de comandos para automatización y administración
+- **Bibliotecas nativas:** SDKs para Python, JavaScript/TypeScript y otros lenguajes necesarios con APIs consistentes
+- **Distribución automatizada:** Accesible vía PyPI, npm u otros
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Intermediador de mensajes
+
+Intermediador (_broker_) MQTT de alto desempeño especializado en telemetría vehicular y comunicación en tiempo real. Actúa como concentrador central para el intercambio de mensajes entre vehículos, sistemas de control y aplicaciones de monitoreo con garantías de entrega y escalabilidad.
+
+### Características
+
+- **Protocolo MQTT 5.0:** Soporte completo con control de flujo
+- **Tópicos jerárquicos especializados:** Estructura optimizada para datos GTFS (vehicle/route/trip/stop)
+- **QoS adaptativo:** Niveles de servicio configurables según criticidad del mensaje
+- **Persistencia selectiva:** Almacenamiento configurable de mensajes críticos con TTL
+- **Seguridad:** TLS/SSL, autenticación por certificados y ACLs granulares
+- **Interoperabilidad:** Conectores para WebSockets, AMQP y sistemas propietarios
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Aplicación móvil operativa
+
+Aplicación móvil nativa diseñada para operadores de transporte público que combina funcionalidades de gestión operativa con capacidades de telemetría básica. Proporciona una interfaz intuitiva para el personal de campo con sincronización en tiempo real.
+
+### Características
+
+- **Panel operativo:** Métricas en tiempo real de ruta, horarios y rendimiento
+- **Comunicación bidireccional:** Chat con despachadores y sistema de alertas
+- **Telemetría vehicular:** Transmisión de posición, velocidad, ocupación y eventos
+- **Reportes de incidencias:** Captura multimedia con geolocalización automática
+- **Configuración dinámica:** Actualizaciones de parámetros operativos
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Sistema de gestión de contenidos
+
+Plataforma de administración de contenido especializada en comunicación operativa y relaciones públicas del sistema de transporte. Incluye _workflows_ editoriales, distribución multicanal y análisis de _engagement_ para maximizar el alcance e impacto de las comunicaciones.
+
+### Características
+
+- **Editor WYSIWYG avanzado:** Edición visual con vista previa en tiempo real para múltiples formatos
+- **Publicación programada:** Calendarización automática
+- **Distribución multicanal:** Sincronización automática con redes sociales, web y apps
+- **API _headless_:** Distribución de contenido via REST/GraphQL para aplicaciones externas
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Protocolo de contexto de modelos
+
+Servidor especializado que implementa _Model Context Protocol_ (MCP) para proporcionar acceso conversacional a datos operativos mediante modelos de lenguaje extensos (LLM, _Large Language Models_). Actúa como puente inteligente entre consultas de lenguaje natural y sistemas de datos estructurados.
+
+### Características
+
+- **Implementación MCP completa:** Soporte total del protocolo con extensiones personalizadas
+- **Consultas en lenguaje natural:** Traducción automática de preguntas a consultas SQL/GraphQL
+- **Contexto:** Mantenimiento de estado conversacional con memoria persistente
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />
+
+## Simulador de datos de tiempo real
+
+Plataforma de simulación para generación de datos sintéticos de transporte público que replica patrones realistas de operación. Esencial para pruebas, desarrollo y entrenamiento sin impacto en sistemas productivos.
+
+### Características
+
+- **Modelos de movilidad realistas:** Patrones de tráfico basados en datos históricos
+
+### Catalogación
+
+- <Catalog catalog="principles" item="001" />

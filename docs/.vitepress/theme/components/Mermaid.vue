@@ -22,6 +22,8 @@ const isDark = ref<boolean>(false)
 
 // Function to render the mermaid diagram
 const renderMermaid = async () => {
+  if (!props.code?.trim()) return
+
   try {
     // Dynamic import to avoid SSR issues
     const mermaid = await import("mermaid")
@@ -178,6 +180,7 @@ watch(isDark, async () => {
   padding: 1rem;
   border-radius: 0.375rem;
   overflow-x: auto;
+  white-space: pre;
 }
 
 /* Force font inheritance on Mermaid SVG elements */
