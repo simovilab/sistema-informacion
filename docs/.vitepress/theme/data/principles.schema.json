@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Principles Catalog Schema",
+  "type": "object",
+  "required": ["metadata", "principles"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "domain",
+          "name",
+          "description",
+          "rationale",
+          "implications",
+          "related_principles",
+          "references"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^principles:[0-9]{3}$"
+          },
+          "domain": {
+            "type": "string",
+            "enum": [
+              "Software Architecture",
+              "Business",
+              "Data",
+              "Application",
+              "Technology"
+            ]
+          },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "rationale": { "type": "string" },
+          "implications": { "type": "string" },
+          "related_principles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "references": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
