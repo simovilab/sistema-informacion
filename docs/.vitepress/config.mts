@@ -7,7 +7,7 @@ export default defineConfig({
   description: "Sistemas de información para el transporte público inteligente",
   lang: "es-ES",
   cleanUrls: true,
-  base: "/sistema-informacion/",
+  base: "/",
 
   markdown: {
     theme: {
