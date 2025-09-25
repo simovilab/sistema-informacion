@@ -43,6 +43,7 @@ export default defineConfig({
       { text: "Desarrollo", link: "/desarrollo/" },
       { text: "Operación", link: "/operacion/" },
       { text: "Plan piloto", link: "/piloto/" },
+      { text: "Catálogos", link: "/catalogos/" },
     ],
 
     sidebar: [
@@ -203,11 +204,36 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/piloto" },
-          { text: "Propuesta técnica", link: "/piloto/propuesta-tecnica" },
+          {
+            text: "Propuesta técnica",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/piloto/propuesta/" },
+              { text: "Databús", link: "/piloto/propuesta/databus" },
+              { text: "Infobús", link: "/piloto/propuesta/infobus" },
+              { text: "DevOps", link: "/piloto/propuesta/devops" },
+            ],
+          },
+          { text: "Unidad de tecnologías", link: "/piloto/unidad" },
           { text: "Propuesta financiera", link: "/piloto/propuesta-financiera" },
         ],
       },
-      { text: "Glosario", link: "/glosario" },
+      {
+        text: "Catálogos",
+        collapsed: true,
+        items: [
+          { text: "Introducción", link: "/catalogos/" },
+          { text: "Principios", link: "/catalogos/principios" },
+          { text: "Partes interesadas", link: "/catalogos/partes-interesadas" },
+          { text: "Actores y organizaciones", link: "/catalogos/actores-y-organizaciones" },
+          { text: "Aplicaciones", link: "/catalogos/aplicaciones" },
+          { text: "Requisitos", link: "/catalogos/requisitos" },
+          { text: "Datos", link: "/catalogos/datos" },
+          { text: "Tecnologías", link: "/catalogos/tecnologias" },
+          { text: "Estándares", link: "/catalogos/estandares" },
+          { text: "Interfaces", link: "/catalogos/interfaces" },
+        ],
+      },
       { text: "Cómo contribuir", link: "/contribuir" },
       { text: "Créditos", link: "/creditos" },
     ],

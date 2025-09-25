@@ -19,17 +19,29 @@ hero:
 
 features:
   - icon: <span class="material-symbols-outlined">draw</span>
+    title: Introducción
+    details: Consideraciones sobre el servicio y las tecnologías para el transporte público.
+    link: /introduccion/
+  - icon: <span class="material-symbols-outlined">draw</span>
     title: Diseño
     details: Consideraciones sobre el servicio y las tecnologías para el transporte público.
     link: /diseno/
   - icon: <span class="material-symbols-outlined">rocket_launch</span>
     title: Desarrollo
     details: Fases de desarrollo tecnológico y estrategias de implementación.
-    link: /implementacion/
+    link: /desarrollo/
   - icon: <span class="material-symbols-outlined">insert_chart</span>
     title: Operación
     details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución, entre otros.
     link: /operacion/
+  - icon: <span class="material-symbols-outlined">rocket_launch</span>
+    title: Plan piloto
+    details: Fases de desarrollo tecnológico y estrategias de implementación.
+    link: /piloto/
+  - icon: <span class="material-symbols-outlined">insert_chart</span>
+    title: Catálogos
+    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución, entre otros.
+    link: /catalogos/
 ---
 
 ::: danger Trabajo en progreso

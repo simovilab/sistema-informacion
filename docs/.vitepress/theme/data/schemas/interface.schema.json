@@ -1,0 +1,168 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Interface Catalog Schema",
+  "description": "JSON Schema for validating interface catalog YAML files in the Public Transportation Information System architecture",
+  "type": "object",
+  "required": ["metadata", "interfaces"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "interfaces": {
+      "type": "array",
+      "description": "List of interfaces in the public transportation information system",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "type",
+          "protocols",
+          "dataFormats",
+          "security",
+          "version",
+          "owner",
+          "contact",
+          "relatedComponents",
+          "status",
+          "documentation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^interface:\\d{3}$",
+            "description": "Unique identifier for the interface following the pattern interface:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the interface"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Brief description of the interface's purpose and functionality"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "REST API",
+              "GraphQL",
+              "SOAP",
+              "Message Queue",
+              "Database",
+              "File Transfer",
+              "WebSocket",
+              "gRPC",
+              "Event Stream",
+              "Batch Interface"
+            ],
+            "description": "Type of interface technology used"
+          },
+          "protocols": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "HTTPS",
+                "HTTP",
+                "TCP",
+                "UDP",
+                "WebSocket",
+                "MQTT",
+                "AMQP",
+                "FTP",
+                "SFTP"
+              ]
+            },
+            "minItems": 1,
+            "description": "List of communication protocols used by the interface"
+          },
+          "dataFormats": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "JSON",
+                "XML",
+                "CSV",
+                "Protobuf",
+                "YAML",
+                "Binary",
+                "Text",
+                "Avro",
+                "Parquet"
+              ]
+            },
+            "minItems": 1,
+            "description": "List of data formats supported by the interface"
+          },
+          "security": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "OAuth 2.0",
+                "API Keys",
+                "JWT",
+                "TLS",
+                "mTLS",
+                "Basic Auth",
+                "SAML",
+                "OpenID Connect",
+                "Certificate Auth"
+              ]
+            },
+            "minItems": 1,
+            "description": "List of security mechanisms implemented by the interface"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+            "description": "Current version of the interface specification"
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Person or team responsible for the interface"
+          },
+          "contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Contact email for interface support"
+          },
+          "relatedComponents": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "List of components or services that use this interface"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Deprecated",
+              "Development",
+              "Planned",
+              "Retired",
+              "Under Review"
+            ],
+            "description": "Current status of the interface"
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL or reference to detailed interface documentation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

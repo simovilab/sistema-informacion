@@ -29,15 +29,31 @@ Esta es la fase de implementación (_deployment_) y pruebas para llevar el siste
 
 ### Infraestructura en la nube
 
+#### Aplicación
+
+Servidores para la gestión de los datos del servicio de transporte público.
+
 | Servidor        | Costo mensual (USD) |
 | --------------- | ------------------- |
 | Databús         | 75                  |
 | Databús MQTT    | 25                  |
 | Infobús         | 75                  |
 | Infobús MQTT    | 25                  |
-| Infobús SCREENS | 25                  |
+| Infobús Screens | 25                  |
 | Infobús SPARQL  | 11                  |
 | **Total**       | **236**             |
+
+#### Monitoreo y seguridad
+
+Servidores para el monitoreo de los servidores de la aplicación.
+
+| Servidor        | Costo mensual (USD) |
+| --------------- | ------------------- |
+| Wazuh Indexer   | 25                  |
+| Wazuh Server    | 25                  |
+| Wazuh Dashboard | 25                  |
+| Zabbix          | 25                  |
+| **Total**       | **100**             |
 
 Los detalles están a continuación.
 

@@ -1,0 +1,23 @@
+[
+  {
+    "key": "principles",
+    "translations": { "es": "principios", "pt": "princípios" }
+  },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "domain", "translations": { "es": "dominio", "pt": "domínio" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  {
+    "key": "description",
+    "translations": { "es": "descripción", "pt": "descrição" }
+  },
+  { "key": "rationale", "translations": { "es": "justificación", "pt": "justificativa" } },
+  {
+    "key": "implications",
+    "translations": { "es": "implicaciones", "pt": "implicações" }
+  },
+  {
+    "key": "related_principles",
+    "translations": { "es": "principios_relacionados", "pt": "princípios_relacionados" }
+  },
+  { "key": "references", "translations": { "es": "referencias", "pt": "referências" } }
+]

@@ -1,0 +1,69 @@
+# Metadata about the catalog
+metadata:
+  title: "Stakeholder Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of architectural stakeholders for a Public Transportation Information System."
+  author:
+    - "Jose Murillo Vargas"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Stakeholder catalog
+stakeholders:
+  - id: stakeholder:001
+    name: "Passengers"
+    description: "Individuals who use the public transportation system for their daily commute or travel needs."
+    role: "End Users"
+    interests:
+      - "Reliable and timely information about bus arrivals and departures."
+      - "User-friendly mobile application for route planning."
+      - "Real-time updates on service disruptions or delays."
+    influence: "High"
+    priority: "High"
+
+  - id: stakeholder:002
+    name: "Bus Operators"
+    description: "Companies or entities responsible for operating the buses within the public transportation system."
+    role: "Service Providers"
+    interests:
+      - "Efficient scheduling and dispatching of buses."
+      - "Access to real-time data for better fleet management."
+      - "Integration with payment systems for fare collection."
+    influence: "High"
+    priority: "High"
+
+  - id: stakeholder:003
+    name: "City Transportation Authorities"
+    description: "Government agencies overseeing public transportation policies, regulations, and funding."
+    role: "Regulators and Planners"
+    interests:
+      - "Compliance with transportation regulations and standards."
+      - "Data analytics for improving transportation services."
+      - "Public satisfaction and feedback mechanisms."
+    influence: "High"
+    priority: "Medium"
+
+  - id: stakeholder:004
+    name: "Maintenance Teams"
+    description: "Personnel responsible for the upkeep and repair of buses and related infrastructure."
+    role: "Support Staff"
+    interests:
+      - "Access to maintenance schedules and records."
+      - "Real-time alerts on vehicle issues or breakdowns."
+      - "Efficient communication with bus operators."
+    influence: "Medium"
+    priority: "Medium"
+
+  - id: stakeholder:005
+    name: "IT Support Staff"
+    description: "Teams responsible for maintaining the technological infrastructure of the Public Transportation Information System."
+    role: "Technical Support"
+    interests:
+      - "System uptime and reliability."
+      - "Security of user data and system integrity."
+      - "Scalability to handle increasing user demand."
+    influence: "Medium"
+    priority: "Medium"

@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Application Portfolio Catalog Schema",
+  "description": "JSON Schema for validating application portfolio catalog YAML files in the Public Transportation Information System architecture",
+  "type": "object",
+  "required": ["metadata", "applications"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "applications": {
+      "type": "array",
+      "description": "List of applications in the public transportation information system",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "version",
+          "vendor",
+          "license",
+          "support_contact",
+          "categories",
+          "technologies",
+          "stakeholders",
+          "status",
+          "deployment_environment",
+          "criticality"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^application:\\d{3}$",
+            "description": "Unique identifier for the application following the pattern application:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the application"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Brief description of the application's purpose and functionality"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+            "description": "Current version of the application"
+          },
+          "vendor": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The company or organization that developed/maintains the application"
+          },
+          "license": {
+            "type": "string",
+            "enum": [
+              "Commercial",
+              "Open Source",
+              "Custom",
+              "Proprietary",
+              "GPL",
+              "MIT",
+              "Apache",
+              "BSD",
+              "Creative Commons"
+            ],
+            "description": "License type under which the application is distributed"
+          },
+          "support_contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Contact email for technical support"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Transportation",
+                "Real-Time Data",
+                "Fleet Management",
+                "Payment Processing",
+                "User Interface",
+                "Analytics",
+                "Integration",
+                "Security",
+                "Monitoring",
+                "Configuration",
+                "Reporting",
+                "Mobile",
+                "Web",
+                "Backend Services"
+              ]
+            },
+            "minItems": 1,
+            "description": "List of functional categories the application belongs to"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "List of key technologies used by the application"
+          },
+          "stakeholders": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Passengers",
+                "Bus Operators",
+                "Transit Authorities",
+                "Maintenance Teams",
+                "IT Support Staff",
+                "System Administrators",
+                "Government Officials",
+                "Financial Partners",
+                "Technology Vendors"
+              ]
+            },
+            "minItems": 1,
+            "description": "List of stakeholder groups that use or are affected by the application"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Inactive",
+              "Development",
+              "Planned",
+              "Retired",
+              "Maintenance",
+              "Testing"
+            ],
+            "description": "Current status of the application"
+          },
+          "deployment_environment": {
+            "type": "string",
+            "enum": ["Cloud", "On-Premise", "Hybrid", "Edge", "Mobile", "SaaS"],
+            "description": "Where the application is deployed"
+          },
+          "criticality": {
+            "type": "string",
+            "enum": ["High", "Medium", "Low", "Critical"],
+            "description": "Business criticality level of the application"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Sistema de información la movilidad inteligente",
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "docs:generate": "node scripts/generate-catalogs.mjs",
+    "docs:dev": "pnpm docs:generate && vitepress dev docs",
+    "docs:build": "pnpm docs:generate && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],

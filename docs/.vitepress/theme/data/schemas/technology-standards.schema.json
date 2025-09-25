@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Technology Standards Catalog Schema",
+  "description": "JSON Schema for validating technology standards catalog YAML files in the Public Transportation Information System architecture",
+  "type": "object",
+  "required": ["metadata", "technologyStandards"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "technologyStandards": {
+      "type": "array",
+      "description": "List of technology standards adopted in the public transportation information system",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "version",
+          "organization",
+          "website",
+          "usage",
+          "relatedTechnologies",
+          "status",
+          "documentation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^tech-standard:\\d{3}$",
+            "description": "Unique identifier for the technology standard following the pattern tech-standard:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the technology standard"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Brief description of what the standard defines and its purpose"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Current version of the standard being adopted"
+          },
+          "organization": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The organization or body that maintains the standard"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "Official website URL for the standard"
+          },
+          "usage": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Description of how the standard is used within the system"
+          },
+          "relatedTechnologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "List of technologies, tools, or frameworks that implement or support this standard"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Planned",
+              "Deprecated",
+              "Under Review",
+              "Retired",
+              "Draft",
+              "Approved",
+              "Implemented"
+            ],
+            "description": "Current adoption status of the standard"
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL or reference to official standard documentation"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -10,5 +10,11 @@
 /* Target VitePress site title in navigation */
 .title a {
   font-family: "Bitcount", sans-serif !important;
-  font-size: 1.33em !important;
+  font-size: 2.5em !important;
+}
+
+/* Utility class: apply Bitcount font anywhere */
+.font-bitcount,
+.bitcount {
+  font-family: "Bitcount", sans-serif !important;
 }

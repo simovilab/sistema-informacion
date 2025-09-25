@@ -26,6 +26,12 @@ Universidad de Costa Rica <br>
 - José Fabián Morales Quesada, _Ingeniería Eléctrica_
 - Johnnixia Valdés Céspedes, _Ingeniería Eléctrica_
 - Ángeles Ulate Jarquín, _Ingeniería Eléctrica_
+- César Augusto Alvarado Castro, _Ingeniería Eléctrica_
+- Randy Gerardo Cascante Espinoza, _Ingeniería Eléctrica_
+- Jostin Francisco Cubero Torres, _Ingeniería Eléctrica_
+- Pedro Esteban Meneses López, _Ingeniería Eléctrica_
+- Oriana Nashira Mora López, _Ingeniería Eléctrica_
+- José Francisco Murillo Vargas, _Ingeniería Eléctrica_
 
 #### Trabajo comunal universitario TC-691 "Tropicalización de la tecnología"
 

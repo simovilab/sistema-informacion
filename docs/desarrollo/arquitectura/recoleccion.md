@@ -40,7 +40,7 @@ Plataforma central de procesamiento que recolecta, valida y transforma datos de 
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Base de datos
 
@@ -57,7 +57,7 @@ Sistema de almacenamiento principal para datos operativos e históricos del tran
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Base de datos en memoria
 
@@ -75,7 +75,7 @@ Caché de alta velocidad para datos temporales de rastreo y telemetría que requ
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Interfaz de programación de aplicaciones REST
 
@@ -92,7 +92,7 @@ API RESTful que proporciona acceso estructurado y escalable a datos operativos d
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Interfaz de programación de aplicaciones GraphQL
 
@@ -105,7 +105,7 @@ API GraphQL que permite consultas flexibles y eficientes mediante un esquema uni
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Gestor GTFS
 
@@ -120,7 +120,7 @@ Motor de gestión integral para datos y procesos relacionados con GTFS Schedule 
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Editor GTFS
 
@@ -137,7 +137,7 @@ Herramienta visual especializada para creación y edición de feeds GTFS _Schedu
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Herramientas de programación
 
@@ -151,7 +151,7 @@ Suite de desarrollo (SDK, _Software Development Kit_) que proporciona biblioteca
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Intermediador de mensajes
 
@@ -168,7 +168,7 @@ Intermediador (_broker_) MQTT de alto desempeño especializado en telemetría ve
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Aplicación móvil operativa
 
@@ -184,7 +184,7 @@ Aplicación móvil nativa diseñada para operadores de transporte público que c
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Sistema de gestión de contenidos
 
@@ -199,7 +199,7 @@ Plataforma de administración de contenido especializada en comunicación operat
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Protocolo de contexto de modelos
 
@@ -213,7 +213,7 @@ Servidor especializado que implementa _Model Context Protocol_ (MCP) para propor
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />
 
 ## Simulador de datos de tiempo real
 
@@ -225,4 +225,4 @@ Plataforma de simulación para generación de datos sintéticos de transporte p�
 
 ### Catalogación
 
-- <Catalog catalog="principles" item="001" />
+- <CatalogItem catalog="principles" item="001" />

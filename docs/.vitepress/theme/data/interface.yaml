@@ -1,0 +1,33 @@
+# Metadata about the catalog
+metadata:
+  title: "Architecture Interfaces Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of architectural interfaces for a Public Transportation Information System."
+  author:
+    - "Oriana Mora López"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Interface catalog
+interfaces:
+  - id: interface:001
+    name: "User Authentication Interface"
+    description: "Interface for user authentication and authorization."
+    type: "REST API"
+    protocols:
+      - "HTTPS"
+    dataFormats:
+      - "JSON"
+    security:
+      - "OAuth 2.0"
+    version: "1.0"
+    owner: "Oriana Mora López"
+    contact: "oriana.mora@ucr.ac.cr"
+    relatedComponents:
+      - "User Management Service"
+      - "Frontend Application"
+    status: "Active"
+    documentation: "https://docs.example.com/user-auth-interface"
