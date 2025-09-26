@@ -1,31 +1,88 @@
 # Propuesta financiera
 
-::: info Puntos clave
-
-- La arquitectura tecnológica propuesta en este informe permite
-- Síntesis de toda esta página
-
-:::
-
-Una unidad técnica de gestión de datos, compuesta por personal técnico especializado, es una propuesta de este informe.
-
-## Resumen
-
-Costos totales para la fase de desarrollo, implementación y un año de operación regular
+Los siguientes son costos estimados derivados de la propuesta la arquitectura tecnológica planteada en este informe.
 
 ## Fase de desarrollo
 
-Esta es la fase de desarrollo del sistema informático, ajustado a las necesidades de la aplicación en Costa Rica.
+| Categoría            | Descripción                                | Monto    |
+| -------------------- | ------------------------------------------ | -------- |
+| Software             | Desarrollo de Databús e Infobús            | $285,000 |
+| Preparación de datos | Generación de GTFS, levantamiento de campo | $5,000   |
 
-## Fase de implementación
+**Subtotal desarrollo:** **$290,000**
 
-Esta es la fase de implementación (_deployment_) y pruebas para llevar el sistema a "producción", incluyendo el trabajo de gestión de la seguridad, confiabilidad y otras propiedades definidas.
+## Fase de implementación (6 meses)
 
-## Fase de operación regular
+| Categoría                     | Descripción                                   |   Monto |
+| ----------------------------- | --------------------------------------------- | ------: |
+| Recursos humanos              | Salarios ($4,500/mes, 6 meses)                | $27,000 |
+| Diseño gráfico y de servicios | Identidad visual, diseño UX/UI, materiales    |  $9,500 |
+| Alquiler                      | Oficina / espacio ($1,000/mes, 6 meses)       |  $6,000 |
+| Infraestructura en la nube    | Servidores y servicios ($400/mes, 6 meses)    |  $2,400 |
+| Equipos de oficina            | Computadoras, periféricos                     | $12,000 |
+| Dispositivos a bordo          | Dispositivos con GPS, interfaz y conectividad | $10,000 |
+| Capacitación                  | Talleres a personal y conductores             |    $750 |
+| Comunicación y difusión       | Campañas de lanzamiento y guías de usuario    |  $2,000 |
 
-### Instalaciones físicas
+**Subtotal implementación:** **$69,650**
+
+## Fase de operación (12 meses)
+
+| Categoría                  | Descripción                                            |   Monto |
+| -------------------------- | ------------------------------------------------------ | ------: |
+| Recursos humanos           | Salarios ($4,500/mes, 12 meses)                        | $54,000 |
+| Alquiler                   | Oficina / espacio ($1,000/mes, 12 meses)               | $12,000 |
+| Infraestructura en la nube | Servidores y servicios ($400/mes, 12 meses)            |  $4,800 |
+| Mantenimiento de equipos   | Repuestos y servicio técnico                           |  $6,000 |
+| Licencias y servicios      | Mapas, SMS gateway, APIs externas                      |      $0 |
+| Conectividad dispositivos  | Planes de datos ($4/dispositivo/mes, 150 dispositivos) |    $600 |
+
+**Subtotal operación:** **$77,400**
+
+## Otros costos estratégicos
+
+| Categoría             | Descripción                                              |   Monto |
+| --------------------- | -------------------------------------------------------- | ------: |
+| Fondo de contingencia | 10% del total de desarrollo + implementación + operación | $44,905 |
+| Fondo de reposición   | Sustitución de dispositivos (ciclo 3 a 5 años)           | $10,000 |
+
+**Subtotal costos estratégicos:** **$54,905**
+
+## Resumen
+
+| Concepto                          |        Monto |
+| --------------------------------- | -----------: |
+| Subtotal desarrollo               |     $290,000 |
+| Subtotal implementación           |      $69,650 |
+| Subtotal operación                |      $77,400 |
+| Otros (contingencia + reposición) |      $54,905 |
+| **Total estimado**                | **$491,955** |
+
+### Posibles descuentos
+
+| Concepto                                                |        Monto |
+| ------------------------------------------------------- | -----------: |
+| **Total estimado preliminar**                           | **$491,955** |
+| Donación en especie de Databús e Infobús                |    -$285,000 |
+| Préstamo de espacio físico en la fase de desarrollo     |      -$6,000 |
+| Acceso a infraestructura de TI en la fase de desarrollo |      -$2,400 |
+| Préstamo de espacio físico en la fase de operación      |     -$12,000 |
+| Acceso a infraestructura de TI en la fase de desarrollo |      -$4,800 |
+| Mantenimiento institucional de equipos                  |      -$6,000 |
+| Excepción de costos estratégicos                        |     -$54,905 |
+| **Total estimado con posibles descuentos**              | **$120,850** |
+
+## Desglose
 
 ### Equipos
+
+| Cantidad | Descripción                         | Costo unitario |  Total |
+| -------- | ----------------------------------- | -------------: | -----: |
+| 4        | Pantallas                           |          $1000 |  $4000 |
+| 3        | Computadoras de alto rendimiento    |          $2000 |  $6000 |
+| 1        | Computadora de escritorio           |          $1000 |  $1000 |
+| 1        | Computadora de control de pantallas |          $1000 |  $1000 |
+|          |                                     |      **Total** | $12000 |
 
 ### Infraestructura en la nube
 
@@ -33,27 +90,27 @@ Esta es la fase de implementación (_deployment_) y pruebas para llevar el siste
 
 Servidores para la gestión de los datos del servicio de transporte público.
 
-| Servidor        | Costo mensual (USD) |
-| --------------- | ------------------- |
-| Databús         | 75                  |
-| Databús MQTT    | 25                  |
-| Infobús         | 75                  |
-| Infobús MQTT    | 25                  |
-| Infobús Screens | 25                  |
-| Infobús SPARQL  | 11                  |
-| **Total**       | **236**             |
+| Servidor        | Costo mensual |
+| --------------- | ------------- |
+| Databús         | 75            |
+| Databús MQTT    | 25            |
+| Infobús         | 75            |
+| Infobús MQTT    | 25            |
+| Infobús Screens | 25            |
+| Infobús SPARQL  | 11            |
+| **Total**       | **236**       |
 
 #### Monitoreo y seguridad
 
 Servidores para el monitoreo de los servidores de la aplicación.
 
-| Servidor        | Costo mensual (USD) |
-| --------------- | ------------------- |
-| Wazuh Indexer   | 25                  |
-| Wazuh Server    | 25                  |
-| Wazuh Dashboard | 25                  |
-| Zabbix          | 25                  |
-| **Total**       | **100**             |
+| Servidor        | Costo mensual |
+| --------------- | ------------- |
+| Wazuh Indexer   | 25            |
+| Wazuh Server    | 25            |
+| Wazuh Dashboard | 25            |
+| Zabbix          | 25            |
+| **Total**       | **100**       |
 
 Los detalles están a continuación.
 
