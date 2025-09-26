@@ -1,0 +1,34 @@
+# Metadata about the catalog
+metadata:
+  title: "Application Portfolio Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of applications for a Public Transportation Information System."
+  author:
+    - "Pedro Meneses López"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Application catalog
+applications:
+  - id: application:001
+    name: "Real-Time Bus Tracking System"
+    description: "An application that provides real-time tracking of buses for passengers."
+    version: "2.3.1"
+    vendor: "TransitTech Solutions"
+    license: "Commercial"
+    support_contact: "support@transittechsolutions.com"
+    categories:
+      - "Transportation"
+      - "Real-Time Data"
+    technologies:
+      - "GPS"
+      - "Mobile App"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"

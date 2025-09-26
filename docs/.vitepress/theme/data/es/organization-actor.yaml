@@ -1,0 +1,39 @@
+# Metadata about the catalog
+metadata:
+  title: "Organizations and Actors Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of architectural organizations and actors for a Public Transportation Information System."
+  author:
+    - "Jose Murillo Vargas"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Organization catalog
+organizations:
+  - id: organization:001
+    name: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+    description: "A research lab focused on intelligent mobility systems."
+    stakeholder: "stakeholder:003"
+    contact: "simovi@ucr.ac.cr"
+    website: "https://simovi.ucr.ac.cr"
+    location: "University of Costa Rica, San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Research"
+      - "Development"
+      - "Consulting"
+
+# Actor catalog
+actors:
+  - id: actor:001
+    name: "Fabián Abarca Calderón"
+    description: "Lead Architect at SIMOVI."
+    type: "Person"
+    contact: "fabian.abarca@ucr.ac.cr"
+    organization: "organization:001"
+    roles:
+      - "Lead Architect"
+      - "Project Manager"
