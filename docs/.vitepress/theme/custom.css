@@ -18,3 +18,60 @@
 .bitcount {
   font-family: "Bitcount", sans-serif !important;
 }
+
+/* Catalog UI: shared classes used by Vue components and generated Markdown */
+.catalog-reference {
+  display: inline;
+  vertical-align: baseline;
+  margin: 0 0.125rem;
+}
+.catalog-badge {
+  display: inline-block;
+  padding: 0.0625rem 0.375rem;
+  background: var(--catalog-badge-bg, var(--vp-c-default-soft));
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 0.25rem;
+}
+.catalog-icon,
+.material-symbols-outlined.catalog-icon {
+  font-family: "Material Symbols Outlined";
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 20;
+  font-size: 1em;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 0.125rem;
+  color: var(--vp-c-text-2);
+}
+.catalog-link {
+  color: var(--vp-c-text-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  line-height: inherit;
+  vertical-align: baseline;
+}
+.catalog-link:hover {
+  color: var(--vp-c-brand-1);
+}
+.catalog-link,
+.catalog-link:hover,
+.catalog-link:focus,
+.catalog-link:active,
+.catalog-link:visited {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+.catalog-link i {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}

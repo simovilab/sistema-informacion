@@ -1,0 +1,10 @@
+[
+  { "key": "entities", "translations": { "es": "entidades", "pt": "entidades" } },
+  { "key": "data_components", "translations": { "es": "componentes_de_datos", "pt": "componentes_de_dados" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "attributes", "translations": { "es": "atributos", "pt": "atributos" } },
+  { "key": "type", "translations": { "es": "tipo", "pt": "tipo" } },
+  { "key": "data_entities", "translations": { "es": "entidades_de_datos", "pt": "entidades_de_dados" } }
+]

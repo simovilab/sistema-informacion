@@ -8,29 +8,26 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | A catalog of applications for a Public Transportation Information System. |
+| Descripción | Un catálogo de aplicaciones para un Sistema de Información de Transporte Público. |
 | Autores | Pedro Meneses López, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY-NC 4.0 |
 
 
-## Aplicaciones
-
-
 <a id="application-001"></a>
-### Real-Time Bus Tracking System
+## Sistema de rastreo de autobuses en tiempo real
 
-ID: `application:001`
+<span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:001</code></span>
 
-- Description: An application that provides real-time tracking of buses for passengers.
-- Version: 2.3.1
-- Vendor: TransitTech Solutions
-- License: Commercial
-- Support contact: support@transittechsolutions.com
-- Categories: Transportation, Real-Time Data
-- Technologies: GPS, Mobile App
-- Stakeholders: Passengers, Transit Authorities
-- Status: Active
-- Deployment environment: Cloud
-- Criticality: High
+- Descripción: Aplicación que brinda a los pasajeros el rastreo de autobuses en tiempo real.
+- Versión: 2.3.1
+- Proveedor: TransitTech Solutions
+- Licencia: Comercial
+- Contacto soporte: support@transittechsolutions.com
+- Categorías: Transporte, Datos en tiempo real
+- Tecnologías: GPS, Aplicación móvil
+- Partes interesadas: Pasajeros, Autoridades de transporte
+- Estado: Activo
+- Entorno despliegue: Nube
+- Criticidad: Alta

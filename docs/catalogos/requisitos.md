@@ -8,48 +8,45 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | A catalog of architectural requirements for a Public Transportation Information System. |
+| Descripción | Un catálogo de requisitos de arquitectura para un Sistema de Información de Transporte Público. |
 | Autores | César Alvarado Castro, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY-NC 4.0 |
 
 
-## Requisitos
-
-
 <a id="requirement-001"></a>
-### Real-Time Bus Tracking
+## Seguimiento de autobuses en tiempo real
 
-ID: `requirement:001`
+<span class="catalog-badge" style="--catalog-badge-bg:#FFF7E6"><span class="catalog-icon material-symbols-outlined">rule</span><code style="background:none;padding:0;margin:0;border:0;">requirement:001</code></span>
 
-- Description: The system shall provide real-time tracking of buses to users.
-- Application: application:001, application:002
-- Type: Functional
-- Priority: High
-- Status: Approved
-- Rationale: To enhance user experience and improve transit efficiency.
-- Stakeholders: Passengers, Transit Authorities
-- AcceptanceCriteria: Users can view real-time bus locations on a map., Bus arrival times are updated in real-time.
-- RelatedComponents: GPS Tracking Module, Mobile Application
-- RelatedInterfaces: Bus Location API
-- RelatedDataEntities: Bus, Route
-- RelatedActors: Passenger
+- Descripción: El sistema deberá proporcionar a las personas usuarias el seguimiento en tiempo real de los autobuses.
+- Aplicación: application:001, application:002
+- Tipo: Funcional
+- Prioridad: Alta
+- Estado: Aprobado
+- Justificación: Para mejorar la experiencia de usuario y la eficiencia del transporte.
+- Partes interesadas: Pasajeros, Autoridades de transporte
+- Criterios de aceptación: Las personas usuarias pueden ver las ubicaciones de los autobuses en tiempo real en un mapa., Los tiempos de llegada de los autobuses se actualizan en tiempo real.
+- Componentes relacionados: Módulo de rastreo GPS, Aplicación móvil
+- Interfaces relacionadas: API de ubicación de autobuses
+- Entidades de datos relacionadas: Autobús, Ruta
+- Actores relacionados: Pasajero
 
 <a id="requirement-002"></a>
-### User Authentication
+## Autenticación de usuarios
 
-ID: `requirement:002`
+<span class="catalog-badge" style="--catalog-badge-bg:#FFF7E6"><span class="catalog-icon material-symbols-outlined">rule</span><code style="background:none;padding:0;margin:0;border:0;">requirement:002</code></span>
 
-- Description: The system shall provide secure user authentication and authorization.
-- Application: application:001, application:002
-- Type: Functional
-- Priority: Medium
-- Status: Approved
-- Rationale: To protect user data and ensure secure access to the system.
-- Stakeholders: Passengers, System Administrators
-- AcceptanceCriteria: Users can register and log in using email and password., Password recovery options are available.
-- RelatedComponents: Authentication Service, User Management Module
-- RelatedInterfaces: User Authentication API
-- RelatedDataEntities: User
-- RelatedActors: Passenger, System Administrator
+- Descripción: El sistema deberá proporcionar autenticación y autorización de usuarios segura.
+- Aplicación: application:001, application:002
+- Tipo: Funcional
+- Prioridad: Media
+- Estado: Aprobado
+- Justificación: Para proteger los datos de los usuarios y garantizar acceso seguro al sistema.
+- Partes interesadas: Pasajeros, Administradores del sistema
+- Criterios de aceptación: Las personas usuarias pueden registrarse e iniciar sesión utilizando correo electrónico y contraseña., Existen opciones para recuperación de contraseña.
+- Componentes relacionados: Servicio de autenticación, Módulo de gestión de usuarios
+- Interfaces relacionadas: API de autenticación de usuarios
+- Entidades de datos relacionadas: Usuario
+- Actores relacionados: Pasajero, Administrador del sistema

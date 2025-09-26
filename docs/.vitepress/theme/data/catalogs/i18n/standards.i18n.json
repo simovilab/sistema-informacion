@@ -1,0 +1,16 @@
+[
+  { "key": "standards", "translations": { "es": "estándares", "pt": "padrões" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "version", "translations": { "es": "versión", "pt": "versão" } },
+  { "key": "organization", "translations": { "es": "organización", "pt": "organização" } },
+  { "key": "website", "translations": { "es": "sitio_web", "pt": "site" } },
+  { "key": "usage", "translations": { "es": "uso", "pt": "uso" } },
+  {
+    "key": "related_technologies",
+    "translations": { "es": "tecnologías_relacionadas", "pt": "tecnologias_relacionadas" }
+  },
+  { "key": "status", "translations": { "es": "estado", "pt": "estado" } },
+  { "key": "documentation", "translations": { "es": "documentación", "pt": "documentação" } }
+]

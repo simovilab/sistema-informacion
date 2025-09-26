@@ -1,0 +1,67 @@
+# Metadata about the catalog
+metadata:
+  title: "Catálogo de requisitos de arquitectura"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "Un catálogo de requisitos de arquitectura para un Sistema de Información de Transporte Público."
+  author:
+    - "César Alvarado Castro"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Requirements catalog
+requirements:
+  - id: requirement:001
+    name: "Seguimiento de autobuses en tiempo real"
+    description: "El sistema deberá proporcionar a las personas usuarias el seguimiento en tiempo real de los autobuses."
+    application:
+      - "application:001"
+      - "application:002"
+    type: "Funcional"
+    priority: "Alta"
+    status: "Aprobado"
+    rationale: "Para mejorar la experiencia de usuario y la eficiencia del transporte."
+    stakeholders:
+      - "Pasajeros"
+      - "Autoridades de transporte"
+    acceptance_criteria:
+      - "Las personas usuarias pueden ver las ubicaciones de los autobuses en tiempo real en un mapa."
+      - "Los tiempos de llegada de los autobuses se actualizan en tiempo real."
+    related_components:
+      - "Módulo de rastreo GPS"
+      - "Aplicación móvil"
+    related_interfaces:
+      - "API de ubicación de autobuses"
+    related_data_entities:
+      - "Autobús"
+      - "Ruta"
+    related_actors:
+      - "Pasajero"
+  - id: requirement:002
+    name: "Autenticación de usuarios"
+    description: "El sistema deberá proporcionar autenticación y autorización de usuarios segura."
+    application:
+      - "application:001"
+      - "application:002"
+    type: "Funcional"
+    priority: "Media"
+    status: "Aprobado"
+    rationale: "Para proteger los datos de los usuarios y garantizar acceso seguro al sistema."
+    stakeholders:
+      - "Pasajeros"
+      - "Administradores del sistema"
+    acceptance_criteria:
+      - "Las personas usuarias pueden registrarse e iniciar sesión utilizando correo electrónico y contraseña."
+      - "Existen opciones para recuperación de contraseña."
+    related_components:
+      - "Servicio de autenticación"
+      - "Módulo de gestión de usuarios"
+    related_interfaces:
+      - "API de autenticación de usuarios"
+    related_data_entities:
+      - "Usuario"
+    related_actors:
+      - "Pasajero"
+      - "Administrador del sistema"

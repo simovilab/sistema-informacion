@@ -1,0 +1,13 @@
+{
+  "principles": { "icon": "verified", "color": "#F0F9EB" },
+  "stakeholders": { "icon": "groups_2", "color": "#E6F4FF" },
+  "actors": { "icon": "person", "color": "#F9F0FF" },
+  "organizations": { "icon": "apartment", "color": "#F9F0FF" },
+  "applications": { "icon": "apps", "color": "#FFF0F6" },
+  "requirements": { "icon": "rule", "color": "#FFF7E6" },
+  "entities": { "icon": "dataset", "color": "#E6FFFB" },
+  "components": { "icon": "schema", "color": "#E6FFFB" },
+  "technologies": { "icon": "memory", "color": "#F5F5F5" },
+  "standards": { "icon": "flag", "color": "#FFFBE6" },
+  "interfaces": { "icon": "hub", "color": "#F0F5FF" }
+}

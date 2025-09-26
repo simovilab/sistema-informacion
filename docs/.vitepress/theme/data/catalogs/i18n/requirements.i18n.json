@@ -1,0 +1,23 @@
+[
+  { "key": "requirements", "translations": { "es": "requisitos", "pt": "requisitos" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "application", "translations": { "es": "aplicación", "pt": "aplicação" } },
+  { "key": "type", "translations": { "es": "tipo", "pt": "tipo" } },
+  { "key": "priority", "translations": { "es": "prioridad", "pt": "prioridade" } },
+  { "key": "status", "translations": { "es": "estado", "pt": "estado" } },
+  { "key": "rationale", "translations": { "es": "justificación", "pt": "justificativa" } },
+  { "key": "stakeholders", "translations": { "es": "partes_interesadas", "pt": "partes_interessadas" } },
+  { "key": "acceptance_criteria", "translations": { "es": "criterios_de_aceptación", "pt": "critérios_de_aceitação" } },
+  {
+    "key": "related_components",
+    "translations": { "es": "componentes_relacionados", "pt": "componentes_relacionados" }
+  },
+  { "key": "related_interfaces", "translations": { "es": "interfaces_relacionadas", "pt": "interfaces_relacionadas" } },
+  {
+    "key": "related_data_entities",
+    "translations": { "es": "entidades_de_datos_relacionadas", "pt": "entidades_de_dados_relacionadas" }
+  },
+  { "key": "related_actors", "translations": { "es": "actores_relacionados", "pt": "atores_relacionados" } }
+]

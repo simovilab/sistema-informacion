@@ -1,0 +1,25 @@
+# Metadata about the catalog
+metadata:
+  title: "Catálogo de entidades y componentes de datos"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "Un catálogo de entidades y componentes de datos para un Sistema de Información de Transporte Público."
+  author:
+    - "Jostin Cubero Torres"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Data Component catalog
+components:
+  - id: component:001
+    name: "Gestión de usuarios"
+    description: "Gestiona el registro de usuarios, la autenticación y la administración de perfiles."
+    data_entities:
+      - data-entity:001
+  - id: component:002
+    name: "Gestión de autobuses"
+    description: "Administra la información de autobuses, asignaciones y actualizaciones de estado."
+    data_entities:
+      - data-entity:002

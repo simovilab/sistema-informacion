@@ -5,7 +5,7 @@ import UnoCSS from "@unocss/vite"
 export default defineConfig({
   title: "infotp",
   description: "Sistemas de información para el transporte público inteligente",
-  lang: "es-ES",
+  lang: "es",
   cleanUrls: true,
   base: "/",
 
@@ -28,7 +28,7 @@ export default defineConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined",
+        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0",
       },
     ],
   ],
@@ -225,10 +225,12 @@ export default defineConfig({
           { text: "Introducción", link: "/catalogos/" },
           { text: "Principios", link: "/catalogos/principios" },
           { text: "Partes interesadas", link: "/catalogos/partes-interesadas" },
-          { text: "Actores y organizaciones", link: "/catalogos/actores-y-organizaciones" },
+          { text: "Actores", link: "/catalogos/actores" },
+          { text: "Organizaciones", link: "/catalogos/organizaciones" },
           { text: "Aplicaciones", link: "/catalogos/aplicaciones" },
           { text: "Requisitos", link: "/catalogos/requisitos" },
-          { text: "Datos", link: "/catalogos/datos" },
+          { text: "Entidades de datos", link: "/catalogos/entidades-datos" },
+          { text: "Componentes de datos", link: "/catalogos/componentes-datos" },
           { text: "Tecnologías", link: "/catalogos/tecnologias" },
           { text: "Estándares", link: "/catalogos/estandares" },
           { text: "Interfaces", link: "/catalogos/interfaces" },

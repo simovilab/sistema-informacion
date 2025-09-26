@@ -8,168 +8,165 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | A catalog of architectural principles for a Public Transportation Information System. |
+| Descripción | Un catálogo de principios de arquitectura para un Sistema de Información de Transporte Público. |
 | Autores | Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY-NC 4.0 |
 
 
-## Principios
-
-
 <a id="principles-001"></a>
-### Maximize Benefits for Users
+## Maximizar beneficios para las personas usuarias
 
-ID: `principles:001`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:001</code></span>
 
-- Domain: Business
-- Description: A public service should prioritize the continuous improvement of its users' experience.
-- Rationale: The economic and social benefits of technologies for public transportation derive, ultimately, from the effectiveness and convenience that it provides to its users.
-- Implications: Continuous upgrades of the information system should be made to better address the evolving needs of its passengers.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Negocio
+- Descripción: Un servicio público debe priorizar la mejora continua de la experiencia de sus personas usuarias.
+- Justificación: Los beneficios económicos y sociales de las tecnologías para el transporte público derivan, en última instancia, de la efectividad y conveniencia que brindan a sus usuarios.
+- Implicaciones: Se deben realizar actualizaciones continuas del sistema de información para responder mejor a las necesidades cambiantes de las personas pasajeras.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-002"></a>
-### Financial Sustainability and Service Affordability
+## Sostenibilidad financiera y asequibilidad del servicio
 
-ID: `principles:002`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:002</code></span>
 
-- Domain: Business
-- Description: The implementation of new technologies must ensure proper funding so that the financial risks for the private companies, as service providers, are minimized, while keeping the costs for passengers reasonable.
-- Rationale: Without a sustainable business model, the concession model of public transportation in Costa Rica cannot exist and, in fact, the service itself is threatened. New operational costs derived from these technologies would worsen the situation, regardless of how useful and important they might be.
-- Implications: The system design should be carefully planned to enable a gradual, low initial cost implementation. New legislation could be discussed to make structural changes related to, for example, the funding mechanisms for new technologies. Subsidies should also be discussed, as suggested by many technical entities.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Negocio
+- Descripción: La implementación de nuevas tecnologías debe garantizar un financiamiento adecuado para minimizar los riesgos financieros de las empresas privadas proveedoras del servicio, manteniendo a la vez costos razonables para las personas pasajeras.
+- Justificación: Sin un modelo de negocio sostenible, el modelo de concesión del transporte público en Costa Rica no puede existir y, de hecho, el servicio mismo se ve amenazado. Nuevos costos operativos derivados de estas tecnologías empeorarían la situación, sin importar cuán útiles e importantes sean.
+- Implicaciones: El diseño del sistema debe planificarse cuidadosamente para permitir una implementación gradual y de bajo costo inicial. Se podría discutir nueva legislación para realizar cambios estructurales relacionados, por ejemplo, con los mecanismos de financiamiento de nuevas tecnologías. También deben discutirse subsidios, como sugieren muchas entidades técnicas.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-003"></a>
-### Service Data is Open and Standardized
+## Los datos del servicio son abiertos y estandarizados
 
-ID: `principles:003`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:003</code></span>
 
-- Domain: Data
-- Description: All data related to the service that should be provided to passengers to facilitate system usage must be open and readily accessible for public consumption.
-- Rationale: There is an obligation for the providers of a public service to be clear and transparent about all the information that its users need to effectively make use of it, while there is an obligation of the governing bodies to coordinate the effort for sharing open and standardized transit data.
-- Implications: The governing bodies will create the appropriate channels for sharing open data, including a technology architecture that allows sustainable evolution of the systems, available without restrictions for consumption and analysis by any interested party, including private companies, researchers, the press and others.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.go-fair.org/fair-principles/
+- Dominio: Datos
+- Descripción: Todos los datos relacionados con el servicio que deben brindarse a las personas pasajeras para facilitar el uso del sistema deben ser abiertos y de fácil acceso para consumo público.
+- Justificación: Existe una obligación de los proveedores de un servicio público de ser claros y transparentes con toda la información que sus usuarios necesitan para hacer uso efectivo del mismo, mientras que las entidades rectoras tienen la obligación de coordinar el esfuerzo de compartir datos de tránsito abiertos y estandarizados.
+- Implicaciones: Las entidades rectoras crearán los canales adecuados para compartir datos abiertos, incluyendo una arquitectura tecnológica que permita la evolución sostenible de los sistemas, disponible sin restricciones para su consumo y análisis por cualquier parte interesada, incluyendo empresas privadas, investigadores, la prensa y otros.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.go-fair.org/fair-principles/
 
 <a id="principles-004"></a>
-### Operational Data is Shared
+## Los datos operativos se comparten
 
-ID: `principles:004`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:004</code></span>
 
-- Domain: Data
-- Description: Operational data is an asset for multiple stakeholders of the system and should be accessible for efficiency, regulation and continuous improvement.
-- Rationale: The concession of a public service requires close inspection from governing and regulatory bodies. For this purpose, operational data is important and valuable for assessing the effectiveness and legal compliance of the company, which is in the highest public interest.
-- Implications: The governing and regulatory bodies must rule what data needs to be shared with them. The data to be shared (occupancy, emissions, etc.) --although not necessarily publicly-- will help in examining, regulating and improving the service.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.go-fair.org/fair-principles/
+- Dominio: Datos
+- Descripción: Los datos operativos son un activo para múltiples partes interesadas del sistema y deben ser accesibles para la eficiencia, la regulación y la mejora continua.
+- Justificación: La concesión de un servicio público requiere una inspección cercana por parte de los órganos rectores y reguladores. Para este propósito, los datos operativos son importantes y valiosos para evaluar la efectividad y el cumplimiento legal de la empresa, lo cual es de máximo interés público.
+- Implicaciones: Los órganos rectores y reguladores deben definir qué datos deben compartirse con ellos. Los datos a compartir (ocupación, emisiones, etc.) —aunque no necesariamente de forma pública— ayudarán a examinar, regular y mejorar el servicio.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.go-fair.org/fair-principles/
 
 <a id="principles-005"></a>
-### Common Vocabulary and Data Definitions
+## Vocabulario común y definiciones de datos
 
-ID: `principles:005`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:005</code></span>
 
-- Domain: Data
-- Description: All technological components of the system will follow a single set of concepts and definitions.
-- Rationale: A complex technological system requires consistency among its components on the understanding of its definitions, elements and relationships. This will allow an easier expansion and integration with smart cities, in general.
-- Implications: All databases and internal data exchanges must follow, as closely as possible, the definitions of any pre-defined, applicable standards. Service data and operational data either share a common vocabulary and data definitions or have a well-defined mapping function, avoiding duplicity or confusion in cases where legacy or external systems are included.
-- Related principles: —
-- References: https://www.go-fair.org/fair-principles/
+- Dominio: Datos
+- Descripción: Todos los componentes tecnológicos del sistema seguirán un conjunto único de conceptos y definiciones.
+- Justificación: Un sistema tecnológico complejo requiere consistencia entre sus componentes en el entendimiento de sus definiciones, elementos y relaciones. Esto permitirá una expansión e integración más sencilla con las ciudades inteligentes, en general.
+- Implicaciones: Todas las bases de datos e intercambios de datos internos deben seguir, lo más cercanamente posible, las definiciones de estándares predefinidos y aplicables. Los datos de servicio y los datos operativos comparten un vocabulario y definiciones comunes o tienen una función de mapeo bien definida, evitando duplicidad o confusión cuando se incluyen sistemas heredados o externos.
+- Principios relacionados: —
+- Referencias: https://www.go-fair.org/fair-principles/
 
 <a id="principles-006"></a>
-### Unicity of the Information
+## Unicidad de la información
 
-ID: `principles:006`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:006</code></span>
 
-- Domain: Application
-- Description: The information available to the users is consistent, accurate, up-to-date and single-sourced, via as many communication channels as possible.
-- Rationale: Passengers require information of the public transportation system as a whole. Currently, in Costa Rica, every private concessionaire is responsible for sharing the information of its service, resulting in a severe lack of availability, with less than 15% of the routes presenting complete and consistent data online and without any clear guidance on how to share this information.
-- Implications: All concessionaires will follow the requirements for data collection and data sharing established by the governing bodies. This does not limit who can collect and share this data --for example, third-party ICT private companies-- but the technical details are previously established.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Aplicación
+- Descripción: La información disponible para las personas usuarias es consistente, precisa, actualizada y de una única fuente, a través de la mayor cantidad posible de canales de comunicación.
+- Justificación: Las personas pasajeras requieren información del sistema de transporte público como un todo. Actualmente, en Costa Rica, cada concesionario privado es responsable de compartir la información de su servicio, resultando en una severa falta de disponibilidad, con menos del 15% de las rutas presentando datos completos y consistentes en línea y sin una guía clara de cómo compartir esta información.
+- Implicaciones: Todas las personas concesionarias seguirán los requisitos de recolección y compartición de datos establecidos por los órganos rectores. Esto no limita quién puede recolectar y compartir estos datos —por ejemplo, empresas TIC privadas de terceros— pero los detalles técnicos se establecen previamente.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-007"></a>
-### Ease-of-Use and Accessibility
+## Facilidad de uso y accesibilidad
 
-ID: `principles:007`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:007</code></span>
 
-- Domain: Application
-- Description: The service should be designed for all users.
-- Rationale: Modern technological systems must be sensible to the needs of special users with different physical and cognitive abilities or background knowledge.
-- Implications: Recommendations in service design must be followed for ensuring accessibility in graphic signage, digital media, communication strategies, and other 'touch points' between the system and the users. The system should also follow from the start an internationalization (i18n) process by providing information that is understandable for most international visitors. For example, translations should be made to, at least, English for wayfinding signage, alerts and other data in print and digital media. New generative artificial intelligence technologies like large language models (LLM) could and should be used to expand these capabilities.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Aplicación
+- Descripción: El servicio debe diseñarse para todas las personas usuarias.
+- Justificación: Los sistemas tecnológicos modernos deben ser sensibles a las necesidades de usuarios con diferentes capacidades físicas y cognitivas o conocimientos previos.
+- Implicaciones: Deben seguirse recomendaciones de diseño del servicio para asegurar accesibilidad en señalización gráfica, medios digitales, estrategias de comunicación y otros puntos de contacto entre el sistema y las personas usuarias. El sistema también debe seguir desde el inicio un proceso de internacionalización (i18n) proporcionando información que sea comprensible para la mayoría de visitantes internacionales. Por ejemplo, se deben realizar traducciones al menos al inglés para señalización de orientación, alertas y otros datos en medios impresos y digitales. Nuevas tecnologías de inteligencia artificial generativa como los modelos de lenguaje (LLM) podrían y deberían usarse para ampliar estas capacidades.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-008"></a>
-### Single System Architecture
+## Arquitectura de sistema único
 
-ID: `principles:008`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:008</code></span>
 
-- Domain: Technology
-- Description: All stakeholders should follow and comply with the guidelines of a system-wide architecture devised by the governing bodies.
-- Rationale: A complex system requires a well-defined blueprint to evolve more seamlessly. The internet is an essential example of a vast, intricate system with a multitude of applications and technologies, all coordinated through a set of standards and architectures. The new paradigms of design of engineering systems demand interventions with careful considerations of the complexities of a socio-technical system like public transportation.
-- Implications: Governing bodies should function as technology planners, product owners and referees, and must develop the technical expertise required for these roles. However, in designing such an architecture, careful attention must be given to ensure it does not become an obstacle to future modernization and interoperability.
-- Related principles: —
-- References: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Tecnología
+- Descripción: Todas las partes interesadas deben seguir y cumplir las directrices de una arquitectura de sistema integral ideada por los órganos rectores.
+- Justificación: Un sistema complejo requiere un plano bien definido para evolucionar sin dificultades. Internet es un ejemplo esencial de un sistema vasto e intrincado con una multitud de aplicaciones y tecnologías, todas coordinadas a través de un conjunto de estándares y arquitecturas. Los nuevos paradigmas de diseño de sistemas de ingeniería exigen intervenciones con consideraciones cuidadosas de las complejidades de un sistema sociotécnico como el transporte público.
+- Implicaciones: Los órganos rectores deben funcionar como planificadores tecnológicos, propietarios de producto y árbitros, y deben desarrollar la experiencia técnica requerida para estos roles. Sin embargo, al diseñar dicha arquitectura, se debe prestar atención para asegurar que no se convierta en un obstáculo para la modernización futura y la interoperabilidad.
+- Principios relacionados: —
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-009"></a>
-### Technology Independence
+## Independencia tecnológica
 
-ID: `principles:009`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:009</code></span>
 
-- Domain: Technology
-- Description: Implementations should be independent of particular technology choices, allowing them to function on multiple platforms and alongside external systems.
-- Rationale: Technology independence results in flexibility, scalability and cost-effective implementations, while minimizing the risk of obsolescence. The accessibility and compatibility to different technology options is increased, as well as the innovation and resilience of results.
-- Implications: Standards must be followed at major steps of the implementation. Critically, government bidding processes must add this in their requirements.
-- Related principles: —
-- References: https://machalliance.org/mach-principles, https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+- Dominio: Tecnología
+- Descripción: Las implementaciones deben ser independientes de elecciones tecnológicas particulares, permitiendo funcionar en múltiples plataformas y junto a sistemas externos.
+- Justificación: La independencia tecnológica resulta en implementaciones flexibles, escalables y costo-efectivas, mientras minimiza el riesgo de obsolescencia. Se incrementa la accesibilidad y compatibilidad con diferentes opciones tecnológicas, así como la innovación y resiliencia de los resultados.
+- Implicaciones: Los estándares deben seguirse en las etapas principales de la implementación. Críticamente, los procesos de contratación pública deben incorporar esto en sus requisitos.
+- Principios relacionados: —
+- Referencias: https://machalliance.org/mach-principles, https://doi.org/10.1109/CONCAPAN63470.2024.10933847
 
 <a id="principles-010"></a>
-### Interoperability
+## Interoperabilidad
 
-ID: `principles:010`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:010</code></span>
 
-- Domain: Technology
-- Description: Implementations should follow established standards to ensure compatibility and effective information exchange between systems.
-- Rationale: This approach enhances efficiency by allowing seamless integration of different technologies. It reduces costs by using existing infrastructure, and fosters innovation through collaboration. Adhering to standards also ensures consistency and improves system management, while maximizing return on investment and supporting vendor integration and supply chain efficiency.
-- Implications: A protocol for devising or adopting and reviewing relevant standards is needed. Current platforms must be identified and documented. Standards should be followed unless there is a strong business case for deviation. A digital governance mechanism should be put in place to oversee this principle.
-- Related principles: —
-- References: https://machalliance.org/mach-principles, https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.interoperablemobility.org/
+- Dominio: Tecnología
+- Descripción: Las implementaciones deben seguir estándares establecidos para asegurar compatibilidad e intercambio efectivo de información entre sistemas.
+- Justificación: Este enfoque mejora la eficiencia al permitir integración fluida de diferentes tecnologías. Reduce costos al utilizar infraestructura existente y fomenta la innovación mediante la colaboración. Adherirse a estándares también asegura consistencia y mejora la gestión del sistema, mientras maximiza el retorno de inversión y apoya la integración de proveedores y la eficiencia de la cadena de suministro.
+- Implicaciones: Se requiere un protocolo para idear o adoptar y revisar estándares relevantes. Las plataformas actuales deben identificarse y documentarse. Los estándares deben seguirse a menos que exista una fuerte justificación de negocio para desviarse. Debe establecerse un mecanismo de gobernanza digital para supervisar este principio.
+- Principios relacionados: —
+- Referencias: https://machalliance.org/mach-principles, https://doi.org/10.1109/CONCAPAN63470.2024.10933847, https://www.interoperablemobility.org/
 
 <a id="principles-011"></a>
-### Separation of Concerns
+## Separación de responsabilidades
 
-ID: `principles:011`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:011</code></span>
 
-- Domain: Software Architecture
-- Description: Different concerns should be separated into distinct sections of the system to improve maintainability and scalability.
-- Rationale: By separating concerns, we can reduce complexity and make it easier to manage changes.
-- Implications: Modules should have clear responsibilities and interfaces.
-- Related principles: —
-- References: https://en.wikipedia.org/wiki/Separation_of_concerns
+- Dominio: Arquitectura de software
+- Descripción: Las distintas preocupaciones deben separarse en secciones del sistema para mejorar mantenibilidad y escalabilidad.
+- Justificación: Al separar responsabilidades, reducimos complejidad y facilitamos la gestión de cambios.
+- Implicaciones: Los módulos deben tener responsabilidades e interfaces claras.
+- Principios relacionados: —
+- Referencias: https://en.wikipedia.org/wiki/Separation_of_concerns
 
 <a id="principles-012"></a>
-### Single Responsibility Principle
+## Principio de responsabilidad única
 
-ID: `principles:012`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:012</code></span>
 
-- Domain: Software Architecture
-- Description: A class or module should have one, and only one, reason to change.
-- Rationale: This principle helps in reducing the impact of changes and improves code readability.
-- Implications: Classes should be designed to handle a single functionality.
-- Related principles: principles:001
-- References: https://en.wikipedia.org/wiki/Single_responsibility_principle
+- Dominio: Arquitectura de software
+- Descripción: Una clase o módulo debe tener una, y solo una, razón para cambiar.
+- Justificación: Este principio ayuda a reducir el impacto de los cambios y mejora la legibilidad del código.
+- Implicaciones: Las clases deben diseñarse para manejar una única funcionalidad.
+- Principios relacionados: principles:001
+- Referencias: https://en.wikipedia.org/wiki/Single_responsibility_principle
 
 <a id="principles-013"></a>
-### Don't Repeat Yourself (DRY)
+## No te repitas (DRY)
 
-ID: `principles:013`
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:013</code></span>
 
-- Domain: Software Architecture
-- Description: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.
-- Rationale: Avoiding duplication reduces the risk of inconsistencies and makes maintenance easier.
-- Implications: Code should be modular and reusable.
-- Related principles: principles:001, principles:002
-- References: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+- Dominio: Arquitectura de software
+- Descripción: Cada pieza de conocimiento debe tener una representación única, inequívoca y autoritativa dentro de un sistema.
+- Justificación: Evitar duplicación reduce el riesgo de inconsistencias y facilita el mantenimiento.
+- Implicaciones: El código debe ser modular y reutilizable.
+- Principios relacionados: principles:001, principles:002
+- Referencias: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself

@@ -1,0 +1,12 @@
+[
+  { "key": "organizations", "translations": { "es": "organizaciones", "pt": "organizações" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "stakeholder", "translations": { "es": "parte_interesada", "pt": "parte_interessada" } },
+  { "key": "contact", "translations": { "es": "contacto", "pt": "contato" } },
+  { "key": "website", "translations": { "es": "sitio_web", "pt": "site" } },
+  { "key": "location", "translations": { "es": "ubicación", "pt": "localização" } },
+  { "key": "parent_organization", "translations": { "es": "organización_padre", "pt": "organização_pai" } },
+  { "key": "roles", "translations": { "es": "roles", "pt": "papéis" } }
+]

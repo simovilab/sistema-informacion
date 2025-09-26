@@ -1,0 +1,24 @@
+# Metadata about the catalog
+metadata:
+  title: "Catálogo de organizaciones y actores"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "Un catálogo de actores de la arquitectura para un Sistema de Información de Transporte Público."
+  author:
+    - "Jose Murillo Vargas"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Actor catalog
+actors:
+  - id: actor:001
+    name: "Fabián Abarca Calderón"
+    description: "Arquitecto líder en SIMOVI."
+    type: "Persona"
+    contact: "fabian.abarca@ucr.ac.cr"
+    organization: "organization:001"
+    roles:
+      - "Arquitecto líder"
+      - "Gerente de proyecto"

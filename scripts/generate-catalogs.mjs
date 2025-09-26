@@ -2,8 +2,13 @@
 /**
  * Pre-generate Markdown pages for catalogs from YAML sources.
  *
- * Inputs (read-only): docs/.vitepress/theme/data/*.yaml
+ * Inputs (read-only): docs/.vitepress/theme/data/catalogs/<locale>/*.yaml
  * Outputs: docs/catalogos/<slug>.md
+ *
+ * Locale selection for labels:
+ * - If env CATALOG_I18N_LOCALE is set, use that (e.g., 'es', 'en', 'pt').
+ * - Else, parse docs/.vitepress/config.mts and use defineConfig({ lang }).
+ * - Else, default to 'en'.
  *
  * Overwrite policy:
  * - If the output file does not exist, create it.
@@ -20,31 +25,79 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const ROOT = path.resolve(__dirname, "..")
-const DATA_DIR = path.join(ROOT, "docs/.vitepress/theme/data")
-const I18N_DIR = path.join(DATA_DIR, "i18n")
+// Source YAMLs live under catalogs/<locale>.
+const CATALOGS_DIR = path.join(ROOT, "docs/.vitepress/theme/data/catalogs")
+
+// Attempt to read the site language from VitePress config (docs/.vitepress/config.mts)
+const CONFIG_PATH = path.join(ROOT, "docs/.vitepress/config.mts")
+let SITE_LANG = null
+try {
+  if (fs.existsSync(CONFIG_PATH)) {
+    const cfg = fs.readFileSync(CONFIG_PATH, "utf-8")
+    const m = cfg.match(/\blang\s*:\s*["']([a-zA-Z-]+)["']/)
+    if (m && m[1]) SITE_LANG = m[1].trim()
+  }
+} catch {
+  // ignore parsing issues; we'll fall back to 'en'
+}
+
+// Determine source locale: env override -> site language (if folder exists) -> 'en'
+let SRC_LOCALE = process.env.CATALOG_SRC_LOCALE || null
+if (!SRC_LOCALE) {
+  const candidate = SITE_LANG || ""
+  if (candidate && fs.existsSync(path.join(CATALOGS_DIR, candidate))) {
+    SRC_LOCALE = candidate
+  } else {
+    SRC_LOCALE = "en"
+  }
+}
+
+const DATA_DIR = path.join(CATALOGS_DIR, SRC_LOCALE)
+// i18n key maps live under catalogs/i18n
+const I18N_DIR = path.join(CATALOGS_DIR, "i18n")
 const OUT_DIR = path.join(ROOT, "docs/catalogos")
 
-// Map YAML basenames -> Spanish slugs (folder/file names under docs/catalogos)
+// Optional formatting configuration for catalogs (colors/icons)
+let FORMAT = {}
+try {
+  const fmtPath = path.join(CATALOGS_DIR, "format.json")
+  if (fs.existsSync(fmtPath)) {
+    FORMAT = JSON.parse(fs.readFileSync(fmtPath, "utf-8"))
+  }
+} catch (e) {
+  console.warn("Warning: unable to read format.json:", e?.message || e)
+}
+
+// Map single YAML basenames -> Spanish slugs (folder/file names under docs/catalogos)
+// Basenames correspond to files in docs/.vitepress/theme/data/catalogs/en/*.yaml
 const fileToSlug = {
   principles: "principios",
-  stakeholder: "partes-interesadas",
-  "organization-actor": "actores-y-organizaciones",
-  "application-portfolio": "aplicaciones",
+  stakeholders: "partes-interesadas",
+  actors: "actores",
+  organizations: "organizaciones",
+  applications: "aplicaciones",
   requirements: "requisitos",
-  "data-entity-component": "datos",
-  "technology-portfolio": "tecnologias",
-  "technology-standards": "estandares",
-  interface: "interfaces",
+  entities: "entidades-datos",
+  components: "componentes-datos",
+  technologies: "tecnologias",
+  standards: "estandares",
+  interfaces: "interfaces",
 }
+
+// Some output pages are composed by merging multiple source files
+// key -> { slug, sources: [basenames...] }
+const groupedSources = {}
 
 // Optional: Display names for the H1 title (Spanish)
 const slugDisplayName = {
   principios: "Principios",
   "partes-interesadas": "Partes interesadas",
-  "actores-y-organizaciones": "Actores y organizaciones",
+  actores: "Actores",
+  organizaciones: "Organizaciones",
   aplicaciones: "Aplicaciones",
   requisitos: "Requisitos",
-  datos: "Datos",
+  "entidades-datos": "Entidades de datos",
+  "componentes-datos": "Componentes de datos",
   tecnologias: "Tecnologías",
   estandares: "Estándares",
   interfaces: "Interfaces",
@@ -57,10 +110,10 @@ const sectionLabel = {
   stakeholders: "Partes interesadas",
   applications: "Aplicaciones",
   requirements: "Requisitos",
-  data: "Datos",
-  technology: "Tecnología",
+  entities: "Entidades de datos",
+  components: "Componentes de datos",
+  technologies: "Tecnologías",
   standards: "Estándares",
-  technologyStandards: "Estándares tecnológicos",
   organizations: "Organizaciones",
   interfaces: "Interfaces",
   actors: "Actores",
@@ -135,9 +188,33 @@ function renderItem(sectionKey, item, index, labelForKey) {
         .replace(/-+/g, "-")
         .replace(/^-|-$/g, "")
     : null
-  let out = `\n${anchorId ? `<a id="${anchorId}"></a>\n` : ""}### ${title}\n\n`
-  // Render id as code badge if present
-  if (item?.id) out += `ID: \`${item.id}\`\n\n`
+  let out = `\n${anchorId ? `<a id="${anchorId}"></a>\n` : ""}## ${title}\n\n`
+  // Render id as a styled badge with optional icon using FORMAT config
+  if (item?.id) {
+    // Determine catalog key from the id prefix before ':' (e.g., 'actors:001')
+    const rawPrefix = String(item.id).split(":")[0]
+    const irregulars = {
+      actor: "actors",
+      organization: "organizations",
+      application: "applications",
+      principle: "principles",
+      requirement: "requirements",
+      entity: "entities",
+      component: "components",
+      standard: "standards",
+      technology: "technologies",
+      interface: "interfaces",
+      stakeholder: "stakeholders",
+    }
+    const prefix = irregulars[rawPrefix] || (rawPrefix.endsWith("s") ? rawPrefix : `${rawPrefix}s`)
+    let fmt = FORMAT[prefix] || null
+    // Fallback: use section key formatting if prefix wasn't found (handles legacy ids like 'data-component')
+    if (!fmt && sectionKey && FORMAT[sectionKey]) fmt = FORMAT[sectionKey]
+    const color = fmt?.color || "var(--vp-c-default-soft)"
+    const icon = fmt?.icon || ""
+    const iconSpan = icon ? `<span class="catalog-icon material-symbols-outlined">${icon}</span>` : ""
+    out += `<span class="catalog-badge" style="--catalog-badge-bg:${color}">${iconSpan}<code style="background:none;padding:0;margin:0;border:0;">${item.id}</code></span>\n\n`
+  }
   // Render remaining fields (excluding 'name')
   const keys = Object.keys(item || {})
   for (const k of keys) {
@@ -157,7 +234,8 @@ function renderItem(sectionKey, item, index, labelForKey) {
 
 function renderSection(key, value, labelForKey) {
   const title = sectionLabel[key] ? sectionLabel[key] : labelForKey(key)
-  let out = `\n## ${title}\n\n`
+  let out = ""
+  // For array sections (the main catalog content), omit the section title and render each item as H2
   if (Array.isArray(value)) {
     value.forEach((item, i) => {
       out += renderItem(key, item, i, labelForKey)
@@ -166,9 +244,10 @@ function renderSection(key, value, labelForKey) {
   }
   const t = typeof value
   if (t === "string" || t === "number" || t === "boolean") {
-    return out + String(value) + "\n\n"
+    return `\n## ${title}\n\n` + String(value) + "\n\n"
   }
   if (value && t === "object") {
+    out += `\n## ${title}\n\n`
     out += "\n"
     for (const [k, v] of Object.entries(value)) {
       const rendered = formatValue(v)
@@ -239,8 +318,8 @@ function capitalizeFirstUnicode(s, locale = "es") {
   return first + s.slice(1)
 }
 
-async function generateOne(basename) {
-  const slug = fileToSlug[basename]
+async function generateOneFromFile(basename, slugOverride = null) {
+  const slug = slugOverride || fileToSlug[basename]
   if (!slug) return { basename, skipped: true, reason: "no-slug" }
   const inFile = path.join(DATA_DIR, `${basename}.yaml`)
   const outFile = path.join(OUT_DIR, `${slug}.md`)
@@ -253,9 +332,9 @@ async function generateOne(basename) {
 
   // If there is an i18n file and metadata.language is set (or an env var), normalize keys.
   const i18n = loadI18nMaps(basename)
-  const locale = (data?.metadata?.language || process.env.CATALOG_I18N_LOCALE || "").trim()
-  if (i18n && locale && i18n[locale]) {
-    data = normalizeKeys(data, i18n[locale].reverse)
+  const desiredLocale = (process.env.CATALOG_I18N_LOCALE || SITE_LANG || "en").trim()
+  if (i18n && desiredLocale && i18n[desiredLocale]) {
+    data = normalizeKeys(data, i18n[desiredLocale].reverse)
   }
 
   const title = slugDisplayName[slug] || data?.metadata?.title || prettifyKey(slug)
@@ -273,12 +352,12 @@ async function generateOne(basename) {
   // Render all other sections deterministically (alphabetical keys except metadata first)
   const keys = Object.keys(data).filter(k => k !== "metadata")
   keys.sort()
-  const forward = i18n && locale && i18n[locale] ? i18n[locale].forward : null
+  const forward = i18n && desiredLocale && i18n[desiredLocale] ? i18n[desiredLocale].forward : null
   const labelForKey = k => {
     const s = String(k)
     const raw = forward?.[s] || s
     const spaced = raw.replace(/[_-]/g, " ")
-    return capitalizeFirstUnicode(spaced, locale || "es")
+    return capitalizeFirstUnicode(spaced, desiredLocale || "es")
   }
   for (const k of keys) {
     md += renderSection(k, data[k], labelForKey)
@@ -300,6 +379,73 @@ async function generateOne(basename) {
   return { basename, slug, skipped: false }
 }
 
+async function generateGrouped(groupKey, sources) {
+  const slug = groupKey
+  const outFile = path.join(OUT_DIR, `${slug}.md`)
+
+  // Merge metadata from the first source; keep sections from all
+  let merged = { metadata: {} }
+  const i18nMaps = {}
+  const desiredLocale = (process.env.CATALOG_I18N_LOCALE || SITE_LANG || "en").trim()
+
+  for (const base of sources) {
+    const srcPath = path.join(DATA_DIR, `${base}.yaml`)
+    if (!fs.existsSync(srcPath)) return { basename: base, slug, skipped: true, reason: "missing-source" }
+    const src = fs.readFileSync(srcPath, "utf-8")
+    let data = yamlLoad(src)
+    if (!data || typeof data !== "object") continue
+    if (!merged.metadata || Object.keys(merged.metadata).length === 0) merged.metadata = data.metadata || {}
+    const i18n = loadI18nMaps(base)
+    i18nMaps[base] = i18n
+    if (i18n && desiredLocale && i18n[desiredLocale]) {
+      data = normalizeKeys(data, i18n[desiredLocale].reverse)
+    }
+    for (const [k, v] of Object.entries(data)) {
+      if (k === "metadata") continue
+      merged[k] = v
+    }
+  }
+
+  const title = slugDisplayName[slug] || merged?.metadata?.title || prettifyKey(slug)
+  let md = ""
+  md += `${MARKER}\n\n`
+  md += `# ${title}\n\n`
+  if (merged.metadata) {
+    md += renderMetadata(merged.metadata)
+    md += "\n"
+  }
+  // Build a combined forward map for labels, preferring the first source that defines a key
+  const combinedForward = {}
+  for (const base of sources) {
+    const i18n = i18nMaps[base]
+    const fwd = i18n && desiredLocale && i18n[desiredLocale] ? i18n[desiredLocale].forward : null
+    if (!fwd) continue
+    for (const [k, v] of Object.entries(fwd)) if (!(k in combinedForward)) combinedForward[k] = v
+  }
+  const labelForKey = k => {
+    const s = String(k)
+    const raw = combinedForward?.[s] || s
+    const spaced = raw.replace(/[_-]/g, " ")
+    return capitalizeFirstUnicode(spaced, desiredLocale || "es")
+  }
+  const keys = Object.keys(merged)
+    .filter(k => k !== "metadata")
+    .sort()
+  for (const k of keys) {
+    md += renderSection(k, merged[k], labelForKey)
+  }
+
+  fs.mkdirSync(OUT_DIR, { recursive: true })
+  if (fs.existsSync(outFile)) {
+    const existing = fs.readFileSync(outFile, "utf-8")
+    const canOverwrite =
+      existing.includes("AUTO-GENERATED FILE - DO NOT EDIT") || looksLikeStub(existing) || existing.trim().length === 0
+    if (!canOverwrite) return { basename: slug, slug, skipped: true, reason: "exists-manual" }
+  }
+  fs.writeFileSync(outFile, md, "utf-8")
+  return { basename: slug, slug, skipped: false }
+}
+
 async function main() {
   const entries = fs.readdirSync(DATA_DIR)
   const basenames = entries.filter(f => f.endsWith(".yaml")).map(f => path.basename(f, ".yaml"))
@@ -308,9 +454,17 @@ async function main() {
   const results = []
   for (const b of targets) {
     try {
-      results.push(await generateOne(b))
+      results.push(await generateOneFromFile(b))
     } catch (e) {
       results.push({ basename: b, skipped: true, reason: "error", error: e?.message || String(e) })
+    }
+  }
+  // Generate grouped pages
+  for (const [groupKey, cfg] of Object.entries(groupedSources)) {
+    try {
+      results.push(await generateGrouped(cfg.slug, cfg.sources))
+    } catch (e) {
+      results.push({ basename: groupKey, skipped: true, reason: "error", error: e?.message || String(e) })
     }
   }
 

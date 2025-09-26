@@ -8,40 +8,37 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | A catalog of technology standards for a Public Transportation Information System. |
+| Descripción | Un catálogo de estándares tecnológicos para un Sistema de Información de Transporte Público. |
 | Autores | Randy Cascante Espinoza, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY-NC 4.0 |
 
 
-## Estándares tecnológicos
+<a id="standard-001"></a>
+## Especificación OpenAPI
 
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:001</code></span>
 
-<a id="tech-standard-001"></a>
-### OpenAPI Specification
+- Descripción: Un estándar para definir APIs RESTful.
+- Versión: 3.0.3
+- Organización: OpenAPI Initiative
+- Sitio web: https://www.openapis.org/
+- Uso: Usado para diseñar y documentar APIs RESTful en el sistema.
+- Tecnologías relacionadas: Swagger, Postman
+- Estado: Activo
+- Documentación: https://swagger.io/specification/
 
-ID: `tech-standard:001`
+<a id="standard-002"></a>
+## OAuth 2.0
 
-- Description: A standard for defining RESTful APIs.
-- Version: 3.0.3
-- Organization: OpenAPI Initiative
-- Website: https://www.openapis.org/
-- Usage: Used for designing and documenting RESTful APIs in the system.
-- RelatedTechnologies: Swagger, Postman
-- Status: Active
-- Documentation: https://swagger.io/specification/
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:002</code></span>
 
-<a id="tech-standard-002"></a>
-### OAuth 2.0
-
-ID: `tech-standard:002`
-
-- Description: An authorization framework that enables applications to obtain limited access to user accounts.
-- Version: RFC 6749
-- Organization: IETF
-- Website: https://oauth.net/2/
-- Usage: Used for securing API access and user authentication.
-- RelatedTechnologies: OpenID Connect, JWT
-- Status: Active
-- Documentation: https://tools.ietf.org/html/rfc6749
+- Descripción: Un marco de autorización que permite a las aplicaciones obtener acceso limitado a cuentas de usuario.
+- Versión: RFC 6749
+- Organización: IETF
+- Sitio web: https://oauth.net/2/
+- Uso: Usado para asegurar el acceso a APIs y la autenticación de usuarios.
+- Tecnologías relacionadas: OpenID Connect, JWT
+- Estado: Activo
+- Documentación: https://tools.ietf.org/html/rfc6749

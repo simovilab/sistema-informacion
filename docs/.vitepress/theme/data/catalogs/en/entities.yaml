@@ -1,0 +1,55 @@
+# Metadata about the catalog
+metadata:
+  title: "Data Entity/Component Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of data entities for a Public Transportation Information System."
+  author:
+    - "Jostin Cubero Torres"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Data Entity catalog
+entities:
+  - id: entity:001
+    name: "User"
+    description: "Represents a user of the Public Transportation Information System."
+    attributes:
+      - id: attribute:001
+        name: "User ID"
+        type: "String"
+        description: "A unique identifier for the user."
+      - id: attribute:002
+        name: "Name"
+        type: "String"
+        description: "The full name of the user."
+      - id: attribute:003
+        name: "Email"
+        type: "String"
+        description: "The email address of the user."
+      - id: attribute:004
+        name: "Phone Number"
+        type: "String"
+        description: "The contact phone number of the user."
+  - id: entity:002
+    name: "Bus"
+    description: "Represents a bus in the Public Transportation Information System."
+    attributes:
+      - id: attribute:005
+        name: "Bus ID"
+        type: "String"
+        description: "A unique identifier for the bus."
+      - id: attribute:006
+        name: "License Plate"
+        type: "String"
+        description: "The license plate number of the bus."
+      - id: attribute:007
+        name: "Capacity"
+        type: "Integer"
+        description: "The maximum number of passengers the bus can carry."
+      - id: attribute:008
+        name: "Route ID"
+        type: "String"
+        description: "The identifier of the route the bus is assigned to."

@@ -1,0 +1,27 @@
+# Metadata about the catalog
+metadata:
+  title: "Catálogo de organizaciones"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "Un catálogo de organizaciones para un Sistema de Información de Transporte Público."
+  author:
+    - "Jose Murillo Vargas"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Organization catalog
+organizations:
+  - id: organization:001
+    name: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+    description: "Un laboratorio de investigación enfocado en sistemas de movilidad inteligente."
+    stakeholder: "stakeholder:003"
+    contact: "simovi@ucr.ac.cr"
+    website: "https://simovi.ucr.ac.cr"
+    location: "Universidad de Costa Rica, San José, Costa Rica"
+    parent_organization: null
+    roles:
+      - "Investigación"
+      - "Desarrollo"
+      - "Consultoría"

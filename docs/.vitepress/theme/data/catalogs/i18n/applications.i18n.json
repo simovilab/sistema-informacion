@@ -1,0 +1,16 @@
+[
+  { "key": "applications", "translations": { "es": "aplicaciones", "pt": "aplicações" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "version", "translations": { "es": "versión", "pt": "versão" } },
+  { "key": "vendor", "translations": { "es": "proveedor", "pt": "fornecedor" } },
+  { "key": "license", "translations": { "es": "licencia", "pt": "licença" } },
+  { "key": "support_contact", "translations": { "es": "contacto_soporte", "pt": "contato_suporte" } },
+  { "key": "categories", "translations": { "es": "categorías", "pt": "categorias" } },
+  { "key": "technologies", "translations": { "es": "tecnologías", "pt": "tecnologias" } },
+  { "key": "stakeholders", "translations": { "es": "partes_interesadas", "pt": "partes_interessadas" } },
+  { "key": "status", "translations": { "es": "estado", "pt": "estado" } },
+  { "key": "deployment_environment", "translations": { "es": "entorno_despliegue", "pt": "ambiente_implantação" } },
+  { "key": "criticality", "translations": { "es": "criticidad", "pt": "criticidade" } }
+]

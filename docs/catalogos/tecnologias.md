@@ -8,54 +8,51 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | A catalog of technologies for a Public Transportation Information System. |
+| Descripción | Un catálogo de tecnologías para un Sistema de Información de Transporte Público. |
 | Autores | Randy Cascante Espinoza, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY-NC 4.0 |
 
 
-## Technologies
-
-
 <a id="technology-001"></a>
-### PostgreSQL
+## PostgreSQL
 
-ID: `technology:001`
+<span class="catalog-badge" style="--catalog-badge-bg:#F5F5F5"><span class="catalog-icon material-symbols-outlined">memory</span><code style="background:none;padding:0;margin:0;border:0;">technology:001</code></span>
 
-- Description: An open-source relational database management system.
-- Version: 13
-- Organization: PostgreSQL Global Development Group
-- Website: https://www.postgresql.org/
-- Usage: Used for storing and managing relational data in the system.
-- RelatedTechnologies: PostGIS, pgAdmin
-- Status: Active
-- Documentation: https://www.postgresql.org/docs/13/
+- Descripción: Un sistema de gestión de bases de datos relacional de código abierto.
+- Versión: 13
+- Organización: PostgreSQL Global Development Group
+- Sitio web: https://www.postgresql.org/
+- Uso: Usado para almacenar y gestionar datos relacionales en el sistema.
+- Tecnologías relacionadas: PostGIS, pgAdmin
+- Estado: Activo
+- Documentación: https://www.postgresql.org/docs/13/
 
 <a id="technology-002"></a>
-### Node.js
+## Node.js
 
-ID: `technology:002`
+<span class="catalog-badge" style="--catalog-badge-bg:#F5F5F5"><span class="catalog-icon material-symbols-outlined">memory</span><code style="background:none;padding:0;margin:0;border:0;">technology:002</code></span>
 
-- Description: A JavaScript runtime built on Chrome's V8 JavaScript engine.
-- Version: 14.x
-- Organization: OpenJS Foundation
-- Website: https://nodejs.org/
-- Usage: Used for building scalable server-side applications.
-- RelatedTechnologies: Express.js, npm
-- Status: Active
-- Documentation: https://nodejs.org/en/docs/
+- Descripción: Un entorno de ejecución de JavaScript construido sobre el motor V8 de Chrome.
+- Versión: 14.x
+- Organización: OpenJS Foundation
+- Sitio web: https://nodejs.org/
+- Uso: Usado para construir aplicaciones del lado del servidor escalables.
+- Tecnologías relacionadas: Express.js, npm
+- Estado: Activo
+- Documentación: https://nodejs.org/en/docs/
 
 <a id="technology-003"></a>
-### Vue.js
+## Vue.js
 
-ID: `technology:003`
+<span class="catalog-badge" style="--catalog-badge-bg:#F5F5F5"><span class="catalog-icon material-symbols-outlined">memory</span><code style="background:none;padding:0;margin:0;border:0;">technology:003</code></span>
 
-- Description: A progressive JavaScript framework for building user interfaces.
-- Version: 3.x
-- Organization: Evan You
-- Website: https://vuejs.org/
-- Usage: Used for building the frontend of web applications.
-- RelatedTechnologies: Vuex, Vue Router
-- Status: Active
-- Documentation: https://vuejs.org/v2/guide/
+- Descripción: Un framework progresivo de JavaScript para construir interfaces de usuario.
+- Versión: 3.x
+- Organización: Evan You
+- Sitio web: https://vuejs.org/
+- Uso: Usado para construir el frontend de aplicaciones web.
+- Tecnologías relacionadas: Vuex, Vue Router
+- Estado: Activo
+- Documentación: https://vuejs.org/v2/guide/

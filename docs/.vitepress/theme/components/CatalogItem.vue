@@ -1,7 +1,10 @@
 <template>
   <span class="catalog-reference">
     <a :href="catalogUrl" class="catalog-link">
-      <span class="catalog-badge" :style="badgeStyle">{{ catalogId }}</span>
+      <span class="catalog-badge" :style="badgeStyle">
+        <span v-if="iconName" class="catalog-icon">{{ iconName }}</span>
+        {{ catalogId }}
+      </span>
       <i>{{ itemName }}</i>
     </a>
   </span>
@@ -44,37 +47,47 @@ const createSlug = (text: string): string => {
     .trim()
 }
 
-// Map catalog names to Spanish URL slugs and a badge color
-const catalogMeta: Record<string, { slug: string; color: string }> = {
-  principles: { slug: "principios", color: "#F0F9EB" },
-  stakeholders: { slug: "partes-interesadas", color: "#E6F4FF" },
-  actors: { slug: "actores-y-organizaciones", color: "#F9F0FF" },
-  applications: { slug: "aplicaciones", color: "#FFF0F6" },
-  requirements: { slug: "requisitos", color: "#FFF7E6" },
-  data: { slug: "datos", color: "#E6FFFB" },
-  technology: { slug: "tecnologias", color: "#F5F5F5" },
-  standards: { slug: "estandares", color: "#FFFBE6" },
-  interfaces: { slug: "interfaces", color: "#F0F5FF" },
+// Map catalog names to Spanish URL slugs (colors/icons are configured in format.json)
+const slugMap: Record<string, string> = {
+  principles: "principios",
+  stakeholders: "partes-interesadas",
+  actors: "actores",
+  organizations: "organizaciones",
+  applications: "aplicaciones",
+  requirements: "requisitos",
+  // data is represented by entities/components; default to entidades-datos for linking
+  data: "entidades-datos",
+  technology: "tecnologias",
+  standards: "estandares",
+  interfaces: "interfaces",
 }
 
 const catalogId = computed(() => `${props.catalog}:${props.item.padStart(3, "0")}`)
 
-const meta = computed(() => catalogMeta[props.catalog] || { slug: props.catalog, color: "var(--vp-c-default-soft)" })
+const metaSlug = computed(() => slugMap[props.catalog] || props.catalog)
 
 // Map catalog prop -> YAML filename (without extension)
 const catalogFileMap: Record<string, string> = {
   principles: "principles",
-  stakeholders: "stakeholder",
-  actors: "organization-actor",
-  applications: "application-portfolio",
+  stakeholders: "stakeholders",
+  actors: "actors",
+  organizations: "organizations",
+  applications: "applications",
   requirements: "requirements",
-  data: "data-entity-component",
-  technology: "technology-portfolio",
-  standards: "technology-standards",
-  interfaces: "interface",
+  // data is represented by entities/components; default to entities for linking
+  data: "entities",
+  technology: "technologies",
+  standards: "standards",
+  interfaces: "interfaces",
 }
 
 const targetFile = computed(() => catalogFileMap[props.catalog] ?? props.catalog)
+
+// Resolve locale folder for YAML data based on site language
+const localeFolder = computed(() => {
+  const lang = (site.value?.lang || "en").toLowerCase()
+  return lang.startsWith("es") ? "es" : "en"
+})
 
 // Anchor derived from the found item's id (matches pre-generated pages)
 const anchorFromId = (id: string) =>
@@ -89,17 +102,54 @@ const anchorFromId = (id: string) =>
 const catalogUrl = computed(() => {
   const base = site.value.base || "/"
   const anchor = itemId.value ? anchorFromId(itemId.value) : createSlug(itemName.value || catalogId.value)
-  return `${base}catalogos/${meta.value.slug}#${anchor}`
+  return `${base}catalogos/${metaSlug.value}#${anchor}`
 })
 
-const badgeStyle = computed(() => ({ "--catalog-badge-bg": meta.value.color }))
+// Icon and color loaded from shared format.json
+const iconName = ref("")
+const badgeColor = ref("var(--vp-c-default-soft)")
+const badgeStyle = computed(() => ({ "--catalog-badge-bg": badgeColor.value }))
 
 onMounted(async () => {
   try {
-    const yamlText = await fetch(new URL(`../data/${targetFile.value}.yaml`, import.meta.url)).then(r => {
+    // Load formatting (icons/colors) from shared JSON
+    try {
+      const formatJson = await fetch(new URL(`../data/catalogs/format.json`, import.meta.url)).then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`)
+        return r.json()
+      })
+      // Prefer the explicit catalog key; fallback to the underlying file key (e.g., entities)
+      const fmtKey = (formatJson[props.catalog] ? props.catalog : targetFile.value) as string
+      const fmt = (formatJson && (formatJson as any)[fmtKey]) || null
+      if (fmt) {
+        if (fmt.icon) iconName.value = String(fmt.icon)
+        if (fmt.color) badgeColor.value = String(fmt.color)
+      }
+    } catch (e) {
+      // Formatting is optional; ignore errors
+      console.warn("format.json not available or invalid:", (e as any)?.message || e)
+    }
+
+    const loadYaml = async (loc: string) => {
+      const url = new URL(`../data/catalogs/${loc}/${targetFile.value}.yaml`, import.meta.url)
+      const r = await fetch(url)
       if (!r.ok) throw new Error(`HTTP ${r.status}`)
       return r.text()
-    })
+    }
+    let yamlText: string
+    try {
+      yamlText = await loadYaml(localeFolder.value)
+    } catch (e) {
+      if (localeFolder.value !== "en") {
+        try {
+          yamlText = await loadYaml("en")
+        } catch (e2) {
+          throw e2
+        }
+      } else {
+        throw e
+      }
+    }
     const { load } = await import("js-yaml")
     const data = load(yamlText) as any
 
@@ -134,35 +184,5 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.catalog-reference {
-  display: inline;
-  vertical-align: baseline;
-}
-.catalog-badge {
-  display: inline;
-  padding: 0.0625rem 0.25rem;
-  background: var(--catalog-badge-bg, var(--vp-c-default-soft));
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 0.75rem;
-  font-size: 0.6875rem;
-  font-family: var(--vp-font-family-mono);
-  color: var(--vp-c-text-2);
-  white-space: nowrap;
-  line-height: 1;
-  vertical-align: middle;
-  margin-right: 0.25rem;
-}
-.catalog-link {
-  color: var(--vp-c-text-1);
-  text-decoration: none;
-  transition: color 0.2s ease;
-  line-height: inherit;
-  vertical-align: baseline;
-}
-.catalog-link:hover {
-  color: var(--vp-c-brand-1);
-}
-.catalog-reference {
-  margin: 0 0.125rem;
-}
+/* Component currently relies on global catalog-* styles defined in custom.css */
 </style>

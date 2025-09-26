@@ -1,0 +1,10 @@
+[
+  { "key": "stakeholders", "translations": { "es": "partes_interesadas", "pt": "partes_interessadas" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "role", "translations": { "es": "rol", "pt": "papel" } },
+  { "key": "interests", "translations": { "es": "intereses", "pt": "interesses" } },
+  { "key": "influence", "translations": { "es": "influencia", "pt": "influência" } },
+  { "key": "priority", "translations": { "es": "prioridad", "pt": "prioridade" } }
+]

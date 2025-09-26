@@ -1,0 +1,19 @@
+[
+  { "key": "interfaces", "translations": { "es": "interfaces", "pt": "interfaces" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "type", "translations": { "es": "tipo", "pt": "tipo" } },
+  { "key": "protocols", "translations": { "es": "protocolos", "pt": "protocolos" } },
+  { "key": "data_formats", "translations": { "es": "formatos_de_datos", "pt": "formatos_de_dados" } },
+  { "key": "security", "translations": { "es": "seguridad", "pt": "segurança" } },
+  { "key": "version", "translations": { "es": "versión", "pt": "versão" } },
+  { "key": "owner", "translations": { "es": "responsable", "pt": "responsável" } },
+  { "key": "contact", "translations": { "es": "contacto", "pt": "contato" } },
+  {
+    "key": "related_components",
+    "translations": { "es": "componentes_relacionados", "pt": "componentes_relacionados" }
+  },
+  { "key": "status", "translations": { "es": "estado", "pt": "estado" } },
+  { "key": "documentation", "translations": { "es": "documentación", "pt": "documentação" } }
+]

@@ -1,0 +1,7 @@
+[
+  { "key": "components", "translations": { "es": "componentes", "pt": "componentes" } },
+  { "key": "id", "translations": { "es": "id", "pt": "id" } },
+  { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
+  { "key": "data_entities", "translations": { "es": "entidades_de_datos", "pt": "entidades_de_dados" } }
+]

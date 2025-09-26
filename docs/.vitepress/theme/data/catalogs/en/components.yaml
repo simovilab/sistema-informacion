@@ -1,0 +1,25 @@
+# Metadata about the catalog
+metadata:
+  title: "Data Entity/Component Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of data entities and components for a Public Transportation Information System."
+  author:
+    - "Jostin Cubero Torres"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Data Component catalog
+components:
+  - id: component:001
+    name: "User Management"
+    description: "Handles user registration, authentication, and profile management."
+    data_entities:
+      - data-entity:001
+  - id: component:002
+    name: "Bus Management"
+    description: "Manages bus information, assignments, and status updates."
+    data_entities:
+      - data-entity:002
