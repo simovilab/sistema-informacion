@@ -25,3 +25,13 @@
    - Correo electrónico
    - Redes sociales
 1. Estrategia de comunicación y relaciones públicas
+
+## Aplicaciones
+
+Centros de administración
+Interfaces de programación de aplicaciones (API)
+Aplicaciones móviles
+Chatbots
+Pantallas informativas
+Servidores
+Sitios web

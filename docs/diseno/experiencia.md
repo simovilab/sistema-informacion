@@ -1,4 +1,4 @@
-# Experiencia del usuario
+# Experiencia del servicio
 
 ::: info Puntos clave
 
@@ -10,6 +10,20 @@
 - El uso de estándares abiertos como GTFS y el principio de “Unicidad de la información” aseguran una fuente confiable y común de datos en tiempo real, accesible tanto desde interfaces tradicionales como desde asistentes con inteligencia artificial multilingüe.
 
 :::
+
+## Digital
+
+## Móvil
+
+## Inclusivo
+
+## Inteligente
+
+## Social
+
+## Multilingüe
+
+## Tico
 
 _Ease of Travel_ (EoT).
 
@@ -227,3 +241,5 @@ La disponibilidad de documentación clara es esencial. Las APIs **Databús** e *
 ### Referencias
 
 <Citation doi="10.1007/978-3-030-81159-4" />
+
+La consideración de género es un aspecto crucial en el diseño de sistemas de información para el transporte público inteligente. Es fundamental garantizar que las soluciones tecnológicas no perpetúen desigualdades de género y que sean inclusivas para todas las personas, independientemente de su género.

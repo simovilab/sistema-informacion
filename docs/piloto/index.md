@@ -1,4 +1,4 @@
-# Plan piloto del sistema
+# Plan piloto
 
 ::: info Puntos clave
 

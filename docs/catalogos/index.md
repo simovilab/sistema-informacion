@@ -1,6 +1,11 @@
 # Catálogos
 
-Siguiendo el método de desarrollo de arquitecturas TOGAF ADM.
+::: info Menú de la sección
+
+- Los catálogos son listas de elementos usados en el diseño y desarrollo del sistema.
+- Los catálogos aquí presentados son definidos por TOGAF ADM, un método de desarrollo de arquitecturas tecnológicas organizacionales.
+
+:::
 
 | Catálogo                                    | Nombre ADM              |
 | ------------------------------------------- | ----------------------- |

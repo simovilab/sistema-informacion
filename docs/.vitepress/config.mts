@@ -38,7 +38,7 @@ export default defineConfig({
     // logo: "/i.png",
     nav: [
       { text: "Inicio", link: "/" },
-      { text: "Introducción", link: "/introduccion" },
+      { text: "Introducción", link: "/introduccion/" },
       { text: "Diseño", link: "/diseno/" },
       { text: "Desarrollo", link: "/desarrollo/" },
       { text: "Operación", link: "/operacion/" },
@@ -51,7 +51,7 @@ export default defineConfig({
         text: "Introducción",
         collapsed: true,
         items: [
-          { text: "Visión", link: "/introduccion" },
+          { text: "Visión", link: "/introduccion/" },
           { text: "Principios", link: "/introduccion/principios" },
         ],
       },
@@ -59,7 +59,7 @@ export default defineConfig({
         text: "Diseño",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/diseno" },
+          { text: "Introducción", link: "/diseno/" },
 
           {
             text: "Canales de comunicación",
@@ -99,37 +99,19 @@ export default defineConfig({
               },
             ],
           },
-          {
-            text: "Experiencia del usuario",
-            collapsed: true,
-            items: [
-              {
-                text: "Principios",
-                link: "/diseno/experiencia",
-              },
-              {
-                text: "Accesibilidad",
-                link: "/diseno/experiencia/accesibilidad",
-              },
-              {
-                text: "Género",
-                link: "/diseno/experiencia/genero",
-              },
-            ],
-          },
+          { text: "Experiencia del servicio", link: "/diseno/experiencia" },
         ],
       },
       {
         text: "Desarrollo",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/desarrollo" },
-          { text: "Requisitos", link: "/desarrollo/requisitos" },
+          { text: "Introducción", link: "/desarrollo/" },
           {
             text: "Arquitectura",
             collapsed: true,
             items: [
-              { text: "Descripción", link: "/desarrollo/arquitectura" },
+              { text: "Descripción", link: "/desarrollo/arquitectura/" },
               { text: "Recolección de datos", link: "/desarrollo/arquitectura/recoleccion" },
               { text: "Distribución de información", link: "/desarrollo/arquitectura/distribucion" },
             ],
@@ -138,7 +120,7 @@ export default defineConfig({
             text: "Tecnologías",
             collapsed: true,
             items: [
-              { text: "Introducción", link: "/desarrollo/tecnologias" },
+              { text: "Introducción", link: "/desarrollo/tecnologias/" },
               {
                 text: "Portafolio",
                 link: "/desarrollo/tecnologias/portafolio",
@@ -149,53 +131,15 @@ export default defineConfig({
               },
             ],
           },
-          {
-            text: "Aplicaciones",
-            collapsed: true,
-            items: [
-              {
-                text: "Descripción",
-                link: "/desarrollo/aplicaciones/",
-              },
-              {
-                text: "Sitios web",
-                link: "/desarrollo/aplicaciones/web",
-              },
-              {
-                text: "Aplicaciones móviles",
-                link: "/desarrollo/aplicaciones/moviles",
-              },
-              {
-                text: "Pantallas informativas",
-                link: "/desarrollo/aplicaciones/pantallas",
-              },
-              {
-                text: "Chatbots",
-                link: "/desarrollo/aplicaciones/chatbots",
-              },
-              {
-                text: "Servidores",
-                link: "/desarrollo/aplicaciones/servidores",
-              },
-              {
-                text: "API",
-                link: "/desarrollo/aplicaciones/api",
-              },
-              {
-                text: "Paneles de administración",
-                link: "/desarrollo/aplicaciones/admin",
-              },
-            ],
-          },
         ],
       },
       {
         text: "Operación",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/operacion" },
+          { text: "Introducción", link: "/operacion/" },
           { text: "Gobernanza", link: "/operacion/gobernanza" },
-          { text: "Seguimiento", link: "/operacion/seguimiento" },
+          { text: "Unidad técnica", link: "/operacion/unidad-tecnica" },
           { text: "Monetización", link: "/operacion/monetizacion" },
         ],
       },
@@ -203,7 +147,7 @@ export default defineConfig({
         text: "Plan piloto",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/piloto" },
+          { text: "Introducción", link: "/piloto/" },
           {
             text: "Propuesta técnica",
             collapsed: true,
@@ -211,10 +155,8 @@ export default defineConfig({
               { text: "Introducción", link: "/piloto/propuesta/" },
               { text: "Databús", link: "/piloto/propuesta/databus" },
               { text: "Infobús", link: "/piloto/propuesta/infobus" },
-              { text: "DevOps", link: "/piloto/propuesta/devops" },
             ],
           },
-          { text: "Unidad de tecnologías", link: "/piloto/unidad" },
           { text: "Propuesta financiera", link: "/piloto/propuesta-financiera" },
         ],
       },

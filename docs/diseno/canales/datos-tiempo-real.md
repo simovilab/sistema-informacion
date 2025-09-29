@@ -7,6 +7,4 @@
 
 :::
 
-Una de las características más importantes de un sistema de información de transporte público es la capacidad de proporcionar datos en tiempo real.
-
-## Ejemplo del plan piloto de la Universidad de Costa Rica
+La información en tiempo real provista por las tecnologías de geolocalización como GPS es un componente fundamental de los sistemas inteligentes de transporte público. Estos datos, según numerosos estudios, son ampliamente valorados por las personas usuarias y tienen un gran potencial de explotación de parte de operadores, gestores, planificadores, reguladores e investigadores para optimizar el servicio y generar valor social y económico.

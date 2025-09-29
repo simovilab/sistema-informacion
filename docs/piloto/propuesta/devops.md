@@ -1,1 +1,0 @@
-# Desarrollo y operación

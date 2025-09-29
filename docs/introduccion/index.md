@@ -1,20 +1,19 @@
-# Visión
+# Visión del sistema
 
-La digitalización del transporte público requiere una **visión integral**, capaz de satisfacer las necesidades actuales y preparar el camino para atender las necesidades futuras.
-
-Este informe es el resultado de la investigación sobre tecnologías de información y comunicación (TIC) aplicadas al transporte público, y ofrece una propuesta de _arquitectura tecnológica_ para la creación de **un sistema de información para la movilidad inteligente** (SIMI).
+Este informe es el resultado de la investigación sobre tecnologías de información y comunicación aplicadas al transporte público, y propone una _arquitectura tecnológica_ para la creación de **un sistema de información para el transporte público inteligente** (InfoTP).
 
 ::: info Nuestras premisas
 
+- La digitalización del transporte público requiere una **visión integral**, capaz de satisfacer las necesidades actuales y preparar el camino para atender las necesidades futuras.
 - La información _completa_, _accesible_ y _actualizada_ del servicio de transporte público facilita un **uso efectivo del sistema**.
 - En el contexto costarricense, la _calidad de la información_ disponible **mejora significativamente la satisfacción** de las personas usuarias con el servicio.
 - Los _sistemas digitales_ y la _inteligencia artificial_ ofrecen nuevas oportunidades concretas para facilitar el **acceso oportuno y por múltiples canales de comunicación** a la información.
 - El diseño de una _arquitectura tecnológica_ es clave para **maximizar los beneficios** de la implementación de un sistema tecnológico complejo como el propuesto.
 - Los sistemas inteligentes pueden mejorar significativamente las tareas de operación, gestión, planificación, regulación e investigación del transporte público.
 
-En las siguientes secciones hay una ampliación de estas ideas, con referencias al desarrollo de cada una dentro del informe.
-
 :::
+
+En las siguientes secciones hay una ampliación de estas ideas, con referencias al desarrollo de cada una dentro del informe.
 
 ## Principios
 
@@ -35,6 +34,8 @@ Si nos preguntamos ¿por qué digitalizar el transporte público?, hay muchas re
 ## Diseño
 
 ### Una estrategia integral de comunicación
+
+El objetivo principal de esta propuesta no es construir **una** aplicación móvil, sino crear la infraestructura digital para tener **muchas** aplicaciones: aplicaciones móviles, sitios web, información impresa, señalética, campañas de redes sociales y más, todo de forma coherente entre sí.
 
 La información nos llega de todas partes. ¿Por qué limitarnos con el transporte público? Con datos abiertos y estandarizados esto no es un problema.
 
@@ -83,7 +84,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Todos los canales de comunicación digitales deben formar parte de la oferta de información del servicio.
+      Todos los canales digitales de comunicación deben formar parte de la oferta de información del servicio.
     </div>
   </div>
   <div class="cell">
@@ -97,49 +98,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      La mayoría de consultas de la información del transporte público vienen desde teléfonos celulares, y por eso el diseño debe estar primordialmente para este medio.
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">
-        Nativo
-        <i>inteligente</i>
-      </div>
-      <div class="cell-icon">
-        <span class="material-symbols-outlined">psychology</span>
-      </div>
-    </div>
-    <div class="cell-content">
-      Las nuevas herramientas de inteligencia artificial deben permitir a las personas usuarias a utilizar lenguaje natural para hacer consultas sobre la información del servicio.
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">
-        Nativo
-        <i>social</i>
-      </div>
-      <div class="cell-icon">
-        <span class="material-symbols-outlined">groups</span>
-      </div>
-    </div>
-    <div class="cell-content">
-      Las redes sociales y los medios de atención al cliente son medios primordiales de comunicación que debe ser explotados por el servicio para informar oportunamente y crear comunidad alrededor del transporte público.
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">
-        Nativo
-        <i>multilingüe</i>
-      </div>
-      <div class="cell-icon">
-        <span class="material-symbols-outlined">translate</span>
-      </div>
-    </div>
-    <div class="cell-content">
-      En un país de vocación turística como Costa Rica, el transporte público no debe poner ningún obstáculo para la información del servicio a las personas usuarias de cualquier parte del mundo. La inteligencia artificial ahora lo permite.
+      La mayoría de consultas del servicio vienen desde teléfonos celulares, y por eso el diseño debe estar centrado en este medio.
     </div>
   </div>
   <div class="cell">
@@ -153,7 +112,49 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      El transporte público es para todos. La información oportuna y con diseño universal puede facilitar la experiencia.
+      El transporte público es para todos. La información oportuna y con diseño universal puede facilitar la experiencia de uso de todas las personas.
+    </div>
+  </div>
+  <div class="cell">
+    <div class="cell-header">
+      <div class="cell-title">
+        Nativo
+        <i>inteligente</i>
+      </div>
+      <div class="cell-icon">
+        <span class="material-symbols-outlined">psychology</span>
+      </div>
+    </div>
+    <div class="cell-content">
+      Las nuevas herramientas de inteligencia artificial deben permitir a las personas usuarias utilizar lenguaje natural para hacer consultas sobre el servicio.
+    </div>
+  </div>
+  <div class="cell">
+    <div class="cell-header">
+      <div class="cell-title">
+        Nativo
+        <i>social</i>
+      </div>
+      <div class="cell-icon">
+        <span class="material-symbols-outlined">groups</span>
+      </div>
+    </div>
+    <div class="cell-content">
+      Las redes sociales y los medios de atención al cliente son canales primordiales para informar y para crear comunidad alrededor del transporte público.
+    </div>
+  </div>
+  <div class="cell">
+    <div class="cell-header">
+      <div class="cell-title">
+        Nativo
+        <i>multilingüe</i>
+      </div>
+      <div class="cell-icon">
+        <span class="material-symbols-outlined">translate</span>
+      </div>
+    </div>
+    <div class="cell-content">
+      En un país de vocación turística como Costa Rica, el transporte público no debe poner barreras del lenguaje a quienes nos visitan desde cualquier parte del mundo.
     </div>
   </div>
   <div class="cell">
@@ -167,14 +168,7 @@ Vivimos plenamente en la época de la información y también en un momento de n
       </div>
     </div>
     <div class="cell-content">
-      Un sitio web para alojar presentaciones interactivas de Slidev para sesiones sincrónicas, utilizando las
-      integraciones desarrolladas con Kalouk.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-xyz">Saber más</a>
-      🌐
-      <a href="https://kalouk.xyz/" target="_blank">kalouk.xyz</a>
+      Es parte de nuestros pueblos, es parte de nuestras ciudades. El transporte público debe ser parte de nuestro orgullo tico.
     </div>
   </div>
 </div>
@@ -202,7 +196,7 @@ Los sistemas inteligentes de transporte público son parte de algo más grande. 
 
 <Ref url="./desarrollo/requisitos" icon="checklist">Requisitos</Ref>
 
-### Un mundo digital: la ciudad inteligente comienza aquí
+### La ciudad inteligente comienza aquí
 
 Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
 
@@ -225,7 +219,7 @@ El código abierto y el software libre es cada vez más la elección de grandes 
 
 ## Operación
 
-### Respuestas para un sistema dinámico
+La estrategia de operación de un _sistema de sistemas_ como el propuesto debe ser especializada.
 
 > Un sistema complejo que funciona proviene de **un sistema simple que funcionaba**.
 >
@@ -233,94 +227,13 @@ El código abierto y el software libre es cada vez más la elección de grandes 
 
 No es un escenario "todo o nada".
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">Complejidad</div>
-      <div class="cell-icon"><span class="material-symbols-outlined">account_tree</span></div>
-    </div>
-    <div class="cell-content">
-      Este es un sistema socio-técnico, es decir, en donde interactúan las tecnologías con las personas e influyen
-      mutuamente.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/kalouk">Saber más</a>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">Interconexión</div>
-      <div class="cell-icon"><span class="material-symbols-outlined">hub</span></div>
-    </div>
-    <div class="cell-content">
-      Un servidor web versátil para generación de datos sintéticos utilizados en el curso y sus proyectos, accesibles
-      por medio de diferentes modelos de comunicación (REST API, WebSocket, SSE y webhooks).
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/servicios/kalouk-web">Saber más</a>
-      🌐
-      <a href="https://web.kalouk.xyz/" target="_blank">web.kalouk.xyz</a>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">Dinamismo</div>
-      <div class="cell-icon"><span class="material-symbols-outlined">autorenew</span></div>
-    </div>
-    <div class="cell-content">
-      Un servidor web con el protocolo de contexto de modelos (MCP) para proveer datos e información de contexto sobre
-      la teoría del curso a agentes de inteligencia artificial.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/servicios/kalouk-mcp">Saber más</a>
-      🌐
-      <a href="https://mcp.kalouk.xyz/" target="_blank">mcp.kalouk.xyz</a>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">Escala global</div>
-      <div class="cell-icon"><span class="material-symbols-outlined">public</span></div>
-    </div>
-    <div class="cell-content">
-      Un conjunto de componentes de JavaScript para actividades interactivas en sitios web, tanto en las presentaciones
-      como en el contenido teórico.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-js">Saber más</a>
-      🌐
-      <a href="https://www.npmjs.com/org/kalouk" target="_blank">npm</a>
-    </div>
-  </div>
-  <div class="cell">
-    <div class="cell-header">
-      <div class="cell-title">Interdisciplinariedad</div>
-      <div class="cell-icon"><span class="material-symbols-outlined">diversity_3</span></div>
-    </div>
-    <div class="cell-content">
-      Una interfaz de línea de comandos (CLI) para interactuar de forma programática con los servicios de Kalouk, como
-      Kalouk WEB y Kalouk MCP.
-    </div>
-    <div class="cell-footer">
-      📖
-      <a href="/resultados/interfaces/kalouk-cli">Saber más</a>
-      🌐
-      <a href="https://www.npmjs.com/package/@kalouk/cli" target="_blank">@kalouk/cli</a>
-    </div>
-  </div>
-</div>
-
 ### Nuevo modelo de gobernanza
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
 <Ref url="./operacion/monetizacion" icon="architecture">Gobernanza</Ref>
 
-### Sistema dinámico: estrategias de seguimiento
+### Estrategias de seguimiento para un sistema dinámico
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
@@ -334,14 +247,20 @@ El código abierto y el software libre es cada vez más la elección de grandes 
 
 ## Plan piloto
 
-### La base de un sistema de sistemas
+El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
+
+<Ref url="./piloto/propuesta-tecnica" icon="architecture">Propuesta técnica</Ref>
+
+### Una propuesta competitiva
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
-<Ref url="./operacion/monetizacion" icon="architecture">Propuesta técnica</Ref>
+<Ref url="./piloto/propuesta-financiera" icon="architecture">Propuesta financiera</Ref>
 
-### En un lugar de La Mancha
+## Catálogos
 
-El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
+Los elementos más importantes de la investigación están compilados en una serie de catálogos donde están los elementos más importantes del sistema, incluyendo los principios de diseño, los sectores sociales interesados, las tecnologías y estándares, entre otros.
 
-<Ref url="./operacion/monetizacion" icon="architecture">Propuesta financiera</Ref>
+Toda la propuesta está interrelacionada con los elementos de estos catálogos, para procurar una propuesta consistente y justificada.
+
+<Ref url="./catalogos/" icon="architecture">Catálogos</Ref>

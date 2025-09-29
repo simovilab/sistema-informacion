@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount:wght@300&display=swap");
 
+/* Overwrite the brand color with Pantone 485C and Reflex Blue (Costa Rica's flag red and blue) */
+:root {
+  --vp-c-brand-1: #da291c;
+  --vp-c-brand-2: #ffffff;
+  --vp-c-brand-3: #001489;
+}
+
 /* Target VitePress hero name */
 .VPHomeHero .name,
 .VPHero .name,

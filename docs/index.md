@@ -18,34 +18,34 @@ hero:
       link: /piloto/
 
 features:
-  - icon: <span class="material-symbols-outlined">draw</span>
+  - icon: <span class="material-symbols-outlined">info</span>
     title: Introducción
-    details: Consideraciones sobre el servicio y las tecnologías para el transporte público.
+    details: Nuestra visión de un sistema de información para el transporte público inteligente.
     link: /introduccion/
-  - icon: <span class="material-symbols-outlined">draw</span>
+  - icon: <span class="material-symbols-outlined">design_services</span>
     title: Diseño
-    details: Consideraciones sobre el servicio y las tecnologías para el transporte público.
+    details: Consideraciones sobre los canales de comunicación y la experiencia del usuario.
     link: /diseno/
-  - icon: <span class="material-symbols-outlined">rocket_launch</span>
+  - icon: <span class="material-symbols-outlined">code</span>
     title: Desarrollo
-    details: Fases de desarrollo tecnológico y estrategias de implementación.
+    details: Descripción de la arquitectura, las tecnologías y las aplicaciones para el sistema.
     link: /desarrollo/
-  - icon: <span class="material-symbols-outlined">insert_chart</span>
+  - icon: <span class="material-symbols-outlined">monitoring</span>
     title: Operación
-    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución, entre otros.
+    details: Planes de gobernanza, seguimiento y monetización del servicio, entre otros.
     link: /operacion/
   - icon: <span class="material-symbols-outlined">rocket_launch</span>
     title: Plan piloto
-    details: Fases de desarrollo tecnológico y estrategias de implementación.
+    details: Detalles de la propuesta técnica y financiera para un plan piloto del sistema.
     link: /piloto/
-  - icon: <span class="material-symbols-outlined">insert_chart</span>
+  - icon: <span class="material-symbols-outlined">library_books</span>
     title: Catálogos
-    details: Planes de seguimiento y evaluación, mitigación de riesgos, gobernanza y evolución, entre otros.
+    details: Descripción detallada del sistema en catálogos de principios, tecnologías y otros.
     link: /catalogos/
 ---
 
 ::: danger Trabajo en progreso
 
-El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para diciembre de 2025. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
+El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para **diciembre de 2025**. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
 
 :::

@@ -1,4 +1,4 @@
-# Desarrollo del sistema
+# Desarrollo
 
 ::: info Puntos clave
 

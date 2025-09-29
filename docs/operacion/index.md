@@ -1,4 +1,4 @@
-# Operación del sistema
+# Operación
 
 ::: info Puntos clave
 
