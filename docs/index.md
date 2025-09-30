@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "infotp"
+  name: "infotp v0.1"
   text: "Sistemas de información para el transporte público inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones.
   image:

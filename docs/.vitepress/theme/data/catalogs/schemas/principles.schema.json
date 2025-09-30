@@ -24,22 +24,16 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^principles:[0-9]{3}$"
+            "pattern": "^principles:[A-Z]{1}[0-9]{2}$"
           },
           "domain": {
             "type": "string",
-            "enum": [
-              "Software Architecture",
-              "Business",
-              "Data",
-              "Application",
-              "Technology"
-            ]
+            "enum": ["Business", "Data", "Application", "Technology"]
           },
           "name": { "type": "string" },
           "description": { "type": "string" },
           "rationale": { "type": "string" },
-          "implications": { "type": "string" },
+          "implications": { "type": "array", "items": { "type": "string" } },
           "related_principles": {
             "type": "array",
             "items": { "type": "string" }

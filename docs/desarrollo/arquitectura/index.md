@@ -7,6 +7,11 @@
 
 :::
 
+Referencias
+
+- TOGAF ADM
+- ARC-IT
+
 A nivel tecnológico, un sistema de información para el transporte público tiene dos grandes etapas: recopilación y producción de datos y consumo y distribución de datos. El diseño de la arquitectura debe tomar en cuenta el público meta de estos datos. En InfoTP, el objetivo principal es proveer información oportuna a las personas usuarias. Sin embargo, la infraestructura también habilita el aprovechamiento de estos datos para todos los actores del transporte público: operadores, gestores, planificadores, reguladores, investigadores, sector civil, entre otros.
 
 Con la implementación de un apropiado sistema de información del transporte público –incluyendo los datos en tiempo real provistos por GPS– es esperable, según la literatura, un aumento de la utilización del servicio y una mayor satisfacción con el mismo. Es necesario, sin embargo, un cuidadoso diseño e implementación de las tecnologías y sistemas interconectados.
