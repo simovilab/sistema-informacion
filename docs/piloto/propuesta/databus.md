@@ -8,8 +8,8 @@ Servidor para la recolección y producción de datos GTFS
 
 | Relación          | Ítem de catálogo                                  |
 | ----------------- | ------------------------------------------------- |
-| implementa        | <CatalogItem catalog="principles" item="001" />   |
-| usado por         | <CatalogItem catalog="principles" item="002" />   |
+| implementa        | <CatalogItem catalog="principles" item="D02" />   |
+| usado por         | <CatalogItem catalog="principles" item="A02" />   |
 | es servido por    | <CatalogItem catalog="requirements" item="001" /> |
 | es del interés de | <CatalogItem catalog="stakeholders" item="001" /> |
 

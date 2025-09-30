@@ -1,7 +1,7 @@
 {
-  "name": "SIMI",
-  "version": "1.0.0",
-  "description": "Sistema de información la movilidad inteligente",
+  "name": "infotp",
+  "version": "0.1.4",
+  "description": "Sistema de información para el transporte público inteligente",
   "scripts": {
     "docs:generate": "node scripts/generate-catalogs.mjs",
     "docs:dev": "pnpm docs:generate && vitepress dev docs",
