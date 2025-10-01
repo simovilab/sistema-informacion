@@ -94,11 +94,13 @@ Servidores para la gestión de los datos del servicio de transporte público.
 | --------------- | ------------- |
 | Databús         | 75            |
 | Databús MQTT    | 25            |
+| Databús MCP     | 25            |
 | Infobús         | 75            |
 | Infobús MQTT    | 25            |
+| Infobús MCP     | 25            |
 | Infobús Screens | 25            |
 | Infobús SPARQL  | 11            |
-| **Total**       | **236**       |
+| **Total**       | **286**       |
 
 #### Monitoreo y seguridad
 
