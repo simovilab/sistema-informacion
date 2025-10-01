@@ -5,7 +5,7 @@
         <span v-if="iconName" class="catalog-icon">{{ iconName }}</span>
         {{ catalogId }}
       </span>
-      <i>{{ itemName }}</i>
+      <i v-if="shouldShowText">{{ displayText }}</i>
     </a>
   </span>
 </template>
@@ -17,6 +17,7 @@ import { useData } from "vitepress"
 interface CatalogItemRec {
   id: string
   name: string
+  description?: string
   [key: string]: any
 }
 
@@ -27,9 +28,12 @@ interface CatalogData {
 const props = defineProps({
   catalog: { type: String, required: true },
   item: { type: String, required: true },
+  // Controls what to render after the badge: 'none' | 'name' | 'description'
+  show: { type: String as () => "none" | "name" | "description", default: "none" },
 })
 
 const itemName = ref("")
+const itemDescription = ref("")
 const itemId = ref("")
 
 // Get VitePress site config
@@ -169,17 +173,28 @@ onMounted(async () => {
 
     if (found) {
       itemName.value = found.name || String(found.id)
+      itemDescription.value = (found.description || found.summary || "") as string
       itemId.value = String(found.id)
     } else {
       itemName.value = `Item ${catalogId.value} not found`
+      itemDescription.value = ""
       itemId.value = catalogId.value
       console.warn(`Catalog item ${catalogId.value} not found in ${targetFile.value}.yaml`)
     }
   } catch (error) {
     itemName.value = `Error loading catalog`
+    itemDescription.value = ""
     itemId.value = catalogId.value
     console.error(`Error loading catalog ${props.catalog}:`, error)
   }
+})
+
+// What to show after the badge
+const shouldShowText = computed(() => props.show !== "none")
+const displayText = computed(() => {
+  if (props.show === "name") return itemName.value
+  if (props.show === "description") return itemDescription.value || itemName.value
+  return ""
 })
 </script>
 

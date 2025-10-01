@@ -1,14 +1,250 @@
-# Distribución de información
+# A2
 
-::: info Puntos clave
+::: info Distribución
 
-1. Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-1. Síntesis de toda esta página
+La acción básica de este subsistema es recopilar los datos GTFS _Schedule_ y GTFS _Realtime_ del servicio de transporte público y otros datos complementarios para luego distribuir a servicios de información en distintos canales digitales.
 
 :::
 
-## Servidor de distribución de información
+La siguiente es la tabla resumen de los componentes de la arquitectura.
 
-### Interfaz de programación de aplicaciones (API)
+| Componente                              | Clasificación ADM   | Catalogación                                      |
+| --------------------------------------- | ------------------- | ------------------------------------------------- |
+| Servidor de distribución de información | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Base de datos                           | Componente de datos | <CatalogItem catalog="components" item="001" />   |
+| Base de datos en memoria                | Componente de datos | <CatalogItem catalog="components" item="001" />   |
+| API REST                                | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| API GraphQL                             | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Conexión SSE                            | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Conexión WebSockets                     | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Conexión Webhooks                       | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Terminal de consultas semánticas        | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Herramientas de programación            | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Intermediador de mensajes pub/sub       | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Sitio web público                       | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Aplicación móvil pública                | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Sistema de gestión de contenidos        | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Servidor de pantallas                   | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Pantallas web                           | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Módulo de signos visuales               | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Servidor para análisis de datos         | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Protocolo de contexto de modelos        | Estándar            | <CatalogItem catalog="standards" item="001" />    |
 
-### Base de datos
+## Servidor de distribución de información en tiempo real
+
+Plataforma central de procesamiento que recolecta suministros (_feeds_) actualizados de GTFS _Schedule_ y GTFS _Realtime_ para distribución a aplicaciones cliente y sistemas externos en múltiples formatos e interfaces.
+
+### Características
+
+- **Procesamiento en tiempo real:** Latencia menor a 1 segundo para datos críticos
+- **Escalabilidad horizontal:** Capacidad de distribuir carga entre múltiples instancias
+- **Tolerancia a fallos:** Redundancia automática y recuperación ante interrupciones
+- **Validación de datos:** Verificación de integridad y consistencia de datos entrantes
+- **Transformación de protocolos:** Conversión entre formatos de telemetría y estándares GTFS
+- **Monitoreo y alertas:** Sistema de métricas y notificaciones
+- **API de integración:** Conectores para sistemas CAD/AVL y plataformas de terceros
+
+## Base de datos
+
+Sistema de almacenamiento principal para datos operativos e históricos del transporte público, optimizado para consultas geoespaciales, análisis temporal y gestión de grandes volúmenes de información estructurada y semi-estructurada.
+
+### Características
+
+- **Motor relacional:** Transacciones ACID, integridad referencial
+- **Extensión geoespacial:** Consultas espaciales, índices geométricos, análisis de proximidad
+- **Soporte JSON/JSONB/BSON:** Almacenamiento flexible de metadatos y configuraciones dinámicas
+- **Series temporales optimizadas:** Particionamiento automático por tiempo, compresión de datos históricos
+- **Respaldo automatizado:** Respaldos incrementales con retención configurable
+
+## Base de datos en memoria
+
+Caché de alta velocidad para datos temporales que requieren acceso rápido durante el procesamiento en tiempo real. Actúa como _buffer_ entre la ingesta de datos y el almacenamiento persistente.
+
+### Características
+
+- **Latencia sub-milisegundo:** Acceso inmediato a datos frecuentemente consultados
+- **Estructura de datos especializada:** Tablas con _hash_, conjuntos ordenados para consultas optimizadas
+- **Expiración automática (TTL):** Limpieza automática de datos obsoletos
+- **Persistencia opcional:** _Snapshots_ periódicos para recuperación ante fallos
+- **Compresión en memoria:** Optimización del uso de RAM para mayor capacidad
+- **Pub/Sub integrado:** Notificaciones en tiempo real de cambios de estado
+
+## Interfaz API REST
+
+Interfaz de programación de aplicaciones (API) RESTful que proporciona acceso estructurado y escalable a datos del sistema de transporte público. Diseñada para integración con sistemas externos, aplicaciones móviles y herramientas de administración con patrones estándar de la industria.
+
+### Características
+
+- **Especificación OpenAPI 3.0:** Documentación automática e interactiva de terminales (_endpoints_)
+- **Autenticación OAuth 2.0 / JWT:** _Tokens_ seguros con alcance de acceso (_scope_) granular y renovación automática
+- **Límite de consultas dinámico:** Límites adaptativos por cliente
+- **Versionado semántico:** Compatibilidad hacia atrás con evolución controlada de API
+- **Paginación inteligente:** División en páginas para grandes conjuntos de datos
+- **Filtrado y ordenamiento:** Parámetros flexibles para consultas personalizadas
+
+## Interfaz API GraphQL
+
+Interfaz de programación de aplicaciones (API) GraphQL que permite consultas flexibles y eficientes mediante un esquema unificado. Optimizada para clientes que requieren datos específicos con mínima transferencia de red y máxima expresividad en las consultas.
+
+### Características
+
+- **Esquema tipado fuerte:** Definición explícita de tipos con validación automática
+- **Suscripciones en tiempo real:** Conexiones WebSocket para actualizaciones instantáneas
+
+## Interfaz de comunicación persistente con eventos enviados por el servidor (SSE)
+
+Canal unidireccional servidor-a-cliente para enviar eventos en tiempo real sobre cambios de estado (vehículos, alertas, estimaciones) con baja sobrecarga y reconexión automática.
+
+### Características
+
+- **Reconexión automática:** Manejo de la conexión y reintentos exponenciales
+- **Canales y filtros:** Suscripción por ruta, parada, línea o área
+- **_Heartbeats_:** Mantiene la conexión activa y detecta cortes
+- **Compatibilidad HTTP/2:** Funcionamiento sobre infraestructuras actuales
+- **Compresión y _backpressure_:** Optimización del ancho de banda y control de flujo
+
+## Interfaz de comunicación persistente bidireccional (WebSockets)
+
+Canal bidireccional de baja latencia para intercambio interactivo de eventos y comandos (suscripciones dinámicas, eco de posición, telemetría y notificaciones).
+
+### Características
+
+- **Pub/Sub dinámico:** Alta/baja de tópicos y filtros en tiempo real
+- **Soporte binario/JSON:** Mensajes compactos o legibles
+
+## Interfaz de notificaciones HTTP salientes (webhooks)
+
+Mecanismo de entrega tipo _push_ hacia sistemas externos mediante conexión HTTP cuando ocurren eventos (nuevas alertas, cambios de servicio, incidencias).
+
+### Características
+
+- **Entrega confiable:** Reintentos con política exponencial e idempotencia
+- **Filtros por suscriptor:** Selección de eventos de interés
+
+## Interfaz de consultas semánticas (SPARQL)
+
+Terminal de consultas SPARQL para bases de datos de tripletas (_triplestores_).
+
+### Características
+
+- **SPARQL 1.1 Query:** SELECT/ASK/CONSTRUCT/DESCRIBE
+- **Catálogo de ontologías:** Vocabularios usados (GTFS, schema.org, etc.)
+- **Consulta federada (opcional):** SERVICE hacia otras fuentes
+- **Múltiples formatos:** JSON, XML, CSV
+
+## Herramientas de programación
+
+Suite de desarrollo (SDK, _Software Development Kit_) que proporciona bibliotecas, utilidades y herramientas especializadas para facilitar la integración con el ecosistema de distribución de información de transporte público. Diseñado para acelerar el desarrollo de aplicaciones cliente y extensiones del sistema.
+
+### Características
+
+- **CLI multiplataforma:** Herramientas de línea de comandos para automatización y administración
+- **Bibliotecas nativas:** SDKs para Python, JavaScript/TypeScript y otros lenguajes necesarios con APIs consistentes
+- **Distribución automatizada:** Accesible vía PyPI, npm u otros
+
+## Intermediador de mensajes de publicación/suscripción
+
+Intermediador (_broker_) MQTT de alto desempeño especializado en actualizaciones de información en tiempo real. Actúa como concentrador central para el intercambio de mensajes entre el servidor y los servicios de información.
+
+### Características
+
+- **Protocolo MQTT 5.0:** Soporte completo con control de flujo
+- **Tópicos jerárquicos especializados:** Estructura optimizada para datos GTFS (vehicle/route/trip/stop)
+- **QoS adaptativo:** Niveles de servicio configurables según criticidad del mensaje
+- **Persistencia selectiva:** Almacenamiento configurable de mensajes críticos con TTL
+- **Seguridad:** TLS/SSL, autenticación por certificados y ACLs granulares
+- **Interoperabilidad:** Conectores para WebSockets, AMQP y sistemas propietarios
+
+## Servidor de gestión de pantallas informativas
+
+Servidor para administración, orquestación y distribución de contenidos a pantallas en vehículos, paradas y estaciones.
+
+### Características
+
+- **Listas de reproducción y horarios:** Programación por lugar/franja
+- **Plantillas y temas:** Diseño consistente y reutilizable
+- **Caché y modo fuera de línea:** Continuidad ante fallas de red
+- **Monitoreo de salud:** _Heartbeats_ de clientes y alertas
+- **Segmentación geográfica:** Contenidos por zona o línea
+- **Integración en tiempo real:** Próximas llegadas y alertas operativas
+
+## Pantallas informativas con tecnologías web
+
+Aplicación web para kioscos/pantallas con renderizado optimizado y operación 24/7.
+
+### Características
+
+- **Modo quiosco:** Pantalla completa y control de inactividad
+- **Rendimiento:** Animaciones fluidas y actualización incremental
+- **Accesibilidad:** Alto contraste, tipografías legibles
+- **Localización:** Soporte multilenguaje (i18n)
+- **Telemetría de cliente:** Logs para diagnóstico y calidad de servicio
+
+## Módulo de creación de signos visuales
+
+Servicio para generar señalética y elementos visuales programáticamente a partir de datos.
+
+### Características
+
+- **Plantillas SVG/PDF:** Salidas listas para impresión o pantalla
+- **Banco de íconos:** Estándares de pictogramas y variaciones
+- **Datos parametrizados:** Generación masiva por rutas/paradas
+- **Exportación por lotes:** Integración con flujos de publicación
+
+## Servidor e interfaz para análisis y visualización de datos
+
+Plataforma para análisis descriptivo y visualización operativa de indicadores claves de desempeño (KPI), con paneles para operación y planificación.
+
+### Características
+
+- **Paneles temáticos:** Frecuencia, puntualidad, ocupación, incidencias
+- **Exploración ad-hoc:** Consultas filtradas por rutas, periodos y zonas
+- **Alertas basadas en umbrales:** Notificaciones por desviaciones de servicio
+- **Exportación:** CSV/Parquet/imagen para informes
+- **Autenticación y permisos:** Acceso por rol (operación/planificación)
+
+## Sitio web público
+
+Portal de información ciudadana con información del servicio, próximas llegadas, alertas y contenidos editoriales.
+
+### Características
+
+- **Búsqueda de paradas y rutas:** Mapas interactivos y autocompletar
+- **Próximas llegadas:** Estimaciones en tiempo real
+- **Alertas y desvíos:** Bandeja de avisos por zona/línea
+- **Accesibilidad y multilenguaje:** AA/AAA cuando aplique
+- **Integración de contenido:** Noticias, guías y materiales del CMS
+- **Chats de lenguaje natural con IA:** Consultas mediadas por MCP
+
+## Aplicación móvil pública
+
+Aplicación móvil para personas usuarias con información en tiempo real, notificaciones y herramientas de planificación básica.
+
+### Características
+
+- **Paradas y rutas cercanas:** Geolocalización y favoritos
+- **Próximas llegadas:** Estimaciones y alertas personalizadas
+- **Avisos de servicio:** Notificaciones push por línea/zona
+- **Mapas y navegación básica:** Trayectos y transbordos simples
+- **Accesibilidad:** Texto escalable, alto contraste y soporte _offline_ básico
+
+## Sistema de gestión de contenidos
+
+Plataforma de administración de contenido especializada en comunicación operativa y relaciones públicas del sistema de transporte. Incluye flujos de trabajo (_workflows_) editoriales, distribución multicanal y análisis de vinculación (_engagement_) para maximizar el alcance e impacto de las comunicaciones.
+
+### Características
+
+- **Editor WYSIWYG avanzado:** Edición visual con vista previa en tiempo real para múltiples formatos
+- **Publicación programada:** Calendarización automática
+- **Distribución multicanal:** Sincronización automática con redes sociales, web y apps
+- **API _headless_:** Distribución de contenido via REST/GraphQL para aplicaciones externas
+
+## Servidor/cliente del protocolo de contexto de modelos (MCP)
+
+Servidor especializado que implementa _Model Context Protocol_ (MCP) para proporcionar acceso conversacional a datos operativos mediante modelos de lenguaje extensos (LLM, _Large Language Models_). Actúa como puente inteligente entre consultas de lenguaje natural y sistemas de datos estructurados.
+
+### Características
+
+- **Implementación MCP completa:** Soporte total del protocolo con extensiones personalizadas
+- **Consultas en lenguaje natural:** Traducción automática de preguntas a consultas SQL/GraphQL/SPARQL
+- **Contexto:** Mantenimiento de estado conversacional con memoria persistente

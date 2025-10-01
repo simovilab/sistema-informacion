@@ -1,12 +1,36 @@
 # Infobús
 
-## Servidor Infobús
+Implementación de la arquitectura A2.
 
-(aplicación): servidor para el consumo de datos del transporte público y distribución con múltiples protocolos a servicios de información
+## Infobús
+
+<CatalogItem catalog="applications" item="001" />
+
+> Servidor para la recolección y producción de datos GTFS
+
+| Información | Valor                                |
+| ----------- | ------------------------------------ |
+| Versión     | 0.2                                  |
+| Repositorio | https://github.com/simovilab/databus |
+
+### Relaciones con el sistema
+
+| Relación          | Ítem de catálogo                                              |
+| ----------------- | ------------------------------------------------------------- |
+| implementa        | <CatalogItem catalog="principles" item="D02" show="name" />   |
+| usado por         | <CatalogItem catalog="principles" item="A02" show="name" />   |
+| es servido por    | <CatalogItem catalog="requirements" item="001" show="name" /> |
+| es del interés de | <CatalogItem catalog="stakeholders" item="001" show="name" /> |
 
 ## Infobús _DB_
 
 (componente de datos): base de datos relacional, geoespacial, de documentos y de series temporales
+
+## Infobús _MEM_
+
+(componente de datos)
+
+Base de datos en memoria
 
 ## Infobús _API_
 

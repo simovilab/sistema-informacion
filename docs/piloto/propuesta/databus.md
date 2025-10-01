@@ -1,17 +1,26 @@
 # Databús
 
-## Servidor Databús
+Implementación de la arquitectura A1.
 
-(aplicación)
+## Databús
 
-Servidor para la recolección y producción de datos GTFS
+<CatalogItem catalog="applications" item="001" />
 
-| Relación          | Ítem de catálogo                                  |
-| ----------------- | ------------------------------------------------- |
-| implementa        | <CatalogItem catalog="principles" item="D02" />   |
-| usado por         | <CatalogItem catalog="principles" item="A02" />   |
-| es servido por    | <CatalogItem catalog="requirements" item="001" /> |
-| es del interés de | <CatalogItem catalog="stakeholders" item="001" /> |
+> Servidor para la recolección y producción de datos GTFS
+
+| Información | Valor                                |
+| ----------- | ------------------------------------ |
+| Versión     | 0.2                                  |
+| Repositorio | https://github.com/simovilab/databus |
+
+### Relaciones con el sistema
+
+| Relación          | Ítem de catálogo                                              |
+| ----------------- | ------------------------------------------------------------- |
+| implementa        | <CatalogItem catalog="principles" item="D02" show="name" />   |
+| usado por         | <CatalogItem catalog="principles" item="A02" show="name" />   |
+| es servido por    | <CatalogItem catalog="requirements" item="001" show="name" /> |
+| es del interés de | <CatalogItem catalog="stakeholders" item="001" show="name" /> |
 
 ## Databús _DB_
 

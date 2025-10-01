@@ -112,8 +112,8 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: "Descripción", link: "/desarrollo/arquitectura/" },
-              { text: "Recolección de datos", link: "/desarrollo/arquitectura/recoleccion" },
-              { text: "Distribución de información", link: "/desarrollo/arquitectura/distribucion" },
+              { text: "A1", link: "/desarrollo/arquitectura/recoleccion" },
+              { text: "A2", link: "/desarrollo/arquitectura/distribucion" },
             ],
           },
           {

@@ -1,26 +1,28 @@
-# Recolección de datos
+# A1
 
-::: info Objetivo
+::: info Recolección
+
 La acción básica de este subsistema es recopilar los datos del servicio de transporte público y recolectar y transformar los datos de telemetría y rastreo de los vehículos para publicación en un suministro de datos GTFS _Schedule_ y GTFS _Realtime_.
+
 :::
 
 La siguiente es la tabla resumen de los componentes de la arquitectura.
 
-| Nombre                           | Clasificación ADM   |
-| -------------------------------- | ------------------- |
-| Servidor en tiempo real          | Aplicación          |
-| Base de datos                    | Componente de datos |
-| Base de datos en memoria         | Componente de datos |
-| API REST                         | Interfaz            |
-| API GraphQL                      | Interfaz            |
-| Gestor GTFS                      | Aplicación          |
-| Editor GTFS                      | Aplicación          |
-| Herramientas de programación     | Aplicación          |
-| Intermediador de mensajes        | Aplicación          |
-| Aplicación móvil operativa       | Aplicación          |
-| Sistema de gestión de contenidos | Aplicación          |
-| Protocolo de contexto de modelos | Aplicación          |
-| Simulador de datos               | Aplicación          |
+| Componente                        | Clasificación ADM   | Catalogación                                      |
+| --------------------------------- | ------------------- | ------------------------------------------------- |
+| Servidor en tiempo real           | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Base de datos                     | Componente de datos | <CatalogItem catalog="components" item="001" />   |
+| Base de datos en memoria          | Componente de datos | <CatalogItem catalog="components" item="001" />   |
+| API REST                          | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| API GraphQL                       | Interfaz            | <CatalogItem catalog="interfaces" item="001" />   |
+| Plataforma GTFS                   | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Editor GTFS _Schedule_            | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Herramientas de programación      | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Intermediador de mensajes pub/sub | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Aplicación móvil operativa        | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Simulador de datos                | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Sistema de gestión de contenidos  | Aplicación          | <CatalogItem catalog="applications" item="001" /> |
+| Protocolo de contexto de modelos  | Estándar            | <CatalogItem catalog="standards" item="001" />    |
 
 A continuación hay una descripción general de cada componente.
 
@@ -38,10 +40,6 @@ Plataforma central de procesamiento que recolecta, valida y transforma datos de 
 - **Monitoreo y alertas:** Sistema de métricas y notificaciones
 - **API de integración:** Conectores para sistemas CAD/AVL y plataformas de terceros
 
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
-
 ## Base de datos
 
 Sistema de almacenamiento principal para datos operativos e históricos del transporte público, optimizado para consultas geoespaciales, análisis temporal y gestión de grandes volúmenes de información estructurada y semi-estructurada.
@@ -50,14 +48,9 @@ Sistema de almacenamiento principal para datos operativos e históricos del tran
 
 - **Motor relacional:** Transacciones ACID, integridad referencial
 - **Extensión geoespacial:** Consultas espaciales, índices geométricos, análisis de proximidad
-- **Soporte JSON/JSONB:** Almacenamiento flexible de metadatos y configuraciones dinámicas
+- **Soporte JSON/JSONB/BSON:** Almacenamiento flexible de metadatos y configuraciones dinámicas
 - **Series temporales optimizadas:** Particionamiento automático por tiempo, compresión de datos históricos
 - **Respaldo automatizado:** Respaldos incrementales con retención configurable
-- **Indexación avanzada:** Índices compuestos para consultas complejas
-
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
 
 ## Base de datos en memoria
 
@@ -69,17 +62,12 @@ Caché de alta velocidad para datos temporales de rastreo y telemetría que requ
 - **Estructura de datos especializada:** Tablas con _hash_, conjuntos ordenados para consultas optimizadas
 - **Expiración automática (TTL):** Limpieza automática de datos obsoletos
 - **Persistencia opcional:** _Snapshots_ periódicos para recuperación ante fallos
-- **_Clustering_ y replicación:** Alta disponibilidad mediante distribución de datos
 - **Compresión en memoria:** Optimización del uso de RAM para mayor capacidad
 - **Pub/Sub integrado:** Notificaciones en tiempo real de cambios de estado
 
-### Catalogación
+## Interfaz API REST
 
-- <CatalogItem catalog="principles" item="001" />
-
-## Interfaz de programación de aplicaciones REST
-
-API RESTful que proporciona acceso estructurado y escalable a datos operativos del sistema de transporte público. Diseñada para integración con sistemas externos, aplicaciones móviles y herramientas de administración con patrones estándar de la industria.
+Interfaz de programación de aplicaciones (API) RESTful que proporciona acceso estructurado y escalable a datos operativos del sistema de transporte público. Diseñada para integración con sistemas externos, aplicaciones móviles y herramientas de administración con patrones estándar de la industria.
 
 ### Características
 
@@ -90,26 +78,18 @@ API RESTful que proporciona acceso estructurado y escalable a datos operativos d
 - **Paginación inteligente:** División en páginas para grandes conjuntos de datos
 - **Filtrado y ordenamiento:** Parámetros flexibles para consultas personalizadas
 
-### Catalogación
+## Interfaz API GraphQL
 
-- <CatalogItem catalog="principles" item="001" />
-
-## Interfaz de programación de aplicaciones GraphQL
-
-API GraphQL que permite consultas flexibles y eficientes mediante un esquema unificado. Optimizada para clientes que requieren datos específicos con mínima transferencia de red y máxima expresividad en las consultas.
+Interfaz de programación de aplicaciones (API) GraphQL que permite consultas flexibles y eficientes mediante un esquema unificado. Optimizada para clientes que requieren datos específicos con mínima transferencia de red y máxima expresividad en las consultas.
 
 ### Características
 
 - **Esquema tipado fuerte:** Definición explícita de tipos con validación automática
 - **Suscripciones en tiempo real:** WebSocket connections para actualizaciones instantáneas
 
-### Catalogación
+## Plataforma GTFS
 
-- <CatalogItem catalog="principles" item="001" />
-
-## Gestor GTFS
-
-Motor de gestión integral para datos y procesos relacionados con GTFS Schedule y GTFS Realtime. Proporciona un ecosistema completo para la administración del ciclo de vida de datos de transporte público, desde la importación hasta la distribución.
+Centro de gestión integral para datos y procesos relacionados con GTFS _Schedule_ y GTFS _Realtime_. Proporciona un ecosistema completo para la administración del ciclo de vida de datos de transporte público, desde la importación hasta la distribución.
 
 ### Características
 
@@ -117,10 +97,6 @@ Motor de gestión integral para datos y procesos relacionados con GTFS Schedule 
 - **Importación robusta:** Procesamiento con validación, transformación y reconciliación de datos
 - **Exportación optimizada:** Generación eficiente de _feeds_ con compresión y versionado
 - **Sincronización tiempo real:** Puente entre GTFS _Schedule_ estático y actualizaciones dinámicas
-
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
 
 ## Editor GTFS
 
@@ -135,10 +111,6 @@ Herramienta visual especializada para creación y edición de feeds GTFS _Schedu
 - **Visualización de conflictos:** Detección y resolución de solapamientos temporales y espaciales
 - **Auditoría completa:** Trazabilidad de cambios con marcas temporales y responsables
 
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
-
 ## Herramientas de programación
 
 Suite de desarrollo (SDK, _Software Development Kit_) que proporciona bibliotecas, utilidades y herramientas especializadas para facilitar la integración con el ecosistema de producción de datos de transporte público. Diseñado para acelerar el desarrollo de aplicaciones cliente y extensiones del sistema.
@@ -149,11 +121,7 @@ Suite de desarrollo (SDK, _Software Development Kit_) que proporciona biblioteca
 - **Bibliotecas nativas:** SDKs para Python, JavaScript/TypeScript y otros lenguajes necesarios con APIs consistentes
 - **Distribución automatizada:** Accesible vía PyPI, npm u otros
 
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
-
-## Intermediador de mensajes
+## Intermediador de mensajes de publicación/suscripción
 
 Intermediador (_broker_) MQTT de alto desempeño especializado en telemetría vehicular y comunicación en tiempo real. Actúa como concentrador central para el intercambio de mensajes entre vehículos, sistemas de control y aplicaciones de monitoreo con garantías de entrega y escalabilidad.
 
@@ -165,10 +133,6 @@ Intermediador (_broker_) MQTT de alto desempeño especializado en telemetría ve
 - **Persistencia selectiva:** Almacenamiento configurable de mensajes críticos con TTL
 - **Seguridad:** TLS/SSL, autenticación por certificados y ACLs granulares
 - **Interoperabilidad:** Conectores para WebSockets, AMQP y sistemas propietarios
-
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
 
 ## Aplicación móvil operativa
 
@@ -182,9 +146,13 @@ Aplicación móvil nativa diseñada para operadores de transporte público que c
 - **Reportes de incidencias:** Captura multimedia con geolocalización automática
 - **Configuración dinámica:** Actualizaciones de parámetros operativos
 
-### Catalogación
+## Simulador de datos de tiempo real
 
-- <CatalogItem catalog="principles" item="001" />
+Plataforma de simulación para generación de datos sintéticos de transporte público que replica patrones realistas de operación. Esencial para pruebas, desarrollo y entrenamiento sin impacto en sistemas productivos.
+
+### Características
+
+- **Modelos de movilidad realistas:** Patrones de tráfico basados en datos históricos
 
 ## Sistema de gestión de contenidos
 
@@ -197,10 +165,6 @@ Plataforma de administración de contenido especializada en comunicación operat
 - **Distribución multicanal:** Sincronización automática con redes sociales, web y apps
 - **API _headless_:** Distribución de contenido via REST/GraphQL para aplicaciones externas
 
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
-
 ## Protocolo de contexto de modelos
 
 Servidor especializado que implementa _Model Context Protocol_ (MCP) para proporcionar acceso conversacional a datos operativos mediante modelos de lenguaje extensos (LLM, _Large Language Models_). Actúa como puente inteligente entre consultas de lenguaje natural y sistemas de datos estructurados.
@@ -210,19 +174,3 @@ Servidor especializado que implementa _Model Context Protocol_ (MCP) para propor
 - **Implementación MCP completa:** Soporte total del protocolo con extensiones personalizadas
 - **Consultas en lenguaje natural:** Traducción automática de preguntas a consultas SQL/GraphQL
 - **Contexto:** Mantenimiento de estado conversacional con memoria persistente
-
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
-
-## Simulador de datos de tiempo real
-
-Plataforma de simulación para generación de datos sintéticos de transporte público que replica patrones realistas de operación. Esencial para pruebas, desarrollo y entrenamiento sin impacto en sistemas productivos.
-
-### Características
-
-- **Modelos de movilidad realistas:** Patrones de tráfico basados en datos históricos
-
-### Catalogación
-
-- <CatalogItem catalog="principles" item="001" />
