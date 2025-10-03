@@ -1,13 +1,12 @@
 # Catálogos
 
-::: info Menú de la sección
+::: info Objetivos
 
-- Los catálogos son listas de elementos usados en el diseño y desarrollo del sistema.
-- Los catálogos aquí presentados son definidos por TOGAF ADM, un método de desarrollo de arquitecturas tecnológicas organizacionales.
+Los catálogos de InfoTP son listas de elementos usados en el diseño y desarrollo del sistema. Los catálogos aquí presentados son definidos por TOGAF ADM, un método de desarrollo de arquitecturas tecnológicas organizacionales.
 
 :::
 
-| Catálogo                                    | Nombre ADM              |
+| Sección                                     | Descripción             |
 | ------------------------------------------- | ----------------------- |
 | [Principios](./principios)                  | _Principles_            |
 | [Partes interesadas](./partes-interesadas)  | _Stakeholders_          |

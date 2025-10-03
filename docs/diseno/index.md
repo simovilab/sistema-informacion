@@ -1,14 +1,16 @@
 # Diseño
 
-::: info Puntos principales
+::: info Objetivo
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+El diseño de InfoTP describe las características principales del servicio de información y de la infraestructura tecnológica que lo soporta.
 
 :::
 
-- Canales de comunicación: descripción de la oferta de canales digitales e impresos con información del servicio.
-- Experiencia de usuario:
+| Sección                  | Descripción                    |
+| ------------------------ | ------------------------------ |
+| Experiencia del servicio | Visión del diseño              |
+| Canales de comunicación  | Descripción de los medios      |
+| Arquitectura             | Diseño tecnológico del sistema |
 
 ## Preguntas generadoras
 

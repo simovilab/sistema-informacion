@@ -1,26 +1,13 @@
 # Desarrollo
 
-::: info Puntos clave
+::: info Objetivo
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+El desarrollo de InfoTP describe la implementación tecnológica del servicio de información.
 
 :::
 
-## Secciones
-
-### Arquitectura
-
-#### A1
-
-Recolección de datos de telemetría y rastreo y construcción de GTFS.
-
-#### A2
-
-Consumo de datos GTFS y datos complementarios y distribución a servicios de información.
-
-### Tecnologías
-
-#### Portafolio
-
-#### Estándares
+| Sección | Descripción                          |
+| ------- | ------------------------------------ |
+| Databús | Implementación de la arquitectura A1 |
+| Infobús | Implementación de la arquitectura A2 |
+| Control | Implementación de la arquitectura A3 |

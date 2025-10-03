@@ -1,11 +1,17 @@
 # Plan piloto
 
-::: info Puntos clave
+::: info Objetivo
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+El plan piloto de InfoTP describe la estrategia de implementación de un plan piloto de mediana escala.
 
 :::
+
+| Sección              | Descripción                               |
+| -------------------- | ----------------------------------------- |
+| Propuesta técnica    | Detalles de la implementación tecnológica |
+| Propuesta financiera | Desglose de costos                        |
+
+## Presentación
 
 La Universidad de Costa Rica, a través del Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) de la Escuela de Ingeniería Eléctrica, ofrece sus servicios para el diseño e implementación del plan piloto de un sistema de información para la movilidad inteligente, como el descrito en este informe.
 

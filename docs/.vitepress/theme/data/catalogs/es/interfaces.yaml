@@ -29,5 +29,43 @@ interfaces:
     related_components:
       - "Servicio de gestión de usuarios"
       - "Aplicación frontend"
-    status: "Activo"
+    status: "Planificación"
     documentation: "https://docs.example.com/user-auth-interface"
+
+  - id: interface:002
+    name: "Interfaz de gestión de usuarios"
+    description: "Interfaz para la gestión de usuarios en el sistema."
+    type: "API REST"
+    protocols:
+      - "HTTPS"
+    data_formats:
+      - "JSON"
+    security:
+      - "OAuth 2.0"
+    version: "1.0"
+    owner: ""
+    contact: ""
+    related_components:
+      - "Servicio de gestión de usuarios"
+      - "Aplicación frontend"
+    status: "Planificación"
+    documentation: "https://docs.example.com/user-management-interface"
+
+  - id: interface:003
+    name: "Interfaz de aplicación móvil operativa"
+    description: "Interfaz gráfica de usuario para la gestión de viajes en el sistema."
+    type: "GUI"
+    protocols:
+      - "HTTPS"
+    data_formats:
+      - ""
+    security:
+      - "OAuth 2.0"
+    version: "1.0"
+    owner: ""
+    contact: ""
+    related_components:
+      - "Driver"
+      - "Real-Time Server"
+    status: "Planificación"
+    documentation: "https://docs.example.com/user-management-interface"

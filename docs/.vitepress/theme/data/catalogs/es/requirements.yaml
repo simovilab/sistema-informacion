@@ -16,13 +16,13 @@ requirements:
   - id: requirement:001
     name: "Seguimiento de autobuses en tiempo real"
     description: "El sistema deberá proporcionar a las personas usuarias el seguimiento en tiempo real de los autobuses."
+    rationale: "Para mejorar la experiencia de usuario y la eficiencia del transporte."
     application:
       - "application:001"
       - "application:002"
     type: "Funcional"
     priority: "Alta"
     status: "Aprobado"
-    rationale: "Para mejorar la experiencia de usuario y la eficiencia del transporte."
     stakeholders:
       - "Pasajeros"
       - "Autoridades de transporte"
@@ -42,13 +42,13 @@ requirements:
   - id: requirement:002
     name: "Autenticación de usuarios"
     description: "El sistema deberá proporcionar autenticación y autorización de usuarios segura."
+    rationale: "Para proteger los datos de los usuarios y garantizar acceso seguro al sistema."
     application:
       - "application:001"
       - "application:002"
     type: "Funcional"
     priority: "Media"
     status: "Aprobado"
-    rationale: "Para proteger los datos de los usuarios y garantizar acceso seguro al sistema."
     stakeholders:
       - "Pasajeros"
       - "Administradores del sistema"

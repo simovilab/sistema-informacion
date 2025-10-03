@@ -289,3 +289,155 @@ principles:
     related_principles: []
     references:
       - "https://doi.org/10.1109/CONCAPAN63470.2024.10933847"
+
+  # ------------------------
+  # Principios de usabilidad
+  # ------------------------
+
+  # Visibilidad del estado del sistema
+  - id: principles:U01
+    domain: "Application"
+    name: "Visibilidad del estado del sistema"
+    description: "El sistema mantiene informadas a las personas usuarias sobre lo que está ocurriendo mediante retroalimentación adecuada y oportuna."
+    rationale: "La puntualidad y precisión de la retroalimentación reduce la incertidumbre en la toma de decisiones. En transporte público, la visibilidad del estado incluye posición de vehículos, estimaciones de llegada y alertas en tiempo real."
+    implications:
+      - "Publicar datos operativos en tiempo real (posiciones, ETA y alertas) en canales abiertos y consistentes."
+      - "Mantener coherencia entre canales (web, app móvil, pantallas) para evitar mensajes contradictorios."
+      - "Diseñar indicadores de estado claros (cargando, actualizado, desactualizado) y tiempos de refresco explícitos."
+    related_principles: ["principles:A01", "principles:D01", "principles:D03"]
+    references:
+      - "https://developers.google.com/transit/gtfs-realtime"
+      - "https://doi.org/10.1109/CONCAPAN63470.2024.10933847"
+
+  # Concordancia entre el sistema y el mundo real
+  - id: principles:U02
+    domain: "Application"
+    name: "Concordancia entre el sistema y el mundo real"
+    description: "El sistema usa el lenguaje, los conceptos y las convenciones del mundo real, reconocibles por las personas usuarias."
+    rationale: "El uso de términos, estructuras y metáforas conocidas reduce la carga cognitiva y mejora la comprensión. En movilidad, GTFS describe entidades familiares (rutas, paradas, horarios)."
+    implications:
+      - "Emparejar vocabulario de interfaces con estándares del dominio (GTFS) y señalética pública."
+      - "Habilitar consultas en lenguaje natural mediante asistentes conversacionales basados en MCP."
+      - "Internacionalización temprana para cubrir idiomas predominantes y escenarios turísticos."
+    related_principles: ["principles:D05", "principles:A02"]
+    references:
+      - "https://gtfs.org/"
+      - "https://modelcontextprotocol.io/"
+
+  # Control y libertad del usuario
+  - id: principles:U03
+    domain: "Application"
+    name: "Control y libertad del usuario"
+    description: "Las personas usuarias requieren salidas simples para cancelar o deshacer acciones y retomar el control."
+    rationale: "Posibilitar cancelar búsquedas, editar parámetros y reevaluar planes de viaje evita bloqueos y fricciones."
+    implications:
+      - "Permitir replanificación rápida (p. ej., cambiar origen/destino o modo) sin perder contexto."
+      - "Evitar flujos irreversibles; ofrecer confirmaciones y deshacer cuando sea apropiado."
+      - "Facilitar la elección entre múltiples canales y aplicaciones compatibles."
+    related_principles: ["principles:B01", "principles:U07"]
+    references:
+      - "https://doi.org/10.1109/CONCAPAN63470.2024.10933847"
+
+  # Consistencia y estándares
+  - id: principles:U04
+    domain: "Application"
+    name: "Consistencia y estándares"
+    description: "Terminología, componentes y comportamientos uniformes, alineados con estándares abiertos, reducen ambigüedad."
+    rationale: "La interoperabilidad y la experiencia consistente se logran adhiriéndose a estándares de datos, protocolos y diseño."
+    implications:
+      - "Adoptar y mantener GTFS (Schedule y Realtime) como base para datos de servicio."
+      - "Alinear modelos y flujos con marcos reconocidos (ARC-IT, Smart Data Models, CAP, MDS)."
+      - "Definir guías de estilo y convenciones de nomenclatura transversales."
+    related_principles: ["principles:A01", "principles:D05", "principles:T06"]
+    references:
+      - "https://gtfs.org/"
+      - "https://developers.google.com/transit/gtfs-realtime"
+      - "https://www.arc-it.net/"
+      - "https://smartdatamodels.org/"
+      - "https://www.oasis-open.org/committees/emergency/"
+      - "https://www.openmobilityfoundation.org/mobility-data-specification/"
+
+  # Prevención de errores
+  - id: principles:U05
+    domain: "Application"
+    name: "Prevención de errores"
+    description: "Es preferible diseñar para evitar errores que depender de mensajes para corregirlos."
+    rationale: "Validaciones proactivas y reglas de negocio claras evitan datos inválidos y decisiones equivocadas por parte de la persona usuaria."
+    implications:
+      - "Implementar validaciones de calidad de datos en el editor GTFS y en pipelines de publicación."
+      - "Usar reglas de negocio para evitar opciones imposibles (servicio no operativo, paradas cerradas)."
+      - "Desplegar alertas preventivas ante afectaciones para que el usuario ajuste su plan."
+    related_principles: ["principles:D01", "principles:T06"]
+    references:
+      - "https://developers.google.com/transit/gtfs-realtime/reference#message-alert"
+
+  # Reconocer antes que recordar
+  - id: principles:U06
+    domain: "Application"
+    name: "Reconocer antes que recordar"
+    description: "Minimizar la carga de memoria mostrando opciones, información y acciones relevantes en el contexto adecuado."
+    rationale: "La información visible y orientada por contexto reduce la necesidad de recordar datos. Señalética e identidad visual coherentes aceleran el reconocimiento."
+    implications:
+      - "Presentar horarios, rutas, paradas y tarifas visibles en los puntos de decisión."
+      - "Aplicar una identidad visual y señalética consistentes en canales físicos y digitales."
+      - "Ofrecer sugerencias y autocompletado en búsquedas y formularios."
+    related_principles: ["principles:A02", "principles:B01"]
+    references:
+      - "https://www.w3.org/WAI/"
+
+  # Flexibilidad y eficiencia de uso
+  - id: principles:U07
+    domain: "Application"
+    name: "Flexibilidad y eficiencia de uso"
+    description: "El sistema debe atender tanto a personas novatas como expertas, ofreciendo atajos y flujos eficientes."
+    rationale: "APIs y asistentes conversacionales permiten usos avanzados, mientras que interfaces guiadas simplifican tareas comunes."
+    implications:
+      - "Exponer APIs (p. ej., REST/GraphQL) con consultas persistidas y ejemplos reproducibles."
+      - "Proveer atajos, filtros guardados y personalización de vistas."
+      - "Ofrecer interfaz conversacional para consultas rápidas en lenguaje natural."
+    related_principles: ["principles:T02", "principles:B01"]
+    references:
+      - "https://modelcontextprotocol.io/"
+
+  # Diseño estético y minimalista
+  - id: principles:U08
+    domain: "Application"
+    name: "Diseño estético y minimalista"
+    description: "Presentar solo la información necesaria con jerarquía clara, evitando sobrecarga cognitiva."
+    rationale: "El exceso de elementos complica la toma de decisiones. Un diseño sobrio y accesible aumenta la eficacia."
+    implications:
+      - "Aplicar jerarquía visual, espaciado y tipografía legibles."
+      - "Usar divulgación progresiva para detalles secundarios."
+      - "Validar accesibilidad y contraste en todos los componentes."
+    related_principles: ["principles:A02", "principles:T07"]
+    references:
+      - "https://www.w3.org/WAI/"
+
+  # Reconocer, diagnosticar y recuperarse de errores
+  - id: principles:U09
+    domain: "Application"
+    name: "Ayudar a reconocer, diagnosticar y recuperarse de errores"
+    description: "Mensajes claros y orientados a la acción ayudan a comprender el problema y a continuar la tarea."
+    rationale: "El lenguaje natural sin códigos crípticos, junto con sugerencias de resolución, acelera la recuperación."
+    implications:
+      - "Redactar mensajes en lenguaje claro con causa probable y pasos siguientes."
+      - "Proveer estados de respaldo y rutas alternativas ante interrupciones del servicio."
+      - "Alinear códigos internos con mensajes de usuario consistentes."
+    related_principles: ["principles:U05", "principles:D03"]
+    references:
+      - "https://developers.google.com/transit/gtfs-realtime/reference#message-alert"
+
+  # Ayuda y documentación
+  - id: principles:U10
+    domain: "Application"
+    name: "Ayuda y documentación"
+    description: "Aunque idealmente innecesaria, la ayuda debe ser fácil de encontrar, buscar y aplicar al contexto."
+    rationale: "Buenas guías, ejemplos y referencias aceleran la adopción por parte de usuarios finales y desarrolladores."
+    implications:
+      - "Publicar documentación de APIs con ejemplos, esquemas y guías de inicio rápido."
+      - "Mantener notas de versión, políticas de cambios y deprecaciones."
+      - "Ofrecer ayuda contextual en aplicaciones y material para pantallas informativas."
+    related_principles: ["principles:B01", "principles:T07"]
+    references:
+      - "https://www.openapis.org/"
+      - "https://github.com/"

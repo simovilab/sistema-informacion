@@ -60,7 +60,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/diseno/" },
-
+          { text: "Experiencia del servicio", link: "/diseno/experiencia" },
           {
             text: "Canales de comunicación",
             collapsed: true,
@@ -99,7 +99,16 @@ export default defineConfig({
               },
             ],
           },
-          { text: "Experiencia del servicio", link: "/diseno/experiencia" },
+          {
+            text: "Arquitectura",
+            collapsed: true,
+            items: [
+              { text: "Descripción", link: "/diseno/arquitectura/" },
+              { text: "A1", link: "/diseno/arquitectura/a1" },
+              { text: "A2", link: "/diseno/arquitectura/a2" },
+              { text: "A3", link: "/diseno/arquitectura/a3" },
+            ],
+          },
         ],
       },
       {
@@ -107,30 +116,9 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/desarrollo/" },
-          {
-            text: "Arquitectura",
-            collapsed: true,
-            items: [
-              { text: "Descripción", link: "/desarrollo/arquitectura/" },
-              { text: "A1", link: "/desarrollo/arquitectura/recoleccion" },
-              { text: "A2", link: "/desarrollo/arquitectura/distribucion" },
-            ],
-          },
-          {
-            text: "Tecnologías",
-            collapsed: true,
-            items: [
-              { text: "Introducción", link: "/desarrollo/tecnologias/" },
-              {
-                text: "Portafolio",
-                link: "/desarrollo/tecnologias/portafolio",
-              },
-              {
-                text: "Estándares",
-                link: "/desarrollo/tecnologias/estandares",
-              },
-            ],
-          },
+          { text: "Databús", link: "/desarrollo/databus" },
+          { text: "Infobús", link: "/desarrollo/infobus" },
+          { text: "Control", link: "/desarrollo/control" },
         ],
       },
       {
@@ -148,15 +136,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/piloto/" },
-          {
-            text: "Propuesta técnica",
-            collapsed: true,
-            items: [
-              { text: "Introducción", link: "/piloto/propuesta/" },
-              { text: "Databús", link: "/piloto/propuesta/databus" },
-              { text: "Infobús", link: "/piloto/propuesta/infobus" },
-            ],
-          },
+          { text: "Propuesta técnica", link: "/piloto/propuesta-tecnica" },
           { text: "Propuesta financiera", link: "/piloto/propuesta-financiera" },
         ],
       },
