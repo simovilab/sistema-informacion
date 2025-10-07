@@ -3,3 +3,4 @@ cache
 dist
 main.*
 !main.tex
+structurizr-*.json
