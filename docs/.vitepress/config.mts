@@ -116,9 +116,30 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/desarrollo/" },
-          { text: "Databús", link: "/desarrollo/databus" },
-          { text: "Infobús", link: "/desarrollo/infobus" },
-          { text: "Control", link: "/desarrollo/control" },
+          {
+            text: "Databús",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/databus/" },
+              { text: "Diagrama", link: "/desarrollo/databus/diagrama" },
+            ],
+          },
+          {
+            text: "Infobús",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/infobus/" },
+              { text: "Diagrama", link: "/desarrollo/infobus/diagrama" },
+            ],
+          },
+          {
+            text: "Desarrollo y operaciones",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/operaciones/" },
+              { text: "Diagrama", link: "/desarrollo/operaciones/diagrama" },
+            ],
+          },
         ],
       },
       {

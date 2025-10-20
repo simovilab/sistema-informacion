@@ -254,3 +254,123 @@
 - Implicaciones: El diseño del sistema debe planificarse cuidadosamente para permitir una implementación gradual y de bajo costo inicial. Se podría discutir nueva legislación para realizar cambios estructurales relacionados, por ejemplo, con los mecanismos de financiamiento de nuevas tecnologías. También deben discutirse subsidios, como sugieren muchas entidades técnicas.
 - Principios relacionados: —
 - Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+
+<a id="principles-u01"></a>
+## Visibilidad del estado del sistema
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U01</code></span>
+
+- Dominio: Application
+- Descripción: El sistema mantiene informadas a las personas usuarias sobre lo que está ocurriendo mediante retroalimentación adecuada y oportuna.
+- Justificación: La puntualidad y precisión de la retroalimentación reduce la incertidumbre en la toma de decisiones. En transporte público, la visibilidad del estado incluye posición de vehículos, estimaciones de llegada y alertas en tiempo real.
+- Implicaciones: Publicar datos operativos en tiempo real (posiciones, ETA y alertas) en canales abiertos y consistentes., Mantener coherencia entre canales (web, app móvil, pantallas) para evitar mensajes contradictorios., Diseñar indicadores de estado claros (cargando, actualizado, desactualizado) y tiempos de refresco explícitos.
+- Principios relacionados: principles:A01, principles:D01, principles:D03
+- Referencias: https://developers.google.com/transit/gtfs-realtime, https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+
+<a id="principles-u02"></a>
+## Concordancia entre el sistema y el mundo real
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U02</code></span>
+
+- Dominio: Application
+- Descripción: El sistema usa el lenguaje, los conceptos y las convenciones del mundo real, reconocibles por las personas usuarias.
+- Justificación: El uso de términos, estructuras y metáforas conocidas reduce la carga cognitiva y mejora la comprensión. En movilidad, GTFS describe entidades familiares (rutas, paradas, horarios).
+- Implicaciones: Emparejar vocabulario de interfaces con estándares del dominio (GTFS) y señalética pública., Habilitar consultas en lenguaje natural mediante asistentes conversacionales basados en MCP., Internacionalización temprana para cubrir idiomas predominantes y escenarios turísticos.
+- Principios relacionados: principles:D05, principles:A02
+- Referencias: https://gtfs.org/, https://modelcontextprotocol.io/
+
+<a id="principles-u03"></a>
+## Control y libertad del usuario
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U03</code></span>
+
+- Dominio: Application
+- Descripción: Las personas usuarias requieren salidas simples para cancelar o deshacer acciones y retomar el control.
+- Justificación: Posibilitar cancelar búsquedas, editar parámetros y reevaluar planes de viaje evita bloqueos y fricciones.
+- Implicaciones: Permitir replanificación rápida (p. ej., cambiar origen/destino o modo) sin perder contexto., Evitar flujos irreversibles; ofrecer confirmaciones y deshacer cuando sea apropiado., Facilitar la elección entre múltiples canales y aplicaciones compatibles.
+- Principios relacionados: principles:B01, principles:U07
+- Referencias: https://doi.org/10.1109/CONCAPAN63470.2024.10933847
+
+<a id="principles-u04"></a>
+## Consistencia y estándares
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U04</code></span>
+
+- Dominio: Application
+- Descripción: Terminología, componentes y comportamientos uniformes, alineados con estándares abiertos, reducen ambigüedad.
+- Justificación: La interoperabilidad y la experiencia consistente se logran adhiriéndose a estándares de datos, protocolos y diseño.
+- Implicaciones: Adoptar y mantener GTFS (Schedule y Realtime) como base para datos de servicio., Alinear modelos y flujos con marcos reconocidos (ARC-IT, Smart Data Models, CAP, MDS)., Definir guías de estilo y convenciones de nomenclatura transversales.
+- Principios relacionados: principles:A01, principles:D05, principles:T06
+- Referencias: https://gtfs.org/, https://developers.google.com/transit/gtfs-realtime, https://www.arc-it.net/, https://smartdatamodels.org/, https://www.oasis-open.org/committees/emergency/, https://www.openmobilityfoundation.org/mobility-data-specification/
+
+<a id="principles-u05"></a>
+## Prevención de errores
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U05</code></span>
+
+- Dominio: Application
+- Descripción: Es preferible diseñar para evitar errores que depender de mensajes para corregirlos.
+- Justificación: Validaciones proactivas y reglas de negocio claras evitan datos inválidos y decisiones equivocadas por parte de la persona usuaria.
+- Implicaciones: Implementar validaciones de calidad de datos en el editor GTFS y en pipelines de publicación., Usar reglas de negocio para evitar opciones imposibles (servicio no operativo, paradas cerradas)., Desplegar alertas preventivas ante afectaciones para que el usuario ajuste su plan.
+- Principios relacionados: principles:D01, principles:T06
+- Referencias: https://developers.google.com/transit/gtfs-realtime/reference#message-alert
+
+<a id="principles-u06"></a>
+## Reconocer antes que recordar
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U06</code></span>
+
+- Dominio: Application
+- Descripción: Minimizar la carga de memoria mostrando opciones, información y acciones relevantes en el contexto adecuado.
+- Justificación: La información visible y orientada por contexto reduce la necesidad de recordar datos. Señalética e identidad visual coherentes aceleran el reconocimiento.
+- Implicaciones: Presentar horarios, rutas, paradas y tarifas visibles en los puntos de decisión., Aplicar una identidad visual y señalética consistentes en canales físicos y digitales., Ofrecer sugerencias y autocompletado en búsquedas y formularios.
+- Principios relacionados: principles:A02, principles:B01
+- Referencias: https://www.w3.org/WAI/
+
+<a id="principles-u07"></a>
+## Flexibilidad y eficiencia de uso
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U07</code></span>
+
+- Dominio: Application
+- Descripción: El sistema debe atender tanto a personas novatas como expertas, ofreciendo atajos y flujos eficientes.
+- Justificación: APIs y asistentes conversacionales permiten usos avanzados, mientras que interfaces guiadas simplifican tareas comunes.
+- Implicaciones: Exponer APIs (p. ej., REST/GraphQL) con consultas persistidas y ejemplos reproducibles., Proveer atajos, filtros guardados y personalización de vistas., Ofrecer interfaz conversacional para consultas rápidas en lenguaje natural.
+- Principios relacionados: principles:T02, principles:B01
+- Referencias: https://modelcontextprotocol.io/
+
+<a id="principles-u08"></a>
+## Diseño estético y minimalista
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U08</code></span>
+
+- Dominio: Application
+- Descripción: Presentar solo la información necesaria con jerarquía clara, evitando sobrecarga cognitiva.
+- Justificación: El exceso de elementos complica la toma de decisiones. Un diseño sobrio y accesible aumenta la eficacia.
+- Implicaciones: Aplicar jerarquía visual, espaciado y tipografía legibles., Usar divulgación progresiva para detalles secundarios., Validar accesibilidad y contraste en todos los componentes.
+- Principios relacionados: principles:A02, principles:T07
+- Referencias: https://www.w3.org/WAI/
+
+<a id="principles-u09"></a>
+## Ayudar a reconocer, diagnosticar y recuperarse de errores
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U09</code></span>
+
+- Dominio: Application
+- Descripción: Mensajes claros y orientados a la acción ayudan a comprender el problema y a continuar la tarea.
+- Justificación: El lenguaje natural sin códigos crípticos, junto con sugerencias de resolución, acelera la recuperación.
+- Implicaciones: Redactar mensajes en lenguaje claro con causa probable y pasos siguientes., Proveer estados de respaldo y rutas alternativas ante interrupciones del servicio., Alinear códigos internos con mensajes de usuario consistentes.
+- Principios relacionados: principles:U05, principles:D03
+- Referencias: https://developers.google.com/transit/gtfs-realtime/reference#message-alert
+
+<a id="principles-u10"></a>
+## Ayuda y documentación
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F9EB"><span class="catalog-icon material-symbols-outlined">verified</span><code style="background:none;padding:0;margin:0;border:0;">principles:U10</code></span>
+
+- Dominio: Application
+- Descripción: Aunque idealmente innecesaria, la ayuda debe ser fácil de encontrar, buscar y aplicar al contexto.
+- Justificación: Buenas guías, ejemplos y referencias aceleran la adopción por parte de usuarios finales y desarrolladores.
+- Implicaciones: Publicar documentación de APIs con ejemplos, esquemas y guías de inicio rápido., Mantener notas de versión, políticas de cambios y deprecaciones., Ofrecer ayuda contextual en aplicaciones y material para pantallas informativas.
+- Principios relacionados: principles:B01, principles:T07
+- Referencias: https://www.openapis.org/, https://github.com/

@@ -29,7 +29,7 @@
 - Responsable: Oriana Mora López
 - Contacto: oriana.mora@ucr.ac.cr
 - Componentes relacionados: Servicio de gestión de usuarios, Aplicación frontend
-- Estado: Activo
+- Estado: Planificación
 - Documentación: https://docs.example.com/user-auth-interface
 
 <a id="interface-002"></a>
@@ -43,8 +43,25 @@
 - Formatos de datos: JSON
 - Seguridad: OAuth 2.0
 - Versión: 1.0
-- Responsable: Oriana Mora López
-- Contacto: oriana.mora@ucr.ac.cr
+- Responsable: 
+- Contacto: 
 - Componentes relacionados: Servicio de gestión de usuarios, Aplicación frontend
-- Estado: Activo
-- Documentación: https://docs.example.com/user-auth-interface
+- Estado: Planificación
+- Documentación: https://docs.example.com/user-management-interface
+
+<a id="interface-003"></a>
+## Interfaz de aplicación móvil operativa
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:003</code></span>
+
+- Descripción: Interfaz gráfica de usuario para la gestión de viajes en el sistema.
+- Tipo: GUI
+- Protocolos: HTTPS
+- Formatos de datos: 
+- Seguridad: OAuth 2.0
+- Versión: 1.0
+- Responsable: 
+- Contacto: 
+- Componentes relacionados: Driver, Real-Time Server
+- Estado: Planificación
+- Documentación: https://docs.example.com/user-management-interface

@@ -21,11 +21,11 @@
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF7E6"><span class="catalog-icon material-symbols-outlined">rule</span><code style="background:none;padding:0;margin:0;border:0;">requirement:001</code></span>
 
 - Descripción: El sistema deberá proporcionar a las personas usuarias el seguimiento en tiempo real de los autobuses.
+- Justificación: Para mejorar la experiencia de usuario y la eficiencia del transporte.
 - Aplicación: application:001, application:002
 - Tipo: Funcional
 - Prioridad: Alta
 - Estado: Aprobado
-- Justificación: Para mejorar la experiencia de usuario y la eficiencia del transporte.
 - Partes interesadas: Pasajeros, Autoridades de transporte
 - Criterios de aceptación: Las personas usuarias pueden ver las ubicaciones de los autobuses en tiempo real en un mapa., Los tiempos de llegada de los autobuses se actualizan en tiempo real.
 - Componentes relacionados: Módulo de rastreo GPS, Aplicación móvil
@@ -39,11 +39,11 @@
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF7E6"><span class="catalog-icon material-symbols-outlined">rule</span><code style="background:none;padding:0;margin:0;border:0;">requirement:002</code></span>
 
 - Descripción: El sistema deberá proporcionar autenticación y autorización de usuarios segura.
+- Justificación: Para proteger los datos de los usuarios y garantizar acceso seguro al sistema.
 - Aplicación: application:001, application:002
 - Tipo: Funcional
 - Prioridad: Media
 - Estado: Aprobado
-- Justificación: Para proteger los datos de los usuarios y garantizar acceso seguro al sistema.
 - Partes interesadas: Pasajeros, Administradores del sistema
 - Criterios de aceptación: Las personas usuarias pueden registrarse e iniciar sesión utilizando correo electrónico y contraseña., Existen opciones para recuperación de contraseña.
 - Componentes relacionados: Servicio de autenticación, Módulo de gestión de usuarios
