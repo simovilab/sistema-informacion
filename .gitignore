@@ -4,3 +4,4 @@ dist
 main.*
 !main.tex
 structurizr-*.json
+**/.structurizr/
