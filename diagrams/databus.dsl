@@ -1,53 +1,61 @@
-workspace "Databús" "The workhorse of data transfer" {
+workspace "Databús" "El caballo de batalla de la transferencia de datos" {
 	
 	model {
-		driver = person "Driver" "Uses the Databús App"
-		agency = person "Agency Admin" "Manages transit data and configurations"
-		databus = softwareSystem "Databús" "Real-Time Transit Data" {
-			server = container "Real-time Server" "Handles real-time data processing" "Django" {
-				api = component "Public API" "Exposes public endpoints" "Django REST Framework"
-				graphql = component "GraphQL API" "Handles GraphQL queries and subscriptions" "Strawberry GraphQL"
-				gtfs = component "GTFS Processor" "Processes GTFS data" "Django app"
+		driver = person "Conductor" "Usa la app Databús"
+		agency = person "Administradores de la agencia" "Gestiona datos de transporte y configuraciones"
+		databus = softwareSystem "Databús" "Datos de transporte en tiempo real" {
+			group "Servicios de backend" {
+				server = container "Servidor de tiempo real" "Gestiona el procesamiento de datos en tiempo real" "Django" {
+					api = component "API pública" "Expone endpoints públicos" "Django REST Framework"
+					graphql = component "API GraphQL" "Gestiona consultas y suscripciones GraphQL" "Strawberry GraphQL"
+					gtfs = component "Procesador GTFS" "Procesa datos GTFS" "Django app"
+				}
+				db = container "Base de datos" "Almacena datos de transporte" "PostgreSQL (PostGIS, TimescaleDB, DocumentDB extension)"
+				celery = container "Cola de tareas" "Gestiona tareas en segundo plano" "Celery" {
+					worker = component "Trabajador" "Procesa trabajos en segundo plano" "Celery worker"
+					scheduler = component "Programador" "Programa tareas periódicas" "Celery Beat"
+					broker = component "Agente de mensajería" "Gestiona mensajería de tareas" "Redis (Pub/Sub)"
+				}
 			}
-			db = container "Database" "Stores transit data" "PostgreSQL (PostGIS, TimescaleDB, DocumentDB extension)"
-			mem = container "In-Memory Cache" "Caches frequently accessed data" "Redis (Hashes, Streams, Pub/Sub)"
-			celery = container "Task Queue" "Manages background tasks" "Celery"
-			mqtt = container "Message Broker" "Queues and MQTT ingress" "RabbitMQ (MQTT)"
-			stream = container "Data Stream Processor" "Processes real-time data streams" "Bytewax"
+			group "Procesamiento de flujos y caché" {
+				mqtt = container "Agente de mensajería" "Colas e ingreso MQTT" "RabbitMQ (MQTT)"
+				stream = container "Procesador de flujos de datos" "Procesa flujos de datos en tiempo real" "Bytewax"
+				mem = container "Caché en memoria" "Almacena en caché datos de acceso frecuente" "Redis (Hashes, Streams)"
+			}
 		}
-		app = softwareSystem "Databús App" "Mobile app for transit data" "Capacitor, Ionic, Vue" {
-			mobile = container "Mobile Application" "Cross-platform mobile app" "Capacitor, Ionic, Vue"
-			mqttClient = container "MQTT Client" "Handles real-time data via MQTT" "Paho MQTT"
+		app = softwareSystem "Databús App" "Aplicación móvil para datos de transporte" "Capacitor, Ionic, Vue" {
+			mobile = container "Aplicación móvil" "Aplicación móvil multiplataforma" "Capacitor, Ionic, Vue"
+			mqttClient = container "Cliente MQTT" "Gestiona datos en tiempo real vía MQTT" "Paho MQTT"
 		}
-		cms = softwareSystem "Content Management System" "Manages content and configurations" "Strapi CMS"
-		mcp = softwareSystem "MCP Server" "Connects LLMs to tools and data" "FastMCP"
-		editor = softwareSystem "Databús Editor" "Web app for managing transit data" {
-			webApp = container "Web Application" "Frontend for managing data" "Vue, Nuxt"
-			adminApi = container "Admin API" "Backend for admin operations" "Django REST Framework"
+		cms = softwareSystem "Sistema de gestión de contenidos" "Gestiona contenidos y configuraciones" "Strapi CMS"
+		mcp = softwareSystem "Servidor MCP" "Conecta LLMs con herramientas y datos" "FastMCP"
+		editor = softwareSystem "Databús Editor" "Aplicación web para gestionar datos de transporte" {
+			webApp = container "Aplicación web" "Frontend para gestionar datos" "Vue, Nuxt"
+			adminApi = container "API de administración" "Backend para operaciones de administración" "Django REST Framework"
 		}
 		
 		// External consumers of published feeds
-		consumers = softwareSystem "Open Data Consumers" "Apps, researchers, integrators (consume public feeds)"
+		consumers = softwareSystem "Consumidores de datos abiertos" "Aplicaciones, investigadores, integradores (consumen feeds públicos)"
 		
-		agency -> editor "Manages transit data and configurations" "REST/HTTPS"
-		agency -> cms "Manages content and configurations" "REST/HTTPS"
-		editor -> databus "Provides GTFS Schedule and Realtime Alerts data" "REST/HTTPS"
-		driver -> app "Uses the Databús App to send real-time transit data" "REST/HTTPS, WebSocket, MQTT"
-		app -> databus "Provides real-time transit data" "REST/HTTPS, WebSocket, MQTT"
-		app -> mcp "Uses LLM chat to answer user queries" "REST/HTTPS"
-		mcp -> databus "Accesses data and tools" "REST/GraphQL API"
-		cms -> app "Manages configurations, messages and content" "REST/HTTPS"
+		agency -> editor "Gestiona datos de transporte y configuraciones" "REST/HTTPS"
+		agency -> cms "Gestiona contenidos y configuraciones" "REST/HTTPS"
+		editor -> databus "Proporciona GTFS Schedule y alertas en tiempo real" "REST/HTTPS"
+		driver -> app "Usa la app Databús para enviar datos de transporte en tiempo real" "REST/HTTPS, WebSocket, MQTT"
+		app -> databus "Proporciona datos de transporte en tiempo real" "REST/HTTPS, WebSocket, MQTT"
+		app -> mcp "Usa chat LLM para responder consultas de usuarios" "REST/HTTPS"
+		mcp -> databus "Accede a datos y herramientas" "REST/GraphQL API"
+		cms -> app "Gestiona configuraciones, mensajes y contenidos" "REST/HTTPS"
 		
-		// Outputs from Databús
-		databus -> consumers "Publishes GTFS Schedule" "HTTP/ZIP (.zip)"
-		databus -> consumers "Publishes GTFS Realtime" "HTTP/Protobuf (.pb)"
+		// Salidas desde Databús
+		databus -> consumers "Publica GTFS Schedule" "HTTP/ZIP (.zip)"
+		databus -> consumers "Publica GTFS Realtime" "HTTP/Protobuf (.pb)"
 		
-		mqtt -> mem "Caches real-time data" "MQTT"
-		stream -> mem "Processes and caches real-time data" "Redis Streams"
-		stream -> mem "Stores processed real-time data" "Redis Hashes"
-		celery -> mem "Reads real-time data snapshots" "Redis Hashes"
-		celery -> db "Reads/Writes data" "SQL"
-		celery -> gtfs "Triggers GTFS data processing" "Internal API"
+		mqtt -> mem "Almacena en caché datos en tiempo real" "MQTT"
+		stream -> mem "Procesa y almacena en caché datos en tiempo real" "Redis Streams"
+		stream -> mem "Almacena datos procesados en tiempo real" "Redis Hashes"
+		celery -> mem "Lee instantáneas de datos en tiempo real" "Redis Hashes"
+		celery -> db "Lee/escribe datos" "SQL"
+		celery -> gtfs "Dispara el procesamiento de datos GTFS" "Internal API"
 		
 	}
 	
