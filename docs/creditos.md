@@ -61,3 +61,5 @@ Universidad de Costa Rica <br>
 - Gabriel de Jesús Alemán Ruiz, _Ingeniería Eléctrica_
 - Mateo Ortigoza Guayazán, _Ingeniería Eléctrica_
 - Ramsés Solís Solórzano, _Ingeniería Eléctrica_
+
+2025 &reg; Universidad de Costa Rica
