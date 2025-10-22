@@ -2,7 +2,6 @@ workspace "Databús" "El caballo de batalla de la transferencia de datos" {
 	
 	model {
 		driver = person "Conductor" "Usa la app Databús"
-		agency = person "Administradores de la agencia" "Gestiona datos de transporte y configuraciones"
 		databus = softwareSystem "Databús" "Datos de transporte público en tiempo real" {
 			group "Servicios de backend" {
 				server = container "Servidor de tiempo real" "Gestiona el procesamiento de datos en tiempo real" "Django" {
@@ -35,24 +34,12 @@ workspace "Databús" "El caballo de batalla de la transferencia de datos" {
 			mobile = container "Aplicación móvil" "Aplicación móvil multiplataforma" "Capacitor, Ionic, Vue"
 			mqttClient = container "Cliente MQTT" "Gestiona datos en tiempo real vía MQTT" "Paho MQTT"
 		}
-		cms = softwareSystem "Sistema de gestión de contenidos" "Gestiona contenidos y configuraciones" "Strapi CMS"
-		mcp = softwareSystem "Servidor MCP" "Conecta LLMs con herramientas y datos" "FastMCP"
-		editor = softwareSystem "Databús Editor" "Aplicación web para gestionar datos de transporte" {
-			webApp = container "Aplicación web" "Frontend para gestionar datos" "Vue, Nuxt"
-			adminApi = container "API de administración" "Backend para operaciones de administración" "Django REST Framework"
-		}
 		
 		// External consumers of published feeds
 		consumers = softwareSystem "Consumidores de datos abiertos" "Aplicaciones, investigadores, integradores (consumen feeds públicos)"
 		
-		agency -> editor "Gestiona datos de transporte y configuraciones" "REST/HTTPS"
-		agency -> cms "Gestiona contenidos y configuraciones" "REST/HTTPS"
-		editor -> databus "Proporciona GTFS Schedule y alertas en tiempo real" "REST/HTTPS"
 		driver -> app "Usa la app Databús para enviar datos de transporte en tiempo real" "REST/HTTPS, WebSocket, MQTT"
 		app -> databus "Proporciona datos de transporte en tiempo real" "REST/HTTPS, WebSocket, MQTT"
-		app -> mcp "Usa chat LLM para responder consultas de usuarios" "REST/HTTPS"
-		mcp -> databus "Accede a datos y herramientas" "REST/GraphQL API"
-		cms -> app "Gestiona configuraciones, mensajes y contenidos" "REST/HTTPS"
 		
 		// Salidas desde Databús
 		databus -> consumers "Publica GTFS Schedule" "HTTP/ZIP (.zip)"
