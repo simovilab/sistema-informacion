@@ -133,6 +133,14 @@ export default defineConfig({
             ],
           },
           {
+            text: "Administración",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/administracion/" },
+              { text: "Diagrama", link: "/desarrollo/administracion/diagrama" },
+            ],
+          },
+          {
             text: "Operaciones",
             collapsed: true,
             items: [
