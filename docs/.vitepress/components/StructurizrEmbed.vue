@@ -21,11 +21,11 @@ const props = defineProps({
   src: {
     type: String,
     default:
-      "http://137.184.189.145:8080/embed/1?diagram=SystemLandscape-001&diagramSelector=false&iframe=myEmbeddedDiagram",
+      "https://structurizr.simovi.org/embed/1?diagram=SystemLandscape-001&diagramSelector=false&iframe=myEmbeddedDiagram",
   },
   scriptSrc: {
     type: String,
-    default: "http://137.184.189.145:8080/static/js/structurizr-embed.js",
+    default: "https://structurizr.simovi.org/static/js/structurizr-embed.js",
   },
 })
 
