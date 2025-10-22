@@ -107,6 +107,7 @@ export default defineConfig({
               { text: "A1", link: "/diseno/arquitectura/a1" },
               { text: "A2", link: "/diseno/arquitectura/a2" },
               { text: "A3", link: "/diseno/arquitectura/a3" },
+              { text: "A4", link: "/diseno/arquitectura/a4" },
             ],
           },
         ],
