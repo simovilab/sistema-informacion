@@ -1,4 +1,4 @@
-# Arquitectura del sistema
+# Arquitectura tecnológica
 
 ::: info Puntos clave
 

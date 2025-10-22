@@ -100,10 +100,10 @@ export default defineConfig({
             ],
           },
           {
-            text: "Arquitectura",
+            text: "Arquitectura tecnológica",
             collapsed: true,
             items: [
-              { text: "Descripción", link: "/diseno/arquitectura/" },
+              { text: "Introducción", link: "/diseno/arquitectura/" },
               { text: "A1", link: "/diseno/arquitectura/a1" },
               { text: "A2", link: "/diseno/arquitectura/a2" },
               { text: "A3", link: "/diseno/arquitectura/a3" },
@@ -133,7 +133,7 @@ export default defineConfig({
             ],
           },
           {
-            text: "Desarrollo y operaciones",
+            text: "Operaciones",
             collapsed: true,
             items: [
               { text: "Componentes", link: "/desarrollo/operaciones/" },
