@@ -1,4 +1,4 @@
-workspace "Administración" "La autopista de información para datos de tránsito" {
+workspace "Admin" "La autopista de información para datos de tránsito" {
 	
 	model {
 		cms = softwareSystem "Sistema de gestión de contenidos" "Gestiona contenidos y configuraciones" "Strapi CMS"
