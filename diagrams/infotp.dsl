@@ -1,37 +1,60 @@
-workspace "InfoTP" "The information highway for transit data" {
+workspace "InfoTP" "La autopista de información para datos de transporte" {
 	
 	model {
-		// InfoTP
-		databus = softwareSystem "Databús" "Real-time transit data system"
-		infobus = softwareSystem "Infobús" "Real-time passenger information system"
 		
-		// Stakeholders
-		user = person "User" "Accesses transit information"
-		agency = person "Agency Admin" "Manages transit data and configurations"
-		driver = person "Driver" "Uses the Databús App"
-		operator = person "Operator" "Monitors and manages transit operations"
-		regulator = person "Regulator" "Oversees compliance and standards"
-		planner = person "Planner" "Plans and optimizes transit routes and schedules"
-		manager = person "Manager" "Oversees transit operations and performance"
+		archetypes {
+			stakeholder = person
+			organization = container
+			actor = component
+		}
 		
-		// External systems
-		weather = softwareSystem "Weather Service" "Provides weather data"
-		mapping = softwareSystem "Mapping Service" "Provides mapping and geolocation data"
-		notification = softwareSystem "Notification Service" "Sends notifications to users"
+		group "Procesamiento de datos en tiempo real" {
+			databus = softwareSystem "Databús" "Sistema de datos de transporte en tiempo real"
+			infobus = softwareSystem "Infobús" "Sistema de información de pasajeros en tiempo real"
+		}
 		
-		// Relationships
-		user -> infobus "Accesses transit information" "Web/Mobile App"
-		agency -> databus "Manages transit data and configurations" "REST/HTTPS"
-		agency -> infobus "Configures information displays and alerts" "REST/HTTPS"
-		driver -> databus "Uses the Databús App to send real-time transit data" "REST/HTTPS, WebSocket, MQTT"
-		operator -> infobus "Monitors transit operations" "Web App"
-		regulator -> infobus "Accesses compliance reports and data" "Web App"
-		planner -> infobus "Accesses transit data for planning" "REST/GraphQL API"
-		manager -> infobus "Oversees transit performance and metrics" "Web App"
-		infobus -> weather "Fetches weather data" "REST API"
-		infobus -> mapping "Fetches mapping and geolocation data" "REST API"
-		infobus -> notification "Sends notifications to users" "REST API"
-		databus -> infobus "Provides GTFS Realtime data" "HTTP/Protobuf"
-		databus -> infobus "Provides GTFS Schedule data" "HTTP/ZIP"
+		group "Partes interesadas" {
+			user = stakeholder "Usuario" "Accede a información de transporte"
+			agency = stakeholder "Administrador de agencia" "Gestiona datos de transporte y configuraciones"
+			driver = stakeholder "Conductor" "Usa la app Databús"
+			operator = stakeholder "Operador" "Monitorea y gestiona operaciones de transporte"
+			regulator = stakeholder "Regulador" "Supervisa cumplimiento y estándares"
+			planner = stakeholder "Planificador" "Planifica y optimiza rutas y horarios de transporte"
+			manager = stakeholder "Gerente" "Supervisa operaciones y rendimiento del transporte"
+		}
+		
+		group "Organizaciones" {
+			mopt = organization "Ministerio de Obras Públicas y Transportes" "Gestiona y opera servicios de transporte"
+			ctp = organization "Consejo de Transporte Público" "Regula y supervisa el transporte público"
+			aresep = organization "ARESEP" "Supervisa tarifas y calidad del servicio de transporte público"
+			bccr = organization "Banco Central de Costa Rica" "Proporciona servicios financieros y de pago electrónico para el transporte público"
+			simovi = organization "SIMOVI" "Gestiona el sistema de movilidad urbana integrada"
+			ongs = organization "ONGs de transporte y movilidad" "Defienden los intereses de los usuarios y promueven la movilidad sostenible"
+			lanamme = organization "LANAMME" "Proporciona investigación y análisis en transporte y movilidad"
+			produs = organization "ProDUS" "Ofrece servicios de datos y análisis para el sector transporte"
+			defensoria = organization "Defensoría de los Habitantes" "Protege los derechos de los usuarios del transporte público"
+			contraloria = organization "Contraloría General de la República" "Supervisa la gestión pública y el uso de recursos en el sector transporte"
+			ungl = organization "Unión Nacional de Gobiernos Locales" "Gestionan y regulan el transporte público a nivel local"
+			canatrans = organization "CANATRANS" "Cámara Nacional de Transportistas"
+			canabus = organization "CANABUS" "Cámara Nacional de Autobuseros"
+			developmentAgencies = organization "Agencias de desarrollo internacional" "Proveen financiamiento y apoyo técnico para proyectos de transporte"
+			incofer = organization "INCOFER" "Instituto Costarricense de Ferrocarriles"
+		}
+		
+		group "Entidades de datos" {
+			vehicle = component "Vehículo" "Proporciona datos de ubicación y estado en tiempo real"
+			agency = component "Agencia de transporte" "Proporciona datos estáticos y operativos del sistema de transporte"
+			passenger = component "Pasajero" "Consume información de transporte en tiempo real"
+			route = component "Ruta" "Define rutas de transporte con paradas y horarios"
+			stop = component "Parada" "Punto de recogida y descenso de pasajeros"
+			run = component "Viaje" "Instancia de un recorrido de transporte con horarios y estado"
+		}
+		
+		group "Componentes de datos" {
+			// Define components related to data processing and management here (create as groups in Databús and Infobús)
+			// API de ingesta de datos, API pública de información, Servidor en tiempo real, Infobús Screens, Infobús Info, Infobús Screens
+			// Gestor de base de datos relacional
+		}
+		
 	}
 }
