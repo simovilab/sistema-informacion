@@ -1,9 +1,8 @@
-# Metadata about the catalog
 metadata:
-  title: "Catálogo de organizaciones"
-  version: "1.0"
-  date: "2025-09-18"
-  description: "Un catálogo de organizaciones para un Sistema de Información de Transporte Público."
+  title: "Catálogo de Organizaciones"
+  version: "1.3"
+  date: "2025-10-23"
+  description: "Un catálogo de las organizaciones específicas para el Sistema de Información del Transporte Público."
   author:
     - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
@@ -11,17 +10,122 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-# Organization catalog
 organizations:
-  - id: organization:001
+  - id: "organization:001"
     name: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
     description: "Un laboratorio de investigación enfocado en sistemas de movilidad inteligente."
-    stakeholder: "stakeholder:003"
+    stakeholder: "stakeholder:007"
+    type: "Laboratorio de Investigación"
     contact: "simovi@ucr.ac.cr"
     website: "https://simovi.ucr.ac.cr"
     location: "Universidad de Costa Rica, San José, Costa Rica"
-    parent_organization: null
+    parentOrganization: null
     roles:
-      - "Investigación"
-      - "Desarrollo"
-      - "Consultoría"
+      - "Research"
+      - "Development"
+      - "Consulting"
+
+  - id: "organization:002"
+    name: "Ministerio de Obras Públicas y Transportes (MOPT)"
+    description: "El ministerio gubernamental que actúa como autoridad suprema y rectora del sector transporte, estableciendo la política nacional."
+    stakeholder: "stakeholder:003"
+    type: "Agencia Gubernamental"
+    contact: "dvagecorrespondencia@mopt.go.cr"
+    website: "https://www.mopt.go.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Planning"
+      - "Regulation"
+
+  - id: "organization:003"
+    name: "Consejo de Transporte Público (CTP)"
+    description: "El organismo especializado dependiente del MOPT, responsable de la gestión diaria y la regulación operativa del transporte público."
+    stakeholder: "stakeholder:003"
+    type: "Agencia Gubernamental"
+    contact: "atencion.usuario@ctp.go.cr"
+    website: "https://www.ctp.go.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: "organization:002"
+    roles:
+      - "Operation"
+      - "Regulation"
+
+  - id: "organization:004"
+    name: "Autoridad Reguladora de los Servicios Públicos (ARESEP)"
+    description: "Una autoridad independiente que regula los servicios públicos estableciendo tarifas y supervisando la calidad del servicio."
+    stakeholder: "stakeholder:003"
+    type: "Agencia Gubernamental"
+    contact: "cmora@aresep.go.cr"
+    website: "https://aresep.go.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Regulation"
+      - "Oversight"
+
+  - id: "organization:005"
+    name: "Banco Central de Costa Rica (BCCR)"
+    description: "El banco central responsable de operar el sistema nacional de pago electrónico del país (SINPE-TP)."
+    stakeholder: "stakeholder:006"
+    type: "Agencia Gubernamental"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    website: "https://www.bccr.fi.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Technology Provider"
+      - "Operation"
+
+  - id: "organization:006"
+    name: "Laboratorio Nacional de Materiales y Modelos Estructurales (LanammeUCR)"
+    description: "Un centro de investigación universitario que proporciona supervisión técnica independiente y legalmente mandatada de la red vial nacional."
+    stakeholder: "stakeholder:007"
+    type: "Laboratorio de Investigación"
+    contact: "contact@lanamme.ucr.ac.cr"
+    website: "https://www.lanamme.ucr.ac.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Oversight"
+      - "Research"
+  
+  - id: "organization:007"
+    name: "Grupo ICE (Instituto Costarricense de Electricidad)"
+    description: "Grupo empresarial estatal integrado por cuatro empresas que ofrecen soluciones de electricidad y telecomunicaciones en Costa Rica."
+    stakeholder: "stakeholder:006"
+    type: "Empresa Estatal"
+    contact: "contactenos@ice.go.cr"
+    website: "https://www.grupoice.com/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Technology Provider"
+      - "Service Provider"
+
+  
+  - id: "organization:008"
+    name: "Cooperativa de Electrificación Rural Los Santos (Coopesantos R.L.)"
+    description: "Cooperativa que brinda servicio eléctrico, internet y TV por cable a la zona de los Santos y Caraigres."
+    stakeholder: "stakeholder:006"
+    type: "Cooperativa"
+    contact: "servicioalcliente@coopesantos.com"
+    website: "https://www.coopesantos.com/"
+    location: "Zona de los Santos, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Service Provider"
+
+  
+  - id: "organization:009"
+    name: "Cámara Nacional de Autobuseros de Costa Rica (CANABUS)"
+    description: "Organización que representa y fortalece la industria de autobuses en Costa Rica, proporcionando formación, información y apoyo."
+    stakeholder: "stakeholder:002"
+    type: "Cámara Gremial"
+    contact: "info@canabuscr.com"
+    website: "https://canabuscr.com/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Consulting"
+      - "Support"
