@@ -1,9 +1,11 @@
+# yaml-language-server: $schema=../schemas/entities.schema.json
 # Metadata about the catalog
+
 metadata:
-  title: "Catálogo de entidades de datos"
-  version: "1.0"
+  title: "Catálogo de Entidades de Datos"
+  version: "1.0.0"
   date: "2025-09-18"
-  description: "Un catálogo de entidades de datos para un Sistema de Información de Transporte Público."
+  description: "Entidades canónicas del Sistema de Información de Transporte Público (alineadas a GTFS y extensiones operativas)."
   author:
     - "Jostin Cubero Torres"
     - "Fabián Abarca Calderón"
@@ -11,45 +13,142 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-# Data Entity catalog
-entities:
-  - id: entity:001
-    name: "Usuario"
-    description: "Representa a un usuario del Sistema de Información de Transporte Público."
+data_entities:
+  - id: data-entity:001
+    name: "User"
+    description: "Usuario del sistema (operadores, analistas, público). No incluye credenciales; solo metadatos de perfil."
     attributes:
       - id: attribute:001
-        name: "ID de usuario"
-        type: "Cadena"
-        description: "Un identificador único para el usuario."
+        name: "user_id"
+        type: "UUID"
+        description: "Identificador único del usuario."
       - id: attribute:002
-        name: "Nombre"
-        type: "Cadena"
-        description: "El nombre completo del usuario."
+        name: "display_name"
+        type: "String"
+        description: "Nombre visible."
       - id: attribute:003
-        name: "Correo electrónico"
-        type: "Cadena"
-        description: "La dirección de correo electrónico del usuario."
-      - id: attribute:004
-        name: "Número de teléfono"
-        type: "Cadena"
-        description: "El número telefónico de contacto del usuario."
-  - id: entity:002
-    name: "Autobús"
-    description: "Representa un autobús en el Sistema de Información de Transporte Público."
+        name: "email"
+        type: "String"
+        description: "Correo de contacto."
+
+  - id: data-entity:002
+    name: "Agency"
+    description: "Operador de transporte (GTFS Agency)."
     attributes:
+      - id: attribute:004
+        name: "agency_id"
+        type: "String"
+        description: "Identificador GTFS de la agencia."
       - id: attribute:005
-        name: "ID de autobús"
-        type: "Cadena"
-        description: "Un identificador único para el autobús."
+        name: "agency_name"
+        type: "String"
+        description: "Nombre oficial de la agencia."
       - id: attribute:006
-        name: "Placa"
-        type: "Cadena"
-        description: "El número de placa del autobús."
+        name: "timezone"
+        type: "String"
+        description: "Zona horaria (IANA)."
+
+  - id: data-entity:003
+    name: "Route"
+    description: "Ruta GTFS que agrupa viajes."
+    attributes:
       - id: attribute:007
-        name: "Capacidad"
-        type: "Entero"
-        description: "El número máximo de pasajeros que el autobús puede transportar."
+        name: "route_id"
+        type: "String"
+        description: "Identificador GTFS de la ruta."
       - id: attribute:008
-        name: "ID de ruta"
-        type: "Cadena"
-        description: "El identificador de la ruta asignada al autobús."
+        name: "route_short_name"
+        type: "String"
+        description: "Nombre corto de la ruta (código/número)."
+      - id: attribute:009
+        name: "route_long_name"
+        type: "String"
+        description: "Nombre descriptivo de la ruta."
+      - id: attribute:010
+        name: "agency_id"
+        type: "String"
+        description: "Referencia a Agency."
+
+  - id: data-entity:004
+    name: "Trip"
+    description: "Instancia planificada de recorrido (GTFS Trip)."
+    attributes:
+      - id: attribute:011
+        name: "trip_id"
+        type: "String"
+        description: "Identificador GTFS del viaje."
+      - id: attribute:012
+        name: "route_id"
+        type: "String"
+        description: "Referencia a Route."
+      - id: attribute:013
+        name: "service_id"
+        type: "String"
+        description: "Referencia a ServiceCalendar."
+      - id: attribute:014
+        name: "direction_id"
+        type: "Integer"
+        description: "Sentido (0/1)."
+
+  - id: data-entity:005
+    name: "Stop"
+    description: "Punto de parada (GTFS Stop)."
+    attributes:
+      - id: attribute:015
+        name: "stop_id"
+        type: "String"
+        description: "Identificador de la parada."
+      - id: attribute:016
+        name: "stop_name"
+        type: "String"
+        description: "Nombre visible."
+      - id: attribute:017
+        name: "lat"
+        type: "Float"
+        description: "Latitud WGS84."
+      - id: attribute:018
+        name: "lon"
+        type: "Float"
+        description: "Longitud WGS84."
+
+  - id: data-entity:006
+    name: "ServiceCalendar"
+    description: "Calendario de servicio (GTFS)."
+    attributes:
+      - id: attribute:019
+        name: "service_id"
+        type: "String"
+        description: "Identificador del calendario."
+      - id: attribute:020
+        name: "weekday_pattern"
+        type: "String"
+        description: "Patrón de días (flags)."
+      - id: attribute:021
+        name: "start_date"
+        type: "Date"
+        description: "Fecha inicio (YYYY-MM-DD)."
+      - id: attribute:022
+        name: "end_date"
+        type: "Date"
+        description: "Fecha fin (YYYY-MM-DD)."
+
+  - id: data-entity:007
+    name: "Vehicle"
+    description: "Vehículo/Bus operativo (extensión)."
+    attributes:
+      - id: attribute:023
+        name: "vehicle_id"
+        type: "String"
+        description: "Identificador único del vehículo."
+      - id: attribute:024
+        name: "plate"
+        type: "String"
+        description: "Placa oficial."
+      - id: attribute:025
+        name: "capacity"
+        type: "Integer"
+        description: "Capacidad nominal de pasajeros."
+      - id: attribute:026
+        name: "agency_id"
+        type: "String"
+        description: "Referencia a Agency."
