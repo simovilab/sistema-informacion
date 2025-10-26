@@ -1,122 +1,54 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Data Entity/Component Catalog Schema",
-  "description": "JSON Schema for validating data entity/component catalog YAML files in the Public Transportation Information System architecture",
+  "title": "Data Entities Catalog Schema",
+  "description": "Validates YAML files that only contain data entities for the PTIS architecture.",
   "type": "object",
-  "required": ["metadata", "data_entities", "data_components"],
+  "required": ["metadata", "data_entities"],
   "properties": {
-    "metadata": {
-      "$ref": "./metadata.schema.json"
-    },
+    "metadata": { "$ref": "./metadata.schema.json" },
     "data_entities": {
       "type": "array",
+      "minItems": 1,
       "description": "List of data entities in the public transportation information system",
       "items": {
         "type": "object",
         "required": ["id", "name", "description", "attributes"],
+        "additionalProperties": false,
         "properties": {
           "id": {
             "type": "string",
             "pattern": "^data-entity:\\d{3}$",
-            "description": "Unique identifier for the data entity following the pattern data-entity:XXX"
+            "description": "Unique identifier for the data entity (data-entity:XXX)"
           },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The name of the data entity"
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Brief description of what the data entity represents"
-          },
+          "name": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
           "attributes": {
             "type": "array",
+            "minItems": 1,
             "items": {
               "type": "object",
               "required": ["id", "name", "type", "description"],
+              "additionalProperties": false,
               "properties": {
                 "id": {
                   "type": "string",
                   "pattern": "^attribute:\\d{3}$",
-                  "description": "Unique identifier for the attribute following the pattern attribute:XXX"
+                  "description": "Unique identifier for the attribute (attribute:XXX)"
                 },
-                "name": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "The name of the attribute"
-                },
+                "name": { "type": "string", "minLength": 1 },
                 "type": {
                   "type": "string",
                   "enum": [
-                    "String",
-                    "Integer",
-                    "Boolean",
-                    "Date",
-                    "DateTime",
-                    "Float",
-                    "Double",
-                    "Long",
-                    "UUID",
-                    "JSON",
-                    "Array",
-                    "Object",
-                    "Binary",
-                    "Decimal"
-                  ],
-                  "description": "Data type of the attribute"
+                    "String","Integer","Boolean","Date","DateTime","Float",
+                    "Double","Long","UUID","JSON","Array","Object","Binary","Decimal"
+                  ]
                 },
-                "description": {
-                  "type": "string",
-                  "minLength": 1,
-                  "description": "Description of what the attribute represents"
-                }
-              },
-              "additionalProperties": false
-            },
-            "minItems": 1,
-            "description": "List of attributes that define the entity structure"
+                "description": { "type": "string", "minLength": 1 }
+              }
+            }
           }
-        },
-        "additionalProperties": false
-      },
-      "minItems": 1
-    },
-    "data_components": {
-      "type": "array",
-      "description": "List of data components in the public transportation information system",
-      "items": {
-        "type": "object",
-        "required": ["id", "name", "description", "data_entities"],
-        "properties": {
-          "id": {
-            "type": "string",
-            "pattern": "^component:\\d{3}$",
-            "description": "Unique identifier for the data component following the pattern component:XXX"
-          },
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "description": "The name of the data component"
-          },
-          "description": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Description of the component's purpose and functionality"
-          },
-          "data_entities": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "pattern": "^data-entity:\\d{3}$"
-            },
-            "minItems": 1,
-            "description": "List of data entity IDs that this component manages"
-          }
-        },
-        "additionalProperties": false
-      },
-      "minItems": 1
+        }
+      }
     }
   },
   "additionalProperties": false
