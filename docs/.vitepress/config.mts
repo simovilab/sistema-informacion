@@ -41,7 +41,7 @@ export default defineConfig({
       { text: "Introducción", link: "/introduccion/" },
       { text: "Diseño", link: "/diseno/" },
       { text: "Desarrollo", link: "/desarrollo/" },
-      { text: "Operación", link: "/operacion/" },
+      { text: "Gestión", link: "/gestion/" },
       { text: "Plan piloto", link: "/piloto/" },
       { text: "Catálogos", link: "/catalogos/" },
     ],
@@ -51,7 +51,7 @@ export default defineConfig({
         text: "Introducción",
         collapsed: true,
         items: [
-          { text: "Visión", link: "/introduccion/" },
+          { text: "InfoTP", link: "/introduccion/" },
           { text: "Principios", link: "/introduccion/principios" },
         ],
       },
@@ -152,13 +152,13 @@ export default defineConfig({
         ],
       },
       {
-        text: "Operación",
+        text: "Gestión",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/operacion/" },
-          { text: "Gobernanza", link: "/operacion/gobernanza" },
-          { text: "Unidad técnica", link: "/operacion/unidad-tecnica" },
-          { text: "Monetización", link: "/operacion/monetizacion" },
+          { text: "Introducción", link: "/gestion/" },
+          { text: "Gobernanza", link: "/gestion/gobernanza" },
+          { text: "Unidad técnica", link: "/gestion/unidad-tecnica" },
+          { text: "Monetización", link: "/gestion/monetizacion" },
         ],
       },
       {
