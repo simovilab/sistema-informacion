@@ -2,7 +2,7 @@
 
 Implementación de la arquitectura A1.
 
-## Databús (servidor)
+## Databús _RT_
 
 Implementación de <CatalogItem catalog="applications" item="001" show="name" />
 
@@ -28,6 +28,15 @@ Application service
 
 T: Django, Celery, Nginx, Daphne
 
+## Databús _GTFS_
+
+(aplicación)
+
+Aplicación de Django para gestión de bases de datos y tareas típicas con GTFS Schedule y Realtime
+
+T: Python, Django
+S: GTFS vX.0 (buscar)
+
 ## Databús _DB_
 
 (componente de datos)
@@ -36,7 +45,7 @@ Base de datos relacional, geoespacial, de documentos y de series temporales
 
 T: PostgreSQL, PostGIS, DocumentDB (Microsoft y Linux Foundation)
 
-## Databús _MEM_
+## Databús _IMDB_
 
 (componente de datos)
 
@@ -71,46 +80,6 @@ Intermediador de mensajes (_broker_) para recolección de datos de rastreo y tel
 T: RabbitMQ
 S: MQTT (OASIS MQTT 5, MQTT 3.1.1)
 
-## Databús _GTFS_
-
-(aplicación)
-
-Aplicación de Django para gestión de bases de datos y tareas típicas con GTFS Schedule y Realtime
-
-T: Python, Django
-S: GTFS vX.0 (buscar)
-
-## Databús _App_
-
-(aplicación)
-
-Aplicación móvil operativa para recolección de datos de rastreo y telemetría de vehículos de transporte público
-
-T: Capacitor, Ionic, Vue
-
-## Databús _Py_
-
-(aplicación)
-
-SDK de Python para control de Infobús
-
-T: Python
-
-## Databús _Editor_
-
-(aplicación): editor web para la creación de suministros (_feeds_) de GTFS Schedule
-
-T: TypeScript, Vue, Nuxt
-S: GTFS vX.0
-
-## Databús _CMS_
-
-(aplicación)
-
-Sistema de gestión de contenidos
-
-T: Strapi
-
 ## Databús _MCP_
 
 (aplicación)
@@ -120,10 +89,10 @@ Servidor y cliente del protocolo de contexto de modelos (MCP, _Model Context Pro
 T: FastMCP
 S: MCP
 
-## Databús _SIM_
+## Databús _App_
 
 (aplicación)
 
-Simulador de datos en tiempo real para pruebas operativas
+Aplicación móvil operativa para recolección de datos de rastreo y telemetría de vehículos de transporte público
 
-T: Python
+T: Capacitor, Ionic, Vue
