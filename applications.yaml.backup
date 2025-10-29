@@ -1,0 +1,34 @@
+# Metadata about the catalog
+metadata:
+  title: "Catálogo de portafolio de aplicaciones"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "Un catálogo de aplicaciones para un Sistema de Información de Transporte Público."
+  author:
+    - "Pedro Meneses López"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+# Application catalog
+applications:
+  - id: application:001
+    name: "Sistema de rastreo de autobuses en tiempo real"
+    description: "Aplicación que brinda a los pasajeros el rastreo de autobuses en tiempo real."
+    version: "2.3.1"
+    vendor: "TransitTech Solutions"
+    license: "Comercial"
+    support_contact: "support@transittechsolutions.com"
+    categories:
+      - "Transporte"
+      - "Datos en tiempo real"
+    technologies:
+      - "GPS"
+      - "Aplicación móvil"
+    stakeholders:
+      - "Pasajeros"
+      - "Autoridades de transporte"
+    status: "Activo"
+    deployment_environment: "Nube"
+    criticality: "Alta"
