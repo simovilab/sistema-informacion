@@ -1,71 +1,181 @@
 # Metadata about the catalog
 metadata:
-  title: "Catálogo de interfaces de arquitectura"
+  title: "Architecture Interfaces Catalog"
   version: "1.0"
   date: "2025-09-18"
-  description: "Un catálogo de interfaces de arquitectura para un Sistema de Información de Transporte Público."
+  description: "A catalog of architectural interfaces for a Public Transportation Information System."
   author:
     - "Oriana Mora López"
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
-  license: "CC BY-NC 4.0"
+  license: "CC BY 4.0"
 
 # Interface catalog
 interfaces:
   - id: interface:001
-    name: "Interfaz de autenticación de usuarios"
-    description: "Interfaz para la autenticación y autorización de usuarios."
-    type: "API REST"
+    name: "User Authentication Interface"
+    description: "Interface for user authentication and authorization."
+    type: "REST API"
     protocols:
       - "HTTPS"
-    data_formats:
+    dataFormats:
       - "JSON"
     security:
       - "OAuth 2.0"
     version: "1.0"
     owner: "Oriana Mora López"
     contact: "oriana.mora@ucr.ac.cr"
-    related_components:
-      - "Servicio de gestión de usuarios"
-      - "Aplicación frontend"
-    status: "Planificación"
+    relatedComponents:
+      - "User Management Service"
+      - "Frontend Application"
+    status: "Active"
     documentation: "https://docs.example.com/user-auth-interface"
 
   - id: interface:002
-    name: "Interfaz de gestión de usuarios"
-    description: "Interfaz para la gestión de usuarios en el sistema."
-    type: "API REST"
+    name: "REST API"
+    description: "Application programming interface based on the REST architectural style, used to connect distributed systems and facilitate data exchange between applications, web services, and databases."
+    type: "REST API"
     protocols:
+      - "HTTP"
       - "HTTPS"
-    data_formats:
+    dataFormats:
       - "JSON"
+      - "XML"
+      - "Text"
     security:
       - "OAuth 2.0"
-    version: "1.0"
-    owner: ""
-    contact: ""
-    related_components:
-      - "Servicio de gestión de usuarios"
-      - "Aplicación frontend"
-    status: "Planificación"
-    documentation: "https://docs.example.com/user-management-interface"
+      - "TLS"
+    version: "3.0"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Frontend Application"
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://www.ibm.com/think/topics/rest-apis"
 
   - id: interface:003
-    name: "Interfaz de aplicación móvil operativa"
-    description: "Interfaz gráfica de usuario para la gestión de viajes en el sistema."
-    type: "GUI"
+    name: "GraphQL API"
+    description: "Query language for APIs that allows clients to request exactly the data they need, enabling flexible schema evolution and efficient data retrieval."
+    type: "GraphQL"
     protocols:
+      - "HTTP"
       - "HTTPS"
-    data_formats:
-      - ""
+    dataFormats:
+      - "JSON"
     security:
-      - "OAuth 2.0"
+      - "JWT"
+      - "TLS"
     version: "1.0"
-    owner: ""
-    contact: ""
-    related_components:
-      - "Driver"
-      - "Real-Time Server"
-    status: "Planificación"
-    documentation: "https://docs.example.com/user-management-interface"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Frontend Application"
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://aws.amazon.com/es/compare/the-difference-between-graphql-and-rest/"
+
+  - id: interface:004
+    name: "gRPC/Protobuf Interface"
+    description: "Interface based on gRPC that uses Protocol Buffers for efficient serialization of structured data and remote service definition."
+    type: "gRPC"
+    protocols:
+      - "TCP"
+      - "HTTP"
+    dataFormats:
+      - "Protobuf"
+      - "Binary"
+    security:
+      - "TLS"
+      - "mTLS"
+    version: "4.31.0"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://protobuf.dev/overview/"
+
+  - id: interface:005
+    name: "HTTP Protocol"
+    description: "Fundamental protocol for web communication, used for information exchange between clients and servers."
+    type: "REST API"
+    protocols:
+      - "HTTP"
+      - "HTTPS"
+    dataFormats:
+      - "JSON"
+      - "XML"
+      - "Text"
+      - "Binary"
+    security:
+      - "TLS"
+    version: "2.0"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Frontend Application"
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+
+  - id: interface:006
+    name: "WebSocket Interface"
+    description: "Bidirectional real-time communication protocol between client and server, allowing messages to be sent at any time."
+    type: "WebSocket"
+    protocols:
+      - "WebSocket"
+    dataFormats:
+      - "Text"
+      - "Binary"
+    security:
+      - "TLS"
+    version: "1.0"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Frontend Application"
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+
+  - id: interface:007
+    name: "SSE Server-Sent Events"
+    description: "Web technology that allows the server to automatically send data to the browser continuously through an open HTTP connection."
+    type: "Event Stream"
+    protocols:
+      - "HTTP"
+      - "HTTPS"
+    dataFormats:
+      - "Text"
+    security:
+      - "TLS"
+    version: "1.0"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Frontend Application"
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
+
+  - id: interface:008
+    name: "ZIP File Transfer"
+    description: "Compressed file format used to efficiently package and transfer files."
+    type: "File Transfer"
+    protocols:
+      - "HTTP"
+      - "FTP"
+      - "SFTP"
+    dataFormats:
+      - "Binary"
+    security:
+      - "TLS"
+    version: "6.3.10"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    relatedComponents:
+      - "Backend Services"
+    status: "Active"
+    documentation: "https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml?utm"
