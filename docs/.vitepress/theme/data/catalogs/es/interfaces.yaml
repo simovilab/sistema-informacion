@@ -1,9 +1,9 @@
-# Metadata about the catalog
+# Metadatos del catálogo
 metadata:
-  title: "Architecture Interfaces Catalog"
+  title: "Catálogo de interfaces de arquitectura"
   version: "1.0"
   date: "2025-09-18"
-  description: "A catalog of architectural interfaces for a Public Transportation Information System."
+  description: "Catálogo de interfaces arquitectónicas para un sistema de información de transporte público."
   author:
     - "Oriana Mora López"
     - "Fabián Abarca Calderón"
@@ -11,35 +11,35 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY 4.0"
 
-# Interface catalog
+# Catálogo de interfaces
 interfaces:
   - id: interface:001
-    name: "User Authentication Interface"
-    description: "Interface for user authentication and authorization."
+    name: "Interfaz de autenticación de usuario"
+    description: "Interfaz para autenticación y autorización de usuarios."
     type: "REST API"
     protocols:
       - "HTTPS"
-    dataFormats:
+    data_formats:
       - "JSON"
     security:
       - "OAuth 2.0"
     version: "1.0"
     owner: "Oriana Mora López"
     contact: "oriana.mora@ucr.ac.cr"
-    relatedComponents:
-      - "User Management Service"
-      - "Frontend Application"
-    status: "Active"
+    related_components:
+      - "Servicio de gestión de usuarios"
+      - "Aplicación frontend"
+    status: "Activo"
     documentation: "https://docs.example.com/user-auth-interface"
 
   - id: interface:002
     name: "REST API"
-    description: "Application programming interface based on the REST architectural style, used to connect distributed systems and facilitate data exchange between applications, web services, and databases."
+    description: "Interfaz de programación de aplicaciones basada en el estilo arquitectónico REST, utilizada para conectar sistemas distribuidos y facilitar el intercambio de datos entre aplicaciones, servicios web y bases de datos."
     type: "REST API"
     protocols:
       - "HTTP"
       - "HTTPS"
-    dataFormats:
+    data_formats:
       - "JSON"
       - "XML"
       - "Text"
@@ -47,64 +47,64 @@ interfaces:
       - "OAuth 2.0"
       - "TLS"
     version: "3.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Aplicación frontend"
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://www.ibm.com/think/topics/rest-apis"
 
   - id: interface:003
     name: "GraphQL API"
-    description: "Query language for APIs that allows clients to request exactly the data they need, enabling flexible schema evolution and efficient data retrieval."
+    description: "Lenguaje de consulta para APIs que permite a los clientes solicitar exactamente los datos que necesitan, facilitando la evolución flexible del esquema y la recuperación eficiente de datos."
     type: "GraphQL"
     protocols:
       - "HTTP"
       - "HTTPS"
-    dataFormats:
+    data_formats:
       - "JSON"
     security:
       - "JWT"
       - "TLS"
     version: "1.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Aplicación frontend"
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://aws.amazon.com/es/compare/the-difference-between-graphql-and-rest/"
 
   - id: interface:004
-    name: "gRPC/Protobuf Interface"
-    description: "Interface based on gRPC that uses Protocol Buffers for efficient serialization of structured data and remote service definition."
+    name: "Interfaz gRPC/Protobuf"
+    description: "Interfaz basada en gRPC que utiliza Protocol Buffers para la serialización eficiente de datos estructurados y la definición de servicios remotos."
     type: "gRPC"
     protocols:
       - "TCP"
       - "HTTP"
-    dataFormats:
+    data_formats:
       - "Protobuf"
       - "Binary"
     security:
       - "TLS"
       - "mTLS"
     version: "4.31.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://protobuf.dev/overview/"
 
   - id: interface:005
-    name: "HTTP Protocol"
-    description: "Fundamental protocol for web communication, used for information exchange between clients and servers."
+    name: "Protocolo HTTP"
+    description: "Protocolo fundamental para la comunicación web, utilizado para el intercambio de información entre clientes y servidores."
     type: "REST API"
     protocols:
       - "HTTP"
       - "HTTPS"
-    dataFormats:
+    data_formats:
       - "JSON"
       - "XML"
       - "Text"
@@ -112,70 +112,70 @@ interfaces:
     security:
       - "TLS"
     version: "2.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Aplicación frontend"
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
 
   - id: interface:006
-    name: "WebSocket Interface"
-    description: "Bidirectional real-time communication protocol between client and server, allowing messages to be sent at any time."
+    name: "Interfaz WebSocket"
+    description: "Protocolo de comunicación bidireccional en tiempo real entre cliente y servidor, permitiendo el envío de mensajes en cualquier momento."
     type: "WebSocket"
     protocols:
       - "WebSocket"
-    dataFormats:
+    data_formats:
       - "Text"
       - "Binary"
     security:
       - "TLS"
     version: "1.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Aplicación frontend"
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
 
   - id: interface:007
     name: "SSE Server-Sent Events"
-    description: "Web technology that allows the server to automatically send data to the browser continuously through an open HTTP connection."
+    description: "Tecnología web que permite al servidor enviar datos automáticamente al navegador de forma continua a través de una conexión HTTP abierta."
     type: "Event Stream"
     protocols:
       - "HTTP"
       - "HTTPS"
-    dataFormats:
+    data_formats:
       - "Text"
     security:
       - "TLS"
     version: "1.0"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Aplicación frontend"
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
 
   - id: interface:008
-    name: "ZIP File Transfer"
-    description: "Compressed file format used to efficiently package and transfer files."
+    name: "Transferencia de archivos ZIP"
+    description: "Formato de archivo comprimido utilizado para empaquetar y transferir archivos de manera eficiente."
     type: "File Transfer"
     protocols:
       - "HTTP"
       - "FTP"
       - "SFTP"
-    dataFormats:
+    data_formats:
       - "Binary"
     security:
       - "TLS"
     version: "6.3.10"
-    owner: "Architecture Team"
+    owner: "Equipo de arquitectura"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Backend Services"
-    status: "Active"
+    related_components:
+      - "Servicios backend"
+    status: "Activo"
     documentation: "https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml?utm"
