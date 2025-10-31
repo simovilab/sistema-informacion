@@ -1,0 +1,5 @@
+# Prettier ignore file
+# Add files and directories that Prettier should not format
+
+# Specific files
+docs/.vitepress/theme/data/catalogs/assets/schedule.md

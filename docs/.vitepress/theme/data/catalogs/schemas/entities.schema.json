@@ -12,7 +12,7 @@
       "description": "List of data entities in the public transportation information system",
       "items": {
         "type": "object",
-        "required": ["id", "name", "description", "attributes"],
+        "required": ["id", "name", "description"],
         "additionalProperties": false,
         "properties": {
           "id": {
@@ -21,6 +21,7 @@
             "description": "Unique identifier for the data entity (data-entity:XXX)"
           },
           "name": { "type": "string", "minLength": 1 },
+          "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Conditionally Forbidden", "Recommended"] },
           "description": { "type": "string", "minLength": 1 },
           "attributes": {
             "type": "array",

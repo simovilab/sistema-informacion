@@ -14,141 +14,136 @@ metadata:
   license: "CC BY-NC 4.0"
 
 data_entities:
+
+# ----
+# GTFS
+# ----
+
   - id: data-entity:001
-    name: "User"
-    description: "Usuario del sistema (operadores, analistas, público). No incluye credenciales; solo metadatos de perfil."
-    attributes:
-      - id: attribute:001
-        name: "user_id"
-        type: "UUID"
-        description: "Identificador único del usuario."
-      - id: attribute:002
-        name: "display_name"
-        type: "String"
-        description: "Nombre visible."
-      - id: attribute:003
-        name: "email"
-        type: "String"
-        description: "Correo de contacto."
-
-  - id: data-entity:002
     name: "Agency"
-    description: "Operador de transporte (GTFS Agency)."
-    attributes:
-      - id: attribute:004
-        name: "agency_id"
-        type: "String"
-        description: "Identificador GTFS de la agencia."
-      - id: attribute:005
-        name: "agency_name"
-        type: "String"
-        description: "Nombre oficial de la agencia."
-      - id: attribute:006
-        name: "timezone"
-        type: "String"
-        description: "Zona horaria (IANA)."
-
+    presence: "Required"
+    description: "Transit agencies with service represented in this dataset."
+  - id: data-entity:002
+    name: "Stop"
+    presence: "Conditionally Required"
+    description: "Stops where vehicles pick up or drop off riders. Also defines stations and station entrances."
   - id: data-entity:003
     name: "Route"
-    description: "Ruta GTFS que agrupa viajes."
-    attributes:
-      - id: attribute:007
-        name: "route_id"
-        type: "String"
-        description: "Identificador GTFS de la ruta."
-      - id: attribute:008
-        name: "route_short_name"
-        type: "String"
-        description: "Nombre corto de la ruta (código/número)."
-      - id: attribute:009
-        name: "route_long_name"
-        type: "String"
-        description: "Nombre descriptivo de la ruta."
-      - id: attribute:010
-        name: "agency_id"
-        type: "String"
-        description: "Referencia a Agency."
-
+    presence: "Required"
+    description: "Transit routes. A route is a group of trips that are displayed to riders as a single service."
   - id: data-entity:004
     name: "Trip"
-    description: "Instancia planificada de recorrido (GTFS Trip)."
-    attributes:
-      - id: attribute:011
-        name: "trip_id"
-        type: "String"
-        description: "Identificador GTFS del viaje."
-      - id: attribute:012
-        name: "route_id"
-        type: "String"
-        description: "Referencia a Route."
-      - id: attribute:013
-        name: "service_id"
-        type: "String"
-        description: "Referencia a ServiceCalendar."
-      - id: attribute:014
-        name: "direction_id"
-        type: "Integer"
-        description: "Sentido (0/1)."
-
+    presence: "Required"
+    description: "Trips for each route. A trip is a sequence of two or more stops that occur during a specific time period."
   - id: data-entity:005
-    name: "Stop"
-    description: "Punto de parada (GTFS Stop)."
-    attributes:
-      - id: attribute:015
-        name: "stop_id"
-        type: "String"
-        description: "Identificador de la parada."
-      - id: attribute:016
-        name: "stop_name"
-        type: "String"
-        description: "Nombre visible."
-      - id: attribute:017
-        name: "lat"
-        type: "Float"
-        description: "Latitud WGS84."
-      - id: attribute:018
-        name: "lon"
-        type: "Float"
-        description: "Longitud WGS84."
-
+    name: "Stop Time"
+    presence: "Required"
+    description: "Times that a vehicle arrives at and departs from stops for each trip."
   - id: data-entity:006
-    name: "ServiceCalendar"
-    description: "Calendario de servicio (GTFS)."
-    attributes:
-      - id: attribute:019
-        name: "service_id"
-        type: "String"
-        description: "Identificador del calendario."
-      - id: attribute:020
-        name: "weekday_pattern"
-        type: "String"
-        description: "Patrón de días (flags)."
-      - id: attribute:021
-        name: "start_date"
-        type: "Date"
-        description: "Fecha inicio (YYYY-MM-DD)."
-      - id: attribute:022
-        name: "end_date"
-        type: "Date"
-        description: "Fecha fin (YYYY-MM-DD)."
-
+    name: "Calendar"
+    presence: "Conditionally Required"
+    description: "Service dates specified using a weekly schedule with start and end dates."
   - id: data-entity:007
-    name: "Vehicle"
-    description: "Vehículo/Bus operativo (extensión)."
-    attributes:
-      - id: attribute:023
-        name: "vehicle_id"
-        type: "String"
-        description: "Identificador único del vehículo."
-      - id: attribute:024
-        name: "plate"
-        type: "String"
-        description: "Placa oficial."
-      - id: attribute:025
-        name: "capacity"
-        type: "Integer"
-        description: "Capacidad nominal de pasajeros."
-      - id: attribute:026
-        name: "agency_id"
-        type: "String"
-        description: "Referencia a Agency."
+    name: "Calendar Date"
+    presence: "Conditionally Required"
+    description: "Exceptions for the services defined in the calendar."
+  - id: data-entity:008
+    name: "Fare Attribute"
+    presence: "Optional"
+    description: "Fare information for a transit agency's routes."
+  - id: data-entity:009
+    name: "Fare Rule"
+    presence: "Optional"
+    description: "Rules to apply fares for itineraries."
+  - id: data-entity:010
+    name: "Timeframe"
+    presence: "Optional"
+    description: "Date and time periods to use in fare rules for fares that depend on date and time factors."
+  - id: data-entity:011
+    name: "Rider Category"
+    presence: "Optional"
+    description: "Defines categories of riders (e.g. elderly, student)."
+  - id: data-entity:012
+    name: "Fare Medium"
+    presence: "Optional"
+    description: "Describes the fare media that can be employed to use fare products."
+  - id: data-entity:013
+    name: "Fare Product"
+    presence: "Optional"
+    description: "Describes the different types of tickets or fares that can be purchased by riders."
+  - id: data-entity:014
+    name: "Fare Leg Rule"
+    presence: "Optional"
+    description: "Fare rules for individual legs of travel."
+  - id: data-entity:015
+    name: "Fare Leg Join Rule"
+    presence: "Optional"
+    description: "Rules for defining two or more legs should be considered as a single effective fare leg for the purposes of matching against rules in fare leg rules."
+  - id: data-entity:016
+    name: "Fare Transfer Rule"
+    presence: "Optional"
+    description: "Fare rules for transfers between legs of travel."
+  - id: data-entity:017
+    name: "Area"
+    presence: "Optional"
+    description: "Area grouping of locations."
+  - id: data-entity:018
+    name: "Stop Area"
+    presence: "Optional"
+    description: "Rules to assign stops to areas."
+  - id: data-entity:019
+    name: "Network"
+    presence: "Conditionally Forbidden"
+    description: "Network grouping of routes."
+  - id: data-entity:020
+    name: "Route Network"
+    presence: "Conditionally Forbidden"
+    description: "Rules to assign routes to networks."
+  - id: data-entity:021
+    name: "Shape"
+    presence: "Optional"
+    description: "Rules for mapping vehicle travel paths, sometimes referred to as route alignments."
+  - id: data-entity:022
+    name: "Frequency"
+    presence: "Optional"
+    description: "Headway (time between trips) for headway-based service or a compressed representation of fixed-schedule service."
+  - id: data-entity:023
+    name: "Transfer"
+    presence: "Optional"
+    description: "Rules for making connections at transfer points between routes."
+  - id: data-entity:024
+    name: "Pathway"
+    presence: "Optional"
+    description: "Pathways linking together locations within stations."
+  - id: data-entity:025
+    name: "Level"
+    presence: "Conditionally Required"
+    description: "Levels within stations."
+  - id: data-entity:026
+    name: "Location Group"
+    presence: "Optional"
+    description: "A group of stops that together indicate locations where a rider may request pickup or drop off."
+  - id: data-entity:027
+    name: "Location Group Stop"
+    presence: "Optional"
+    description: "Rules to assign stops to location groups."
+  - id: data-entity:028
+    name: "Location"
+    presence: "Optional"
+    description: "Zones for rider pickup or drop-off requests by on-demand services, represented as GeoJSON polygons."
+  - id: data-entity:029
+    name: "Booking Rule"
+    presence: "Optional"
+    description: "Booking information for rider-requested services."
+  - id: data-entity:030
+    name: "Translation"
+    presence: "Optional"
+    description: "Translations of customer-facing dataset values."
+  - id: data-entity:031
+    name: "Feed Info"
+    presence: "Conditionally Required"
+    description: "Dataset metadata, including publisher, version, and expiration information."
+  - id: data-entity:032
+    name: "Attribution"
+    presence: "Optional"
+    description: "Dataset attributions."

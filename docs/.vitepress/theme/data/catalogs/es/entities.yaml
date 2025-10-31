@@ -13,25 +13,18 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-data_entities:
-  - id: data-entity:001
-    name: "User"
-    description: "Usuario del sistema (operadores, analistas, público). No incluye credenciales; solo metadatos de perfil."
-    attributes:
-      - id: attribute:001
-        name: "user_id"
-        type: "UUID"
-        description: "Identificador único del usuario."
-      - id: attribute:002
-        name: "display_name"
-        type: "String"
-        description: "Nombre visible."
-      - id: attribute:003
-        name: "email"
-        type: "String"
-        description: "Correo de contacto."
+# HACER PRIMERO EN INGLÉS COMO OFICIAL
 
-  - id: data-entity:002
+data_entities:
+
+# ----
+# GTFS
+# ----
+
+# Usuario no será incluido porque estarán dentro de actores
+# Todo GTFS estará aquí, más las entidades operativas
+
+  - id: data-entity:001
     name: "Agency"
     description: "Operador de transporte (GTFS Agency)."
     attributes:
@@ -132,6 +125,10 @@ data_entities:
         type: "Date"
         description: "Fecha fin (YYYY-MM-DD)."
 
+# --------------------
+# Entidades operativas
+# --------------------
+
   - id: data-entity:007
     name: "Vehicle"
     description: "Vehículo/Bus operativo (extensión)."
@@ -152,3 +149,115 @@ data_entities:
         name: "agency_id"
         type: "String"
         description: "Referencia a Agency."
+  - id: data-entity:008
+    name: "Driver"
+    description: "Conductor operativo (extensión)."
+    attributes:
+      - id: attribute:027
+        name: "driver_id"
+        type: "String"
+        description: "Identificador único del conductor."
+      - id: attribute:028
+        name: "name"
+        type: "String"
+        description: "Nombre completo del conductor."
+      - id: attribute:029
+        name: "license_number"
+        type: "String"
+        description: "Número de licencia de conducir."
+      - id: attribute:030
+        name: "contact_number"
+        type: "String"
+        description: "Número de contacto del conductor."
+  - id: data-entity:008
+    name: "Dispatcher"
+    description: "Instancia operativa de un viaje (extensión)."
+    attributes:
+      - id: attribute:031
+        name: "trip_instance_id"
+        type: "String"
+        description: "Identificador único de la instancia del viaje."
+      - id: attribute:032
+        name: "trip_id"
+        type: "String"
+        description: "Referencia a Trip."
+      - id: attribute:033
+        name: "vehicle_id"
+        type: "String"
+        description: "Referencia a Vehicle."
+      - id: attribute:034
+        name: "driver_id"
+        type: "String"
+        description: "Referencia a Driver."
+      - id: attribute:035
+        name: "departure_time"
+        type: "DateTime"
+        description: "Hora y fecha de salida programada."
+      - id: attribute:036
+        name: "arrival_time"
+        type: "DateTime"
+        description: "Hora y fecha de llegada programada."
+  - id: data-entity:009
+    name: "Run"
+    description: "Instancia operativa de un viaje (extensión)."
+    attributes:
+      - id: attribute:031
+        name: "trip_instance_id"
+        type: "String"
+        description: "Identificador único de la instancia del viaje."
+      - id: attribute:032
+        name: "trip_id"
+        type: "String"
+        description: "Referencia a Trip."
+      - id: attribute:033
+        name: "vehicle_id"
+        type: "String"
+        description: "Referencia a Vehicle."
+      - id: attribute:034
+        name: "driver_id"
+        type: "String"
+        description: "Referencia a Driver."
+      - id: attribute:035
+        name: "departure_time"
+        type: "DateTime"
+        description: "Hora y fecha de salida programada."
+      - id: attribute:036
+        name: "arrival_time"
+        type: "DateTime"
+        description: "Hora y fecha de llegada programada."
+  - id: data-entity:010
+    name: "Screens"
+    description: "Pantallas informativas en paradas (extensión)."
+    attributes:
+      - id: attribute:037
+        name: "screen_id"
+        type: "String"
+        description: "Identificador único de la pantalla."
+      - id: attribute:038
+        name: "stop_id"
+        type: "String"
+        description: "Referencia a Stop."
+      - id: attribute:039
+        name: "installation_date"
+        type: "Date"
+        description: "Fecha de instalación de la pantalla."
+  - id: data-entity:011
+    name: "On-Board Device"
+    description: "Dispositivo a bordo (extensión)."
+    attributes:
+      - id: attribute:040
+        name: "record_id"
+        type: "String"
+        description: "Identificador único del dispositivo a bordo."
+      - id: attribute:041
+        name: "vehicle_id"
+        type: "String"
+        description: "Referencia a Vehicle."
+      - id: attribute:042
+        name: "maintenance_date"
+        type: "Date"
+        description: "Fecha del mantenimiento."
+      - id: attribute:043
+        name: "description"
+        type: "String"
+        description: "Descripción del mantenimiento realizado."
