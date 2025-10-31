@@ -4,6 +4,7 @@
   { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
   { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
   { "key": "type", "translations": { "es": "tipo", "pt": "tipo" } },
+  { "key": "person", "translations": { "es": "persona", "pt": "pessoa" } },
   { "key": "contact", "translations": { "es": "contacto", "pt": "contato" } },
   { "key": "organization", "translations": { "es": "organización", "pt": "organização" } },
   { "key": "roles", "translations": { "es": "roles", "pt": "papéis" } }

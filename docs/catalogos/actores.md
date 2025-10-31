@@ -38,12 +38,13 @@
 - Roles: Developer, Analyst
 
 <a id="actor-003"></a>
-## Efraím Zeledón Leiva
+## Ministro de Obras Públicas y Transportes
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">person</span><code style="background:none;padding:0;margin:0;border:0;">actor:003</code></span>
 
-- Descripción: Ministro actual de Obras Públicas y Transportes (MOPT).
+- Descripción: Ministro de Obras Públicas y Transportes (MOPT).
 - Tipo: Person
+- Persona: Efraím Zeledón Leiva
 - Contacto: dvagecorrespondencia@mopt.go.cr
 - Organización: organization:002
 - Roles: Project Manager

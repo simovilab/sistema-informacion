@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../schemas/actors.schema.json
+
 metadata:
   title: "Catálogo de Actores"
   version: "1.3"
@@ -32,9 +34,10 @@ actors:
       - "Analyst"
 
   - id: "actor:003"
-    name: "Efraím Zeledón Leiva"
-    description: "Ministro actual de Obras Públicas y Transportes (MOPT)."
+    name: "Ministro de Obras Públicas y Transportes"
+    description: "Ministro de Obras Públicas y Transportes (MOPT)."
     type: "Person"
+    person: "Efraím Zeledón Leiva"
     contact: "dvagecorrespondencia@mopt.go.cr"
     organization: "organization:002"
     roles:
