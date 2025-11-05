@@ -1,6 +1,6 @@
 # Visión del sistema
 
-Este informe es el resultado de la investigación sobre tecnologías de información y comunicación aplicadas al transporte público, y propone una _arquitectura tecnológica_ para la creación de **un sistema de información para el transporte público inteligente** (InfoTP).
+Este informe es el resultado de la investigación sobre tecnologías de información y comunicación aplicadas al transporte público, y propone una _arquitectura tecnológica_ junto con una _estrategia de comunicación_ para la creación de **un sistema de información para el transporte público inteligente**, llamado **InfoTP**.
 
 ::: info Nuestras premisas
 
@@ -9,7 +9,7 @@ Este informe es el resultado de la investigación sobre tecnologías de informac
 - En el contexto costarricense, la _calidad de la información_ disponible **mejora significativamente la satisfacción** de las personas usuarias con el servicio.
 - Los _sistemas digitales_ y la _inteligencia artificial_ ofrecen nuevas oportunidades concretas para facilitar el **acceso oportuno y por múltiples canales de comunicación** a la información.
 - El diseño de una _arquitectura tecnológica_ es clave para **maximizar los beneficios** de la implementación de un sistema tecnológico complejo como el propuesto.
-- Los sistemas inteligentes pueden mejorar significativamente las tareas de operación, gestión, planificación, regulación e investigación del transporte público.
+- Los **sistemas inteligentes** pueden mejorar significativamente las tareas de operación, gestión, planificación, regulación e investigación del transporte público.
 
 :::
 
@@ -31,19 +31,9 @@ Si nos preguntamos ¿por qué digitalizar el transporte público?, hay muchas re
 
 <Ref url="./diseno/principios" icon="directions_bus">Principios de diseño</Ref>
 
-## Diseño
+### Más información es mejor satisfacción
 
-### Una estrategia integral de comunicación
-
-El objetivo principal de esta propuesta no es construir **una** aplicación móvil, sino crear la infraestructura digital para tener **muchas** aplicaciones: aplicaciones móviles, sitios web, información impresa, señalética, campañas de redes sociales y más, todo de forma coherente entre sí.
-
-La información nos llega de todas partes. ¿Por qué limitarnos con el transporte público? Con datos abiertos y estandarizados esto no es un problema.
-
-Concepto clave: datos abiertos y estandarizados.
-
-Y hablamos de los medios de comunicación digital del presente y del futuro también. ¿Habrá señales de tránsito holográficas tridimensionales? Estaremos preparados para ese momento, con algunos pequeños ajustes.
-
-Los estudios realizados en la Universidad de Costa Rica demuestran que la **información** es actualmente **el factor más decisivo** en la satisfacción con el servicio de las personas usuarias.
+Los estudios realizados en la Universidad de Costa Rica demuestran que la **información** es en la actualidad **el factor más decisivo** en la satisfacción con el servicio de las personas usuarias.
 
 <Mermaid :code="`
 flowchart LR
@@ -66,9 +56,25 @@ Información en tiempo real
 Colaboración de la comunidad
 Accesibilidad
 
-<Ref url="./diseno/canales" icon="directions_bus">Canales de comunicación</Ref>
+### Más y mejor información con tecnologías digitales
 
-### Una propuesta contemporánea
+Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
+
+#### Conexiones abiertas, ideas libres
+
+El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
+
+## Diseño
+
+::: info ¿Qué imaginamos cuando pensamos en el transporte público?
+
+Entonces sí y luego también y además después.
+
+:::
+
+<Ref url="/diseno/" icon="directions_bus">Diseño</Ref>
+
+### Un sistema nativo
 
 Vivimos plenamente en la época de la información y también en un momento de nuevas sensibilidades y conciencia sobre la importancia del transporte público para todos. Debemos diseñar un sistema adaptado a estas circunstancias. Por eso, este sistema es **nativo**.
 
@@ -175,9 +181,19 @@ Vivimos plenamente en la época de la información y también en un momento de n
 
 Los estudios realizados en la Universidad de Costa Rica demuestran que la **información** es actualmente **el factor más decisivo** en la satisfacción con el servicio de las personas usuarias.
 
-<Ref url="./diseno/experiencia/" icon="directions_bus">Experiencia del usuario</Ref>
+<Ref url="./diseno/experiencia/" icon="directions_bus">Experiencia del servicio</Ref>
 
-## Desarrollo
+### Una estrategia integral de comunicación por todos los canales
+
+El objetivo principal de esta propuesta no es construir **una** aplicación móvil, sino crear la infraestructura digital para tener **muchas** aplicaciones: aplicaciones móviles, sitios web, información impresa, señalética, campañas de redes sociales y más, todo de forma coherente entre sí.
+
+La información nos llega de todas partes. ¿Por qué limitarnos con el transporte público? Con datos abiertos y estandarizados esto no es un problema.
+
+Concepto clave: datos abiertos y estandarizados.
+
+Y hablamos de los medios de comunicación digital del presente y del futuro también. ¿Habrá señales de tránsito holográficas tridimensionales? Estaremos preparados para ese momento, con algunos pequeños ajustes.
+
+<Ref url="./diseno/experiencia/" icon="directions_bus">Canales de comunicación</Ref>
 
 ### Una arquitectura tecnológica, muchas opciones
 
@@ -194,9 +210,11 @@ Las tecnologías digitales... pero es necesario considerar algunas característi
 
 Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
 
-<Ref url="./desarrollo/requisitos" icon="checklist">Requisitos</Ref>
+<Ref url="./desarrollo/arquitectura" icon="checklist">Arquitectura tecnológica</Ref>
 
-### La ciudad inteligente comienza aquí
+## Desarrollo
+
+::: info La ciudad inteligente comienza aquí
 
 Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
 
@@ -204,22 +222,31 @@ Interoperabilidad
 
 Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
 
-<Ref url="./desarrollo/arquitectura" icon="checklist">Arquitectura</Ref>
+:::
 
-### Más y mejor información con tecnologías digitales
+<Ref url="/desarrollo/" icon="checklist">Desarrollo</Ref>
 
-Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
+### Databús
 
-#### Conexiones abiertas, ideas libres
+### Infobús
+
+### AdminTP
+
+### DevOpsTP
+
+## Gestión
+
+::: info Un sistema de sistemas
+
+La estrategia de operación y mantenimiento de un _sistema de sistemas_ como el propuesto debe ser especializada.
+
+:::
+
+<Ref url="/gestion/" icon="architecture">Gestión</Ref>
+
+### Nuevo modelo de gobernanza
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
-
-<Ref url="./diseno/requisitos-propiedades" icon="checklist">Tecnologías</Ref> &nbsp;
-<Ref url="./desarrollo/arquitectura" icon="architecture">Aplicaciones</Ref>
-
-## Operación
-
-La estrategia de operación de un _sistema de sistemas_ como el propuesto debe ser especializada.
 
 > Un sistema complejo que funciona proviene de **un sistema simple que funcionaba**.
 >
@@ -227,25 +254,31 @@ La estrategia de operación de un _sistema de sistemas_ como el propuesto debe s
 
 No es un escenario "todo o nada".
 
-### Nuevo modelo de gobernanza
-
-El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
-
-<Ref url="./operacion/monetizacion" icon="architecture">Gobernanza</Ref>
+<Ref url="/gestion/monetizacion" icon="architecture">Gobernanza</Ref>
 
 ### Estrategias de seguimiento para un sistema dinámico
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
-<Ref url="./operacion/monetizacion" icon="architecture">Seguimiento</Ref>
+<Ref url="/gestion/unidad-tecnica" icon="architecture">Unidad técnica</Ref>
 
 ### Flexibilidad en las fuentes de financiamiento
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
-<Ref url="./operacion/monetizacion" icon="architecture">Monetización</Ref>
+<Ref url="/gestion/monetizacion" icon="architecture">Monetización</Ref>
 
 ## Plan piloto
+
+::: info El camino para hacer realidad esta visión
+
+El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
+
+:::
+
+<Ref url="/piloto/" icon="architecture">Plan piloto</Ref>
+
+### Tecnologías robustas
 
 El código abierto y el software libre es cada vez más la elección de grandes y pequeñas compañías para construir sistemas complejos con robustez y la colaboración de la comunidad.
 
@@ -259,8 +292,16 @@ El código abierto y el software libre es cada vez más la elección de grandes 
 
 ## Catálogos
 
+::: info El detalle del contexto
+
+Para elaborar una propuesta robusta, es necesario tener un conocimiento extenso del contexto en el que se desarrolla el proyecto. Para esto, hemos sistematizado.
+
+Los elementos más importantes de la investigación están compilados en una serie de catálogos donde están los elementos más importantes del sistema, incluyendo los principios de diseño, los sectores sociales interesados, las tecnologías y estándares, entre otros.
+
+:::
+
+<Ref url="./catalogos/" icon="architecture">Catálogos</Ref>
+
 Los elementos más importantes de la investigación están compilados en una serie de catálogos donde están los elementos más importantes del sistema, incluyendo los principios de diseño, los sectores sociales interesados, las tecnologías y estándares, entre otros.
 
 Toda la propuesta está interrelacionada con los elementos de estos catálogos, para procurar una propuesta consistente y justificada.
-
-<Ref url="./catalogos/" icon="architecture">Catálogos</Ref>

@@ -19,29 +19,17 @@ hero:
 
 features:
   - icon: <span class="material-symbols-outlined">info</span>
-    title: Introducción
-    details: Nuestra visión de un sistema de información para el transporte público inteligente.
+    title: Datos en tiempo real
+    details: Sistema de rastreo y telemetría de vehículos de transporte público.
     link: /introduccion/
   - icon: <span class="material-symbols-outlined">design_services</span>
-    title: Diseño
-    details: Consideraciones sobre los canales de comunicación y la experiencia del usuario.
-    link: /diseno/
+    title: Múltiples canales digitales
+    details: Difusión de información para pasajeros en múltiples canales digitales.
+    link: /introduccion/
   - icon: <span class="material-symbols-outlined">code</span>
-    title: Desarrollo
-    details: Descripción de la arquitectura, las tecnologías y las aplicaciones para el sistema.
-    link: /desarrollo/
-  - icon: <span class="material-symbols-outlined">monitoring</span>
-    title: Operación
-    details: Planes de gobernanza, seguimiento y monetización del servicio, entre otros.
-    link: /operacion/
-  - icon: <span class="material-symbols-outlined">rocket_launch</span>
-    title: Plan piloto
-    details: Detalles de la propuesta técnica y financiera para un plan piloto del sistema.
-    link: /piloto/
-  - icon: <span class="material-symbols-outlined">library_books</span>
-    title: Catálogos
-    details: Descripción detallada del sistema en catálogos de principios, tecnologías y otros.
-    link: /catalogos/
+    title: Estrategia de comunicación
+    details: Más que solamente tecnologías, una visión integral de la información.
+    link: /introduccion/
 ---
 
 ::: danger Trabajo en progreso

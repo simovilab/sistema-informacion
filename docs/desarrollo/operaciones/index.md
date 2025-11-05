@@ -1,3 +1,3 @@
-# Control
+# Desarrollo, monitoreo y control
 
-Implementación de la arquitectura A3.
+Implementación de la arquitectura A4.
