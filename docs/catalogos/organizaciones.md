@@ -140,3 +140,59 @@
 - Ubicación: San José, Costa Rica
 - ParentOrganization: —
 - Roles: Consulting, Support
+
+<a id="organization-010"></a>
+## GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:010</code></span>
+
+- Descripción: La agencia de cooperación internacional de Alemania, un socio clave en Costa Rica para proyectos de descarbonización y modernización del transporte.
+- Parte interesada: stakeholder:008
+- Type: Agencia de Cooperación Internacional
+- Contacto: info.costarica@giz.de
+- Sitio web: https://www.giz.de/en/worldwide/315.html
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Funding, Consulting, Support
+
+<a id="organization-011"></a>
+## Unión Europea (Delegación en Costa Rica)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:011</code></span>
+
+- Descripción: La delegación oficial de la Unión Europea en Costa Rica, que financia y apoya proyectos de desarrollo sostenible, política climática y movilidad.
+- Parte interesada: stakeholder:008
+- Type: Organización Internacional
+- Contacto: DELEGATION-COSTA-RICA@eeas.europa.eu
+- Sitio web: https://www.eeas.europa.eu/delegations/costa-rica_es
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Funding, Oversight
+
+<a id="organization-012"></a>
+## Fundación CRUSA
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:012</code></span>
+
+- Descripción: Organización costarricense que invierte capital y financia iniciativas estratégicas para el desarrollo sostenible y el capital humano, incluyendo la movilidad eléctrica.
+- Parte interesada: stakeholder:008
+- Type: Fundación
+- Contacto: info@crusa.cr
+- Sitio web: https://www.crusa.cr/
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Funding, Support
+
+<a id="organization-013"></a>
+## ProDUS (Programa de Investigación en Desarrollo Urbano Sostenible)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:013</code></span>
+
+- Descripción: Programa de investigación de la Universidad de Costa Rica (UCR) enfocado en el análisis y la planificación del desarrollo urbano y la movilidad sostenible.
+- Parte interesada: stakeholder:007
+- Type: Laboratorio de Investigación
+- Contacto: produs@ucr.ac.cr
+- Sitio web: https://produs.ucr.ac.cr/
+- Ubicación: Universidad de Costa Rica, San José, Costa Rica
+- ParentOrganization: —
+- Roles: Research, Consulting, Planning

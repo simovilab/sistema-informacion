@@ -129,3 +129,56 @@ organizations:
     roles:
       - "Consulting"
       - "Support"
+  - id: "organization:010"
+    name: "GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)"
+    description: "La agencia de cooperación internacional de Alemania, un socio clave en Costa Rica para proyectos de descarbonización y modernización del transporte."
+    stakeholder: "stakeholder:008"
+    type: "Agencia de Cooperación Internacional"
+    contact: "info.costarica@giz.de"
+    website: "https://www.giz.de/en/worldwide/315.html"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Funding"
+      - "Consulting"
+      - "Support"
+
+  - id: "organization:011"
+    name: "Unión Europea (Delegación en Costa Rica)"
+    description: "La delegación oficial de la Unión Europea en Costa Rica, que financia y apoya proyectos de desarrollo sostenible, política climática y movilidad."
+    stakeholder: "stakeholder:008"
+    type: "Organización Internacional"
+    contact: "DELEGATION-COSTA-RICA@eeas.europa.eu"
+    website: "https://www.eeas.europa.eu/delegations/costa-rica_es"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Funding"
+      - "Oversight"
+
+  - id: "organization:012"
+    name: "Fundación CRUSA"
+    description: "Organización costarricense que invierte capital y financia iniciativas estratégicas para el desarrollo sostenible y el capital humano, incluyendo la movilidad eléctrica."
+    stakeholder: "stakeholder:008"
+    type: "Fundación"
+    contact: "info@crusa.cr"
+    website: "https://www.crusa.cr/"
+    location: "San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Funding"
+      - "Support"
+
+  - id: "organization:013"
+    name: "ProDUS (Programa de Investigación en Desarrollo Urbano Sostenible)"
+    description: "Programa de investigación de la Universidad de Costa Rica (UCR) enfocado en el análisis y la planificación del desarrollo urbano y la movilidad sostenible."
+    stakeholder: "stakeholder:007"
+    type: "Laboratorio de Investigación"
+    contact: "produs@ucr.ac.cr"
+    website: "https://produs.ucr.ac.cr/"
+    location: "Universidad de Costa Rica, San José, Costa Rica"
+    parentOrganization: null
+    roles:
+      - "Research"
+      - "Consulting"
+      - "Planning"
