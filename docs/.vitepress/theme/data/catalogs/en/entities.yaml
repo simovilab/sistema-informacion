@@ -15,9 +15,9 @@ metadata:
 
 data_entities:
 
-# ----
-# GTFS
-# ----
+# -------------
+# GTFS Schedule
+# -------------
 
   - id: data-entity:001
     name: "Agency"
@@ -27,18 +27,22 @@ data_entities:
     - id: attribute:001
       name: "agency_name"
       type: "String"
+      presence: "Required"
       description: "Full name of the transit agency."
     - id: attribute:002
       name: "agency_url"
       type: "String"
+      presence: "Required"
       description: " URL of the transit agency."
     - id: attribute:003
       name: "agency_timezone"
       type: "String"
+      presence: "Required"
       description: "Timezone where the transit agency is located."
     - id: attribute:004
       name: "agency_id"
       type: "String"
+      presence: "Required"
       description: "Identifies a transit brand which is often synonymous with a transit agency."
   - id: data-entity:002
     name: "Stop"
@@ -290,3 +294,9 @@ data_entities:
     name: "Attribution"
     presence: "Optional"
     description: "Dataset attributions."
+
+# -------------------------
+# Operational data entities
+# -------------------------
+
+# Vehículo (vehicle), dispositivos de a bordo (on-board device), dispositivos en la infraestructura (infrastructure device), pantallas (screen), conductor (driver), despachador (dispatcher)

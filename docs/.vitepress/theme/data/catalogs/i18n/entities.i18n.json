@@ -3,6 +3,7 @@
   { "key": "data_components", "translations": { "es": "componentes_de_datos", "pt": "componentes_de_dados" } },
   { "key": "id", "translations": { "es": "id", "pt": "id" } },
   { "key": "name", "translations": { "es": "nombre", "pt": "nome" } },
+  { "key": "presence", "translations": { "es": "presencia", "pt": "presença" } },
   { "key": "description", "translations": { "es": "descripción", "pt": "descrição" } },
   { "key": "attributes", "translations": { "es": "atributos", "pt": "atributos" } },
   { "key": "type", "translations": { "es": "tipo", "pt": "tipo" } },

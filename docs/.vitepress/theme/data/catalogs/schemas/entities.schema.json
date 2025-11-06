@@ -44,6 +44,7 @@
                     "Double","Long","UUID","JSON","Array","Object","Binary","Decimal"
                   ]
                 },
+                "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Conditionally Forbidden", "Recommended"] },
                 "description": { "type": "string", "minLength": 1 }
               }
             }

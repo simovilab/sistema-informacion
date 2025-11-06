@@ -16,65 +16,49 @@
 
 
 <a id="component-001"></a>
-## Gestor de base de datos relacionada
+## Relational Database Manager
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:001</code></span>
 
-- Descripción: Base de datos transaccional (p.ej., PostgreSQL) que materializa entidades GTFS canónicas.
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007
+- Descripción: Transactional relational database (e.g., PostgreSQL) that materializes canonical GTFS entities.
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:008, data-entity:009, data-entity:010, data-entity:011, data-entity:012, data-entity:013, data-entity:014, data-entity:015, data-entity:016, data-entity:017, data-entity:018, data-entity:019, data-entity:020, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:026, data-entity:027, data-entity:028, data-entity:029, data-entity:030, data-entity:031, data-entity:032
 
 <a id="component-002"></a>
-## Infobus API (API pública de información)
+## Databus API (GTFS Ingestion)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:002</code></span>
 
-- Descripción: API HTTP para consulta pública de información (lecturas) sobre rutas, viajes y paradas.
-- Entidades de datos: data-entity:003, data-entity:004, data-entity:005
+- Descripción: Ingestion service that imports and validates GTFS files and writes them into the relational database.
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007
 
 <a id="component-003"></a>
-## Databus API (API de ingesta de datos)
+## Infobus API (Public Query)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:003</code></span>
 
-- Descripción: Servicio de ingesta que importa/valida GTFS y datos operativos; escribe en el gestor relacional.
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007
+- Descripción: HTTP read-only API that exposes routes, trips, stops, and schedules to the public.
+- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005
 
 <a id="component-004"></a>
-## Databus Realtime Server (servidor en tiempo real)
+## Infobus Screens (Display Server)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:004</code></span>
 
-- Descripción: Publica/gestiona actualizaciones en tiempo real (p.ej., posiciones de vehículos, avances de viaje).
-- Entidades de datos: data-entity:007, data-entity:004
+- Descripción: Back-end service that feeds information displays for stations and users; consumes Infobus API.
+- Entidades de datos: data-entity:002, data-entity:003, data-entity:004
 
 <a id="component-005"></a>
-## Infobus Screens (servidor de pantalla)
+## Infobus Info Server (Aggregation/Cache)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:005</code></span>
 
-- Descripción: Back-end que alimenta pantallas de usuario/estación; consume Info API y tiempo real.
-- Entidades de datos: data-entity:003, data-entity:004, data-entity:005
+- Descripción: Internal aggregation and caching service for combined catalog and real-time data queries.
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:006
 
 <a id="component-006"></a>
-## Infobus Info Server (servidor de información del TP)
+## Infobus Data (Analytics/BI)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:006</code></span>
 
-- Descripción: Servicio interno de agregación/caching para consultas combinadas (catálogos + tiempo real).
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006
-
-<a id="component-007"></a>
-## Infobus Data (servidor de análisis de datos)
-
-<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:007</code></span>
-
-- Descripción: Plataforma analítica que consolida históricos para reporting y modelos (BI/ETL).
-- Entidades de datos: data-entity:003, data-entity:004, data-entity:005, data-entity:007
-
-<a id="component-008"></a>
-## User Management
-
-<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:008</code></span>
-
-- Descripción: Gestión de perfiles de usuario (registro y perfil). **No** maneja credenciales aquí; solo metadatos del User.
-- Entidades de datos: data-entity:001
+- Descripción: Analytical platform that consolidates historical data for reporting and business intelligence models (BI/ETL).
+- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005
