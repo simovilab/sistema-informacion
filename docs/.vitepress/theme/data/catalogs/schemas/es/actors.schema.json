@@ -1,16 +1,16 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Organization/Actor Catalog Schema",
-  "description": "JSON Schema for validating organization/actor catalog YAML files in the Public Transportation Information System architecture",
+  "title": "Esquema del Catálogo de Organizaciones/Actores",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de organizaciones/actores en la arquitectura del Sistema de Información de Transporte Público",
   "type": "object",
-  "required": ["metadata", "actors"],
+  "required": ["metadata", "organizations", "actors"],
   "properties": {
     "metadata": {
       "$ref": "./metadata.schema.json"
     },
     "actors": {
       "type": "array",
-      "description": "List of actors (individuals) in the public transportation information system",
+      "description": "Lista de actores (individuos) en el sistema de información de transporte público",
       "items": {
         "type": "object",
         "required": ["id", "name", "description", "type", "contact", "organization", "roles"],
@@ -18,36 +18,32 @@
           "id": {
             "type": "string",
             "pattern": "^actor:[0-9]{3}$",
-            "description": "Unique identifier for the actor following the pattern actor:XXX"
+            "description": "Identificador único para el actor siguiendo el patrón actor:XXX"
           },
           "name": {
             "type": "string",
             "minLength": 1,
-            "description": "The person's full name"
+            "description": "Nombre completo de la persona"
           },
           "description": {
             "type": "string",
             "minLength": 1,
-            "description": "Brief description of their role and responsibilities"
+            "description": "Breve descripción de su rol y responsabilidades"
           },
           "type": {
             "type": "string",
             "enum": ["Person", "System", "Role", "External System", "Automated Process"],
-            "description": "Type of actor"
-          },
-          "person": {
-            "type": "string",
-            "description": "Name of the person if the actor is an individual"
+            "description": "Tipo de actor"
           },
           "contact": {
             "type": "string",
             "format": "email",
-            "description": "Contact email for the actor"
+            "description": "Correo electrónico de contacto del actor"
           },
           "organization": {
             "type": "string",
             "minLength": 1,
-            "description": "The organization the actor belongs to"
+            "description": "La organización a la que pertenece el actor"
           },
           "roles": {
             "type": "array",
@@ -72,7 +68,7 @@
               ]
             },
             "minItems": 1,
-            "description": "List of specific roles the actor performs"
+            "description": "Lista de roles específicos que desempeña el actor"
           }
         },
         "additionalProperties": false

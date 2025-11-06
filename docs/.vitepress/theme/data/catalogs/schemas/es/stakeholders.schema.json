@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Partes Interesadas",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de partes interesadas en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "stakeholders"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "stakeholders": {
+      "type": "array",
+      "description": "Lista de partes interesadas en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "role", "interests", "influence", "priority"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^stakeholder:[0-9]{3}$",
+            "description": "Identificador único para la parte interesada siguiendo el patrón stakeholder:XXX, donde XXX es un número de tres dígitos"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre de la parte interesada o grupo de partes interesadas"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descripción detallada de quién es esta parte interesada y su contexto"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "End Users",
+              "Service Providers",
+              "Regulators",
+              "Regulators and Planners",
+              "Support Staff",
+              "Technical Support",
+              "Government Officials",
+              "Financial Partners",
+              "Technology Vendors",
+              "Research Organizations",
+              "Civil Society",
+              "International Organizations"
+            ],
+            "description": "Rol principal de la parte interesada en el sistema de transporte"
+          },
+          "interests": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de intereses, preocupaciones o requisitos clave que tiene la parte interesada"
+          },
+          "influence": {
+            "type": "string",
+            "enum": ["High", "Medium", "Low"],
+            "description": "Nivel de influencia que tiene la parte interesada sobre el desarrollo y operación del sistema"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["High", "Medium", "Low"],
+            "description": "Nivel de prioridad para el compromiso con las partes interesadas y la consideración de requisitos"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

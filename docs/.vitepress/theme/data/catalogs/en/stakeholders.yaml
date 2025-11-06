@@ -1,9 +1,8 @@
-# Metadata about the catalog
 metadata:
   title: "Stakeholder Catalog"
-  version: "1.0"
-  date: "2025-09-18"
-  description: "A catalog of architectural stakeholders for a Public Transportation Information System."
+  version: "1.1"
+  date: "2025-10-30"
+  description: "A catalog of stakeholder categories for the Public Transportation Information System."
   author:
     - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
@@ -11,11 +10,10 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-# Stakeholder catalog
 stakeholders:
-  - id: stakeholder:001
+  - id: "stakeholder:001"
     name: "Passengers"
-    description: "Individuals who use the public transportation system for their daily commute or travel needs."
+    description: "Individuals who use the public transportation system for their daily commutes or travel needs."
     role: "End Users"
     interests:
       - "Reliable and timely information about bus arrivals and departures."
@@ -24,7 +22,7 @@ stakeholders:
     influence: "High"
     priority: "High"
 
-  - id: stakeholder:002
+  - id: "stakeholder:002"
     name: "Bus Operators"
     description: "Companies or entities responsible for operating the buses within the public transportation system."
     role: "Service Providers"
@@ -35,9 +33,9 @@ stakeholders:
     influence: "High"
     priority: "High"
 
-  - id: stakeholder:003
-    name: "City Transportation Authorities"
-    description: "Government agencies overseeing public transportation policies, regulations, and funding."
+  - id: "stakeholder:003"
+    name: "Transport Authorities"
+    description: "Government entities that oversee public transportation policies, regulations, and funding."
     role: "Regulators and Planners"
     interests:
       - "Compliance with transportation regulations and standards."
@@ -46,9 +44,9 @@ stakeholders:
     influence: "High"
     priority: "Medium"
 
-  - id: stakeholder:004
+  - id: "stakeholder:004"
     name: "Maintenance Teams"
-    description: "Personnel responsible for the upkeep and repair of buses and related infrastructure."
+    description: "Personnel responsible for the maintenance and repair of buses and related infrastructure."
     role: "Support Staff"
     interests:
       - "Access to maintenance schedules and records."
@@ -57,7 +55,7 @@ stakeholders:
     influence: "Medium"
     priority: "Medium"
 
-  - id: stakeholder:005
+  - id: "stakeholder:005"
     name: "IT Support Staff"
     description: "Teams responsible for maintaining the technological infrastructure of the Public Transportation Information System."
     role: "Technical Support"
@@ -67,3 +65,36 @@ stakeholders:
       - "Scalability to handle increasing user demand."
     influence: "Medium"
     priority: "Medium"
+
+  - id: "stakeholder:006"
+    name: "Technology and Infrastructure Providers"
+    description: "Entities that design, build, and operate the core digital and financial infrastructure, including the central bank and technology providers."
+    role: "Technology Vendors"
+    interests:
+      - "Security and stability of technical platforms."
+      - "Adherence to industry standards."
+      - "Successful integration with other system components."
+    influence: "High"
+    priority: "High"
+
+  - id: "stakeholder:007"
+    name: "Academic and Research Bodies"
+    description: "University laboratories and research centers that provide independent technical oversight, data analysis, and strategic planning support."
+    role: "Research Organizations"
+    interests:
+      - "Providing independent, data-driven technical oversight."
+      - "Influencing public policy with evidence-based research."
+      - "Using mobility data to create and validate urban development models."
+    influence: "Medium"
+    priority: "Medium"
+
+  - id: "stakeholder:008"
+    name: "International Partners and Sponsors"
+    description: "Multilateral organizations and development agencies that provide funding, technical expertise, and strategic support for modernization projects."
+    role: "International Organizations"
+    interests:
+      - "Fulfilling climate and development goals through funded projects."
+      - "Ensuring successful implementation and governance of supported initiatives."
+      - "Promoting the adoption of international standards and best practices."
+    influence: "Medium"
+    priority: "High"

@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Portafolio de Tecnologías",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de portafolio de tecnologías en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "technologies"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "technologies": {
+      "type": "array",
+      "description": "Lista de tecnologías en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "version",
+          "organization",
+          "website",
+          "usage",
+          "relatedTechnologies",
+          "status",
+          "documentation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^technology:\\d{3}$",
+            "description": "Identificador único para la tecnología siguiendo el patrón technology:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre de la tecnología"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción de qué es la tecnología y su propósito principal"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Versión actual en uso o recomendada"
+          },
+          "organization": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Organización o entidad que desarrolla/mantiene la tecnología"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL del sitio web oficial de la tecnología"
+          },
+          "usage": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descripción de cómo se utiliza la tecnología dentro del sistema"
+          },
+          "relatedTechnologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Lista de tecnologías complementarias o relacionadas que funcionan con esta"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Planned",
+              "Deprecated",
+              "Under Evaluation",
+              "Retired",
+              "Pilot",
+              "Production",
+              "Development"
+            ],
+            "description": "Estado actual de despliegue/adopción de la tecnología"
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL o referencia a la documentación oficial"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
