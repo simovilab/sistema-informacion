@@ -14,72 +14,89 @@ metadata:
   license: "CC BY-NC 4.0"
 
 data_components:
-  - id: component:001
-    name: "Gestor de base de datos relacionada"
-    description: "Base de datos transaccional (p.ej., PostgreSQL) que materializa entidades GTFS canónicas."
+  - id: "component:001"
+    name: "Relational Database Manager"
+    description: "Transactional relational database (e.g., PostgreSQL) that materializes canonical GTFS entities."
     data_entities:
-      - "data-entity:002"  # Agency
+      - "data-entity:001"  # Agency
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
-      - "data-entity:006"  # ServiceCalendar
-      - "data-entity:007"  # Vehicle
+      - "data-entity:005"  # Stop Time
+      - "data-entity:006"  # Calendar
+      - "data-entity:007"  # Calendar Date
+      - "data-entity:008"  # Fare Attribute
+      - "data-entity:009"  # Fare Rule
+      - "data-entity:010"  # Timeframe
+      - "data-entity:011"  # Rider Category
+      - "data-entity:012"  # Fare Medium
+      - "data-entity:013"  # Fare Product
+      - "data-entity:014"  # Fare Leg Rule
+      - "data-entity:015"  # Fare Leg Join Rule
+      - "data-entity:016"  # Fare Transfer Rule
+      - "data-entity:017"  # Area
+      - "data-entity:018"  # Stop Area
+      - "data-entity:019"  # Network
+      - "data-entity:020"  # Route Network
+      - "data-entity:021"  # Shape
+      - "data-entity:022"  # Frequency
+      - "data-entity:023"  # Transfer
+      - "data-entity:024"  # Pathway
+      - "data-entity:025"  # Level
+      - "data-entity:026"  # Location Group
+      - "data-entity:027"  # Location Group Stop
+      - "data-entity:028"  # Location
+      - "data-entity:029"  # Booking Rule
+      - "data-entity:030"  # Translation
+      - "data-entity:031"  # Feed Info
+      - "data-entity:032"  # Attribution
 
-  - id: component:002
-    name: "Infobus API (API pública de información)"
-    description: "API HTTP para consulta pública de información (lecturas) sobre rutas, viajes y paradas."
+  - id: "component:002"
+    name: "Databus API (GTFS Ingestion)"
+    description: "Ingestion service that imports and validates GTFS files and writes them into the relational database."
     data_entities:
+      - "data-entity:001"  # Agency
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
+      - "data-entity:005"  # StopTime
+      - "data-entity:006"  # Calendar
+      - "data-entity:007"  # CalendarDate
 
-  - id: component:003
-    name: "Databus API (API de ingesta de datos)"
-    description: "Servicio de ingesta que importa/valida GTFS y datos operativos; escribe en el gestor relacional."
+  - id: "component:003"
+    name: "Infobus API (Public Query)"
+    description: "HTTP read-only API that exposes routes, trips, stops, and schedules to the public."
     data_entities:
-      - "data-entity:002"  # Agency
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
-      - "data-entity:006"  # ServiceCalendar
-      - "data-entity:007"  # Vehicle
+      - "data-entity:005"  # StopTime
 
-  - id: component:004
-    name: "Databus Realtime Server (servidor en tiempo real)"
-    description: "Publica/gestiona actualizaciones en tiempo real (p.ej., posiciones de vehículos, avances de viaje)."
+  - id: "component:004"
+    name: "Infobus Screens (Display Server)"
+    description: "Back-end service that feeds information displays for stations and users; consumes Infobus API."
     data_entities:
-      - "data-entity:007"  # Vehicle
-      - "data-entity:004"  # Trip
-
-  - id: component:005
-    name: "Infobus Screens (servidor de pantalla)"
-    description: "Back-end que alimenta pantallas de usuario/estación; consume Info API y tiempo real."
-    data_entities:
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
 
-  - id: component:006
-    name: "Infobus Info Server (servidor de información del TP)"
-    description: "Servicio interno de agregación/caching para consultas combinadas (catálogos + tiempo real)."
+  - id: "component:005"
+    name: "Infobus Info Server (Aggregation/Cache)"
+    description: "Internal aggregation and caching service for combined catalog and real-time data queries."
     data_entities:
-      - "data-entity:002"  # Agency
+      - "data-entity:001"  # Agency
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
-      - "data-entity:006"  # ServiceCalendar
+      - "data-entity:006"  # Calendar
 
-  - id: component:007
-    name: "Infobus Data (servidor de análisis de datos)"
-    description: "Plataforma analítica que consolida históricos para reporting y modelos (BI/ETL)."
+  - id: "component:006"
+    name: "Infobus Data (Analytics/BI)"
+    description: "Analytical platform that consolidates historical data for reporting and business intelligence models (BI/ETL)."
     data_entities:
+      - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
       - "data-entity:004"  # Trip
-      - "data-entity:005"  # Stop
-      - "data-entity:007"  # Vehicle
+      - "data-entity:005"  # StopTime
 
-  - id: component:008
-    name: "User Management"
-    description: "Gestión de perfiles de usuario (registro y perfil). **No** maneja credenciales aquí; solo metadatos del User."
-    data_entities:
-      - "data-entity:001"  # User
+

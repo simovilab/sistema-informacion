@@ -23,30 +23,173 @@ data_entities:
     name: "Agency"
     presence: "Required"
     description: "Transit agencies with service represented in this dataset."
+    attributes:
+    - id: attribute:001
+      name: "agency_name"
+      type: "String"
+      description: "Full name of the transit agency."
+    - id: attribute:002
+      name: "agency_url"
+      type: "String"
+      description: " URL of the transit agency."
+    - id: attribute:003
+      name: "agency_timezone"
+      type: "String"
+      description: "Timezone where the transit agency is located."
+    - id: attribute:004
+      name: "agency_id"
+      type: "String"
+      description: "Identifies a transit brand which is often synonymous with a transit agency."
   - id: data-entity:002
     name: "Stop"
     presence: "Conditionally Required"
     description: "Stops where vehicles pick up or drop off riders. Also defines stations and station entrances."
+    attributes:
+    - id: attribute:010
+      name: "stop_id"
+      type: "String"
+      description: "Identifies a location: stop/platform, station, entrance/exit, generic node or boarding area"
+    - id: attribute:011
+      name: "stop_name"
+      type: "String"
+      description: "Name of the location."
+    - id: attribute:012
+      name: "stop_lat"
+      type: "String"
+      description: "Latitude of the location."
+    - id: attribute:013
+      name: "stop_lon"
+      type: "String"
+      description: "Longitude of the location."
   - id: data-entity:003
     name: "Route"
     presence: "Required"
     description: "Transit routes. A route is a group of trips that are displayed to riders as a single service."
+    attributes:
+    - id: attribute:020
+      name: "route_id"
+      type: "String"
+      description: "Identifies a route."
+    - id: attribute:021
+      name: "agency_id"
+      type: "String"
+      description: "Agency for the specified route."
+    - id: attribute:022
+      name: "route_short_name"
+      type: "String"
+      description: "Short name of a route. Often a short, abstract identifier."
+    - id: attribute:023
+      name: "route_long_name"
+      type: "String"
+      description: "Full name of a route. This name is generally more descriptive than the `route_short_name` and often includes the route's destination or stop."
+    - id: attribute:024
+      name: "route_type"
+      type: "String"
+      description: "Indicates the type of transportation used on a route."
   - id: data-entity:004
     name: "Trip"
     presence: "Required"
     description: "Trips for each route. A trip is a sequence of two or more stops that occur during a specific time period."
+    attributes:
+    - id: attribute:030
+      name: "route_id"
+      type: "String"
+      description: "Identifies a route."
+    - id: attribute:031
+      name: "service_id"
+      type: "String"
+      description: "Identifies a set of dates when service is available for one or more routes."
+    - id: attribute:032
+      name: "trip_id"
+      type: "String"
+      description: "Identifies a trip."
   - id: data-entity:005
     name: "Stop Time"
     presence: "Required"
     description: "Times that a vehicle arrives at and departs from stops for each trip."
+    attributes:
+    - id: attribute:040
+      name: "trip_id"
+      type: "String"
+      description: "Identifies a trip."
+    - id: attribute:041
+      name: "arrival_time"
+      type: "String"
+      description: "Arrival time at the stop for a specific trip."
+    - id: attribute:042
+      name: "departure_time"
+      type: "String"
+      description: "Departure time from the stop for a specific trip."
+    - id: attribute:043
+      name: "stop_id"
+      type: "String"
+      description: "Identifies the serviced stop."
+    - id: attribute:044
+      name: "stop_sequence"
+      type: "String"
+      description: "Order of stops, location groups, or GeoJSON locations for a particular trip"
   - id: data-entity:006
     name: "Calendar"
     presence: "Conditionally Required"
     description: "Service dates specified using a weekly schedule with start and end dates."
+    attributes:
+    - id: attribute:050
+      name: "service_id"
+      type: "String"
+      description: "Identifies a set of dates when service is available for one or more routes."
+    - id: attribute:051
+      name: "monday"
+      type: "String"
+      description: "Indicates whether the service operates on all Mondays in the date range specified by the `start_date` and `end_date` fields"
+    - id: attribute:052
+      name: "tuesday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Tuesdays."
+    - id: attribute:053
+      name: "wednesday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Wednesdays."
+    - id: attribute:054
+      name: "thursday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Thursdays."
+    - id: attribute:055
+      name: "friday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Fridays."
+    - id: attribute:056
+      name: "saturday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Saturdays."
+    - id: attribute:057
+      name: "sunday"
+      type: "String"
+      description: "Functions in the same way as `monday` except applies to Sundays."
+    - id: attribute:058
+      name: "start_date"
+      type: "String"
+      description: "Start service day for the service interval."
+    - id: attribute:059
+      name: "end_date"
+      type: "String"
+      description: "End service day for the service interval. This service day is included in the interval.."
   - id: data-entity:007
     name: "Calendar Date"
     presence: "Conditionally Required"
     description: "Exceptions for the services defined in the calendar."
+    attributes:
+    - id: attribute:060
+      name: "service_id"
+      type: "String"
+      description: "Identifies a set of dates when a service exception occurs for one or more route."
+    - id: attribute:061
+      name: "date"
+      type: "String"
+      description: "Date when service exception occurs."
+    - id: attribute:062
+      name: "exception_type"
+      type: "String"
+      description: "Indicates whether service is available on the date specified in the date field."
   - id: data-entity:008
     name: "Fare Attribute"
     presence: "Optional"
