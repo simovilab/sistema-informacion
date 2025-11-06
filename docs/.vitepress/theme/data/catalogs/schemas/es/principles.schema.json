@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Principios",
+  "type": "object",
+  "required": ["metadata", "principles"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "principles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "domain",
+          "name",
+          "description",
+          "rationale",
+          "implications",
+          "related_principles",
+          "references"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^principles:[A-Z]{1}[0-9]{2}$"
+          },
+          "domain": {
+            "type": "string",
+            "enum": ["Business", "Data", "Application", "Technology"]
+          },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "rationale": { "type": "string" },
+          "implications": { "type": "array", "items": { "type": "string" } },
+          "related_principles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "references": {
+            "type": "array",
+            "items": { "type": "string", "format": "uri" }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

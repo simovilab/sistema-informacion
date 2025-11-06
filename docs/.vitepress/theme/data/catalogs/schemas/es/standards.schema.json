@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Estándares Tecnológicos",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de estándares tecnológicos en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "technology_standards"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "technology_standards": {
+      "type": "array",
+      "description": "Lista de estándares tecnológicos adoptados en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "version",
+          "organization",
+          "website",
+          "usage",
+          "related_technologies",
+          "status",
+          "documentation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^standard:\\d{3}$",
+            "description": "Identificador único para el estándar tecnológico siguiendo el patrón standard:XXX, donde XXX es un número de tres dígitos"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre del estándar tecnológico"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción de lo que define el estándar y su propósito"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Versión actual del estándar que se está adoptando"
+          },
+          "organization": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Organización o entidad que mantiene el estándar"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL del sitio web oficial del estándar"
+          },
+          "usage": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descripción de cómo se utiliza el estándar dentro del sistema"
+          },
+          "related_technologies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "description": "Lista de tecnologías, herramientas o frameworks que implementan o soportan este estándar"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Active", "Planned", "Deprecated", "Under Review", "Retired", "Draft", "Approved", "Implemented"],
+            "description": "Estado actual de adopción del estándar"
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL o referencia a la documentación oficial del estándar"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

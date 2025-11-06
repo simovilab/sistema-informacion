@@ -1,0 +1,186 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Organizaciones/Actores",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de organizaciones/actores en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "organizations", "actors"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "organizations": {
+      "type": "array",
+      "description": "Lista de organizaciones en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "type",
+          "contact",
+          "website",
+          "location",
+          "parentOrganization",
+          "roles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^organization:[0-9]{3}$",
+            "description": "Identificador único para la organización siguiendo el patrón organization:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre completo de la organización"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción del propósito de la organización"
+          },
+          "stakeholder": {
+            "type": "string",
+            "pattern": "^stakeholder:[0-9]{3}$",
+            "description": "Tipo de interesado que la organización representa"
+          },
+          "contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico de contacto principal para la organización"
+          },
+          "website": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL del sitio web de la organización"
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Ubicación física o dirección de la organización"
+          },
+          "parentOrganization": {
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "string",
+                "pattern": "^organization:[0-9]{3}$"
+              }
+            ],
+            "description": "ID de la organización matriz si aplica, nulo para organizaciones de nivel superior"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Research",
+                "Development",
+                "Consulting",
+                "Operation",
+                "Regulation",
+                "Planning",
+                "Funding",
+                "Technology Provider",
+                "Service Provider",
+                "Oversight",
+                "Support",
+                "Integration",
+                "Maintenance"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de roles que desempeña la organización en el sistema"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "actors": {
+      "type": "array",
+      "description": "Lista de actores (individuos) en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "type",
+          "contact",
+          "organization",
+          "roles"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^actor:[0-9]{3}$",
+            "description": "Identificador único para el actor siguiendo el patrón actor:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre completo de la persona"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción de su rol y responsabilidades"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Person",
+              "System",
+              "Role",
+              "External System",
+              "Automated Process"
+            ],
+            "description": "Tipo de actor"
+          },
+          "contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico de contacto del actor"
+          },
+          "organization": {
+            "type": "string",
+            "minLength": 1,
+            "description": "La organización a la que pertenece el actor"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Lead Architect",
+                "Project Manager",
+                "System Administrator",
+                "Developer",
+                "Analyst",
+                "Researcher",
+                "Consultant",
+                "Operations Manager",
+                "Technical Lead",
+                "Product Owner",
+                "Business Analyst",
+                "Quality Assurance",
+                "DevOps Engineer",
+                "Data Scientist",
+                "UI/UX Designer"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de roles específicos que desempeña el actor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
