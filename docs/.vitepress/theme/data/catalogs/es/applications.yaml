@@ -1,4 +1,7 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/applications.schema.json
+
+## Metadata about the catalog
+
 metadata:
   title: "Catálogo de portafolio de aplicaciones"
   version: "1.0"
@@ -13,22 +16,346 @@ metadata:
 
 # Application catalog
 applications:
-  - id: application:001
-    name: "Sistema de rastreo de autobuses en tiempo real"
-    description: "Aplicación que brinda a los pasajeros el rastreo de autobuses en tiempo real."
-    version: "2.3.1"
-    vendor: "TransitTech Solutions"
-    license: "Comercial"
-    support_contact: "support@transittechsolutions.com"
+  - id: "application:001"
+    name: "Seguimiento de vehículos de tránsito"
+    description: "Monitorea la ubicación actual de los vehículos de tránsito utilizando un Sistema de Localización Automática de Vehículos."
+    version: "0.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
     categories:
-      - "Transporte"
-      - "Datos en tiempo real"
+      - "Transportation"
+      - "Real-Time Data"
+      - "Transit Management"
     technologies:
       - "GPS"
-      - "Aplicación móvil"
+      - "Mobile App"
+      - "GPS / GNSS"
+      - "Automated Vehicle Location (AVL)"
+      - "Wireless communications (3G/4G/5G, DSRC, C-V2X)"
+      - "Centralized fleet management software"
     stakeholders:
-      - "Pasajeros"
-      - "Autoridades de transporte"
-    status: "Activo"
-    deployment_environment: "Nube"
-    criticality: "Alta"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"
+
+  - id: "application:002"
+    name: "Operaciones de tránsito de ruta fija"
+    description: "Realiza despacho automatizado y monitoreo del sistema para servicios de tránsito de ruta fija y ruta flexible."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "Computer-Aided Dispatch (CAD)"
+      - "AVL"
+      - "Radio / Cellular communications"
+      - "Operations control center systems"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"
+
+  - id: "application:003"
+    name: "Operaciones de tránsito dinámico"
+    description: "Permite a los viajeros solicitar viajes y obtener itinerarios utilizando dispositivos personales."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "Mobile apps (smartphone, tablets)"
+      - "Trip planning software"
+      - "Cloud-based dispatching"
+      - "APIs for real-time schedule updates"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "Medium"
+
+  - id: "application:004"
+    name: "Gestión de cobro de tarifas de tránsito"
+    description: "Gestiona el cobro de tarifas de tránsito utilizando medios electrónicos en vehículos y paradas."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "Smart cards / RFID"
+      - "NFC (contactless payment)"
+      - "Mobile payment apps (QR, wallet)"
+      - "Fare collection back-office systems"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Hybrid"
+    criticality: "High"
+
+  - id: "application:005"
+    name: "Seguridad del tránsito"
+    description: "Proporciona seguridad física para los pasajeros de tránsito y operadores de vehículos."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Security"
+    technologies:
+      - "CCTV with video analytics"
+      - "Panic buttons / emergency communication systems"
+      - "Access control & intrusion detection"
+      - "Security operation centers"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "On-Premise"
+    criticality: "High"
+
+  - id: "application:006"
+    name: "Gestión de flota de tránsito"
+    description: "Soporta la programación y monitoreo automático del mantenimiento de tránsito."
+    version: "1.0.0"
+    vendor: "FleetTech Solutions"
+    license: "Custom"
+    support_contact: "support@fleettech.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "On-board diagnostics (OBD-II, CAN bus)"
+      - "Predictive maintenance software"
+      - "Telematics"
+      - "IoT sensors"
+    stakeholders:
+      - "Maintenance Teams"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "Medium"
+
+  - id: "application:007"
+    name: "Conteo de pasajeros de tránsito"
+    description: "Cuenta los pasajeros que entran y salen de los vehículos de tránsito utilizando sensores."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "Infrared / ultrasonic sensors"
+      - "Video analytics with AI"
+      - "Weight sensors"
+      - "Wireless data transmission"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Hybrid"
+    criticality: "Medium"
+
+  - id: "application:008"
+    name: "Información para viajeros de tránsito"
+    description: "Proporciona a los usuarios de tránsito acceso a información de tránsito en paradas y vehículos."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Traveler Information"
+    technologies:
+      - "Digital signage (LED displays)"
+      - "Mobile apps / web portals"
+      - "GTFS-Realtime feeds"
+      - "Cloud-based information dissemination"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"
+
+  - id: "application:009"
+    name: "Prioridad de señales para tránsito"
+    description: "Permite a los vehículos de tránsito solicitar prioridad en intersecciones."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Traffic Management"
+    technologies:
+      - "DSRC / C-V2X communication"
+      - "Adaptive signal control software"
+      - "GPS-based priority request"
+      - "Traffic management centers"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Hybrid"
+    criticality: "Medium"
+
+  - id: "application:010"
+    name: "Carriles de autobús intermitentes"
+    description: "Proporciona carriles dedicados para autobuses durante horas de mayor demanda."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Traffic Management"
+    technologies:
+      - "Dynamic lane control signals"
+      - "Roadside sensors & cameras"
+      - "Traffic monitoring systems"
+      - "Intelligent lane management software"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "On-Premise"
+    criticality: "Medium"
+
+  - id: "application:011"
+    name: "Indicación de tránsito para peatones"
+    description: "Informa a los peatones sobre la presencia de vehículos de tránsito utilizando comunicaciones V2P."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Security"
+    technologies:
+      - "Vehicle-to-Pedestrian (V2P) communications"
+      - "Smartphones / wearables with apps"
+      - "Roadside Units (RSUs) with DSRC / C-V2X"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Inactive"
+    deployment_environment: "Hybrid"
+    criticality: "Low"
+
+  - id: "application:012"
+    name: "Advertencias de vehículos de tránsito en estación/parada"
+    description: "Informa a los vehículos cercanos sobre vehículos de tránsito en estaciones o paradas."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Security"
+    technologies:
+      - "V2V / V2I communications"
+      - "On-board warning systems"
+      - "Roadside connected infrastructure"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Inactive"
+    deployment_environment: "Hybrid"
+    criticality: "Low"
+
+  - id: "application:013"
+    name: "Vehículo girando a la derecha frente a vehículo de tránsito"
+    description: "Detecta vehículos cerca de vehículos de tránsito detenidos y advierte a los operadores sobre vehículos que giran a la derecha."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Security"
+    technologies:
+      - "V2V communications (DSRC / C-V2X)"
+      - "Vehicle movement detection (radar, LIDAR, cameras)"
+      - "Driver alerting systems"
+    stakeholders:
+      - "Bus Operators"
+    status: "Inactive"
+    deployment_environment: "Hybrid"
+    criticality: "Low"
+
+  - id: "application:014"
+    name: "Coordinación multimodal"
+    description: "Establece comunicaciones entre múltiples agencias de tránsito y tráfico para la coordinación de servicios."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Traffic Management"
+    technologies:
+      - "Inter-agency communication platforms"
+      - "API integration"
+      - "Cloud-based coordination systems"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"
+
+  - id: "application:015"
+    name: "Solicitud de parada de tránsito"
+    description: "Permite a los pasajeros enviar solicitudes de parada a vehículos de tránsito que se aproximan."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "On-board passenger interface"
+      - "Wireless request communication"
+      - "Vehicle Human-Machine Interface (HMI)"
+    stakeholders:
+      - "Passengers"
+    status: "Active"
+    deployment_environment: "Hybrid"
+    criticality: "Medium"
+
+  - id: "application:016"
+    name: "Identificación de rutas para personas con discapacidad visual"
+    description: "Asiste a los viajeros con discapacidad visual a identificar los vehículos de tránsito y rutas correctas."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Traveler Information"
+    technologies:
+      - "Bluetooth beacons"
+      - "Audio announcements"
+      - "Smartphone accessibility apps"
+      - "Haptic feedback devices"
+    stakeholders:
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Hybrid"
+    criticality: "Medium"
+
+  - id: "application:017"
+    name: "Protección de conexiones de tránsito"
+    description: "Permite a los viajeros solicitar protección de conexiones durante los viajes."
+    version: "1.0.0"
+    vendor: "N/A"
+    license: "Custom"
+    support_contact: "email@example.com"
+    categories:
+      - "Transit Management"
+    technologies:
+      - "Mobile applications for requests"
+      - "Real-time operations coordination"
+      - "Communications with traffic control"
+    stakeholders:
+      - "Passengers"
+      - "Transit Authorities"
+    status: "Active"
+    deployment_environment: "Cloud"
+    criticality: "High"
