@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../schemas/stakeholders.schema.json
+
 metadata:
   title: "Catálogo de Partes Interesadas"
   version: "1.1"
@@ -12,7 +14,7 @@ metadata:
 
 stakeholders:
   - id: "stakeholder:001"
-    name: "Pasajeros"
+    name: "Personas usuarias"
     description: "Personas que utilizan el sistema de transporte público para sus desplazamientos diarios o necesidades de viaje."
     role: "End Users"
     interests:
@@ -23,7 +25,7 @@ stakeholders:
     priority: "High"
 
   - id: "stakeholder:002"
-    name: "Operadoras de autobuses"
+    name: "Empresas operadoras de autobuses"
     description: "Empresas o entidades responsables de operar los autobuses dentro del sistema de transporte público."
     role: "Service Providers"
     interests:
@@ -34,18 +36,29 @@ stakeholders:
     priority: "High"
 
   - id: "stakeholder:003"
-    name: "Autoridades de transporte"
-    description: "Entidades gubernamentales que supervisan políticas, regulaciones y financiamiento del transporte público."
+    name: "Autoridades del transporte público"
+    description: "Entidades gubernamentales que supervisan las operaciones, políticas, regulaciones y financiamiento del transporte público."
     role: "Regulators and Planners"
     interests:
       - "Cumplimiento de regulaciones y estándares de transporte."
-      - "Analítica de datos para mejorar los servicios de transporte."
-      - "Satisfacción pública y mecanismos de retroalimentación."
+      - "Análisis de datos para mejorar los servicios de transporte."
+      - "Satisfacción de las personas usuarias y mecanismos de retroalimentación."
     influence: "High"
     priority: "Medium"
 
   - id: "stakeholder:004"
-    name: "Equipos de mantenimiento"
+    name: "Autoridades reguladoras del servicio de transporte público"
+    description: "Entidades encargadas de establecer y hacer cumplir las normativas y estándares para el servicio de transporte público."
+    role: "Regulators"
+    interests:
+      - "Asegurar el cumplimiento de las regulaciones y estándares del sector."
+      - "Monitorear la calidad del servicio y la seguridad de las personas usuarias."
+      - "Implementar políticas para mejorar la eficiencia y sostenibilidad del transporte público."
+    influence: "High"
+    priority: "High"
+
+  - id: "stakeholder:005"
+    name: "Equipos de mantenimiento técnico"
     description: "Personal responsable del mantenimiento y reparación de autobuses e infraestructura relacionada."
     role: "Support Staff"
     interests:
@@ -55,9 +68,9 @@ stakeholders:
     influence: "Medium"
     priority: "Medium"
 
-  - id: "stakeholder:005"
-    name: "Personal de soporte TI"
-    description: "Equipos responsables de mantener la infraestructura tecnológica del Sistema de Información de Transporte Público."
+  - id: "stakeholder:006"
+    name: "Personal de soporte de tecnologías de información y comunicación (TIC)"
+    description: "Equipos responsables de mantener la infraestructura tecnológica del sistema de información de transporte público."
     role: "Technical Support"
     interests:
       - "Disponibilidad y confiabilidad del sistema."
@@ -66,9 +79,9 @@ stakeholders:
     influence: "Medium"
     priority: "Medium"
 
-  - id: "stakeholder:006"
-    name: "Proveedores de Tecnología e Infraestructura"
-    description: "Entidades que diseñan, construyen y operan la infraestructura digital y financiera central, incluyendo el banco central y proveedores de tecnología."
+  - id: "stakeholder:007"
+    name: "Proveedores de tecnologías de información y comunicación (TIC)"
+    description: "Entidades que diseñan, construyen y operan la infraestructura digital."
     role: "Technology Vendors"
     interests:
       - "Seguridad y estabilidad de las plataformas técnicas."
@@ -77,8 +90,8 @@ stakeholders:
     influence: "High"
     priority: "High"
 
-  - id: "stakeholder:007"
-    name: "Cuerpos Académicos y de Investigación"
+  - id: "stakeholder:008"
+    name: "Cuerpos académicos y de investigación"
     description: "Laboratorios universitarios y centros de investigación que proporcionan supervisión técnica independiente, análisis de datos y apoyo en la planificación estratégica."
     role: "Research Organizations"
     interests:
@@ -88,13 +101,24 @@ stakeholders:
     influence: "Medium"
     priority: "Medium"
 
-  - id: "stakeholder:008"
-    name: "Socios y Patrocinadores Internacionales"
+  - id: "stakeholder:009"
+    name: "Agencias de cooperación internacional"
     description: "Organizaciones multilaterales y agencias de desarrollo que proporcionan financiamiento, experiencia técnica y apoyo estratégico para proyectos de modernización."
     role: "International Organizations"
     interests:
       - "Cumplir con los objetivos climáticos y de desarrollo a través de proyectos financiados."
       - "Asegurar la implementación y gobernanza exitosa de las iniciativas apoyadas."
       - "Promover la adopción de estándares internacionales y mejores prácticas."
+    influence: "Medium"
+    priority: "High"
+
+  - id: "stakeholder:010"
+    name: "Organizaciones no gubernamentales y organizaciones de la sociedad civil"
+    description: "Entidades que representan los intereses de la sociedad civil y abogan por cambios en las políticas públicas."
+    role: "Civil Society"
+    interests:
+      - "Promover la equidad y la justicia social en el transporte público."
+      - "Asegurar la participación ciudadana en la toma de decisiones."
+      - "Monitorear el cumplimiento de los derechos de las personas usuarias."
     influence: "Medium"
     priority: "High"

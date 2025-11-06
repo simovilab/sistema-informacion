@@ -16,7 +16,7 @@
 
 
 <a id="stakeholder-001"></a>
-## Pasajeros
+## Personas usuarias
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:001</code></span>
 
@@ -27,7 +27,7 @@
 - Prioridad: High
 
 <a id="stakeholder-002"></a>
-## Operadoras de autobuses
+## Empresas operadoras de autobuses
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:002</code></span>
 
@@ -38,20 +38,31 @@
 - Prioridad: High
 
 <a id="stakeholder-003"></a>
-## Autoridades de transporte
+## Autoridades del transporte público
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:003</code></span>
 
-- Descripción: Entidades gubernamentales que supervisan políticas, regulaciones y financiamiento del transporte público.
+- Descripción: Entidades gubernamentales que supervisan las operaciones, políticas, regulaciones y financiamiento del transporte público.
 - Rol: Regulators and Planners
-- Intereses: Cumplimiento de regulaciones y estándares de transporte., Analítica de datos para mejorar los servicios de transporte., Satisfacción pública y mecanismos de retroalimentación.
+- Intereses: Cumplimiento de regulaciones y estándares de transporte., Análisis de datos para mejorar los servicios de transporte., Satisfacción de las personas usuarias y mecanismos de retroalimentación.
 - Influencia: High
 - Prioridad: Medium
 
 <a id="stakeholder-004"></a>
-## Equipos de mantenimiento
+## Autoridades reguladoras del servicio de transporte público
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:004</code></span>
+
+- Descripción: Entidades encargadas de establecer y hacer cumplir las normativas y estándares para el servicio de transporte público.
+- Rol: Regulators
+- Intereses: Asegurar el cumplimiento de las regulaciones y estándares del sector., Monitorear la calidad del servicio y la seguridad de las personas usuarias., Implementar políticas para mejorar la eficiencia y sostenibilidad del transporte público.
+- Influencia: High
+- Prioridad: High
+
+<a id="stakeholder-005"></a>
+## Equipos de mantenimiento técnico
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:005</code></span>
 
 - Descripción: Personal responsable del mantenimiento y reparación de autobuses e infraestructura relacionada.
 - Rol: Support Staff
@@ -59,32 +70,32 @@
 - Influencia: Medium
 - Prioridad: Medium
 
-<a id="stakeholder-005"></a>
-## Personal de soporte TI
+<a id="stakeholder-006"></a>
+## Personal de soporte de tecnologías de información y comunicación (TIC)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:005</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:006</code></span>
 
-- Descripción: Equipos responsables de mantener la infraestructura tecnológica del Sistema de Información de Transporte Público.
+- Descripción: Equipos responsables de mantener la infraestructura tecnológica del sistema de información de transporte público.
 - Rol: Technical Support
 - Intereses: Disponibilidad y confiabilidad del sistema., Seguridad de los datos de los usuarios e integridad del sistema., Escalabilidad para manejar el aumento de la demanda de usuarios.
 - Influencia: Medium
 - Prioridad: Medium
 
-<a id="stakeholder-006"></a>
-## Proveedores de Tecnología e Infraestructura
+<a id="stakeholder-007"></a>
+## Proveedores de tecnologías de información y comunicación (TIC)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:006</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:007</code></span>
 
-- Descripción: Entidades que diseñan, construyen y operan la infraestructura digital y financiera central, incluyendo el banco central y proveedores de tecnología.
+- Descripción: Entidades que diseñan, construyen y operan la infraestructura digital.
 - Rol: Technology Vendors
 - Intereses: Seguridad y estabilidad de las plataformas técnicas., Adherencia a los estándares de la industria., Integración exitosa con otros componentes del sistema.
 - Influencia: High
 - Prioridad: High
 
-<a id="stakeholder-007"></a>
-## Cuerpos Académicos y de Investigación
+<a id="stakeholder-008"></a>
+## Cuerpos académicos y de investigación
 
-<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:007</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:008</code></span>
 
 - Descripción: Laboratorios universitarios y centros de investigación que proporcionan supervisión técnica independiente, análisis de datos y apoyo en la planificación estratégica.
 - Rol: Research Organizations
@@ -92,13 +103,24 @@
 - Influencia: Medium
 - Prioridad: Medium
 
-<a id="stakeholder-008"></a>
-## Socios y Patrocinadores Internacionales
+<a id="stakeholder-009"></a>
+## Agencias de cooperación internacional
 
-<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:008</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:009</code></span>
 
 - Descripción: Organizaciones multilaterales y agencias de desarrollo que proporcionan financiamiento, experiencia técnica y apoyo estratégico para proyectos de modernización.
 - Rol: International Organizations
 - Intereses: Cumplir con los objetivos climáticos y de desarrollo a través de proyectos financiados., Asegurar la implementación y gobernanza exitosa de las iniciativas apoyadas., Promover la adopción de estándares internacionales y mejores prácticas.
+- Influencia: Medium
+- Prioridad: High
+
+<a id="stakeholder-010"></a>
+## Organizaciones no gubernamentales y organizaciones de la sociedad civil
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:010</code></span>
+
+- Descripción: Entidades que representan los intereses de la sociedad civil y abogan por cambios en las políticas públicas.
+- Rol: Civil Society
+- Intereses: Promover la equidad y la justicia social en el transporte público., Asegurar la participación ciudadana en la toma de decisiones., Monitorear el cumplimiento de los derechos de las personas usuarias.
 - Influencia: Medium
 - Prioridad: High

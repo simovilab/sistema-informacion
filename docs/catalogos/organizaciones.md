@@ -16,23 +16,9 @@
 
 
 <a id="organization-001"></a>
-## Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:001</code></span>
-
-- Descripción: Un laboratorio de investigación enfocado en sistemas de movilidad inteligente.
-- Parte interesada: stakeholder:007
-- Type: Laboratorio de Investigación
-- Contacto: simovi@ucr.ac.cr
-- Sitio web: https://simovi.ucr.ac.cr
-- Ubicación: Universidad de Costa Rica, San José, Costa Rica
-- ParentOrganization: —
-- Roles: Research, Development, Consulting
-
-<a id="organization-002"></a>
 ## Ministerio de Obras Públicas y Transportes (MOPT)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:002</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:001</code></span>
 
 - Descripción: El ministerio gubernamental que actúa como autoridad suprema y rectora del sector transporte, estableciendo la política nacional.
 - Parte interesada: stakeholder:003
@@ -43,10 +29,10 @@
 - ParentOrganization: —
 - Roles: Planning, Regulation
 
-<a id="organization-003"></a>
+<a id="organization-002"></a>
 ## Consejo de Transporte Público (CTP)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:003</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:002</code></span>
 
 - Descripción: El organismo especializado dependiente del MOPT, responsable de la gestión diaria y la regulación operativa del transporte público.
 - Parte interesada: stakeholder:003
@@ -57,10 +43,10 @@
 - ParentOrganization: organization:002
 - Roles: Operation, Regulation
 
-<a id="organization-004"></a>
+<a id="organization-003"></a>
 ## Autoridad Reguladora de los Servicios Públicos (ARESEP)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:004</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:003</code></span>
 
 - Descripción: Una autoridad independiente que regula los servicios públicos estableciendo tarifas y supervisando la calidad del servicio.
 - Parte interesada: stakeholder:003
@@ -71,10 +57,10 @@
 - ParentOrganization: —
 - Roles: Regulation, Oversight
 
-<a id="organization-005"></a>
+<a id="organization-004"></a>
 ## Banco Central de Costa Rica (BCCR)
 
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:005</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:004</code></span>
 
 - Descripción: El banco central responsable de operar el sistema nacional de pago electrónico del país (SINPE-TP).
 - Parte interesada: stakeholder:006
@@ -85,10 +71,38 @@
 - ParentOrganization: —
 - Roles: Technology Provider, Operation
 
+<a id="organization-005"></a>
+## Cámara Nacional de Transportistas de Costa Rica (CANATRANS)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:005</code></span>
+
+- Descripción: Organización que representa y fortalece la industria de transporte en Costa Rica, proporcionando formación, información y apoyo.
+- Parte interesada: stakeholder:002
+- Type: Cámara Gremial
+- Contacto: info@canatrans.com
+- Sitio web: https://canatrans.com/
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Consulting, Support
+
 <a id="organization-006"></a>
-## Laboratorio Nacional de Materiales y Modelos Estructurales (LanammeUCR)
+## Cámara Nacional de Autobuseros de Costa Rica (CANABUS)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:006</code></span>
+
+- Descripción: Organización que representa y fortalece la industria de autobuses en Costa Rica, proporcionando formación, información y apoyo.
+- Parte interesada: stakeholder:002
+- Type: Cámara Gremial
+- Contacto: info@canabuscr.com
+- Sitio web: https://canabuscr.com/
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Consulting, Support
+
+<a id="organization-007"></a>
+## Laboratorio Nacional de Materiales y Modelos Estructurales (LanammeUCR)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:007</code></span>
 
 - Descripción: Un centro de investigación universitario que proporciona supervisión técnica independiente y legalmente mandatada de la red vial nacional.
 - Parte interesada: stakeholder:007
@@ -99,47 +113,33 @@
 - ParentOrganization: —
 - Roles: Oversight, Research
 
-<a id="organization-007"></a>
-## Grupo ICE (Instituto Costarricense de Electricidad)
-
-<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:007</code></span>
-
-- Descripción: Grupo empresarial estatal integrado por cuatro empresas que ofrecen soluciones de electricidad y telecomunicaciones en Costa Rica.
-- Parte interesada: stakeholder:006
-- Type: Empresa Estatal
-- Contacto: contactenos@ice.go.cr
-- Sitio web: https://www.grupoice.com/
-- Ubicación: San José, Costa Rica
-- ParentOrganization: —
-- Roles: Technology Provider, Service Provider
-
 <a id="organization-008"></a>
-## Cooperativa de Electrificación Rural Los Santos (Coopesantos R.L.)
+## ProDUS (Programa de Investigación en Desarrollo Urbano Sostenible)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:008</code></span>
 
-- Descripción: Cooperativa que brinda servicio eléctrico, internet y TV por cable a la zona de los Santos y Caraigres.
-- Parte interesada: stakeholder:006
-- Type: Cooperativa
-- Contacto: servicioalcliente@coopesantos.com
-- Sitio web: https://www.coopesantos.com/
-- Ubicación: Zona de los Santos, Costa Rica
+- Descripción: Programa de investigación de la Universidad de Costa Rica (UCR) enfocado en el análisis y la planificación del desarrollo urbano y la movilidad sostenible.
+- Parte interesada: stakeholder:007
+- Type: Laboratorio de Investigación
+- Contacto: produs@ucr.ac.cr
+- Sitio web: https://produs.ucr.ac.cr/
+- Ubicación: Universidad de Costa Rica, San José, Costa Rica
 - ParentOrganization: —
-- Roles: Service Provider
+- Roles: Research, Consulting, Planning
 
 <a id="organization-009"></a>
-## Cámara Nacional de Autobuseros de Costa Rica (CANABUS)
+## Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:009</code></span>
 
-- Descripción: Organización que representa y fortalece la industria de autobuses en Costa Rica, proporcionando formación, información y apoyo.
-- Parte interesada: stakeholder:002
-- Type: Cámara Gremial
-- Contacto: info@canabuscr.com
-- Sitio web: https://canabuscr.com/
-- Ubicación: San José, Costa Rica
+- Descripción: Un laboratorio de investigación enfocado en sistemas de movilidad inteligente.
+- Parte interesada: stakeholder:007
+- Type: Laboratorio de Investigación
+- Contacto: simovi@ucr.ac.cr
+- Sitio web: https://simovi.ucr.ac.cr
+- Ubicación: Universidad de Costa Rica, San José, Costa Rica
 - ParentOrganization: —
-- Roles: Consulting, Support
+- Roles: Research, Development, Consulting
 
 <a id="organization-010"></a>
 ## GIZ (Deutsche Gesellschaft für Internationale Zusammenarbeit)
@@ -184,15 +184,57 @@
 - Roles: Funding, Support
 
 <a id="organization-013"></a>
-## ProDUS (Programa de Investigación en Desarrollo Urbano Sostenible)
+## Centro para la Sostenibilidad Urbana (CPSU)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:013</code></span>
 
-- Descripción: Programa de investigación de la Universidad de Costa Rica (UCR) enfocado en el análisis y la planificación del desarrollo urbano y la movilidad sostenible.
-- Parte interesada: stakeholder:007
-- Type: Laboratorio de Investigación
-- Contacto: produs@ucr.ac.cr
-- Sitio web: https://produs.ucr.ac.cr/
-- Ubicación: Universidad de Costa Rica, San José, Costa Rica
+- Descripción: Organización dedicada a la promoción de la sostenibilidad urbana en Costa Rica.
+- Parte interesada: stakeholder:009
+- Type: Organización No Gubernamental
+- Contacto: info@cpsu.org
+- Sitio web: https://www.cpsu.org/
+- Ubicación: San José, Costa Rica
 - ParentOrganization: —
-- Roles: Research, Consulting, Planning
+- Roles: Consulting, Research, Oversight
+
+<a id="organization-014"></a>
+## Ministerio de Ciencia, Innovación, Tecnología y Telecomunicaciones (MICITT)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:014</code></span>
+
+- Descripción: El ministerio gubernamental responsable de la formulación y ejecución de políticas relacionadas con la ciencia, la tecnología y las telecomunicaciones en Costa Rica.
+- Parte interesada: stakeholder:003
+- Type: Agencia Gubernamental
+- Contacto: info@micitt.go.cr
+- Sitio web: https://www.micitt.go.cr/
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Planning, Regulation
+
+<a id="organization-015"></a>
+## Grupo ICE (Instituto Costarricense de Electricidad)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:015</code></span>
+
+- Descripción: Grupo empresarial estatal integrado por cuatro empresas que ofrecen soluciones de electricidad y telecomunicaciones en Costa Rica.
+- Parte interesada: stakeholder:006
+- Type: Empresa Estatal
+- Contacto: contactenos@ice.go.cr
+- Sitio web: https://www.grupoice.com/
+- Ubicación: San José, Costa Rica
+- ParentOrganization: —
+- Roles: Technology Provider, Service Provider
+
+<a id="organization-016"></a>
+## Cooperativa de Electrificación Rural Los Santos (Coopesantos R.L.)
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F9F0FF"><span class="catalog-icon material-symbols-outlined">apartment</span><code style="background:none;padding:0;margin:0;border:0;">organization:016</code></span>
+
+- Descripción: Cooperativa que brinda servicio eléctrico, internet y TV por cable a la zona de los Santos y Caraigres.
+- Parte interesada: stakeholder:006
+- Type: Cooperativa
+- Contacto: servicioalcliente@coopesantos.com
+- Sitio web: https://www.coopesantos.com/
+- Ubicación: Zona de los Santos, Costa Rica
+- ParentOrganization: —
+- Roles: Service Provider

@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=../schemas/actors.schema.json
+
 metadata:
   title: "Catálogo de Actores"
   version: "1.3"
@@ -12,47 +14,50 @@ metadata:
 
 actors:
   - id: "actor:001"
-    name: "Fabián Abarca Calderón"
-    description: "Arquitecto Principal en SIMOVI."
+    name: "Ministro de Obras Públicas y Transportes"
+    description: "Ministro de Obras Públicas y Transportes (MOPT)."
     type: "Person"
-    contact: "fabian.abarca@ucr.ac.cr"
-    organization: "organization:001"
-    roles:
-      - "Lead Architect"
-      - "Project Manager"
-
-  - id: "actor:002"
-    name: "Jose Murillo Vargas"
-    description: "Estudiante y contribuyente del proyecto, responsable de los catálogos de Stakeholder, Organization y Actor."
-    type: "Person"
-    contact: "jose.murillovargas@ucr.ac.cr"
-    organization: "organization:001"
-    roles:
-      - "Developer"
-      - "Analyst"
-
-  - id: "actor:003"
-    name: "Efraím Zeledón Leiva"
-    description: "Ministro actual de Obras Públicas y Transportes (MOPT)."
-    type: "Person"
+    person: "Efraím Zeledón Leiva"
     contact: "dvagecorrespondencia@mopt.go.cr"
     organization: "organization:002"
     roles:
       - "Project Manager"
 
-  - id: "actor:004"
-    name: "Rafael Alberto Herrera García"
-    description: "Director Ejecutivo actual del Consejo de Transporte Público (CTP)."
+  - id: "actor:002"
+    name: "Director Ejecutivo del Consejo de Transporte Público (CTP)"
+    description: "Director Ejecutivo del Consejo de Transporte Público (CTP)."
     type: "Person"
+    person: "Rafael Alberto Herrera García"
+    contact: "atencion.usuario@ctp.go.cr"
+    organization: "organization:003"
+    roles:
+      - "Operations Manager"
+
+  - id: "actor:003"
+    name: "Director Técnico del Consejo de Transporte Público (CTP)"
+    description: "Director Técnico del Consejo de Transporte Público (CTP)."
+    type: "Person"
+    person: "Aura Álvarez Orozco"
+    contact: "atencion.usuario@ctp.go.cr"
+    organization: "organization:003"
+    roles:
+      - "Operations Manager"
+
+  - id: "actor:004"
+    name: "Jefe del Departamento de Ingeniería del Consejo de Transporte Público (CTP)"
+    description: "Jefe del Departamento de Ingeniería del Consejo de Transporte Público (CTP)."
+    type: "Person"
+    person: "Rafael Magaña Aguilar"
     contact: "atencion.usuario@ctp.go.cr"
     organization: "organization:003"
     roles:
       - "Operations Manager"
 
   - id: "actor:005"
-    name: "Eric Bogantes Cabezas"
-    description: "Regulador General actual de la Autoridad Reguladora de los Servicios Públicos (ARESEP)."
+    name: "Regulador General de la Autoridad Reguladora de los Servicios Públicos (ARESEP)"
+    description: "Regulador General de la Autoridad Reguladora de los Servicios Públicos (ARESEP)."
     type: "Person"
+    person: "Eric Bogantes Cabezas"
     contact: "cmora@aresep.go.cr"
     organization: "organization:004"
     roles:
@@ -60,21 +65,66 @@ actors:
       - "Consultant"
 
   - id: "actor:006"
-    name: "Róger Madrigal López"
-    description: "Presidente Ejecutivo actual del Banco Central de Costa Rica (BCCR)."
-    type: "Person"
-    contact: "atencionalciudadano@bccr.fi.cr"
-    organization: "organization:005"
-    roles:
-      - "Project Manager"
-  
-  - id: "actor:007"
-    name: "Paolo Andrés Varela Brenes"
+    name: "Intendente de Transporte"
     description: "Intendente a.i. de Transporte en ARESEP, responsable de regular los servicios de transporte remunerado e infraestructura."
     type: "Person"
+    person: "Paolo Andrés Varela Brenes"
     contact: "varelab@aresep.go.cr"
     organization: "organization:004" 
     roles: 
       - "Analyst"
       - "Consultant" 
+
+  - id: "actor:007"
+    name: "Presidente Ejecutivo del Banco Central de Costa Rica (BCCR)"
+    description: "Presidente Ejecutivo del Banco Central de Costa Rica (BCCR)."
+    type: "Person"
+    person: "Róger Madrigal López"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:005"
+    roles:
+      - "Project Manager"
+
+  - id: "actor:008"
+    name: "Director División Sistemas de Pago del Banco Central de Costa Rica (BCCR)"
+    description: "Director de la División de Sistemas de Pago del Banco Central de Costa Rica (BCCR)."
+    type: "Person"
+    person: "Carlos Melegatti Sarlo"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:005"
+    roles:
+      - "Project Manager"
     
+  - id: "actor:009"
+    name: "Director del Sistema Nacional de Pago Electrónico en el Transporte Público (SINPE-TP)"
+    description: "Director del Sistema Nacional de Pago Electrónico en el Transporte Público (SINPE-TP)."
+    type: "Person"
+    person: "Suzeth Rodríguez Solís"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:005"
+    roles:
+      - "Project Manager"
+  
+  - id: "actor:010"
+    name: "Arquitecto Principal en SIMOVI"
+    description: "Arquitecto Principal en SIMOVI."
+    type: "Person"
+    person: "Fabián Abarca Calderón"
+    contact: "fabian.abarca@ucr.ac.cr"
+    organization: "organization:001"
+    roles:
+      - "Lead Architect"
+      - "Project Manager"
+
+  - id: "actor:011"
+    name: "Estudiante y contribuyente de InfoTP"
+    description: "Estudiante y contribuyente del proyecto, responsable de los catálogos de Stakeholder, Organization y Actor."
+    type: "Person"
+    person: "Jose Murillo Vargas"
+    contact: "jose.murillovargas@ucr.ac.cr"
+    organization: "organization:001"
+    roles:
+      - "Developer"
+      - "Analyst"
+
+# Faltan: Coordinador de ProDUS (Jonathan Agüero Valverde), Director de LanammeUCR (Rolando Castillo Barahona)

@@ -3,7 +3,7 @@
   "title": "Organization/Actor Catalog Schema",
   "description": "JSON Schema for validating organization/actor catalog YAML files in the Public Transportation Information System architecture",
   "type": "object",
-  "required": ["metadata", "organizations", "actors"],
+  "required": ["metadata", "actors"],
   "properties": {
     "metadata": {
       "$ref": "./metadata.schema.json"
@@ -34,6 +34,10 @@
             "type": "string",
             "enum": ["Person", "System", "Role", "External System", "Automated Process"],
             "description": "Type of actor"
+          },
+          "person": {
+            "type": "string",
+            "description": "Name of the person if the actor is an individual"
           },
           "contact": {
             "type": "string",
