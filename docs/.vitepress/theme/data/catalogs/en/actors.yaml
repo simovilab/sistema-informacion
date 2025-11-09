@@ -1,79 +1,307 @@
+# yaml-language-server: $schema=./actors.schema.json
+
 metadata:
   title: "Actor Catalog"
   version: "1.3"
-  date: "2025-10-30"
-  description: "A catalog of actors (individuals) for the Public Transportation Information System."
+  date: "2025-10-23"
+  description: "A catalog of the actors (individuals) for the Public Transportation Information System."
   author:
     - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
-  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
 actors:
+  # === Government authorities and regulatory bodies ===
+
+  # MOPT (organization:001)
   - id: "actor:001"
-    name: "Fabián Abarca Calderón"
+    name: "Minister of Public Works and Transport"
+    description: "Minister of Public Works and Transport (MOPT)."
+    type: "Person"
+    person: "Efraím Zeledón Leiva"
+    contact: "despacho.presidente@presidencia.go.cr."
+    organization: "organization:001"
+    roles:
+      - "Project Manager"
+
+  # CTP (organization:002)
+  - id: "actor:002"
+    name: "Executive Director of the Public Transport Council (CTP)"
+    description: "Executive Director of the Public Transport Council (CTP)."
+    type: "Person"
+    person: "Rafael Alberto Herrera García"
+    contact: "informacion@ctp.go.cr"
+    organization: "organization:002"
+    roles:
+      - "Operations Manager"
+  - id: "actor:003"
+    name: "Technical Director of the Public Transport Council (CTP)"
+    description: "Technical Director of the Public Transport Council (CTP)."
+    type: "Person"
+    person: "Aura Álvarez Orozco"
+    contact: "informacion@ctp.go.cr"
+    organization: "organization:002"
+    roles:
+      - "Operations Manager"
+
+
+  # ARESEP (organization:003)
+  - id: "actor:004"
+    name: "Regulator General of the Public Services Regulatory Authority (ARESEP)"
+    description: "Regulator General of the Public Services Regulatory Authority (ARESEP)."
+    type: "Person"
+    person: "Eric Bogantes Cabezas"
+    contact: "informacion@aresep.go.cr"
+    organization: "organization:003"
+    roles:
+      - "Analyst"
+      - "Consultant"
+  - id: "actor:005"
+    name: "Superintendent of Transport"
+    description: "Acting Superintendent of Transport at ARESEP, responsible for regulating paid transport services and infrastructure."
+    type: "Person"
+    person: "Paolo Andrés Varela Brenes"
+    contact: "varelab@aresep.go.cr"
+    organization: "organization:003"
+    roles:
+      - "Analyst"
+      - "Consultant"
+
+  # BCCR (organization:004)
+  - id: "actor:006"
+    name: "Executive President of the Central Bank of Costa Rica (BCCR)"
+    description: "Executive President of the Central Bank of Costa Rica (BCCR)."
+    type: "Person"
+    person: "Róger Madrigal López"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:004"
+    roles:
+      - "Project Manager"
+  - id: "actor:007"
+    name: "Director of the Payment Systems Division of the Central Bank of Costa Rica (BCCR)"
+    description: "Director of the Payment Systems Division of the Central Bank of Costa Rica (BCCR)."
+    type: "Person"
+    person: "Carlos Melegatti Sarlo"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:004"
+    roles:
+      - "Project Manager"
+  - id: "actor:008"
+    name: "Director of the National Electronic Payment System in Public Transport (SINPE-TP)"
+    description: "Director of the National Electronic Payment System in Public Transport (SINPE-TP)."
+    type: "Person"
+    person: "Suzeth Rodríguez Solís"
+    contact: "atencionalciudadano@bccr.fi.cr"
+    organization: "organization:004"
+    roles:
+      - "Project Manager"
+
+  # === Industry associations ===
+
+  # CANATRANS (organization:005)
+  - id: "actor:009"
+    name: "Executive Director of CANATRANS"
+    description: "Executive Director of the National Chamber of Transporters of Costa Rica."
+    type: "Person"
+    person: "Silvia Bolaños"
+    contact: "canatrans@canatrans.or.cr"
+    organization: "organization:005"
+    roles:
+      - "Consultant"
+      - "Project Manager"
+
+  # CANABUS (organization:006)
+  - id: "actor:010"
+    name: "President of CANABUS"
+    description: "President of the National Chamber of Bus Operators of Costa Rica."
+    type: "Person"
+    person: "Bernal Rodríguez"
+    contact: "canabuscamara@gmail.com"
+    organization: "organization:006"
+    roles:
+      - "Consultant"
+      - "Project Manager"
+
+  # === Research laboratories and universities ===
+
+  # LanammeUCR (organization:007)
+  - id: "actor:011"
+    name: "Director of LanammeUCR"
+    description: "General Director of the National Laboratory of Materials and Structural Models (LanammeUCR)."
+    type: "Person"
+    person: "Rolando Castillo Barahona"
+    contact: "direccion.lanamme@ucr.ac.cr"
+    organization: "organization:007"
+    roles:
+      - "Project Manager"
+      - "Analyst"
+
+  # ProDUS (organization:008)
+  - id: "actor:012"
+    name: "Coordinator of ProDUS"
+    description: "Coordinator of the Research Program in Sustainable Urban Development (ProDUS)."
+    type: "Person"
+    person: "Jonathan Agüero Valverde"
+    contact: "produs@ucr.ac.cr"
+    organization: "organization:008"
+    roles:
+      - "Researcher"
+      - "Analyst"
+      - "Consultant"
+
+  # SIMOVI (organization:009)
+  - id: "actor:013"
+    name: "Lead Architect at SIMOVI"
     description: "Lead Architect at SIMOVI."
     type: "Person"
+    person: "Fabián Abarca Calderón"
     contact: "fabian.abarca@ucr.ac.cr"
-    organization: "organization:001"
+    organization: "organization:009"
     roles:
       - "Lead Architect"
       - "Project Manager"
-
-  - id: "actor:002"
-    name: "Jose Murillo Vargas"
+  - id: "actor:014"
+    name: "Student and InfoTP Contributor"
     description: "Student and project contributor, responsible for the Stakeholder, Organization, and Actor catalogs."
     type: "Person"
+    person: "Jose Murillo Vargas"
     contact: "jose.murillovargas@ucr.ac.cr"
-    organization: "organization:001"
+    organization: "organization:009"
     roles:
       - "Developer"
       - "Analyst"
 
-  - id: "actor:003"
-    name: "Efraím Zeledón Leiva"
-    description: "Current Minister of Public Works and Transport (MOPT)."
+  # === International cooperation agencies ===
+
+  # GIZ (organization:010)
+  - id: "actor:015"
+    name: "Resident Director of GIZ Costa Rica"
+    description: "Resident Director of the German cooperation agency GIZ in Costa Rica."
     type: "Person"
-    contact: "dvagecorrespondencia@mopt.go.cr"
-    organization: "organization:002"
+    person: "Andreas Villar"
+    contact: "comunicacion.centroamerica@giz.de"
+    organization: "organization:010"
+    roles:
+      - "Consultant"
+      - "Project Manager"
+
+  # European Union (organization:011)
+  - id: "actor:016"
+    name: "Ambassador of the European Union to Costa Rica"
+    description: "Ambassador and Head of the Delegation of the European Union to Costa Rica."
+    type: "Person"
+    person: "Pierre-Louis Lempereur"
+    contact: "costa-rica@eeas.europa.eu"
+    organization: "organization:011"
+    roles:
+      - "Consultant"
+
+  # Fundación CRUSA (organization:012)
+  - id: "actor:017"
+    name: "President of the CRUSA Foundation"
+    description: "President of the Board of Directors of the CRUSA Foundation."
+    type: "Person"
+    person: "Jéssica García Hernández"
+    contact: "info@cpsurbana.org"
+    organization: "organization:012"
     roles:
       - "Project Manager"
 
-  - id: "actor:004"
-    name: "Rafael Alberto Herrera García"
-    description: "Current Executive Director of the Public Transport Council (CTP)."
+  # === Non-governmental and civil society organizations ===
+
+  # CPSU (organization:013)
+  - id: "actor:018"
+    name: "Executive Director of the Center for Urban Sustainability (CPSU)"
+    description: "Executive Director of the CPSU."
     type: "Person"
-    contact: "atencion.usuario@ctp.go.cr"
-    organization: "organization:003"
+    person: "Pablo Castro"
+    contact: "info@cpsu.org"
+    organization: "organization:013"
+    roles:
+      - "Researcher"
+      - "Analyst"
+
+  # === Ministries ===
+
+  # MICITT (organization:014)
+  - id: "actor:019"
+    name: "Minister of MICITT"
+    description: "Minister of Science, Innovation, Technology, and Telecommunications."
+    type: "Person"
+    person: "Paula Bogantes Zamora"
+    contact: "gobernanzadigital@micitt.go.cr"
+    organization: "organization:014"
+    roles:
+      - "Project Manager"
+
+  # MINAE (organization:015)
+  - id: "actor:020"
+    name: "Minister of MINAE"
+    description: "Minister of Environment and Energy."
+    type: "Person"
+    person: "Franz Tattenbach Capra"
+    contact: "despachominae@minae.go.cr"
+    organization: "organization:015"
+    roles:
+      - "Project Manager"
+
+  # MIDEPLAN (organization:016)
+  - id: "actor:021"
+    name: "Minister of MIDEPLAN"
+    description: "Minister of National Planning and Economic Policy."
+    type: "Person"
+    person: "Marlon Navarro Álvarez"
+    contact: "comunicacion@mideplan.go.cr"
+    organization: "organization:016"
+    roles:
+      - "Project Manager"
+
+  # === Service and technology providers ===
+
+  # Grupo ICE (organization:017)
+  - id: "actor:022"
+    name: "Executive President of Grupo ICE"
+    description: "Executive President of the Costa Rican Electricity Institute."
+    type: "Person"
+    person: "Marco Acuña Mora"
+    contact: "contactenos@ice.go.cr"
+    organization: "organization:017"
+    roles:
+      - "Project Manager"
+      - "Operations Manager"
+
+  # Coopesantos R.L. (organization:018)
+  - id: "actor:023"
+    name: "General Manager of Coopesantos R.L."
+    description: "General Manager of the Los Santos Rural Electrification Cooperative."
+    type: "Person"
+    person: "Mario Patricio Solís"
+    contact: "servicioalcliente@coopesantos.com"
+    organization: "organization:018"
     roles:
       - "Operations Manager"
 
-  - id: "actor:005"
-    name: "Eric Bogantes Cabezas"
-    description: "Current General Regulator of the Regulatory Authority for Public Services (ARESEP)."
+  # CNFL (organization:019)
+  - id: "actor:024"
+    name: "General Manager of CNFL"
+    description: "General Manager of the National Power and Light Company."
     type: "Person"
-    contact: "cmora@aresep.go.cr"
-    organization: "organization:004"
+    person: "Luis Fernando Andrés Jácome"
+    contact: "800energia@cnfl.go.cr"
+    organization: "organization:019"
     roles:
-      - "Analyst"
-      - "Consultant"
+      - "Operations Manager"
 
-  - id: "actor:006"
-    name: "Róger Madrigal López"
-    description: "Current Executive President of the Central Bank of Costa Rica (BCCR)."
+  # RACSA (organization:020)
+  - id: "actor:025"
+    name: "General Manager of RACSA"
+    description: "General Manager of Radiográfica Costarricense."
     type: "Person"
-    contact: "atencionalciudadano@bccr.fi.cr"
-    organization: "organization:0Google"
+    person: "Mauricio Barrantes Quesada"
+    contact: "servicioacliente@racsa.go.cr"
+    organization: "organization:020"
     roles:
+      - "Operations Manager"
       - "Project Manager"
-
-  - id: "actor:007"
-    name: "Paolo Andrés Varela Brenes"
-    description: "Interim Intendant of Transport at ARESEP, responsible for regulating paid transport services and infrastructure."
-    type: "Person"
-    contact: "varelab@aresep.go.cr"
-    organization: "organization:004"
-    roles:
-      - "Analyst"
-      - "Consultant"

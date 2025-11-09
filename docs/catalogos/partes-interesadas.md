@@ -124,3 +124,25 @@
 - Intereses: Promover la equidad y la justicia social en el transporte público., Asegurar la participación ciudadana en la toma de decisiones., Monitorear el cumplimiento de los derechos de las personas usuarias.
 - Influencia: Medium
 - Prioridad: High
+
+<a id="stakeholder-011"></a>
+## Personas usuarias viales
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:011</code></span>
+
+- Descripción: Peatones, ciclistas, conductores de vehículos privados y otros usuarios que comparten la infraestructura vial con el transporte público.
+- Rol: Civil Society
+- Intereses: Seguridad en las intersecciones y paradas de autobús., Infraestructura vial compartida de forma equitativa., Reducción de la congestión y la contaminación.
+- Influencia: Medium
+- Prioridad: Medium
+
+<a id="stakeholder-012"></a>
+## Personas con discapacidad
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6F4FF"><span class="catalog-icon material-symbols-outlined">groups_2</span><code style="background:none;padding:0;margin:0;border:0;">stakeholder:012</code></span>
+
+- Descripción: Personas con movilidad reducida, discapacidades visuales, auditivas u otras que requieren características de accesibilidad especiales en el transporte.
+- Rol: End Users
+- Intereses: Accesibilidad universal en autobuses y paradas (rampas, espacio para sillas de ruedas)., Sistemas de información auditivos y visuales claros., Tarifas y políticas de asistencia justas.
+- Influencia: High
+- Prioridad: High
