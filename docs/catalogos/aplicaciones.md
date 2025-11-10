@@ -24,7 +24,7 @@
 - Versión: 0.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transportation, Real-Time Data, Transit Management
 - Tecnologías: GPS, Mobile App, GPS / GNSS, Automated Vehicle Location (AVL), Wireless communications (3G/4G/5G, DSRC, C-V2X), Centralized fleet management software
 - Partes interesadas: Transit Authorities
@@ -41,7 +41,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: Computer-Aided Dispatch (CAD), AVL, Radio / Cellular communications, Operations control center systems
 - Partes interesadas: Transit Authorities
@@ -58,7 +58,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: Mobile apps (smartphone, tablets), Trip planning software, Cloud-based dispatching, APIs for real-time schedule updates
 - Partes interesadas: Passengers, Transit Authorities
@@ -75,7 +75,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: Smart cards / RFID, NFC (contactless payment), Mobile payment apps (QR, wallet), Fare collection back-office systems
 - Partes interesadas: Passengers, Transit Authorities
@@ -92,7 +92,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Security
 - Tecnologías: CCTV with video analytics, Panic buttons / emergency communication systems, Access control & intrusion detection, Security operation centers
 - Partes interesadas: Passengers, Transit Authorities
@@ -109,7 +109,7 @@
 - Versión: 1.0.0
 - Proveedor: FleetTech Solutions
 - Licencia: Custom
-- Contacto soporte: support@fleettech.com
+- Contacto de soporte: support@fleettech.com
 - Categorías: Transit Management
 - Tecnologías: On-board diagnostics (OBD-II, CAN bus), Predictive maintenance software, Telematics, IoT sensors
 - Partes interesadas: Maintenance Teams, Transit Authorities
@@ -126,7 +126,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: Infrared / ultrasonic sensors, Video analytics with AI, Weight sensors, Wireless data transmission
 - Partes interesadas: Transit Authorities
@@ -143,7 +143,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Traveler Information
 - Tecnologías: Digital signage (LED displays), Mobile apps / web portals, GTFS-Realtime feeds, Cloud-based information dissemination
 - Partes interesadas: Passengers, Transit Authorities
@@ -160,7 +160,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Traffic Management
 - Tecnologías: DSRC / C-V2X communication, Adaptive signal control software, GPS-based priority request, Traffic management centers
 - Partes interesadas: Transit Authorities
@@ -177,7 +177,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Traffic Management
 - Tecnologías: Dynamic lane control signals, Roadside sensors & cameras, Traffic monitoring systems, Intelligent lane management software
 - Partes interesadas: Transit Authorities
@@ -194,7 +194,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Security
 - Tecnologías: Vehicle-to-Pedestrian (V2P) communications, Smartphones / wearables with apps, Roadside Units (RSUs) with DSRC / C-V2X
 - Partes interesadas: Transit Authorities
@@ -211,7 +211,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Security
 - Tecnologías: V2V / V2I communications, On-board warning systems, Roadside connected infrastructure
 - Partes interesadas: Transit Authorities
@@ -228,7 +228,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Security
 - Tecnologías: V2V communications (DSRC / C-V2X), Vehicle movement detection (radar, LIDAR, cameras), Driver alerting systems
 - Partes interesadas: Bus Operators
@@ -245,7 +245,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Traffic Management
 - Tecnologías: Inter-agency communication platforms, API integration, Cloud-based coordination systems
 - Partes interesadas: Transit Authorities
@@ -262,7 +262,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: On-board passenger interface, Wireless request communication, Vehicle Human-Machine Interface (HMI)
 - Partes interesadas: Passengers
@@ -279,7 +279,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Traveler Information
 - Tecnologías: Bluetooth beacons, Audio announcements, Smartphone accessibility apps, Haptic feedback devices
 - Partes interesadas: Transit Authorities
@@ -296,7 +296,7 @@
 - Versión: 1.0.0
 - Proveedor: N/A
 - Licencia: Custom
-- Contacto soporte: email@example.com
+- Contacto de soporte: email@example.com
 - Categorías: Transit Management
 - Tecnologías: Mobile applications for requests, Real-time operations coordination, Communications with traffic control
 - Partes interesadas: Passengers, Transit Authorities

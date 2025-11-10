@@ -82,8 +82,8 @@ export default defineConfig({
                 link: "/diseno/canales/identidad-visual",
               },
               {
-                text: "Redes sociales",
-                link: "/diseno/canales/redes-sociales",
+                text: "Señalización",
+                link: "/diseno/canales/senalizacion",
               },
               {
                 text: "Medios digitales",
@@ -92,6 +92,10 @@ export default defineConfig({
               {
                 text: "Medios impresos",
                 link: "/diseno/canales/medios-impresos",
+              },
+              {
+                text: "Redes sociales",
+                link: "/diseno/canales/redes-sociales",
               },
               {
                 text: "Atención al cliente",
