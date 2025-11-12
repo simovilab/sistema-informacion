@@ -78,14 +78,6 @@ export default defineConfig({
                 link: "/diseno/canales/datos-tiempo-real",
               },
               {
-                text: "Identidad visual",
-                link: "/diseno/canales/identidad-visual",
-              },
-              {
-                text: "Señalización",
-                link: "/diseno/canales/senalizacion",
-              },
-              {
                 text: "Medios digitales",
                 link: "/diseno/canales/medios-digitales",
               },
@@ -112,6 +104,18 @@ export default defineConfig({
               { text: "A2: Distribución", link: "/diseno/arquitectura/a2" },
               { text: "A3: Administración", link: "/diseno/arquitectura/a3" },
               { text: "A4: Operaciones", link: "/diseno/arquitectura/a4" },
+            ],
+          },
+          {
+            text: "Identidad visual",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/diseno/identidad-visual/" },
+              { text: "Marca", link: "/diseno/identidad-visual/marca" },
+              { text: "Elementos gráficos", link: "/diseno/identidad-visual/elementos-graficos" },
+              { text: "Interfaces gráficas", link: "/diseno/identidad-visual/interfaces-graficas" },
+              { text: "Señalización", link: "/diseno/identidad-visual/senalizacion" },
+              { text: "Plantillas", link: "/diseno/identidad-visual/plantillas" },
             ],
           },
         ],
