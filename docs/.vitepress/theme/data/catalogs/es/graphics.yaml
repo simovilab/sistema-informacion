@@ -1,8 +1,8 @@
 metadata:
-  title: "Graphic Elements Catalog"
+  title: "Catálogo de elementos gráficos"
   version: "0.1"
   date: "2025-11-12"
-  description: "Defines core visual elements including colors, typography, shapes, and icons."
+  description: "Define los elementos visuales principales incluyendo colores, tipografía, formas e íconos."
   author:
     - "Ian Gama Oashi"
     - "Fabián Abarca Calderón"
@@ -12,34 +12,36 @@ metadata:
 
 colors:
   - id: color:001
-    name: "Primary Blue"
+    name: "Azul primario"
     hex: "#005BBB"
     rgb: "0,91,187"
-    usage: "Primary brand color used for headers, buttons, and signage backgrounds."
-    contrast_ratio: "AA compliant on white background"
+    usage: "Color de marca principal usado para encabezados, botones y fondos de señalización."
+    contrast_ratio: "Cumple AA sobre fondo blanco"
   - id: color:002
-    name: "Secondary Yellow"
+    name: "Amarillo secundario"
     hex: "#FFD500"
-    usage: "Accent color for highlights and alerts."
+    usage: "Color de acento para resaltados y alertas."
 
 typography:
   - id: font:001
+    name: "Inter"
     family: "Inter"
     weight: ["Regular", "Bold"]
-    usage: "Used across digital interfaces for legibility."
+    usage: "Usado en interfaces digitales para legibilidad."
   - id: font:002
+    name: "Roboto Condensed"
     family: "Roboto Condensed"
-    usage: "Used for signage and display systems."
-
-shapes:
-  - id: shape:001
-    name: "Rounded Rectangle"
-    corner_radius: "8px"
-    usage: "Used for buttons and wayfinding signs."
+    usage: "Usado para señalización y sistemas de visualización."
 
 icons:
   - id: icon:bus
-    name: "Bus Icon"
+    name: "Autobús"
     style: "Outlined"
     source: "Material Design"
-    usage: "Used in stop signage and digital maps."
+    usage: "Usado en señalización de paradas y mapas digitales."
+
+shapes:
+  - id: shape:001
+    name: "Rectángulo redondeado"
+    corner_radius: "8px"
+    usage: "Usado para botones y señales de orientación."

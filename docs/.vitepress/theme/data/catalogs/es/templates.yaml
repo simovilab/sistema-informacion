@@ -1,8 +1,8 @@
 metadata:
-  title: "Templates and Communication Materials Catalog"
+  title: "Catálogo de plantillas y materiales de comunicación"
   version: "0.1"
   date: "2025-11-12"
-  description: "Defines communication templates to maintain brand coherence."
+  description: "Define las plantillas de comunicación para mantener la coherencia de marca."
   author:
     - "Ian Gama Oashi"
     - "Fabián Abarca Calderón"
@@ -12,20 +12,20 @@ metadata:
 
 templates:
   - id: template:poster
-    name: "Information Poster"
+    name: "Póster informativo"
     size: "A2"
-    layout: "Header + Image + Body + Footer"
-    logo_position: "Top-left"
-    primary_color: "Primary Blue"
+    layout: "Encabezado + Imagen + Cuerpo + Pie de página"
+    logo_position: "Superior izquierda"
+    primary_color: "Azul primario"
     font: "Inter Regular 14pt"
     file_format: "Adobe Illustrator / PDF"
 
   - id: template:ppt
-    name: "Presentation Template"
+    name: "Plantilla de presentación"
     ratio: "16:9"
     font: "Inter"
-    colors: ["Primary Blue", "Gray 600"]
+    colors: ["Azul primario", "Gris 600"]
     slide_types:
-      - "Title Slide"
-      - "Content Slide"
-      - "Conclusion Slide"
+      - "Diapositiva de título"
+      - "Diapositiva de contenido"
+      - "Diapositiva de conclusión"

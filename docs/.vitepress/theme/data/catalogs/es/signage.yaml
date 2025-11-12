@@ -1,8 +1,8 @@
 metadata:
-  title: "Signage and Environmental Design Catalog"
+  title: "Catálogo de señalización y diseño ambiental"
   version: "0.1"
   date: "2025-11-12"
-  description: "Catalog of physical signage elements for the public transportation system."
+  description: "Catálogo de elementos físicos de señalización para el sistema de transporte público."
   author:
     - "Ian Gama Oashi"
     - "Fabián Abarca Calderón"
@@ -12,17 +12,34 @@ metadata:
 
 signage:
   - id: signage:001
-    type: "Bus Stop Sign"
+    name: "Señal de parada de autobús"
+    type: "Señal de parada de autobús"
     dimensions: "60x90 cm"
     orientation: "Vertical"
-    materials: "Aluminum with reflective vinyl"
+    materials: "Aluminio con vinilo reflectivo"
     typography: "Inter"
-    color_scheme: ["Primary Blue", "White"]
+    color_scheme: ["Azul primario", "Blanco"]
     content_elements:
-      - "Route number"
-      - "Stop name"
-      - "QR code"
-    installation_height: "2.2 m from ground"
-    location_context: "Urban bus stops"
+      - "Número de ruta"
+      - "Nombre de la parada"
+      - "Código QR"
+    installation_height: "2.2 m desde el suelo"
+    location_context: "Paradas de autobús urbanas"
     standard_reference: "ISO 7001:2023"
-    maintenance_interval: "24 months"
+    maintenance_interval: "24 meses"
+  
+  - id: signage:002
+    name: "Señal de dirección"
+    type: "Señal de dirección"
+    dimensions: "30x15 cm"
+    orientation: "Horizontal"
+    materials: "Plástico duradero"
+    typography: "Roboto Condensed"
+    color_scheme: ["Amarillo secundario", "Negro"]
+    content_elements:
+      - "Flecha de dirección"
+      - "Distancia al próximo punto de interés"
+    installation_height: "1.8 m desde el suelo"
+    location_context: "Intersecciones y puntos de decisión"
+    standard_reference: "ISO 7001:2023"
+    maintenance_interval: "36 meses"
