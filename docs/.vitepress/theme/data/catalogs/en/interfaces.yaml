@@ -5,11 +5,11 @@ metadata:
   date: "2025-09-18"
   description: "A catalog of architectural interfaces for a Public Transportation Information System."
   author: "Fabián Abarca Calderón"
-  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY 4.0"
 
-# Interface catalog
+# Interfaces catalog
 interfaces:
   - id: interface:001
     name: "User Authentication Interface"
@@ -22,11 +22,8 @@ interfaces:
     security:
       - "OAuth 2.0"
     version: "1.0"
-    owner: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+    owner: "Intelligent Mobility Systems Laboratory (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "User Management Service"
-      - "Frontend Application"
     status: "Active"
     documentation: "https://docs.example.com/user-auth-interface"
 
@@ -47,9 +44,6 @@ interfaces:
     version: "2.0"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
     status: "Active"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
 
@@ -70,9 +64,6 @@ interfaces:
     version: "3.0"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
     status: "Active"
     documentation: "https://www.ibm.com/think/topics/rest-apis"
 
@@ -91,37 +82,29 @@ interfaces:
     version: "1.0"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
     status: "Active"
     documentation: "https://aws.amazon.com/es/compare/the-difference-between-graphql-and-rest/"
 
   - id: interface:005
-    name: "gRPC/Protobuf Interface"
-    description: "Interface based on gRPC that uses Protocol Buffers for efficient serialization of structured data and remote service definition."
-    type: "gRPC"
+    name: "Web User Interface (WUI)"
+    description: "Communication protocol between the user and an application or website through a web browser."
+    type: "HTML"
     protocols:
-      - "TCP"
       - "HTTP"
     dataFormats:
-      - "Protobuf"
-      - "Binary"
+      - "HTML"
+      - "JSON"
     security:
-      - "TLS"
-      - "mTLS"
-    version: "4.31.0"
+      - "XSS"
+    version: "HTTP/2"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Backend Services"
     status: "Active"
-    documentation: "https://protobuf.dev/overview/"
-
+    documentation: "https://www.ibm.com"
 
   - id: interface:006
     name: "WebSocket Interface"
-    description: "Bidirectional real-time communication protocol between client and server, allowing messages to be sent at any time."
+    description: "Real-time bidirectional communication protocol between client and server, allowing messages to be sent at any time."
     type: "WebSocket"
     protocols:
       - "WebSocket"
@@ -133,13 +116,59 @@ interfaces:
     version: "1.0"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
     status: "Active"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
 
   - id: interface:007
+    name: "MQTT Interface"
+    description: "Communication protocol based on a publish/subscribe model where devices do not communicate directly. The user connects to a server that filters and distributes messages."
+    protocols:
+      - "TCP/IP"
+    dataFormats:
+      - "JSON"
+      - "Binary"
+    security:
+      - "TLS"
+      - "SSL"
+    version: "3.1.1"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    status: "Active"
+    documentation: "https://mqtt.org"
+
+  - id: interface:008
+    name: "gRPC Interface"
+    description: "Interface based on gRPC that uses Protocol Buffers acting as a contract for communication between applications. It is a framework that uses Protobuf definitions for RPC communication (remote function execution)."
+    type: "gRPC"
+    protocols:
+      - "HTTP"
+    dataFormats:
+      - "Protobuf"
+    security:
+      - "TLS"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    status: "Active"
+    documentation: "https://protobuf.dev/overview/"
+
+  - id: interface:009
+    name: "Protobuf Interface"
+    description: "Interface based on gRPC that uses Protocol Buffers for efficient serialization of structured data and definition of remote services. It is the format for defining data messages and the structure of the service interface."
+    type: "gRPC"
+    protocols:
+      - "JSON"
+      - "XML"
+    dataFormats:
+      - "Binary"
+    security:
+      - "TLS"
+    version: "proto3"
+    owner: "Architecture Team"
+    contact: "simovi@ucr.ac.cr"
+    status: "Active"
+    documentation: "https://protobuf.dev/overview/"
+
+  - id: interface:010
     name: "SSE Server-Sent Events"
     description: "Web technology that allows the server to automatically send data to the browser continuously through an open HTTP connection."
     type: "Event Stream"
@@ -153,13 +182,10 @@ interfaces:
     version: "1.0"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Frontend Application"
-      - "Backend Services"
     status: "Active"
     documentation: "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
 
-  - id: interface:008
+  - id: interface:011
     name: "ZIP File Transfer"
     description: "Compressed file format used to efficiently package and transfer files."
     type: "File Transfer"
@@ -174,7 +200,5 @@ interfaces:
     version: "6.3.10"
     owner: "Architecture Team"
     contact: "simovi@ucr.ac.cr"
-    relatedComponents:
-      - "Backend Services"
     status: "Active"
     documentation: "https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml?utm"
