@@ -1,4 +1,5 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/standards.schema.json
+
 metadata:
   title: "Catálogo de estándares tecnológicos"
   version: "1.0"
@@ -6,16 +7,111 @@ metadata:
   description: "Un catálogo de estándares tecnológicos para un Sistema de Información de Transporte Público."
   author:
     - "Randy Cascante Espinoza"
+    - "Oriana Mora López"
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-# Technology Standards catalog
 standards:
+  
+  # Protocols
+
   - id: standard:001
-    name: "Especificación OpenAPI"
+    name: "HTTP"
+    description: "Protocolo fundamental para la comunicación web, utilizado para el intercambio de información entre clientes y servidores."
+    type: "Protocol"
+    version: "2.0"
+    organization: "IETF"
+    website: "https://datatracker.ietf.org/doc/html/rfc9110"
+    usage: "Usado para la comunicación entre clientes y servidores en el sistema."
+    related_technologies:
+      - "HTTPS"
+      - "REST API"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+
+  - id: standard:002
+    name: "TCP"
+    description: "Protocolo de comunicación fundamental que proporciona una conexión confiable y orientada a la conexión entre dispositivos en una red."
+    type: "Protocol"
+    version: "1.0"
+    organization: "IETF"
+    website: "https://datatracker.ietf.org/doc/html/rfc793"
+    usage: "Usado para la transmisión de datos entre dispositivos en la red del sistema."
+    related_technologies:
+      - "IP"
+      - "TLS"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Glossary/TCP"
+
+  - id: standard:007
+    name: "WebSocket"
+    description: "Protocolo de comunicación que proporciona canales de comunicación full-duplex sobre una única conexión TCP."
+    type: "Protocol"
+    version: "RFC 6455"
+    organization: "IETF"
+    website: "https://datatracker.ietf.org/doc/html/rfc6455"
+    usage: "Usado para comunicación en tiempo real entre clientes y servidores en el sistema."
+    security:
+      - "TLS"
+    related_technologies:
+      - "HTTP"
+      - "HTTPS"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"
+
+  - id: standard:012
+    name: "SSE"
+    description: "Tecnología web que permite al servidor enviar datos automáticamente al navegador de forma continua a través de una conexión HTTP abierta."
+    type: "Protocol"
+    version: "1.0"
+    organization: "WHATWG"
+    website: "https://html.spec.whatwg.org/multipage/server-sent-events.html"
+    usage: "Usado para enviar actualizaciones en tiempo real desde el servidor al cliente en el sistema."
+    related_technologies:
+      - "HTTP"
+      - "JavaScript"
+    status: "Active"
+    documentation: "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events"
+
+  - id: standard:013
+    name: "MQTT"
+    description: "Protocolo de mensajería ligero diseñado para conexiones remotas con dispositivos con recursos limitados y redes de ancho de banda limitado."
+    type: "Protocol"
+    version: "3.1.1"
+    organization: "OASIS"
+    website: "https://mqtt.org/"
+    usage: "Usado para la comunicación eficiente entre dispositivos IoT en el sistema."
+    related_technologies:
+      - "TCP"
+      - "TLS"
+    status: "Active"
+    documentation: "https://mqtt.org/documentation"
+
+  # API Specifications
+
+  - id: standard:003
+    name: "REST"
+    description: "Estilo arquitectónico para diseñar servicios web que utilizan HTTP para la comunicación entre sistemas distribuidos."
+    type: "API Specification"
+    version: "1.0"
+    organization: "Roy Fielding"
+    website: "https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm"
+    usage: "Usado para diseñar y desarrollar APIs web en el sistema."
+    related_technologies:
+      - "HTTP"
+    data_formats:
+      - "JSON"
+    security:
+      - "TLS"
+    status: "Active"
+    documentation: "https://restfulapi.net/"
+
+  - id: standard:004
+    name: "OpenAPI"
     description: "Un estándar para definir APIs RESTful."
+    type: "API Specification"
     version: "3.0.3"
     organization: "OpenAPI Initiative"
     website: "https://www.openapis.org/"
@@ -23,11 +119,91 @@ standards:
     related_technologies:
       - "Swagger"
       - "Postman"
-    status: "Activo"
+    status: "Active"
     documentation: "https://swagger.io/specification/"
-  - id: standard:002
-    name: "OAuth 2.0"
+
+  - id: standard:005
+    name: "GraphQL"
+    description: "Lenguaje de consulta para APIs que permite a los clientes solicitar exactamente los datos que necesitan, habilitando una evolución flexible del esquema y una recuperación eficiente de datos."
+    type: "API Specification"
+    version: "June 2018"
+    organization: "GraphQL Foundation"
+    website: "https://graphql.org/"
+    usage: "Usado para definir y consultar APIs con esquemas flexibles que permiten a los clientes solicitar solo los datos necesarios."
+    data_formats:
+      - "JSON"
+    security:
+      - "JWT"
+      - "TLS"
+    related_technologies:
+      - "HTTP"
+      - "HTTPS"
+    status: "Active"
+    documentation: "https://spec.graphql.org/"
+  
+  - id: standard:010
+    name: "gRPC"
+    description: "Un framework de llamada a procedimiento remoto (RPC) de alto rendimiento que utiliza HTTP/2 para la comunicación entre servicios."
+    type: "API Specification"
+    version: "1.0"
+    organization: "Google"
+    website: "https://grpc.io/"
+    usage: "Usado para la comunicación eficiente entre microservicios en el sistema."
+    data_formats:
+      - "Protocol Buffers (protobuf)"
+    related_technologies:
+      - "HTTP/2"
+    status: "Active"
+    documentation: "https://grpc.io/docs/"
+
+  # Security Standards
+
+  - id: standard:008
+    name: "TLS"
+    description: "Protocolo criptográfico que proporciona comunicaciones seguras sobre una red informática."
+    type: "Security Standard"
+    version: "1.3"
+    organization: "IETF"
+    website: "https://datatracker.ietf.org/doc/html/rfc8446"
+    usage: "Usado para asegurar las comunicaciones entre clientes y servidores en el sistema."
+    related_technologies:
+      - "HTTPS"
+      - "TCP"
+    status: "Active"
+    documentation: "https://tools.ietf.org/html/rfc8446"
+
+  - id: standard:009
+    name: "SSL"
+    description: "Protocolo criptográfico diseñado para proporcionar comunicaciones seguras a través de una red informática."
+    type: "Security Standard"
+    version: "3.0"
+    organization: "Netscape"
+    website: "https://datatracker.ietf.org/doc/html/rfc6101"
+    usage: "Usado para asegurar las comunicaciones entre clientes y servidores en el sistema."
+    related_technologies:
+      - "TLS"
+      - "HTTPS"
+    status: "Active"
+    documentation: "https://tools.ietf.org/html/rfc6101"
+
+  - id: standard:010
+    name: "JWT"
+    description: "Un estándar abierto para la transmisión segura de información entre partes como un objeto JSON."
+    type: "Security Standard"
+    version: "RFC 7519"
+    organization: "IETF"
+    website: "https://datatracker.ietf.org/doc/html/rfc7519"
+    usage: "Usado para la autenticación y autorización de usuarios en el sistema."
+    related_technologies:
+      - "OAuth"
+      - "OpenID Connect"
+    status: "Active"
+    documentation: "https://tools.ietf.org/html/rfc7519"
+
+  - id: standard:006
+    name: "OAuth"
     description: "Un marco de autorización que permite a las aplicaciones obtener acceso limitado a cuentas de usuario."
+    type: "Security Standard"
     version: "RFC 6749"
     organization: "IETF"
     website: "https://oauth.net/2/"
@@ -35,5 +211,36 @@ standards:
     related_technologies:
       - "OpenID Connect"
       - "JWT"
-    status: "Activo"
+    status: "Active"
     documentation: "https://tools.ietf.org/html/rfc6749"
+
+  # Data Formats
+
+  - id: standard:010
+    name: "JSON"
+    description: "Formato de datos ligero y fácil de leer y escribir, utilizado para el intercambio de datos entre sistemas."
+    type: "Data Format"
+    version: "ECMA-404"
+    organization: "ECMA International"
+    website: "https://www.ecma-international.org/publications-and-standards/publications/ecma-404/"
+    usage: "Usado para el intercambio de datos entre componentes del sistema."
+    related_technologies:
+      - "REST API"
+      - "GraphQL"
+    status: "Active"
+    documentation: "https://www.json.org/json-en.html"
+
+  - id: standard:011
+    name: "Protocol Buffers (protobuf)"
+    description: "Un formato de serialización de datos estructurados, utilizado para la comunicación entre servicios."
+    type: "Data Format"
+    version: "proto3"
+    organization: "Google"
+    website: "https://developers.google.com/protocol-buffers"
+    usage: "Usado para la serialización eficiente de datos en la comunicación entre servicios."
+    data_formats:
+      - "Binary"
+    related_technologies:
+      - "gRPC"
+    status: "Active"
+    documentation: "https://developers.google.com/protocol-buffers/docs/overview"

@@ -6,186 +6,215 @@
 
 | Campo | Valor |
 | --- | --- |
-| Versión | 1.0 |
-| Fecha | 2025-09-18 |
+| Versión | 0.1 |
+| Fecha | 2025-11-13 |
 | Descripción | Un catálogo de interfaces arquitectónicas para un Sistema de Información de Transporte Público. |
-| Autores | Fabián Abarca Calderón |
+| Autores | Oriana Mora López, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
 | Licencia | CC BY 4.0 |
 
 
 <a id="interface-001"></a>
-## Interfaz de Autenticación de Usuario
+## Databús API
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:001</code></span>
 
-- Descripción: Interfaz para la autenticación y autorización de usuarios.
-- Tipo: REST API
-- Protocolos: HTTPS
-- DataFormats: JSON
-- Seguridad: OAuth 2.0
-- Versión: 1.0
-- Responsable: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
+- Descripción: API RESTful para acceder a datos de transporte público en tiempo real y datos históricos del sistema Databús.
+- Tipo: Application Programming Interface (API)
+- Protocolos: HTTPS, REST
+- Formatos de datos: JSON
+- Seguridad: API Keys, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://docs.example.com/user-auth-interface
+- Componentes relacionados: Databús Backend, Databús Database
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/databus/api
 
 <a id="interface-002"></a>
-## Protocolo HTTP
+## Databús GraphQL
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:002</code></span>
 
-- Descripción: Protocolo fundamental para la comunicación web, utilizado para el intercambio de información entre clientes y servidores.
-- Tipo: REST API
-- Protocolos: HTTP, HTTPS
-- DataFormats: JSON, XML, Texto, Binario
-- Seguridad: TLS
-- Versión: 2.0
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz GraphQL para consultas flexibles y eficientes de datos de transporte público del sistema Databús.
+- Tipo: Query Interface
+- Protocolos: HTTPS
+- Formatos de datos: JSON
+- Seguridad: API Keys, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://developer.mozilla.org/en-US/docs/Web/HTTP
+- Componentes relacionados: Databús Backend, Databús Database
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/databus/graphql
 
 <a id="interface-003"></a>
-## REST API
+## Databús MQTT
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:003</code></span>
 
-- Descripción: Interfaz de programación de aplicaciones basada en el estilo arquitectónico REST, utilizada para conectar sistemas distribuidos y facilitar el intercambio de datos entre aplicaciones, servicios web y bases de datos.
-- Tipo: REST API
-- Protocolos: HTTP, HTTPS
-- DataFormats: JSON, XML, Texto
-- Seguridad: OAuth 2.0, TLS
-- Versión: 3.0
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz de mensajería MQTT para la transmisión de datos de transporte en tiempo real desde dispositivos IoT al sistema Databús.
+- Tipo: Message Queue
+- Protocolos: MQTT, TCP
+- Formatos de datos: JSON, Binary
+- Seguridad: TLS, Certificate Auth
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://www.ibm.com/think/topics/rest-apis
+- Componentes relacionados: Databús IoT Gateway, Databús Backend
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/databus/mqtt
 
 <a id="interface-004"></a>
-## API GraphQL
+## Infobús API
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:004</code></span>
 
-- Descripción: Lenguaje de consulta para APIs que permite a los clientes solicitar exactamente los datos que necesitan, habilitando una evolución flexible del esquema y una recuperación eficiente de datos.
-- Tipo: GraphQL
-- Protocolos: HTTP, HTTPS
-- DataFormats: JSON
-- Seguridad: JWT, TLS
-- Versión: 1.0
-- Responsable: Equipo de Arquitectura
+- Descripción: API RESTful para acceder a información de transporte público, rutas, horarios y servicios del sistema Infobús.
+- Tipo: Application Programming Interface (API)
+- Protocolos: HTTPS, REST
+- Formatos de datos: JSON
+- Seguridad: OAuth 2.0, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://aws.amazon.com/es/compare/the-difference-between-graphql-and-rest/
+- Componentes relacionados: Infobús Backend, Infobús Database
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/api
 
 <a id="interface-005"></a>
-## Interfaz de usuario WEB (WUI)
+## Infobús GraphQL
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:005</code></span>
 
-- Descripción: Protocolo de comunicación entre el usuario y una aplicación o bien un sitio web a través de un navegador web.
-- Tipo: HTML
-- Protocolos: HTTP
-- DataFormats: HTML, JSON
-- Seguridad: XSS
-- Versión: HTTP/2
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz GraphQL para consultas personalizadas de información de transporte público del sistema Infobús.
+- Tipo: Query Interface
+- Protocolos: HTTPS
+- Formatos de datos: JSON
+- Seguridad: OAuth 2.0, JWT, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://www.ibm.com
+- Componentes relacionados: Infobús Backend, Infobús Database
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/graphql
 
 <a id="interface-006"></a>
-## Interfaz WebSocket
+## Infobús SSE
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:006</code></span>
 
-- Descripción: Protocolo de comunicación bidireccional en tiempo real entre cliente y servidor, que permite enviar mensajes en cualquier momento.
-- Tipo: WebSocket
-- Protocolos: WebSocket
-- DataFormats: Texto, Binario
-- Seguridad: TLS
-- Versión: 1.0
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz de Server-Sent Events para transmitir actualizaciones en tiempo real de transporte público a clientes web del sistema Infobús.
+- Tipo: Event Stream
+- Protocolos: HTTPS, SSE
+- Formatos de datos: JSON, Text
+- Seguridad: JWT, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://developer.mozilla.org/en-US/docs/Web/HTTP
+- Componentes relacionados: Infobús Backend, Infobús Web Client
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/sse
 
 <a id="interface-007"></a>
-## Interfaz MQTT
+## Infobús WebSockets
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:007</code></span>
 
-- Descripción: Protocolo de comunicación basado en un modelo de publicación/suscripción; los dispositivos se conectan a un broker que filtra y distribuye mensajes.
-- Tipo: MQTT
-- Protocolos: TCP/IP
-- DataFormats: JSON, Binario
-- Seguridad: TLS, SSL
-- Versión: 3.1.1
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz WebSocket para comunicación bidireccional en tiempo real entre el sistema Infobús y aplicaciones cliente.
+- Tipo: Event Stream
+- Protocolos: WebSocket, HTTPS
+- Formatos de datos: JSON
+- Seguridad: JWT, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://mqtt.org
+- Componentes relacionados: Infobús Backend, Infobús Mobile App, Infobús Web Client
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/websockets
 
 <a id="interface-008"></a>
-## Interfaz gRPC
+## Infobús Webhooks
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:008</code></span>
 
-- Descripción: Interfaz basada en gRPC que utiliza Protocol Buffers que actúa como un contrato para la comunicación entre aplicaciones. Usa definiciones de Protobuf para la comunicación RPC.
-- Tipo: gRPC
-- Protocolos: HTTP
-- DataFormats: Protobuf
-- Seguridad: TLS
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz de webhooks para notificaciones basadas en eventos del sistema Infobús a servicios externos.
+- Tipo: Event Stream
+- Protocolos: HTTPS
+- Formatos de datos: JSON
+- Seguridad: JWT, API Keys, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://protobuf.dev/overview/
+- Componentes relacionados: Infobús Backend, External Services
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/webhooks
 
 <a id="interface-009"></a>
-## Interfaz Protobuf
+## Infobús MQTT
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:009</code></span>
 
-- Descripción: Interfaz basada en gRPC que utiliza Protocol Buffers para la serialización eficiente de datos estructurados y la definición de servicios remotos.
-- Tipo: gRPC
-- Protocolos: JSON, XML
-- DataFormats: Binario
-- Seguridad: TLS
-- Versión: proto3
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz de mensajería MQTT para la publicación y suscripción de eventos de transporte en tiempo real del sistema Infobús.
+- Tipo: Message Queue
+- Protocolos: MQTT, TCP
+- Formatos de datos: JSON
+- Seguridad: TLS, Certificate Auth
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://protobuf.dev/overview/
+- Componentes relacionados: Infobús Backend, Infobús IoT Devices
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/mqtt
 
 <a id="interface-010"></a>
-## SSE Eventos Enviados por el Servidor
+## Infobús SPARQL
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:010</code></span>
 
-- Descripción: Tecnología web que permite al servidor enviar datos automáticamente al navegador de forma continua a través de una conexión HTTP abierta.
-- Tipo: Flujo de Eventos
-- Protocolos: HTTP, HTTPS
-- DataFormats: Texto
-- Seguridad: TLS
-- Versión: 1.0
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz SPARQL para consultas semánticas sobre datos enlazados de transporte público en el sistema Infobús.
+- Tipo: Query Interface
+- Protocolos: HTTPS
+- Formatos de datos: JSON, XML
+- Seguridad: OAuth 2.0, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events
+- Componentes relacionados: Infobús Knowledge Graph, Infobús RDF Store
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/sparql
 
 <a id="interface-011"></a>
-## Transferencia de Archivos ZIP
+## Infobús MCP
 
 <span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:011</code></span>
 
-- Descripción: Formato de archivo comprimido utilizado para empaquetar y transferir archivos de manera eficiente.
-- Tipo: Transferencia de Archivos
-- Protocolos: HTTP, FTP, SFTP
-- DataFormats: Binario
-- Seguridad: TLS
-- Versión: 6.3.10
-- Responsable: Equipo de Arquitectura
+- Descripción: Interfaz de Protocolo de Contexto de Modelo (MCP) que permite a aplicaciones de IA acceder a datos y herramientas del sistema Infobús.
+- Tipo: Remote Procedure Call (RPC)
+- Protocolos: HTTPS, WebSocket
+- Formatos de datos: JSON
+- Seguridad: API Keys, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
 - Contacto: simovi@ucr.ac.cr
-- Estado: Activo
-- Documentación: https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml
+- Componentes relacionados: Infobús MCP Server, AI Applications
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/infobus/mcp
+
+<a id="interface-012"></a>
+## AdminTP Auth
+
+<span class="catalog-badge" style="--catalog-badge-bg:#F0F5FF"><span class="catalog-icon material-symbols-outlined">hub</span><code style="background:none;padding:0;margin:0;border:0;">interface:012</code></span>
+
+- Descripción: Interfaz de autenticación y autorización para el sistema administrativo de transporte público AdminTP.
+- Tipo: Application Programming Interface (API)
+- Protocolos: HTTPS
+- Formatos de datos: JSON
+- Seguridad: OAuth 2.0, JWT, TLS
+- Versión: 1.0.0
+- Responsable: Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)
+- Contacto: simovi@ucr.ac.cr
+- Componentes relacionados: AdminTP Backend, AdminTP Web Client, User Management System
+- Estado: Active
+- Documentación: https://docs.simovi.ucr.ac.cr/admintp/auth
