@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Templates and Communication Materials Catalog Schema",
+  "description": "JSON Schema for validating templates and communication materials catalog YAML files in the Public Transportation Information System architecture",
+  "type": "object",
+  "required": ["metadata", "templates"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    }
+  }
+}

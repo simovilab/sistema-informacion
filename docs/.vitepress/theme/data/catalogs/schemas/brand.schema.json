@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Brand Identity Catalog Schema",
+  "description": "JSON Schema for validating brand identity catalog YAML files in the Public Transportation Information System architecture",
+  "type": "object",
+  "required": ["metadata", "brands", "governance"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    }
+  }
+}
