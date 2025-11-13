@@ -1,71 +1,271 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/interfaces.schema.json
+
 metadata:
-  title: "Catálogo de interfaces de arquitectura"
-  version: "1.0"
-  date: "2025-09-18"
-  description: "Un catálogo de interfaces de arquitectura para un Sistema de Información de Transporte Público."
-  author:
+  title: "Catálogo de Interfaces de Arquitectura"
+  version: "0.1"
+  date: "2025-11-13"
+  description: "Un catálogo de interfaces arquitectónicas para un Sistema de Información de Transporte Público."
+  author: 
     - "Oriana Mora López"
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
-  license: "CC BY-NC 4.0"
+  license: "CC BY 4.0"
 
-# Interface catalog
+# Catálogo de interfaces
+
 interfaces:
   - id: interface:001
-    name: "Interfaz de autenticación de usuarios"
-    description: "Interfaz para la autenticación y autorización de usuarios."
-    type: "API REST"
+    name: "Databús API"
+    description: "API RESTful para acceder a datos de transporte público en tiempo real y datos históricos del sistema Databús."
+    type: "Application Programming Interface (API)"
     protocols:
       - "HTTPS"
+      - "REST"
     data_formats:
       - "JSON"
     security:
-      - "OAuth 2.0"
-    version: "1.0"
-    owner: "Oriana Mora López"
-    contact: "oriana.mora@ucr.ac.cr"
+      - "API Keys"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
     related_components:
-      - "Servicio de gestión de usuarios"
-      - "Aplicación frontend"
-    status: "Planificación"
-    documentation: "https://docs.example.com/user-auth-interface"
+      - "Databús Backend"
+      - "Databús Database"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/databus/api"
 
   - id: interface:002
-    name: "Interfaz de gestión de usuarios"
-    description: "Interfaz para la gestión de usuarios en el sistema."
-    type: "API REST"
+    name: "Databús GraphQL"
+    description: "Interfaz GraphQL para consultas flexibles y eficientes de datos de transporte público del sistema Databús."
+    type: "Query Interface"
+    protocols:
+      - "HTTPS"
+    data_formats:
+      - "JSON"
+    security:
+      - "API Keys"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Databús Backend"
+      - "Databús Database"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/databus/graphql"
+
+  - id: interface:003
+    name: "Databús MQTT"
+    description: "Interfaz de mensajería MQTT para la transmisión de datos de transporte en tiempo real desde dispositivos IoT al sistema Databús."
+    type: "Message Queue"
+    protocols:
+      - "MQTT"
+      - "TCP"
+    data_formats:
+      - "JSON"
+      - "Binary"
+    security:
+      - "TLS"
+      - "Certificate Auth"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Databús IoT Gateway"
+      - "Databús Backend"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/databus/mqtt"
+
+  - id: interface:004
+    name: "Infobús API"
+    description: "API RESTful para acceder a información de transporte público, rutas, horarios y servicios del sistema Infobús."
+    type: "Application Programming Interface (API)"
+    protocols:
+      - "HTTPS"
+      - "REST"
+    data_formats:
+      - "JSON"
+    security:
+      - "OAuth 2.0"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús Backend"
+      - "Infobús Database"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/api"
+
+  - id: interface:005
+    name: "Infobús GraphQL"
+    description: "Interfaz GraphQL para consultas personalizadas de información de transporte público del sistema Infobús."
+    type: "Query Interface"
     protocols:
       - "HTTPS"
     data_formats:
       - "JSON"
     security:
       - "OAuth 2.0"
-    version: "1.0"
-    owner: ""
-    contact: ""
+      - "JWT"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
     related_components:
-      - "Servicio de gestión de usuarios"
-      - "Aplicación frontend"
-    status: "Planificación"
-    documentation: "https://docs.example.com/user-management-interface"
+      - "Infobús Backend"
+      - "Infobús Database"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/graphql"
 
-  - id: interface:003
-    name: "Interfaz de aplicación móvil operativa"
-    description: "Interfaz gráfica de usuario para la gestión de viajes en el sistema."
-    type: "GUI"
+  - id: interface:006
+    name: "Infobús SSE"
+    description: "Interfaz de Server-Sent Events para transmitir actualizaciones en tiempo real de transporte público a clientes web del sistema Infobús."
+    type: "Event Stream"
+    protocols:
+      - "HTTPS"
+      - "SSE"
+    data_formats:
+      - "JSON"
+      - "Text"
+    security:
+      - "JWT"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús Backend"
+      - "Infobús Web Client"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/sse"
+
+  - id: interface:007
+    name: "Infobús WebSockets"
+    description: "Interfaz WebSocket para comunicación bidireccional en tiempo real entre el sistema Infobús y aplicaciones cliente."
+    type: "Event Stream"
+    protocols:
+      - "WebSocket"
+      - "HTTPS"
+    data_formats:
+      - "JSON"
+    security:
+      - "JWT"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús Backend"
+      - "Infobús Mobile App"
+      - "Infobús Web Client"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/websockets"
+
+  - id: interface:008
+    name: "Infobús Webhooks"
+    description: "Interfaz de webhooks para notificaciones basadas en eventos del sistema Infobús a servicios externos."
+    type: "Event Stream"
     protocols:
       - "HTTPS"
     data_formats:
-      - ""
+      - "JSON"
+    security:
+      - "JWT"
+      - "API Keys"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús Backend"
+      - "External Services"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/webhooks"
+
+  - id: interface:009
+    name: "Infobús MQTT"
+    description: "Interfaz de mensajería MQTT para la publicación y suscripción de eventos de transporte en tiempo real del sistema Infobús."
+    type: "Message Queue"
+    protocols:
+      - "MQTT"
+      - "TCP"
+    data_formats:
+      - "JSON"
+    security:
+      - "TLS"
+      - "Certificate Auth"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús Backend"
+      - "Infobús IoT Devices"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/mqtt"
+
+  - id: interface:010
+    name: "Infobús SPARQL"
+    description: "Interfaz SPARQL para consultas semánticas sobre datos enlazados de transporte público en el sistema Infobús."
+    type: "Query Interface"
+    protocols:
+      - "HTTPS"
+    data_formats:
+      - "JSON"
+      - "XML"
     security:
       - "OAuth 2.0"
-    version: "1.0"
-    owner: ""
-    contact: ""
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
     related_components:
-      - "Driver"
-      - "Real-Time Server"
-    status: "Planificación"
-    documentation: "https://docs.example.com/user-management-interface"
+      - "Infobús Knowledge Graph"
+      - "Infobús RDF Store"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/sparql"
+
+  - id: interface:011
+    name: "Infobús MCP"
+    description: "Interfaz de Protocolo de Contexto de Modelo (MCP) que permite a aplicaciones de IA acceder a datos y herramientas del sistema Infobús."
+    type: "Remote Procedure Call (RPC)"
+    protocols:
+      - "HTTPS"
+      - "WebSocket"
+    data_formats:
+      - "JSON"
+    security:
+      - "API Keys"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "Infobús MCP Server"
+      - "AI Applications"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/infobus/mcp"
+
+  - id: interface:012
+    name: "AdminTP Auth"
+    description: "Interfaz de autenticación y autorización para el sistema administrativo de transporte público AdminTP."
+    type: "Application Programming Interface (API)"
+    protocols:
+      - "HTTPS"
+    data_formats:
+      - "JSON"
+    security:
+      - "OAuth 2.0"
+      - "JWT"
+      - "TLS"
+    version: "1.0.0"
+    owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
+    contact: "simovi@ucr.ac.cr"
+    related_components:
+      - "AdminTP Backend"
+      - "AdminTP Web Client"
+      - "User Management System"
+    status: "Active"
+    documentation: "https://docs.simovi.ucr.ac.cr/admintp/auth"
