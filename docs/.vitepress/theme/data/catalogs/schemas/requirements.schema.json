@@ -23,11 +23,11 @@
           "status",
           "rationale",
           "stakeholders",
-          "acceptanceCriteria",
-          "relatedComponents",
-          "relatedInterfaces",
-          "relatedDataEntities",
-          "relatedActors"
+          "acceptance_criteria",
+          "related_components",
+          "related_interfaces",
+          "related_data_entities",
+          "related_actors"
         ],
         "properties": {
           "id": {
@@ -117,7 +117,7 @@
             "minItems": 1,
             "description": "List of stakeholder groups affected by or interested in this requirement"
           },
-          "acceptanceCriteria": {
+          "acceptance_criteria": {
             "type": "array",
             "items": {
               "type": "string",
@@ -126,7 +126,7 @@
             "minItems": 1,
             "description": "List of specific, measurable criteria that define when the requirement is satisfied"
           },
-          "relatedComponents": {
+          "related_components": {
             "type": "array",
             "items": {
               "type": "string",
@@ -135,7 +135,7 @@
             "minItems": 1,
             "description": "List of system components that implement or are affected by this requirement"
           },
-          "relatedInterfaces": {
+          "related_interfaces": {
             "type": "array",
             "items": {
               "type": "string",
@@ -144,7 +144,7 @@
             "minItems": 1,
             "description": "List of interfaces that support or enable this requirement"
           },
-          "relatedDataEntities": {
+          "related_data_entities": {
             "type": "array",
             "items": {
               "type": "string",
@@ -153,7 +153,7 @@
             "minItems": 1,
             "description": "List of data entities involved in fulfilling this requirement"
           },
-          "relatedActors": {
+          "related_actors": {
             "type": "array",
             "items": {
               "type": "string",

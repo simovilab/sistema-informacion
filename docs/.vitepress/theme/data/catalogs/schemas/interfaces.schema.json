@@ -24,7 +24,7 @@
           "version",
           "owner",
           "contact",
-          "relatedComponents",
+          "related_components",
           "status",
           "documentation"
         ],
@@ -132,7 +132,7 @@
             "format": "email",
             "description": "Contact email for interface support"
           },
-          "relatedComponents": {
+          "related_components": {
             "type": "array",
             "items": {
               "type": "string",
