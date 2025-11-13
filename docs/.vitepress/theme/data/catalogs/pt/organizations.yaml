@@ -19,7 +19,7 @@ organizations:
     contact: "simovi@ucr.ac.cr"
     website: "https://simovi.ucr.ac.cr"
     location: "University of Costa Rica, San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Research"
       - "Development"
@@ -33,7 +33,7 @@ organizations:
     contact: "dvagecorrespondencia@mopt.go.cr"
     website: "https://www.mopt.go.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Planning"
       - "Regulation"
@@ -46,7 +46,7 @@ organizations:
     contact: "atencion.usuario@ctp.go.cr"
     website: "https://www.ctp.go.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: "organization:002"
+    parent_organization: "organization:002"
     roles:
       - "Operation"
       - "Regulation"
@@ -59,7 +59,7 @@ organizations:
     contact: "cmora@aresep.go.cr"
     website: "https://aresep.go.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Regulation"
       - "Oversight"
@@ -72,7 +72,7 @@ organizations:
     contact: "atencionalciudadano@bccr.fi.cr"
     website: "https://www.bccr.fi.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Technology Provider"
       - "Operation"
@@ -85,7 +85,7 @@ organizations:
     contact: "contact@lanamme.ucr.ac.cr"
     website: "https://www.lanamme.ucr.ac.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Oversight"
       - "Research"
@@ -98,7 +98,7 @@ organizations:
     contact: "contactenos@ice.go.cr"
     website: "https://www.grupoice.com/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Technology Provider"
       - "Service Provider"
@@ -111,7 +111,7 @@ organizations:
     contact: "servicioalcliente@coopesantos.com"
     website: "https://www.coopesantos.com/"
     location: "Los Santos Zone, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Service Provider"
 
@@ -123,7 +123,7 @@ organizations:
     contact: "info@canabuscr.com"
     website: "https://canabuscr.com/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Consulting"
       - "Support"
@@ -136,7 +136,7 @@ organizations:
     contact: "info.costarica@giz.de"
     website: "https://www.giz.de/en/worldwide/315.html"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Funding"
       - "Consulting"
@@ -150,7 +150,7 @@ organizations:
     contact: "DELEGATION-COSTA-RICA@eeas.europa.eu"
     website: "https://www.eeas.europa.eu/delegations/costa-rica_es"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Funding"
       - "Oversight"
@@ -163,7 +163,7 @@ organizations:
     contact: "info@crusa.cr"
     website: "https://www.crusa.cr/"
     location: "San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Funding"
       - "Support"
@@ -176,7 +176,7 @@ organizations:
     contact: "produs@ucr.ac.cr"
     website: "https://produs.ucr.ac.cr/"
     location: "University of Costa Rica, San José, Costa Rica"
-    parentOrganization: null
+    parent_organization: null
     roles:
       - "Research"
       - "Consulting"
