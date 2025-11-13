@@ -24,7 +24,7 @@
           "version",
           "owner",
           "contact",
-          "relatedComponents",
+          "related_components",
           "status",
           "documentation"
         ],
@@ -145,7 +145,7 @@
             "format": "email",
             "description": "Correo electrónico de contacto para soporte de la interfaz"
           },
-          "relatedComponents": {
+          "related_components": {
             "type": "array",
             "items": {
               "type": "string",

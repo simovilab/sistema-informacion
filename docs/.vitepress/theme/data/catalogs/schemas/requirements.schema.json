@@ -50,7 +50,7 @@
             "items": {
               "type": "string",
               "pattern": "^application:\\d{3}$",
-              "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX, where XXX is a three-digit number"
+              "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX"
             },
             "minItems": 1,
             "description": "List of application IDs this requirement is associated with"
@@ -79,7 +79,16 @@
           },
           "status": {
             "type": "string",
-            "enum": ["Approved", "Pending", "Rejected", "In Review", "Implemented", "Testing", "Deferred", "Cancelled"],
+            "enum": [
+              "Approved",
+              "Pending",
+              "Rejected",
+              "In Review",
+              "Implemented",
+              "Testing",
+              "Deferred",
+              "Cancelled"
+            ],
             "description": "Current status of the requirement"
           },
           "rationale": {
