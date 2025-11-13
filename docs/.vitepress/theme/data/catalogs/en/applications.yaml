@@ -20,9 +20,9 @@ applications:
     name: "Transit Vehicle Tracking"
     description: "Monitors current transit vehicle location using an Automated Vehicle Location System."
     version: "0.0.0"
-    vendor: "N/A"
+    vendor: "Databus"
     license: "Custom"
-    support_contact: "email@example.com"
+    support_contact: "simovi@ucr.ac.cr"
     categories:
       - "Transportation"
       - "Real-Time Data"
@@ -37,7 +37,7 @@ applications:
     stakeholders:
       - "Transit Authorities"
     status: "Active"
-    deployment_environment: "Cloud"
+    deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:002"
@@ -56,17 +56,17 @@ applications:
       - "Operations control center systems"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Cloud"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:003"
     name: "Dynamic Transit Operations"
     description: "Allows travelers to request trips and obtain itineraries using personal devices."
     version: "1.0.0"
-    vendor: "N/A"
+    vendor: "Infobus"
     license: "Custom"
-    support_contact: "email@example.com"
+    support_contact: "simovi@ucr.ac.cr"
     categories:
       - "Transit Management"
     technologies:
@@ -78,8 +78,8 @@ applications:
       - "Passengers"
       - "Transit Authorities"
     status: "Active"
-    deployment_environment: "Cloud"
-    criticality: "Medium"
+    deployment_environment: "On-Premise"
+    criticality: "High"
 
   - id: "application:004"
     name: "Transit Fare Collection Management"
@@ -98,8 +98,8 @@ applications:
     stakeholders:
       - "Passengers"
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Hybrid"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:005"
@@ -119,7 +119,7 @@ applications:
     stakeholders:
       - "Passengers"
       - "Transit Authorities"
-    status: "Active"
+    status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
 
@@ -140,8 +140,8 @@ applications:
     stakeholders:
       - "Maintenance Teams"
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Cloud"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "Medium"
 
   - id: "application:007"
@@ -160,8 +160,8 @@ applications:
       - "Wireless data transmission"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Hybrid"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "Medium"
 
   - id: "application:008"
@@ -181,8 +181,8 @@ applications:
     stakeholders:
       - "Passengers"
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Cloud"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:009"
@@ -201,8 +201,8 @@ applications:
       - "Traffic management centers"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Hybrid"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "Medium"
 
   - id: "application:010"
@@ -221,7 +221,7 @@ applications:
       - "Intelligent lane management software"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
+    status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
@@ -241,7 +241,7 @@ applications:
     stakeholders:
       - "Transit Authorities"
     status: "Inactive"
-    deployment_environment: "Hybrid"
+    deployment_environment: "On-Premise"
     criticality: "Low"
 
   - id: "application:012"
@@ -260,7 +260,7 @@ applications:
     stakeholders:
       - "Transit Authorities"
     status: "Inactive"
-    deployment_environment: "Hybrid"
+    deployment_environment: "On-Premise"
     criticality: "Low"
 
   - id: "application:013"
@@ -279,7 +279,7 @@ applications:
     stakeholders:
       - "Bus Operators"
     status: "Inactive"
-    deployment_environment: "Hybrid"
+    deployment_environment: "On-Premise"
     criticality: "Low"
 
   - id: "application:014"
@@ -297,8 +297,8 @@ applications:
       - "Cloud-based coordination systems"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Cloud"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:015"
@@ -316,8 +316,8 @@ applications:
       - "Vehicle Human-Machine Interface (HMI)"
     stakeholders:
       - "Passengers"
-    status: "Active"
-    deployment_environment: "Hybrid"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "Medium"
 
   - id: "application:016"
@@ -336,8 +336,8 @@ applications:
       - "Haptic feedback devices"
     stakeholders:
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Hybrid"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "Medium"
 
   - id: "application:017"
@@ -356,6 +356,6 @@ applications:
     stakeholders:
       - "Passengers"
       - "Transit Authorities"
-    status: "Active"
-    deployment_environment: "Cloud"
+    status: "Inactive"
+    deployment_environment: "On-Premise"
     criticality: "High"
