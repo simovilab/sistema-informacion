@@ -1,0 +1,181 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Interfaces",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de interfaces en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "interfaces"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "interfaces": {
+      "type": "array",
+      "description": "Lista de interfaces en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "type",
+          "protocols",
+          "dataFormats",
+          "security",
+          "version",
+          "owner",
+          "contact",
+          "relatedComponents",
+          "status",
+          "documentation"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^interface:\\d{3}$",
+            "description": "Identificador único para la interfaz siguiendo el patrón interface:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre de la interfaz"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción del propósito y funcionalidad de la interfaz"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "REST API",
+              "GraphQL",
+              "SOAP",
+              "Message Queue",
+              "Database",
+              "File Transfer",
+              "WebSocket",
+              "gRPC",
+              "Event Stream",
+              "Batch Interface"
+            ],
+            "description": "Tipo de tecnología de interfaz utilizada"
+          },
+          "protocols": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "HTTPS",
+                "HTTP",
+                "TCP",
+                "UDP",
+                "WebSocket",
+                "MQTT",
+                "AMQP",
+                "FTP",
+                "SFTP"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de protocolos de comunicación utilizados por la interfaz"
+          },
+          "data_formats": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "JSON",
+                "XML",
+                "CSV",
+                "Protocol Buffers",
+                "Avro",
+                "Parquet",
+                "Binary",
+                "Text"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de formatos de datos soportados por la interfaz"
+          },
+          "security": {
+            "type": "object",
+            "required": ["authentication", "authorization", "encryption"],
+            "properties": {
+              "authentication": {
+                "type": "string",
+                "enum": [
+                  "OAuth 2.0",
+                  "API Key",
+                  "JWT",
+                  "Basic Auth",
+                  "Mutual TLS",
+                  "None"
+                ],
+                "description": "Método de autenticación utilizado por la interfaz"
+              },
+              "authorization": {
+                "type": "string",
+                "enum": [
+                  "Role-Based Access Control (RBAC)",
+                  "Attribute-Based Access Control (ABAC)",
+                  "None"
+                ],
+                "description": "Método de autorización utilizado por la interfaz"
+              },
+              "encryption": {
+                "type": "string",
+                "enum": ["TLS 1.3", "TLS 1.2", "End-to-End Encryption", "None"],
+                "description": "Método de encriptación utilizado por la interfaz"
+              }
+            },
+            "description": "Configuración de seguridad de la interfaz"
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+(\\.\\d+)?$",
+            "description": "Versión actual de la especificación de la interfaz"
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Persona o equipo responsable de la interfaz"
+          },
+          "contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico de contacto para soporte de la interfaz"
+          },
+          "relatedComponents": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de componentes o servicios que utilizan esta interfaz"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "Active",
+              "Deprecated",
+              "Development",
+              "Planned",
+              "Retired",
+              "Under Review"
+            ],
+            "description": "Estado actual de la interfaz"
+          },
+          "documentation": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL o referencia a la documentación detallada de la interfaz"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

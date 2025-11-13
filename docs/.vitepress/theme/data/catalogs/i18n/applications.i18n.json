@@ -6,7 +6,7 @@
   { "key": "version", "translations": { "es": "versión", "pt": "versão" } },
   { "key": "vendor", "translations": { "es": "proveedor", "pt": "fornecedor" } },
   { "key": "license", "translations": { "es": "licencia", "pt": "licença" } },
-  { "key": "support_contact", "translations": { "es": "contacto_soporte", "pt": "contato_suporte" } },
+  { "key": "support_contact", "translations": { "es": "contacto_de_soporte", "pt": "contato_de_suporte" } },
   { "key": "categories", "translations": { "es": "categorías", "pt": "categorias" } },
   { "key": "technologies", "translations": { "es": "tecnologías", "pt": "tecnologias" } },
   { "key": "stakeholders", "translations": { "es": "partes_interesadas", "pt": "partes_interessadas" } },

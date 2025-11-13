@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Organizaciones/Actores",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de organizaciones/actores en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "organizations", "actors"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "actors": {
+      "type": "array",
+      "description": "Lista de actores (individuos) en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "type", "contact", "organization", "roles"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^actor:[0-9]{3}$",
+            "description": "Identificador único para el actor siguiendo el patrón actor:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre completo de la persona"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción de su rol y responsabilidades"
+          },
+          "type": {
+            "type": "string",
+            "enum": ["Person", "System", "Role", "External System", "Automated Process"],
+            "description": "Tipo de actor"
+          },
+          "contact": {
+            "type": "string",
+            "format": "email",
+            "description": "Correo electrónico de contacto del actor"
+          },
+          "organization": {
+            "type": "string",
+            "minLength": 1,
+            "description": "La organización a la que pertenece el actor"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Lead Architect",
+                "Project Manager",
+                "System Administrator",
+                "Developer",
+                "Analyst",
+                "Researcher",
+                "Consultant",
+                "Operations Manager",
+                "Technical Lead",
+                "Product Owner",
+                "Business Analyst",
+                "Quality Assurance",
+                "DevOps Engineer",
+                "Data Scientist",
+                "UI/UX Designer"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de roles específicos que desempeña el actor"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

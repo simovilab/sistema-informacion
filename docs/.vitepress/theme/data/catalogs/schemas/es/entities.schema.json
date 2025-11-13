@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Entidades/Componentes de Datos",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de entidades/componentes de datos en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "data_entities", "data_components"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "data_entities": {
+      "type": "array",
+      "description": "Lista de entidades de datos en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "attributes"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^data-entity:\\d{3}$",
+            "description": "Identificador único para la entidad de datos siguiendo el patrón data-entity:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre de la entidad de datos"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Breve descripción de lo que representa la entidad de datos"
+          },
+          "attributes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["id", "name", "type", "description"],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "pattern": "^attribute:\\d{3}$",
+                  "description": "Identificador único para el atributo siguiendo el patrón attribute:XXX"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Nombre del atributo"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "String",
+                    "Integer",
+                    "Boolean",
+                    "Date",
+                    "DateTime",
+                    "Float",
+                    "Double",
+                    "Long",
+                    "UUID",
+                    "JSON",
+                    "Array",
+                    "Object",
+                    "Binary",
+                    "Decimal"
+                  ],
+                  "description": "Tipo de datos del atributo"
+                },
+                "description": {
+                  "type": "string",
+                  "minLength": 1,
+                  "description": "Descripción de lo que representa el atributo"
+                }
+              },
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "description": "Lista de atributos que definen la estructura de la entidad"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "data_components": {
+      "type": "array",
+      "description": "Lista de componentes de datos en el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "data_entities"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^component:\\d{3}$",
+            "description": "Identificador único para el componente de datos siguiendo el patrón component:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre del componente de datos"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Descripción del propósito y funcionalidad del componente"
+          },
+          "data_entities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^data-entity:\\d{3}$"
+            },
+            "minItems": 1,
+            "description": "Lista de IDs de entidades de datos que gestiona este componente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

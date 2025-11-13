@@ -1,0 +1,163 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Esquema del Catálogo de Requerimientos",
+  "description": "Esquema JSON para validar archivos YAML del catálogo de requerimientos en la arquitectura del Sistema de Información de Transporte Público",
+  "type": "object",
+  "required": ["metadata", "requirements"],
+  "properties": {
+    "metadata": {
+      "$ref": "./metadata.schema.json"
+    },
+    "requirements": {
+      "type": "array",
+      "description": "Lista de requerimientos para el sistema de información de transporte público",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "description",
+          "application",
+          "type",
+          "priority",
+          "status",
+          "rationale",
+          "stakeholders",
+          "acceptance_criteria",
+          "related_components",
+          "related_interfaces",
+          "related_data_entities",
+          "related_actors"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^requirement:\\d{3}$",
+            "description": "Identificador único para el requerimiento siguiendo el patrón requirement:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Nombre del requerimiento"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Declaración clara de lo que el sistema debe hacer o proporcionar"
+          },
+          "application": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^application:\\d{3}$",
+              "description": "Identificador de la(s) aplicación(es) a las que aplica este requerimiento, siguiendo el patrón application:XXX, donde XXX es un número de tres dígitos"
+            },
+            "minItems": 1,
+            "description": "Lista de IDs de aplicaciones con las que este requerimiento está asociado"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "Functional",
+              "Non-Functional",
+              "Business",
+              "Technical",
+              "Performance",
+              "Security",
+              "Usability",
+              "Reliability",
+              "Compliance",
+              "Integration",
+              "Operational"
+            ],
+            "description": "Tipo de requerimiento"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["Critical", "High", "Medium", "Low"],
+            "description": "Nivel de prioridad del requerimiento"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["Approved", "Pending", "Rejected", "In Review", "Implemented", "Testing", "Deferred", "Cancelled"],
+            "description": "Estado actual del requerimiento"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Explicación de por qué este requerimiento es importante y beneficioso"
+          },
+          "stakeholders": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Passengers",
+                "Bus Operators",
+                "Transit Authorities",
+                "Maintenance Teams",
+                "IT Support Staff",
+                "System Administrators",
+                "Government Officials",
+                "Financial Partners",
+                "Technology Vendors",
+                "Civil Society",
+                "International Organizations"
+              ]
+            },
+            "minItems": 1,
+            "description": "Lista de grupos de interesados afectados o interesados en este requerimiento"
+          },
+          "acceptance_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de criterios específicos y medibles que definen cuándo se satisface el requerimiento"
+          },
+          "related_components": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de componentes del sistema que implementan o son afectados por este requerimiento"
+          },
+          "related_interfaces": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de interfaces que soportan o habilitan este requerimiento"
+          },
+          "related_data_entities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de entidades de datos involucradas en el cumplimiento de este requerimiento"
+          },
+          "related_actors": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1,
+            "description": "Lista de actores (usuarios, sistemas) que interactúan con este requerimiento"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
