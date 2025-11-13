@@ -23,11 +23,11 @@
           "status",
           "rationale",
           "stakeholders",
-          "acceptance_criteria",
-          "related_components",
-          "related_interfaces",
-          "related_data_entities",
-          "related_actors"
+          "acceptanceCriteria",
+          "relatedComponents",
+          "relatedInterfaces",
+          "relatedDataEntities",
+          "relatedActors"
         ],
         "properties": {
           "id": {
@@ -50,7 +50,7 @@
             "items": {
               "type": "string",
               "pattern": "^application:\\d{3}$",
-              "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX, where XXX is a three-digit number"
+              "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX"
             },
             "minItems": 1,
             "description": "List of application IDs this requirement is associated with"
@@ -79,7 +79,16 @@
           },
           "status": {
             "type": "string",
-            "enum": ["Approved", "Pending", "Rejected", "In Review", "Implemented", "Testing", "Deferred", "Cancelled"],
+            "enum": [
+              "Approved",
+              "Pending",
+              "Rejected",
+              "In Review",
+              "Implemented",
+              "Testing",
+              "Deferred",
+              "Cancelled"
+            ],
             "description": "Current status of the requirement"
           },
           "rationale": {
@@ -108,7 +117,7 @@
             "minItems": 1,
             "description": "List of stakeholder groups affected by or interested in this requirement"
           },
-          "acceptance_criteria": {
+          "acceptanceCriteria": {
             "type": "array",
             "items": {
               "type": "string",
@@ -117,7 +126,7 @@
             "minItems": 1,
             "description": "List of specific, measurable criteria that define when the requirement is satisfied"
           },
-          "related_components": {
+          "relatedComponents": {
             "type": "array",
             "items": {
               "type": "string",
@@ -126,7 +135,7 @@
             "minItems": 1,
             "description": "List of system components that implement or are affected by this requirement"
           },
-          "related_interfaces": {
+          "relatedInterfaces": {
             "type": "array",
             "items": {
               "type": "string",
@@ -135,7 +144,7 @@
             "minItems": 1,
             "description": "List of interfaces that support or enable this requirement"
           },
-          "related_data_entities": {
+          "relatedDataEntities": {
             "type": "array",
             "items": {
               "type": "string",
@@ -144,7 +153,7 @@
             "minItems": 1,
             "description": "List of data entities involved in fulfilling this requirement"
           },
-          "related_actors": {
+          "relatedActors": {
             "type": "array",
             "items": {
               "type": "string",

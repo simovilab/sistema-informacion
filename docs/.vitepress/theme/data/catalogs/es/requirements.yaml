@@ -1,67 +1,919 @@
 # Metadata about the catalog
 metadata:
-  title: "Catálogo de requisitos de arquitectura"
+  title: "Architecture Requirements Catalog"
   version: "1.0"
   date: "2025-09-18"
-  description: "Un catálogo de requisitos de arquitectura para un Sistema de Información de Transporte Público."
+  description: "A catalog of architectural requirements for a Public Transportation Information System."
   author:
     - "César Alvarado Castro"
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
-  license: "CC BY-NC 4.0"
+  license: "CC BY 4.0"
 
 # Requirements catalog
 requirements:
-  - id: requirement:001
-    name: "Seguimiento de autobuses en tiempo real"
-    description: "El sistema deberá proporcionar a las personas usuarias el seguimiento en tiempo real de los autobuses."
-    rationale: "Para mejorar la experiencia de usuario y la eficiencia del transporte."
-    application:
-      - "application:001"
-      - "application:002"
-    type: "Funcional"
-    priority: "Alta"
-    status: "Aprobado"
-    stakeholders:
-      - "Pasajeros"
-      - "Autoridades de transporte"
-    acceptance_criteria:
-      - "Las personas usuarias pueden ver las ubicaciones de los autobuses en tiempo real en un mapa."
-      - "Los tiempos de llegada de los autobuses se actualizan en tiempo real."
-    related_components:
-      - "Módulo de rastreo GPS"
-      - "Aplicación móvil"
-    related_interfaces:
-      - "API de ubicación de autobuses"
-    related_data_entities:
-      - "Autobús"
-      - "Ruta"
-    related_actors:
-      - "Pasajero"
-  - id: requirement:002
-    name: "Autenticación de usuarios"
-    description: "El sistema deberá proporcionar autenticación y autorización de usuarios segura."
-    rationale: "Para proteger los datos de los usuarios y garantizar acceso seguro al sistema."
-    application:
-      - "application:001"
-      - "application:002"
-    type: "Funcional"
-    priority: "Media"
-    status: "Aprobado"
-    stakeholders:
-      - "Pasajeros"
-      - "Administradores del sistema"
-    acceptance_criteria:
-      - "Las personas usuarias pueden registrarse e iniciar sesión utilizando correo electrónico y contraseña."
-      - "Existen opciones para recuperación de contraseña."
-    related_components:
-      - "Servicio de autenticación"
-      - "Módulo de gestión de usuarios"
-    related_interfaces:
-      - "API de autenticación de usuarios"
-    related_data_entities:
-      - "Usuario"
-    related_actors:
-      - "Pasajero"
-      - "Administrador del sistema"
+
+- id: requirement:001
+  name: "Procesamiento en tiempo real"
+  description: "El sistema deberá procesar datos de rastreo y telemetría con una latencia menor a 1 segundo."
+  type: "Performance"
+  priority: "Critical"
+  rationale: "Garantiza actualizaciones precisas y oportunas en el ecosistema de transporte público."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:002
+  name: "Escalabilidad horizontal"
+  description: "El sistema deberá distribuir la carga entre múltiples instancias para soportar aumentos de demanda."
+  type: "Technical"
+  priority: "High"
+  rationale: "Permite la continuidad del servicio durante picos de uso y expansión del sistema."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:003
+  name: "Tolerancia a fallos"
+  description: "El sistema deberá mantener redundancia automática y recuperación ante interrupciones."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Minimiza el tiempo de inactividad y mejora la resiliencia del sistema."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:004
+  name: "Validación de datos"
+  description: "El sistema deberá verificar la integridad y consistencia de los datos entrantes de telemetría."
+  type: "Functional"
+  priority: "High"
+  rationale: "Asegura que los datos procesados y distribuidos sean confiables y consistentes."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:005
+  name: "Transformación de protocolos"
+  description: "El sistema deberá convertir datos entre formatos de telemetría propietarios y estándares GTFS."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Garantiza interoperabilidad entre diferentes sistemas de transporte y proveedores."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:006
+  name: "Monitoreo y alertas"
+  description: "El sistema deberá incluir métricas y notificaciones automáticas sobre el rendimiento y estado operativo."
+  type: "Operational"
+  priority: "High"
+  rationale: "Permite la detección temprana de fallos y mejora la capacidad de respuesta."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:007
+  name: "API de integración"
+  description: "El sistema deberá ofrecer conectores de integración con sistemas CAD/AVL y plataformas de terceros."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Facilita la interoperabilidad y la reutilización de datos entre diferentes plataformas."
+  application:
+    - "application:servidor-tiempo-real"
+
+- id: requirement:008
+  name: "Motor relacional"
+  description: "La base de datos deberá soportar transacciones ACID y mantener integridad referencial."
+  type: "Technical"
+  priority: "High"
+  rationale: "Garantiza la confiabilidad y consistencia de los datos almacenados."
+  application:
+    - "application:base-datos"
+
+- id: requirement:009
+  name: "Extensión geoespacial"
+  description: "La base de datos deberá permitir consultas espaciales e índices geométricos para análisis de proximidad."
+  type: "Functional"
+  priority: "High"
+  rationale: "Habilita análisis geográficos y consultas de localización esenciales para transporte público."
+  application:
+    - "application:base-datos"
+
+- id: requirement:010
+  name: "Soporte JSON/JSONB/BSON"
+  description: "La base de datos deberá permitir el almacenamiento flexible de metadatos y configuraciones dinámicas."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Permite gestionar datos semiestructurados sin comprometer el rendimiento."
+  application:
+    - "application:base-datos"
+
+- id: requirement:011
+  name: "Series temporales optimizadas"
+  description: "La base de datos deberá soportar particionamiento automático y compresión de datos históricos por tiempo."
+  type: "Performance"
+  priority: "High"
+  rationale: "Optimiza el manejo de grandes volúmenes de datos históricos de operación."
+  application:
+    - "application:base-datos"
+
+- id: requirement:012
+  name: "Respaldo automatizado"
+  description: "La base de datos deberá ejecutar respaldos incrementales con retención configurable."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Protege contra pérdida de información y facilita la recuperación ante incidentes."
+  application:
+    - "application:base-datos"
+
+- id: requirement:013
+  name: "Latencia sub-milisegundo"
+  description: "La base de datos en memoria deberá proporcionar acceso inmediato a datos frecuentemente consultados."
+  type: "Performance"
+  priority: "Critical"
+  rationale: "Asegura respuestas instantáneas durante el procesamiento en tiempo real."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:014
+  name: "Estructura de datos especializada"
+  description: "La base de datos en memoria deberá soportar tablas hash y conjuntos ordenados para consultas rápidas."
+  type: "Technical"
+  priority: "High"
+  rationale: "Optimiza el rendimiento en operaciones de búsqueda y filtrado intensivas."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:015
+  name: "Expiración automática de datos (TTL)"
+  description: "El sistema deberá eliminar automáticamente datos obsoletos mediante configuración de tiempo de vida."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Evita la acumulación de datos innecesarios y mantiene la eficiencia de memoria."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:016
+  name: "Persistencia opcional"
+  description: "La base de datos en memoria deberá soportar snapshots periódicos para recuperación ante fallos."
+  type: "Reliability"
+  priority: "Medium"
+  rationale: "Permite reiniciar el servicio sin pérdida de datos temporales críticos."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:017
+  name: "Compresión en memoria"
+  description: "El sistema deberá comprimir datos en memoria para optimizar el uso de RAM."
+  type: "Performance"
+  priority: "Medium"
+  rationale: "Aumenta la capacidad efectiva del sistema de caché sin degradar el rendimiento."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:018
+  name: "Pub/Sub integrado"
+  description: "La base de datos en memoria deberá ofrecer notificaciones en tiempo real de cambios de estado."
+  type: "Functional"
+  priority: "High"
+  rationale: "Facilita la sincronización de sistemas dependientes y la distribución inmediata de eventos."
+  application:
+    - "application:base-datos-memoria"
+
+- id: requirement:019
+  name: "Especificación OpenAPI 3.0"
+  description: "La API REST deberá documentarse mediante OpenAPI 3.0 con interfaz interactiva para desarrolladores."
+  type: "Technical"
+  priority: "High"
+  rationale: "Proporciona documentación estandarizada y mejora la interoperabilidad entre sistemas."
+  application:
+    - "application:api-rest"
+
+- id: requirement:020
+  name: "Autenticación OAuth 2.0 / JWT"
+  description: "La API REST deberá implementar autenticación segura basada en OAuth 2.0 con tokens JWT renovables."
+  type: "Security"
+  priority: "Critical"
+  rationale: "Garantiza el acceso seguro y controlado a los recursos del sistema."
+  application:
+    - "application:api-rest"
+
+- id: requirement:021
+  name: "Límite de consultas dinámico"
+  description: "La API REST deberá aplicar límites de consulta adaptativos según cliente y carga del sistema."
+  type: "Performance"
+  priority: "Medium"
+  rationale: "Evita la sobrecarga del sistema y garantiza la equidad entre clientes."
+  application:
+    - "application:api-rest"
+
+- id: requirement:022
+  name: "Versionado semántico"
+  description: "La API REST deberá mantener compatibilidad hacia atrás mediante versionado semántico controlado."
+  type: "Technical"
+  priority: "High"
+  rationale: "Permite la evolución del sistema sin afectar integraciones existentes."
+  application:
+    - "application:api-rest"
+
+- id: requirement:023
+  name: "Paginación inteligente"
+  description: "La API REST deberá ofrecer paginación optimizada para grandes conjuntos de datos."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Mejora la eficiencia de transferencia y la experiencia del cliente."
+  application:
+    - "application:api-rest"
+
+- id: requirement:024
+  name: "Filtrado y ordenamiento flexible"
+  description: "La API REST deberá permitir consultas con parámetros de filtrado y ordenamiento personalizados."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Permite obtener datos relevantes de forma precisa según las necesidades del cliente."
+  application:
+    - "application:api-rest"
+
+- id: requirement:025
+  name: "Esquema tipado fuerte"
+  description: "La API GraphQL deberá definir un esquema con tipos explícitos y validación automática."
+  type: "Technical"
+  priority: "High"
+  rationale: "Reduce errores de consulta y garantiza coherencia entre clientes y servidor."
+  application:
+    - "application:api-graphql"
+
+- id: requirement:026
+  name: "Suscripciones en tiempo real"
+  description: "La API GraphQL deberá soportar conexiones WebSocket para actualizaciones instantáneas."
+  type: "Functional"
+  priority: "High"
+  rationale: "Permite recibir cambios en tiempo real sin necesidad de sondeo continuo."
+  application:
+    - "application:api-graphql"
+
+- id: requirement:027
+  name: "Reconexión automática"
+  description: "La interfaz SSE deberá manejar reconexiones automáticas con reintentos exponenciales ante pérdida de conexión."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Mantiene la entrega continua de eventos en entornos con conectividad inestable."
+  application:
+    - "application:api-sse"
+
+- id: requirement:028
+  name: "Canales y filtros de suscripción"
+  description: "La interfaz SSE deberá permitir suscripciones por ruta, parada, línea o área."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Optimiza el consumo de datos al permitir recibir solo la información relevante."
+  application:
+    - "application:api-sse"
+
+- id: requirement:029
+  name: "Heartbeats de conexión"
+  description: "La interfaz SSE deberá enviar señales periódicas para mantener la conexión activa y detectar cortes."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite monitorear la salud de las conexiones cliente-servidor."
+  application:
+    - "application:api-sse"
+
+- id: requirement:030
+  name: "Compatibilidad HTTP/2"
+  description: "La interfaz SSE deberá operar sobre HTTP/2 para aprovechar multiplexación y compresión de cabeceras."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Mejora la eficiencia y compatibilidad con infraestructuras modernas."
+  application:
+    - "application:api-sse"
+
+- id: requirement:031
+  name: "Compresión y control de flujo"
+  description: "La interfaz SSE deberá aplicar compresión de mensajes y backpressure para optimizar ancho de banda."
+  type: "Performance"
+  priority: "Medium"
+  rationale: "Reduce la carga de red y mejora la escalabilidad de conexiones simultáneas."
+  application:
+    - "application:api-sse"
+
+- id: requirement:032
+  name: "Comunicación bidireccional"
+  description: "La interfaz WebSocket deberá permitir el intercambio interactivo de eventos y comandos entre cliente y servidor."
+  type: "Functional"
+  priority: "High"
+  rationale: "Soporta operaciones en tiempo real como eco de posición o alertas instantáneas."
+  application:
+    - "application:websockets"
+
+- id: requirement:033
+  name: "Pub/Sub dinámico"
+  description: "La interfaz WebSocket deberá admitir la alta y baja dinámica de tópicos y filtros de suscripción."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Permite ajustar las suscripciones activas según las necesidades de los clientes."
+  application:
+    - "application:websockets"
+
+- id: requirement:034
+  name: "Soporte binario y JSON"
+  description: "La interfaz WebSocket deberá permitir el uso de formatos binarios y JSON para mensajes."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Proporciona flexibilidad entre eficiencia de transmisión y legibilidad de datos."
+  application:
+    - "application:websockets"
+
+- id: requirement:035
+  name: "Entrega confiable de eventos"
+  description: "El sistema de webhooks deberá garantizar entrega confiable mediante reintentos con política exponencial e idempotencia."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Evita pérdida o duplicación de notificaciones críticas en integraciones externas."
+  application:
+    - "application:webhooks"
+
+- id: requirement:036
+  name: "Filtros por suscriptor"
+  description: "Los webhooks deberán permitir a cada suscriptor definir qué tipos de eventos desea recibir."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Optimiza el uso de recursos y evita notificaciones irrelevantes."
+  application:
+    - "application:webhooks"
+
+- id: requirement:037
+  name: "Compatibilidad SPARQL 1.1"
+  description: "El sistema deberá implementar un endpoint SPARQL 1.1 que soporte consultas SELECT, ASK, CONSTRUCT y DESCRIBE."
+  type: "Functional"
+  priority: "High"
+  rationale: "Permite acceso semántico y flexible a datos estructurados del transporte público."
+  application:
+    - "application:api-sparql"
+
+- id: requirement:038
+  name: "Catálogo de ontologías"
+  description: "El sistema SPARQL deberá incluir vocabularios estándar como GTFS y schema.org."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Garantiza interoperabilidad con otras fuentes y sistemas semánticos."
+  application:
+    - "application:api-sparql"
+
+- id: requirement:039
+  name: "Consulta federada"
+  description: "El endpoint SPARQL deberá permitir consultas federadas (SERVICE) hacia fuentes externas cuando sea posible."
+  type: "Functional"
+  priority: "Low"
+  rationale: "Facilita la integración de datos distribuidos en ecosistemas abiertos."
+  application:
+    - "application:api-sparql"
+
+- id: requirement:040
+  name: "Soporte de múltiples formatos"
+  description: "El sistema SPARQL deberá entregar resultados en formatos JSON, XML y CSV según preferencia del cliente."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Mejora la interoperabilidad con diferentes tipos de aplicaciones cliente."
+  application:
+    - "application:api-sparql"
+
+- id: requirement:041
+  name: "Generación automática de feeds GTFS"
+  description: "El sistema deberá generar automáticamente los archivos GTFS Schedule actualizados a partir de la base de datos operativa."
+  type: "Functional"
+  priority: "High"
+  rationale: "Mantiene consistencia entre los datos internos y los feeds distribuidos a terceros."
+  application:
+    - "application:plataforma-gtfs"
+
+- id: requirement:042
+  name: "Validación de integridad GTFS"
+  description: "El sistema deberá ejecutar validaciones de integridad sobre cada feed GTFS antes de su publicación."
+  type: "Quality"
+  priority: "High"
+  rationale: "Evita errores en aplicaciones cliente debidos a datos inconsistentes o incompletos."
+  application:
+    - "application:plataforma-gtfs"
+
+- id: requirement:043
+  name: "Compatibilidad con GTFS Realtime"
+  description: "El sistema deberá publicar flujos GTFS Realtime para vehículos, alertas y llegadas, con actualizaciones cada segundo."
+  type: "Functional"
+  priority: "Critical"
+  rationale: "Permite a los usuarios obtener información de tránsito actualizada en tiempo real."
+  application:
+    - "application:plataforma-gtfs"
+
+- id: requirement:044
+  name: "Historial de publicaciones GTFS"
+  description: "El sistema deberá mantener un registro histórico de versiones publicadas de los feeds GTFS."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Facilita auditorías y comparaciones entre versiones de datos publicadas."
+  application:
+    - "application:plataforma-gtfs"
+
+- id: requirement:045
+  name: "Compatibilidad con extensiones GTFS-Pathways"
+  description: "El sistema deberá soportar extensiones GTFS para modelar pasillos, conexiones y zonas accesibles."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Permite representar de manera más precisa la infraestructura de transporte público."
+  application:
+    - "application:plataforma-gtfs"
+
+- id: requirement:046
+  name: "Editor visual de rutas"
+  description: "El sistema deberá incluir un editor visual para la creación y modificación de rutas y paradas sobre un mapa."
+  type: "Functional"
+  priority: "High"
+  rationale: "Simplifica la edición de datos por parte del personal técnico y operativo."
+  application:
+    - "application:editor-gtfs"
+
+- id: requirement:047
+  name: "Validación en línea"
+  description: "El editor GTFS deberá realizar validaciones automáticas en tiempo real al modificar datos."
+  type: "Quality"
+  priority: "High"
+  rationale: "Evita errores humanos durante la edición de rutas, horarios o paradas."
+  application:
+    - "application:editor-gtfs"
+
+- id: requirement:048
+  name: "Soporte multisesión"
+  description: "El editor GTFS deberá permitir la edición concurrente de múltiples usuarios con bloqueo de registros."
+  type: "Collaboration"
+  priority: "Medium"
+  rationale: "Permite trabajo colaborativo y evita conflictos entre ediciones simultáneas."
+  application:
+    - "application:editor-gtfs"
+
+- id: requirement:049
+  name: "Control de versiones"
+  description: "El editor GTFS deberá almacenar versiones de cambios y permitir revertir ediciones previas."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite auditar modificaciones y restaurar configuraciones anteriores en caso de error."
+  application:
+    - "application:editor-gtfs"
+
+- id: requirement:050
+  name: "Importación desde feeds externos"
+  description: "El editor GTFS deberá permitir importar datos desde feeds externos o de otras agencias."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Facilita la integración de información proveniente de sistemas de terceros."
+  application:
+    - "application:editor-gtfs"
+
+- id: requirement:051
+  name: "SDK de integración"
+  description: "El sistema deberá ofrecer un SDK para Python, JavaScript y Java para facilitar integraciones personalizadas."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Simplifica la adopción de la plataforma por parte de desarrolladores externos."
+  application:
+    - "application:tooling"
+
+- id: requirement:052
+  name: "Biblioteca de utilidades GTFS"
+  description: "El SDK deberá incluir funciones comunes para lectura, validación y transformación de datos GTFS."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Reduce esfuerzo de desarrollo y mejora la consistencia de integraciones externas."
+  application:
+    - "application:tooling"
+
+- id: requirement:053
+  name: "CLI de administración"
+  description: "El sistema deberá incluir una interfaz de línea de comandos para tareas de administración y mantenimiento."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite automatizar procesos y simplifica tareas de soporte técnico."
+  application:
+    - "application:tooling"
+
+- id: requirement:054
+  name: "API de desarrollo local"
+  description: "El SDK deberá incluir un modo local que simule las respuestas de la API central para pruebas offline."
+  type: "Technical"
+  priority: "Low"
+  rationale: "Facilita el desarrollo y depuración de aplicaciones sin necesidad de conexión constante."
+  application:
+    - "application:tooling"
+
+- id: requirement:055
+  name: "Ejemplos de código"
+  description: "El SDK deberá incluir ejemplos de uso en cada lenguaje soportado, con documentación detallada."
+  type: "Documentation"
+  priority: "Low"
+  rationale: "Mejora la experiencia de los desarrolladores y acelera la integración de terceros."
+  application:
+    - "application:tooling"
+
+- id: requirement:056
+  name: "Soporte de entornos virtuales"
+  description: "El SDK deberá ser compatible con entornos virtuales de desarrollo como venv, npm o Maven."
+  type: "Technical"
+  priority: "Low"
+  rationale: "Garantiza facilidad de instalación e integración en proyectos existentes."
+  application:
+    - "application:tooling"
+
+- id: requirement:057
+  name: "Depuración con logs detallados"
+  description: "El SDK deberá ofrecer opciones de registro detallado y depuración para pruebas locales."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Facilita la identificación de errores y la optimización del rendimiento durante el desarrollo."
+  application:
+    - "application:tooling"
+
+- id: requirement:058
+  name: "Compatibilidad multiplataforma"
+  description: "Las herramientas de desarrollo deberán ser compatibles con Windows, Linux y macOS."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Aumenta la accesibilidad para equipos de desarrollo con entornos heterogéneos."
+  application:
+    - "application:tooling"
+
+- id: requirement:059
+  name: "Publicación de paquetes"
+  description: "El SDK deberá estar disponible como paquete en repositorios públicos (PyPI, npm, Maven Central)."
+  type: "Technical"
+  priority: "Low"
+  rationale: "Simplifica la instalación y actualización de herramientas por parte de los desarrolladores."
+  application:
+    - "application:tooling"
+
+- id: requirement:060
+  name: "Control de dependencias"
+  description: "Las herramientas deberán incluir archivos de configuración de dependencias actualizadas y auditadas."
+  type: "Security"
+  priority: "Medium"
+  rationale: "Evita vulnerabilidades asociadas a librerías desactualizadas o inseguras."
+  application:
+    - "application:tooling"
+
+- id: requirement:061
+  name: "Monitoreo de latencia"
+  description: "El sistema deberá medir y registrar la latencia promedio de transmisión de datos en tiempo real."
+  type: "Performance"
+  priority: "High"
+  rationale: "Permite garantizar que se cumpla el objetivo de latencia menor a un segundo."
+  application:
+    - "application:plataforma-monitoreo"
+
+- id: requirement:062
+  name: "Alertas automáticas"
+  description: "El sistema deberá generar alertas automáticas cuando se detecten fallos o retrasos en la transmisión de datos."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Facilita la respuesta temprana ante incidentes que afecten la continuidad del servicio."
+  application:
+    - "application:plataforma-monitoreo"
+
+- id: requirement:063
+  name: "Monitoreo de disponibilidad"
+  description: "El sistema deberá supervisar la disponibilidad de los componentes críticos del sistema mediante chequeos periódicos."
+  type: "Operational"
+  priority: "High"
+  rationale: "Permite detectar caídas de servicios y mantener alta disponibilidad del sistema."
+  application:
+    - "application:plataforma-monitoreo"
+
+- id: requirement:064
+  name: "Historial de eventos"
+  description: "El sistema deberá mantener un registro histórico de alertas, errores y tiempos de respuesta."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite realizar auditorías y análisis post-incidente."
+  application:
+    - "application:plataforma-monitoreo"
+
+- id: requirement:065
+  name: "Integración con Prometheus y Grafana"
+  description: "El sistema deberá exponer métricas compatibles con Prometheus y visualizaciones mediante Grafana."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Facilita el uso de herramientas estándar de monitoreo y observabilidad."
+  application:
+    - "application:plataforma-monitoreo"
+
+- id: requirement:066
+  name: "Panel en tiempo real"
+  description: "El panel de control deberá mostrar el estado actual de vehículos, rutas y estaciones en tiempo real."
+  type: "Functional"
+  priority: "High"
+  rationale: "Brinda visibilidad inmediata sobre la operación del transporte público."
+  application:
+    - "application:dashboard"
+
+- id: requirement:067
+  name: "Mapas interactivos"
+  description: "El panel deberá mostrar un mapa interactivo con posiciones de vehículos, rutas activas y alertas georreferenciadas."
+  type: "Functional"
+  priority: "High"
+  rationale: "Facilita el seguimiento visual de las unidades y su estado operativo."
+  application:
+    - "application:dashboard"
+
+- id: requirement:068
+  name: "Filtros y búsqueda avanzada"
+  description: "El panel deberá permitir filtrar la información por ruta, unidad, operador o zona."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Permite enfocar el monitoreo en áreas o vehículos específicos según necesidad."
+  application:
+    - "application:dashboard"
+
+- id: requirement:069
+  name: "Notificaciones visuales"
+  description: "El panel deberá resaltar con colores o íconos las condiciones anormales o eventos críticos."
+  type: "Usability"
+  priority: "Medium"
+  rationale: "Mejora la rapidez de interpretación y respuesta del personal de monitoreo."
+  application:
+    - "application:dashboard"
+
+- id: requirement:070
+  name: "Modo oscuro y accesibilidad"
+  description: "El panel deberá ofrecer un modo oscuro y cumplir estándares de accesibilidad WCAG 2.1."
+  type: "Usability"
+  priority: "Low"
+  rationale: "Mejora la legibilidad y reduce la fatiga visual durante el monitoreo prolongado."
+  application:
+    - "application:dashboard"
+
+- id: requirement:071
+  name: "Control de permisos"
+  description: "El panel deberá implementar control de acceso por roles para restringir funciones según perfil de usuario."
+  type: "Security"
+  priority: "High"
+  rationale: "Garantiza que solo usuarios autorizados puedan realizar acciones administrativas."
+  application:
+    - "application:dashboard"
+
+- id: requirement:072
+  name: "Exportación de datos"
+  description: "El panel deberá permitir exportar información en formatos CSV, JSON y PDF."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Facilita la generación de reportes y análisis fuera del sistema."
+  application:
+    - "application:dashboard"
+
+- id: requirement:073
+  name: "Analítica descriptiva"
+  description: "El módulo de analítica deberá generar indicadores sobre puntualidad, velocidad promedio y frecuencia de servicio."
+  type: "Functional"
+  priority: "High"
+  rationale: "Permite evaluar el desempeño del transporte público y detectar áreas de mejora."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:074
+  name: "Detección de patrones anómalos"
+  description: "El sistema deberá identificar comportamientos atípicos como desvíos de ruta o paradas prolongadas."
+  type: "Intelligence"
+  priority: "High"
+  rationale: "Permite detectar incidentes operativos y optimizar la gestión de flota."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:075
+  name: "Análisis histórico"
+  description: "El sistema deberá ofrecer reportes históricos agregados por hora, día y semana."
+  type: "Functional"
+  priority: "Medium"
+  rationale: "Permite comparar tendencias de operación a lo largo del tiempo."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:076
+  name: "Integración con herramientas BI"
+  description: "El módulo de analítica deberá ofrecer conexión a herramientas de inteligencia de negocios mediante OData o API REST."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Facilita el análisis avanzado de datos en plataformas externas."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:077
+  name: "Indicadores personalizados"
+  description: "El sistema deberá permitir definir métricas e indicadores configurables según el usuario o entidad operadora."
+  type: "Functional"
+  priority: "Low"
+  rationale: "Permite adaptar los reportes a las necesidades específicas de cada institución."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:078
+  name: "Visualizaciones interactivas"
+  description: "El módulo de analítica deberá ofrecer gráficos dinámicos y comparativos de desempeño."
+  type: "Usability"
+  priority: "Medium"
+  rationale: "Facilita la interpretación visual de grandes volúmenes de datos operativos."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:079
+  name: "Alertas basadas en KPIs"
+  description: "El módulo de analítica deberá generar alertas automáticas cuando un KPI supere o caiga bajo umbrales definidos."
+  type: "Reliability"
+  priority: "Medium"
+  rationale: "Permite la detección temprana de degradaciones en el servicio."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:080
+  name: "Comparación entre periodos"
+  description: "El módulo deberá permitir comparar métricas de desempeño entre diferentes intervalos de tiempo o zonas."
+  type: "Functional"
+  priority: "Low"
+  rationale: "Apoya la toma de decisiones mediante análisis comparativo."
+  application:
+    - "application:modulo-analitica"
+
+- id: requirement:081
+  name: "Autenticación centralizada"
+  description: "El sistema deberá contar con un servicio de autenticación centralizada que gestione las credenciales y sesiones de todos los usuarios."
+  type: "Security"
+  priority: "High"
+  rationale: "Centralizar el control de acceso mejora la seguridad y simplifica la administración de usuarios."
+  application:
+    - "application:seguridad"
+
+- id: requirement:082
+  name: "Autorización por roles"
+  description: "El sistema deberá aplicar control de acceso basado en roles (RBAC) para restringir acciones según los permisos asignados."
+  type: "Security"
+  priority: "High"
+  rationale: "Previene accesos no autorizados a funcionalidades críticas del sistema."
+  application:
+    - "application:seguridad"
+
+- id: requirement:083
+  name: "Encriptación de datos en tránsito"
+  description: "Todas las comunicaciones entre servicios deberán realizarse mediante protocolos seguros como TLS 1.3."
+  type: "Security"
+  priority: "High"
+  rationale: "Protege la confidencialidad e integridad de los datos transmitidos entre componentes."
+  application:
+    - "application:seguridad"
+
+- id: requirement:084
+  name: "Encriptación de datos en reposo"
+  description: "Los datos almacenados en bases de datos y respaldos deberán cifrarse utilizando algoritmos AES-256 o equivalentes."
+  type: "Security"
+  priority: "High"
+  rationale: "Garantiza la protección de la información sensible ante accesos indebidos o pérdidas."
+  application:
+    - "application:seguridad"
+
+- id: requirement:085
+  name: "Registro de auditoría"
+  description: "El sistema deberá mantener un registro detallado de las acciones realizadas por los usuarios y servicios internos."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite la trazabilidad de eventos y facilita las investigaciones ante incidentes de seguridad."
+  application:
+    - "application:seguridad"
+
+- id: requirement:086
+  name: "Gestión de certificados"
+  description: "El sistema deberá automatizar la gestión y renovación de certificados digitales utilizados en la infraestructura."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Reduce riesgos asociados al vencimiento o mal uso de certificados SSL/TLS."
+  application:
+    - "application:seguridad"
+
+- id: requirement:087
+  name: "Infraestructura escalable"
+  description: "El sistema deberá estar diseñado para soportar el aumento de carga mediante escalamiento horizontal automático."
+  type: "Technical"
+  priority: "High"
+  rationale: "Permite mantener el rendimiento del sistema ante el crecimiento del tráfico o número de usuarios."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:088
+  name: "Contenedorización de servicios"
+  description: "Todos los componentes deberán empaquetarse en contenedores para facilitar su despliegue y portabilidad."
+  type: "Technical"
+  priority: "High"
+  rationale: "Simplifica el despliegue, la replicación y la recuperación del sistema."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:089
+  name: "Orquestación de contenedores"
+  description: "El sistema deberá utilizar una plataforma de orquestación como Kubernetes para la gestión automatizada de contenedores."
+  type: "Technical"
+  priority: "High"
+  rationale: "Asegura el equilibrio de carga, la alta disponibilidad y la autorecuperación de servicios."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:090
+  name: "Balanceo de carga"
+  description: "El sistema deberá distribuir automáticamente las solicitudes entrantes entre las instancias disponibles."
+  type: "Performance"
+  priority: "Medium"
+  rationale: "Optimiza la utilización de recursos y evita cuellos de botella."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:091
+  name: "Alta disponibilidad"
+  description: "La arquitectura deberá diseñarse con redundancia en todos los componentes críticos para evitar puntos únicos de fallo."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Aumenta la continuidad operativa del sistema ante fallos de hardware o software."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:092
+  name: "Recuperación ante desastres"
+  description: "El sistema deberá contar con un plan y mecanismos de recuperación automática ante fallos o pérdidas de datos."
+  type: "Reliability"
+  priority: "High"
+  rationale: "Garantiza la restauración del servicio en caso de eventos catastróficos."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:093
+  name: "Despliegue continuo"
+  description: "El sistema deberá permitir la automatización de pruebas, integración y despliegue mediante pipelines CI/CD."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Reduce errores humanos y acelera la entrega de nuevas versiones del sistema."
+  application:
+    - "application:mantenimiento"
+
+- id: requirement:094
+  name: "Versionamiento de componentes"
+  description: "Cada componente deberá mantener un control de versiones semántico (SemVer) documentado."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Permite rastrear cambios y mantener compatibilidad entre servicios."
+  application:
+    - "application:mantenimiento"
+
+- id: requirement:095
+  name: "Monitoreo de infraestructura"
+  description: "El sistema deberá recolectar métricas de CPU, memoria, red y almacenamiento en tiempo real."
+  type: "Operational"
+  priority: "Medium"
+  rationale: "Permite anticipar problemas de rendimiento y planificar capacidad."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:096
+  name: "Alertas de disponibilidad"
+  description: "El sistema deberá notificar automáticamente al personal técnico en caso de fallos críticos o pérdida de conectividad."
+  type: "Operational"
+  priority: "High"
+  rationale: "Facilita la intervención inmediata ante incidentes operativos."
+  application:
+    - "application:infraestructura"
+
+- id: requirement:097
+  name: "Actualizaciones automáticas"
+  description: "El sistema deberá permitir aplicar actualizaciones de seguridad y mantenimiento sin afectar la disponibilidad del servicio."
+  type: "Maintenance"
+  priority: "Medium"
+  rationale: "Reduce tiempos de inactividad y mantiene la seguridad del entorno productivo."
+  application:
+    - "application:mantenimiento"
+
+- id: requirement:098
+  name: "Pruebas automatizadas"
+  description: "Los componentes críticos deberán contar con pruebas unitarias, de integración y de rendimiento automatizadas."
+  type: "Quality"
+  priority: "Medium"
+  rationale: "Asegura la estabilidad del sistema ante actualizaciones o nuevas funcionalidades."
+  application:
+    - "application:mantenimiento"
+
+- id: requirement:099
+  name: "Documentación técnica"
+  description: "El sistema deberá incluir documentación técnica actualizada accesible desde un repositorio central."
+  type: "Quality"
+  priority: "Low"
+  rationale: "Facilita la comprensión, mantenimiento y capacitación del equipo técnico."
+  application:
+    - "application:mantenimiento"
+
+- id: requirement:100
+  name: "Soporte multientorno"
+  description: "El sistema deberá poder desplegarse en entornos de desarrollo, pruebas y producción con configuraciones independientes."
+  type: "Technical"
+  priority: "Medium"
+  rationale: "Permite validar cambios de forma segura antes de su despliegue productivo."
+  application:
+    - "application:infraestructura"
+
+
+
+
