@@ -90,7 +90,7 @@ interfaces:
     description: "Protocolo de comunicación entre el usuario y una aplicación o bien un sitio web a través de un navegador web."
     type: "HTML"
     protocols:
-      -"HTTP"
+      - "HTTP"
     dataFormats:
       - "HTML"
       - "JSON"
@@ -100,7 +100,7 @@ interfaces:
     owner: "Equipo de Arquitectura"
     contact: "simovi@ucr.ac.cr"
     status: "Activo"
-    documentation: "https://www.ibm.com
+    documentation: "https://www.ibm.com"
 
   - id: interface:006
     name: "Interfaz WebSocket"
@@ -121,7 +121,8 @@ interfaces:
 
   - id: interface:007
     name: "Interfaz MQTT"
-    description: "Protocolo de comunicación el cual es un modelo de publicación y o suscripción ya que los dispositivos no se comunican directamente, consiste en que el usuario se conecta a un servidor el cual filtra y distribuye mensajes."
+    description: "Protocolo de comunicación basado en un modelo de publicación/suscripción; los dispositivos se conectan a un broker que filtra y distribuye mensajes."
+    type: "MQTT"
     protocols:
       - "TCP/IP"
     dataFormats:
@@ -136,10 +137,9 @@ interfaces:
     status: "Activo"
     documentation: "https://mqtt.org"
 
-
   - id: interface:008
     name: "Interfaz gRPC"
-    description: "Interfaz basada en gRPC que utiliza Protocol Buffers ue actúa como un contrato para la comunicación entre aplicaciones. Es un marco de trabajo que utiliza las definiciones de Protobuf para la comunicación RPC (ejecución de funciones remotas)"
+    description: "Interfaz basada en gRPC que utiliza Protocol Buffers que actúa como un contrato para la comunicación entre aplicaciones. Usa definiciones de Protobuf para la comunicación RPC."
     type: "gRPC"
     protocols:
       - "HTTP"
@@ -154,10 +154,10 @@ interfaces:
 
   - id: interface:009
     name: "Interfaz Protobuf"
-    description: "Interfaz basada en gRPC que utiliza Protocol Buffers para la serialización eficiente de datos estructurados y la definición de servicios remotos. Es el formato para definir los mensajes de datos y la estructura de la interfaz del servicio."
+    description: "Interfaz basada en gRPC que utiliza Protocol Buffers para la serialización eficiente de datos estructurados y la definición de servicios remotos."
     type: "gRPC"
     protocols:
-      - "JASON"
+      - "JSON"
       - "XML"
     dataFormats:
       - "Binario"
@@ -202,4 +202,4 @@ interfaces:
     owner: "Equipo de Arquitectura"
     contact: "simovi@ucr.ac.cr"
     status: "Activo"
-    documentation: "https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml?utm"
+    documentation: "https://www.loc.gov/preservation/digital/formats/fdd/fdd000362.shtml"
