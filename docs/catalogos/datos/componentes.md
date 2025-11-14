@@ -24,41 +24,89 @@
 - Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:008, data-entity:009, data-entity:010, data-entity:011, data-entity:012, data-entity:013, data-entity:014, data-entity:015, data-entity:016, data-entity:017, data-entity:018, data-entity:019, data-entity:020, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:026, data-entity:027, data-entity:028, data-entity:029, data-entity:030, data-entity:031, data-entity:032
 
 <a id="component-002"></a>
-## Databus API (GTFS Ingestion)
+## Databús API (GTFS Ingestion)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:002</code></span>
 
 - Descripción: Ingestion service that imports and validates GTFS files and writes them into the relational database.
-- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:008, data-entity:009, data-entity:010, data-entity:011, data-entity:012, data-entity:013, data-entity:014, data-entity:015, data-entity:016, data-entity:017, data-entity:018, data-entity:019, data-entity:020, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:026, data-entity:027, data-entity:028, data-entity:029, data-entity:030, data-entity:031, data-entity:032
 
 <a id="component-003"></a>
-## Infobus API (Public Query)
+## Infobús API (Public Query)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:003</code></span>
 
 - Descripción: HTTP read-only API that exposes routes, trips, stops, and schedules to the public.
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:030, data-entity:031, data-entity:032
 
 <a id="component-004"></a>
-## Infobus Screens (Display Server)
+## Infobús Screens (Display Server)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:004</code></span>
 
-- Descripción: Back-end service that feeds information displays for stations and users; consumes Infobus API.
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004
+- Descripción: Back-end service that feeds information displays for stations and users; consumes Infobús API.
+- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:021, data-entity:022, data-entity:023, data-entity:031
 
 <a id="component-005"></a>
-## Infobus Info Server (Aggregation/Cache)
+## Infobús Info Server (Aggregation/Cache)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:005</code></span>
 
 - Descripción: Internal aggregation and caching service for combined catalog and real-time data queries.
-- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:006
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:026, data-entity:027, data-entity:028, data-entity:029, data-entity:030, data-entity:031, data-entity:032
 
 <a id="component-006"></a>
-## Infobus Data (Analytics/BI)
+## Infobús Data (Analytics/BI)
 
 <span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:006</code></span>
 
 - Descripción: Analytical platform that consolidates historical data for reporting and business intelligence models (BI/ETL).
-- Entidades de datos: data-entity:002, data-entity:003, data-entity:004, data-entity:005
+- Entidades de datos: data-entity:001, data-entity:002, data-entity:003, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:008, data-entity:009, data-entity:010, data-entity:011, data-entity:012, data-entity:013, data-entity:014, data-entity:015, data-entity:016, data-entity:017, data-entity:018, data-entity:019, data-entity:020, data-entity:021, data-entity:022, data-entity:023, data-entity:024, data-entity:025, data-entity:026, data-entity:027, data-entity:028, data-entity:029, data-entity:030, data-entity:031, data-entity:032
+
+<a id="component-007"></a>
+## Vehicle Telemetry Service
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:007</code></span>
+
+- Descripción: Service that collects, stores, and publishes real-time telemetry and positioning data from vehicles and on-board devices.
+- Entidades de datos: data-entity:033, data-entity:034
+
+<a id="component-008"></a>
+## Infrastructure Device Manager
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:008</code></span>
+
+- Descripción: Platform that supervises and monitors fixed infrastructure devices such as cameras, sensors, or communication gateways.
+- Entidades de datos: data-entity:035, data-entity:036
+
+<a id="component-009"></a>
+## Display Content Service
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:009</code></span>
+
+- Descripción: Back-end responsible for generating and distributing dynamic content for passenger information screens.
+- Entidades de datos: data-entity:036, data-entity:003, data-entity:004, data-entity:005, data-entity:031, data-entity:032
+
+<a id="component-010"></a>
+## Driver Management System
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:010</code></span>
+
+- Descripción: System that stores driver records, licensing, assignments, and attendance within the operational environment.
+- Entidades de datos: data-entity:037, data-entity:033
+
+<a id="component-011"></a>
+## Dispatch and Control Center
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:011</code></span>
+
+- Descripción: Central platform that coordinates driver assignments, vehicle dispatch, incident monitoring, and schedule control.
+- Entidades de datos: data-entity:037, data-entity:038, data-entity:033, data-entity:004, data-entity:005, data-entity:006, data-entity:007, data-entity:017, data-entity:018
+
+<a id="component-012"></a>
+## Operational Data Warehouse
+
+<span class="catalog-badge" style="--catalog-badge-bg:#E6FFFB"><span class="catalog-icon material-symbols-outlined">schema</span><code style="background:none;padding:0;margin:0;border:0;">component:012</code></span>
+
+- Descripción: Analytical layer that integrates telemetry, driver performance, and infrastructure metrics for operational insights and dashboards.
+- Entidades de datos: data-entity:033, data-entity:034, data-entity:035, data-entity:036, data-entity:037, data-entity:038

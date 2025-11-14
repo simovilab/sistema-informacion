@@ -210,6 +210,7 @@ export default defineConfig({
               { text: "Introducción", link: "/catalogos/datos/" },
               { text: "Entidades", link: "/catalogos/datos/entidades" },
               { text: "Componentes", link: "/catalogos/datos/componentes" },
+              { text: "GTFS", link: "/catalogos/datos/gtfs" },
             ],
           },
           {
