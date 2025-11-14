@@ -78,6 +78,7 @@ const fileToPath = {
   applications: "fundamentos/aplicaciones.md",
   requirements: "fundamentos/requisitos.md",
   entities: "datos/entidades.md",
+  gtfs: "datos/gtfs.md",
   components: "datos/componentes.md",
   technologies: "tecnologia/tecnologias.md",
   standards: "tecnologia/estandares.md",
@@ -103,6 +104,7 @@ const slugDisplayName = {
   requisitos: "Requisitos",
   // New filenames without suffix used in paths below
   entidades: "Entidades de datos",
+  gtfs: "GTFS",
   componentes: "Componentes de datos",
   tecnologias: "Tecnologías",
   estandares: "Estándares",
@@ -178,6 +180,23 @@ function formatValue(v) {
   }
 }
 
+function renderAttributesTable(attributes) {
+  if (!Array.isArray(attributes) || attributes.length === 0) return "—"
+  
+  // Build table with columns: name (as code), type, description
+  let table = "\n| Nombre | Tipo | Descripción |\n"
+  table += "| --- | --- | --- |\n"
+  
+  for (const attr of attributes) {
+    const name = attr.name ? `\`${attr.name}\`` : "—"
+    const type = attr.type || "—"
+    const description = attr.description || "—"
+    table += `| ${name} | ${type} | ${description} |\n`
+  }
+  
+  return table + "\n"
+}
+
 function renderMetadata(md) {
   if (!md || typeof md !== "object") return ""
   const rows = []
@@ -249,6 +268,14 @@ function renderItem(sectionKey, item, index, labelForKey, headingLevel = 2) {
     if (k === "id") continue
     const v = item[k]
     const label = labelForKey(k)
+    
+    // Special case: render attributes/fields as a table for data entities and GTFS files
+    if ((k === "attributes" || k === "fields") && Array.isArray(v) && v.length > 0 && v[0]?.name && v[0]?.type) {
+      out += `\n**${label}:**\n`
+      out += renderAttributesTable(v)
+      continue
+    }
+    
     const rendered = formatValue(v)
     if (rendered.startsWith("```json")) {
       out += `- ${label}:\n\n${rendered}\n\n`

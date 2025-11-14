@@ -52,7 +52,7 @@ data_components:
       - "data-entity:032"  # Attribution
 
   - id: "component:002"
-    name: "Databus API (GTFS Ingestion)"
+    name: "Databús API (GTFS Ingestion)"
     description: "Ingestion service that imports and validates GTFS files and writes them into the relational database."
     data_entities:
       - "data-entity:001"  # Agency
@@ -89,7 +89,7 @@ data_components:
       - "data-entity:032"  # Attribution
 
   - id: "component:003"
-    name: "Infobus API (Public Query)"
+    name: "Infobús API (Public Query)"
     description: "HTTP read-only API that exposes routes, trips, stops, and schedules to the public."
     data_entities:
       - "data-entity:001"  # Agency
@@ -109,8 +109,8 @@ data_components:
       - "data-entity:032"  # Attribution
 
   - id: "component:004"
-    name: "Infobus Screens (Display Server)"
-    description: "Back-end service that feeds information displays for stations and users; consumes Infobus API."
+    name: "Infobús Screens (Display Server)"
+    description: "Back-end service that feeds information displays for stations and users; consumes Infobús API."
     data_entities:
       - "data-entity:002"  # Stop
       - "data-entity:003"  # Route
@@ -122,7 +122,7 @@ data_components:
       - "data-entity:031"  # Feed Info
 
   - id: "component:005"
-    name: "Infobus Info Server (Aggregation/Cache)"
+    name: "Infobús Info Server (Aggregation/Cache)"
     description: "Internal aggregation and caching service for combined catalog and real-time data queries."
     data_entities:
       - "data-entity:001"  # Agency
@@ -146,7 +146,7 @@ data_components:
       - "data-entity:032"  # Attribution
 
   - id: "component:006"
-    name: "Infobus Data (Analytics/BI)"
+    name: "Infobús Data (Analytics/BI)"
     description: "Analytical platform that consolidates historical data for reporting and business intelligence models (BI/ETL)."
     data_entities:
       - "data-entity:001"  # Agency
