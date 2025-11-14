@@ -34,6 +34,6 @@ features:
 
 ::: danger Trabajo en progreso
 
-El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para **diciembre de 2025**. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
+El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para **febrero de 2026**. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
 
 :::

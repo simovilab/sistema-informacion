@@ -122,3 +122,25 @@ stakeholders:
       - "Monitorear el cumplimiento de los derechos de las personas usuarias."
     influence: "Medium"
     priority: "High"
+
+  - id: "stakeholder:011"
+    name: "Personas usuarias viales"
+    description: "Peatones, ciclistas, conductores de vehículos privados y otros usuarios que comparten la infraestructura vial con el transporte público."
+    role: "Civil Society"
+    interests:
+      - "Seguridad en las intersecciones y paradas de autobús."
+      - "Infraestructura vial compartida de forma equitativa."
+      - "Reducción de la congestión y la contaminación."
+    influence: "Medium"
+    priority: "Medium"
+
+  - id: "stakeholder:012"
+    name: "Personas con discapacidad"
+    description: "Personas con movilidad reducida, discapacidades visuales, auditivas u otras que requieren características de accesibilidad especiales en el transporte."
+    role: "End Users"
+    interests:
+      - "Accesibilidad universal en autobuses y paradas (rampas, espacio para sillas de ruedas)."
+      - "Sistemas de información auditivos y visuales claros."
+      - "Tarifas y políticas de asistencia justas."
+    influence: "High"
+    priority: "High"
