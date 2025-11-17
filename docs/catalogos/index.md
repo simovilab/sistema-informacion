@@ -47,9 +47,9 @@ Reúne los catálogos de tecnologías, estándares e interfaces que conforman la
 | [Estándares](./tecnologia/estandares)   | _Technology Standards_ |
 | [Interfaces](./tecnologia/interfaces)   | _Interface_            |
 
-### Identidad visual
+### Comunicación
 
-Comprende los catálogos que definen la identidad y coherencia visual del sistema. Incluye la marca, los elementos gráficos, la señalización, las interfaces gráficas y las plantillas de comunicación, asegurando una experiencia visual unificada en todos los medios.
+Comprende los catálogos que definen la identidad y coherencia visual del sistema. Incluye la marca, los elementos gráficos, la señalización, las interfaces gráficas y las plantillas de comunicación, promoviendo una experiencia visual unificada en todos los medios.
 
 | Catálogo                                                         | Descripción                 |
 | ---------------------------------------------------------------- | --------------------------- |
