@@ -14,7 +14,10 @@ signage:
   - id: signage:001
     name: "Señal de parada de autobús"
     type: "Señal de parada de autobús"
-    dimensions: "60x90 cm"
+    dimensions: 
+      - width: 60
+      - height: 30
+      - unit: "cm"
     orientation: "Vertical"
     materials: "Aluminio con vinilo reflectivo"
     typography: "Inter"
