@@ -85,12 +85,6 @@ S: SPARQL (1.1) (https://www.w3.org/TR/sparql11-query/)
 T: FastMCP
 S: MCP (buscar versión)
 
-## Infobús _Py_
-
-(aplicación): SDK de Python para control de Infobús
-
-T: Python
-
 ## Infobús _Screens_
 
 (aplicación): servidor para administración y distribución de datos de pantallas informativas
