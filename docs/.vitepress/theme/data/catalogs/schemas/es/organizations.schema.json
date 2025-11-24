@@ -21,7 +21,7 @@
           "contact",
           "website",
           "location",
-          "parentOrganization",
+          "parent_organization",
           "roles"
         ],
         "properties": {
@@ -60,7 +60,7 @@
             "minLength": 1,
             "description": "Ubicación física o dirección de la organización"
           },
-          "parentOrganization": {
+          "parent_organization": {
             "oneOf": [
               {
                 "type": "null"

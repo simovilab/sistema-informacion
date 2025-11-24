@@ -60,41 +60,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/diseno/" },
+          { text: "Datos abiertos", link: "/diseno/datos-abiertos" },
           { text: "Experiencia del servicio", link: "/diseno/experiencia" },
-          {
-            text: "Canales de comunicación",
-            collapsed: true,
-            items: [
-              {
-                text: "Introducción",
-                link: "/diseno/canales/",
-              },
-              {
-                text: "Datos abiertos",
-                link: "/diseno/canales/datos-abiertos",
-              },
-              {
-                text: "Datos en tiempo real",
-                link: "/diseno/canales/datos-tiempo-real",
-              },
-              {
-                text: "Medios digitales",
-                link: "/diseno/canales/medios-digitales",
-              },
-              {
-                text: "Medios impresos",
-                link: "/diseno/canales/medios-impresos",
-              },
-              {
-                text: "Redes sociales",
-                link: "/diseno/canales/redes-sociales",
-              },
-              {
-                text: "Atención al cliente",
-                link: "/diseno/canales/atencion-cliente",
-              },
-            ],
-          },
           {
             text: "Arquitectura tecnológica",
             collapsed: true,
@@ -107,15 +74,48 @@ export default defineConfig({
             ],
           },
           {
-            text: "Identidad visual",
+            text: "Comunicación",
             collapsed: true,
             items: [
-              { text: "Introducción", link: "/diseno/identidad-visual/" },
-              { text: "Marca", link: "/diseno/identidad-visual/marca" },
-              { text: "Elementos gráficos", link: "/diseno/identidad-visual/elementos-graficos" },
-              { text: "Interfaces gráficas", link: "/diseno/identidad-visual/interfaces-graficas" },
-              { text: "Señalización", link: "/diseno/identidad-visual/senalizacion" },
-              { text: "Plantillas", link: "/diseno/identidad-visual/plantillas" },
+              { text: "Introducción", link: "/diseno/comunicacion/" },
+              {
+                text: "Canales",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Introducción",
+                    link: "/diseno/comunicacion/canales/",
+                  },
+                  {
+                    text: "Medios digitales",
+                    link: "/diseno/comunicacion/canales/medios-digitales",
+                  },
+                  {
+                    text: "Medios impresos",
+                    link: "/diseno/comunicacion/canales/medios-impresos",
+                  },
+                  {
+                    text: "Redes sociales",
+                    link: "/diseno/comunicacion/canales/redes-sociales",
+                  },
+                  {
+                    text: "Atención al cliente",
+                    link: "/diseno/canales/atencion-cliente",
+                  },
+                ],
+              },
+              {
+                text: "Identidad visual",
+                collapsed: true,
+                items: [
+                  { text: "Introducción", link: "/diseno/comunicacion/identidad-visual/" },
+                  { text: "Marca", link: "/diseno/comunicacion/identidad-visual/marca" },
+                  { text: "Elementos gráficos", link: "/diseno/comunicacion/identidad-visual/elementos-graficos" },
+                  { text: "Interfaces gráficas", link: "/diseno/comunicacion/identidad-visual/interfaces-graficas" },
+                  { text: "Señalización", link: "/diseno/comunicacion/identidad-visual/senalizacion" },
+                  { text: "Plantillas", link: "/diseno/comunicacion/identidad-visual/plantillas" },
+                ],
+              },
             ],
           },
         ],
@@ -155,6 +155,14 @@ export default defineConfig({
             items: [
               { text: "Componentes", link: "/desarrollo/operaciones/" },
               { text: "Diagrama", link: "/desarrollo/operaciones/diagrama" },
+            ],
+          },
+          {
+            text: "Herramientas",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/herramientas/" },
+              { text: "Diagrama", link: "/desarrollo/herramientas/diagrama" },
             ],
           },
         ],
@@ -210,6 +218,7 @@ export default defineConfig({
               { text: "Introducción", link: "/catalogos/datos/" },
               { text: "Entidades", link: "/catalogos/datos/entidades" },
               { text: "Componentes", link: "/catalogos/datos/componentes" },
+              { text: "GTFS", link: "/catalogos/datos/gtfs" },
             ],
           },
           {
@@ -223,15 +232,15 @@ export default defineConfig({
             ],
           },
           {
-            text: "Identidad visual",
+            text: "Comunicación",
             collapsed: true,
             items: [
-              { text: "Introducción", link: "/catalogos/identidad-visual/" },
-              { text: "Marca", link: "/catalogos/identidad-visual/marca" },
-              { text: "Elementos gráficos", link: "/catalogos/identidad-visual/elementos-graficos" },
-              { text: "Señalización", link: "/catalogos/identidad-visual/senalizacion" },
-              { text: "Interfaces gráficas", link: "/catalogos/identidad-visual/interfaces-graficas" },
-              { text: "Plantillas", link: "/catalogos/identidad-visual/plantillas" },
+              { text: "Introducción", link: "/catalogos/comunicacion/" },
+              { text: "Marca", link: "/catalogos/comunicacion/marca" },
+              { text: "Elementos gráficos", link: "/catalogos/comunicacion/elementos-graficos" },
+              { text: "Señalización", link: "/catalogos/comunicacion/senalizacion" },
+              { text: "Interfaces gráficas", link: "/catalogos/comunicacion/interfaces-graficas" },
+              { text: "Plantillas", link: "/catalogos/comunicacion/plantillas" },
             ],
           },
         ],

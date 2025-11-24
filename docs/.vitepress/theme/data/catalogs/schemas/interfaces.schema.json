@@ -24,6 +24,7 @@
           "version",
           "owner",
           "contact",
+          "related_components",
           "status",
           "documentation"
         ],

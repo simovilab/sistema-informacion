@@ -11,17 +11,19 @@ metadata:
   license: "CC BY-NC 4.0"
 
 components:
-  - id: ui:button-primary
-    name: "Botón primario"
-    shape: "Rectángulo redondeado"
-    background_color: "Azul primario"
-    text_color: "Blanco"
-    font: "Inter Bold 16px"
-    hover_behavior: "Aclarar 10%"
-    accessibility: "WCAG 2.1 AA"
-    usage: "Usado para acciones principales en las aplicaciones."
+  - id: gui:website
+    name: "Plantilla de sitio web"
+    layout: "Barra lateral izquierda con contenido principal"
+    elements:
+      - "Menú de navegación"
+      - "Encabezado con logo"
+      - "Sección de contenido"
+      - "Pie de página con enlaces"
+    responsive: true
+    color_scheme: ["Azul primario", "Blanco", "Gris claro"]
+    typography: "Inter"
 
-  - id: ui:realtime-screen
+  - id: gui:screen
     name: "Plantilla de pantalla en tiempo real"
     layout: "Cuadrícula de 3 columnas"
     elements:

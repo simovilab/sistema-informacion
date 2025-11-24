@@ -1,0 +1,1082 @@
+# yaml-language-server: $schema=../schemas/gtfs.schema.json
+# Metadata about the catalog
+
+metadata:
+  title: "Catálogo de Datos GTFS"
+  version: "1.0.0"
+  date: "2025-09-18"
+  description: "Especificación GTFS v2.0."
+  author:
+    - "Jostin Cubero Torres"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+files:
+  - id: data-entity:001
+    name: "Agencia"
+    presence: "Required"
+    description: "Agencias de transporte con servicio representado en este conjunto de datos."
+    fields:
+    - id: field:001
+      name: "agency_id"
+      type: "String"
+      presence: "Conditionally Required"
+      description: "Identifica una marca de transporte que a menudo es sinónimo de una agencia de transporte."
+    - id: field:002
+      name: "agency_name"
+      type: "String"
+      presence: "Required"
+      description: "Nombre completo de la agencia de transporte."
+    - id: field:003
+      name: "agency_url"
+      type: "String"
+      presence: "Required"
+      description: "URL del sitio web de la agencia de transporte."
+    - id: field:004
+      name: "agency_timezone"
+      type: "String"
+      presence: "Required"
+      description: "Zona horaria donde se encuentra la agencia de transporte."
+    - id: field:005
+      name: "agency_lang"
+      type: "String"
+      presence: "Optional"
+      description: "Idioma principal utilizado por esta agencia de transporte."
+    - id: field:006
+      name: "agency_phone"
+      type: "String"
+      presence: "Optional"
+      description: "Número telefónico de voz de la agencia especificada."
+    - id: field:007
+      name: "agency_fare_url"
+      type: "String"
+      presence: "Optional"
+      description: "URL de una página web donde una persona usuaria puede comprar tiquetes u otros instrumentos de tarifa para esa agencia."
+    - id: field:008
+      name: "agency_email"
+      type: "String"
+      presence: "Optional"
+      description: "Dirección de correo electrónico monitoreada activamente por el departamento de atención al cliente de la agencia."
+    - id: field:009
+      name: "cemv_support"
+      type: "String"
+      presence: "Optional"
+      description: "Indica si las personas usuarias pueden acceder a un servicio de transporte asociado a esta agencia utilizando EMV sin contacto"
+
+# --------------------------------------------------------------------------------------
+  - id: data-entity:002
+    name: "Parada"
+    presence: "Conditionally Required"
+    description: "Paradas donde los vehículos recogen o dejan personas usuarias. También define estaciones y accesos a estaciones."
+    fields:
+    - id: field:010
+      name: "stop_id"
+      type: "String"
+      presence: "Required"
+      description: "Identifica una ubicación: parada/plataforma, estación, acceso/salida, nodo genérico o área de abordaje"
+    - id: field:011
+      name: "stop_code"
+      type: "String"
+      presence: "Optional"
+      description: "Texto corto o número que identifica la ubicación para las personas usuarias."
+    - id: field:012
+      name: "stop_name"
+      type: "String"
+      presence: "Conditionally Required"
+      description: "Nombre de la ubicación."
+    - id: field:013
+      name: "stop_desc"
+      type: "String"
+      presence: "Optional"
+      description: "Descripción de la ubicación que proporciona información útil y de calidad."
+    - id: field:014
+      name: "stop_lat" 
+      type: "Float"
+      presence: "Conditionally Required"
+      description: "Latitud de la ubicación."
+    - id: field:015
+      name: "stop_lon"
+      type: "Float"
+      presence: "Conditionally Required"
+      description: "Longitud de la ubicación."
+    - id: field:016
+      name: "zone_id"
+      type: "String"
+      presence: "Optional"
+      description: "Identifica la zona tarifaria de una parada."
+    - id: field:017
+      name: "stop_url"
+      type: "String"
+      presence: "Optional"
+      description: "URL de una página web sobre la ubicación."
+    - id: field:018
+      name: "location_type"
+      type: "String"
+      presence: "Optional"
+      description: "Tipo de ubicación. " 
+    - id: field:019
+      name: "parent_station"
+      type: "String"
+      presence: "Conditionally Required"
+      description: "Define jerarquía entre las diferentes ubicaciones definidas en stops.txt." 
+    - id: field:020
+      name: "stop_timezone"
+      type: "String"
+      presence: "Optional"
+      description: "Zona horaria de la ubicación."
+    - id: field:021
+      name: "wheelchair_boarding"
+      type: "String"
+      presence: "Optional"
+      description: "Indica si es posible el abordaje en silla de ruedas desde la ubicación."
+    - id: field:022
+      name: "level_id"
+      type: "String"
+      presence: "Optional"
+      description: "Nivel de la ubicación." 
+    - id: field:023
+      name: "platform_code"
+      type: "String"
+      presence: "Optional"
+      description: "Identificador de plataforma para una parada en plataforma (una parada que pertenece a una estación)."
+    - id: field:024
+      name: "stop_access"
+      type: "Integer"
+      presence: "Optional"
+      description: "Indica cómo se accede a la parada para una estación en particular."
+#-------------------------------------------------------------------------------  
+  - id: data-entity:003
+    name: "Ruta"
+    presence: "Required"
+    description: "Rutas de transporte. Una ruta es un grupo de viajes que se muestran a las personas usuarias como un único servicio."
+    fields:
+    - id: field:020
+      name: "route_id"
+      type: "String"
+      description: "Identifica una ruta."
+    - id: field:021
+      name: "agency_id"
+      type: "String"
+      description: "Agencia correspondiente a la ruta especificada."
+    - id: field:022
+      name: "route_short_name"
+      type: "String"
+      description: "Nombre corto de una ruta. A menudo es un identificador breve y abstracto."
+    - id: field:023
+      name: "route_long_name"
+      type: "String"
+      description: "Nombre completo de una ruta. Generalmente es más descriptivo que `route_short_name` e incluye el destino o una parada de la ruta."
+    - id: field:024
+      name: "route_type"
+      type: "String"
+      description: "Indica el tipo de transporte utilizado en una ruta."
+#-------------------------------------------------------------------------------  
+  - id: data-entity:004
+    name: "Viaje"
+    presence: "Required"
+    description: "Viajes para cada ruta. Un viaje es una secuencia de dos o más paradas que ocurren durante un periodo de tiempo específico."
+    fields:
+    - id: field:025
+      name: "route_id"
+      type: "String"
+      description: "Identifies a route."
+    - id: field:026
+      name: "service_id"
+      type: "String"
+      description: "Identifica un conjunto de fechas en las que hay servicio disponible para una o más rutas."
+    - id: field:027
+      name: "trip_id"
+      type: "String"
+      description: "Identifies a trip."
+    - id: field:028
+      name: "trip_headsign"
+      type: "String"
+      description: "Texto que aparece en la rotulación identificando el destino del viaje para las personas usuarias."
+    - id: field:029
+      name: "trip_short_name"
+      type: "String"
+      description: "Texto visible al público usado para identificar el viaje a las personas usuarias; por ejemplo, para identificar números de tren en viajes de tren de cercanías."
+    - id: field:030
+      name: "direction_id"
+      type: "String"
+      description: "Indica el sentido de recorrido del viaje."
+    - id: field:031
+      name: "block_id"
+      type: "String"
+      description: "Identifica el bloque al que pertenece el viaje"
+    - id: field:032
+      name: "shape_id"
+      type: "String"
+      description: "Identifica una forma geoespacial que describe el recorrido del vehículo para un viaje."
+    - id: field:033
+      name: "wheelchair_accessible"
+      type: "String"
+      description: "Indica accesibilidad para sillas de ruedas."
+    - id: field:033
+      name: "bikes_allowed"
+      type: "String"
+      description: "Indica si se permiten bicicletas."
+    - id: field:034
+      name: "cars_allowed"
+      type: "String"
+      description: "Indica si se permiten automóviles."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:005
+    name: "Tiempos de parada"
+    presence: "Required"
+    description: "Tiempos en que un vehículo llega a y sale de las paradas para cada viaje."
+    fields:
+    - id: field:035
+      name: "trip_id"
+      type: "String"
+      description: "Identifies a trip."
+    - id: field:036
+      name: "arrival_time"
+      type: "String"
+      description: "Hora de llegada a la parada para un viaje específico."
+    - id: field:037
+      name: "departure_time"
+      type: "String"
+      description: "Hora de salida de la parada para un viaje específico."
+    - id: field:038
+      name: "stop_id"
+      type: "String"
+      description: "Identifica la parada atendida."
+    - id: field:039
+      name: "stop_sequence"
+      type: "Integer"
+      description: "Orden de las paradas para un viaje en particular."
+    - id: field:040
+      name: "stop_headsign"
+      type: "String"
+      description: "Texto que aparece en la rotulación identificando el destino del viaje para esta parada."
+    - id: field:041
+      name: "pickup_type"
+      type: "Integer"
+      description: "Indica el método de abordaje."
+    - id: field:042
+      name: "drop_off_type"
+      type: "Integer"
+      description: "Indica el método de descenso."
+    - id: field:043
+      name: "continuous_pickup"
+      type: "Integer"
+      description: "Indica abordaje continuo a lo largo de la ruta."
+    - id: field:044
+      name: "continuous_drop_off"
+      type: "Integer"
+      description: "Indica descenso continuo a lo largo de la ruta."
+    - id: field:045
+      name: "shape_dist_traveled"
+      type: "Float"
+      description: "Distancia recorrida a lo largo de la forma para esta parada."
+    - id: field:046
+      name: "timepoint"
+      type: "Integer"
+      description: "Indica tiempos exactos o aproximados en esta parada."
+    - id: field:047
+      name: "start_pickup_drop_off_window"
+      type: "String"
+      description: "Inicio de la ventana de abordaje o descenso."
+    - id: field:048
+      name: "end_pickup_drop_off_window"
+      type: "String"
+      description: "Fin de la ventana de abordaje o descenso."
+    - id: field:049
+      name: "pickup_booking_rule_id"
+      type: "String"
+      description: "Identifica la regla de reserva que aplica para el abordaje."
+    - id: field:050
+      name: "drop_off_booking_rule_id"
+      type: "String"
+      description: "Identifica la regla de reserva que aplica para el descenso."
+    - id: field:051
+      name: "location_group_id"
+      type: "String"
+      description: "Identifica el grupo de ubicaciones atendido en lugar de una parada específica."
+    - id: field:052
+      name: "location_id"
+      type: "String"
+      description: "Identifica una ubicación GeoJSON atendida en lugar de una parada específica."
+
+#-------------------------------------------------------------------------------------------------------
+  - id: data-entity:006
+    name: "Calendario"
+    presence: "Conditionally Required"
+    description: "Fechas de servicio especificadas utilizando un horario semanal con fechas de inicio y fin."
+    fields:
+    - id: field:050
+      name: "service_id"
+      type: "String"
+      description: "Identifica un conjunto de fechas cuando hay servicio disponible para una o más rutas."
+    - id: field:051
+      name: "monday"
+      type: "String"
+      description: "Indica si el servicio opera todos los lunes en el rango de fechas especificado por los campos `start_date` y `end_date`"
+    - id: field:052
+      name: "tuesday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los martes."
+    - id: field:053
+      name: "wednesday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los miércoles."
+    - id: field:054
+      name: "thursday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los jueves."
+    - id: field:055
+      name: "friday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los viernes."
+    - id: field:056
+      name: "saturday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los sábados."
+    - id: field:057
+      name: "sunday"
+      type: "String"
+      description: "Funciona de la misma manera que `monday`, excepto que aplica a los domingos."
+    - id: field:058
+      name: "start_date"
+      type: "String"
+      description: "Día de inicio del servicio para el intervalo."
+    - id: field:059
+      name: "end_date"
+      type: "String"
+      description: "Día de fin del servicio para el intervalo. Este día de servicio se incluye en el intervalo."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:007
+    name: "Fecha de calendario"
+    presence: "Conditionally Required"
+    description: "Excepciones para los servicios definidos en el calendario."
+    fields:
+    - id: field:063
+      name: "service_id"
+      type: "String"
+      description: "Identifica un conjunto de fechas cuando ocurre una excepción de servicio para una o más rutas."
+    - id: field:064
+      name: "date"
+      type: "Date"
+      description: "Fecha en la que ocurre la excepción del servicio."
+    - id: field:065
+      name: "exception_type"
+      type: "Integer"
+      description: "Indica si el servicio se agrega o se elimina en la fecha especificada."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:008
+    name: "Atributo de tarifa"
+    presence: "Optional"
+    description: "Información de tarifas para las rutas de una agencia de transporte."
+    fields:
+    - id: field:066
+      name: "fare_id"
+      type: "String"
+      description: "Identifica una clase de tarifa."
+    - id: field:067
+      name: "price"
+      type: "Float"
+      description: "Precio de la tarifa."
+    - id: field:068
+      name: "currency_type"
+      type: "String"
+      description: "Código de moneda ISO 4217."
+    - id: field:069
+      name: "payment_method"
+      type: "Integer"
+      description: "0 = el pago se realiza a bordo; 1 = el pago se realiza antes de abordar."
+    - id: field:070
+      name: "transfers"
+      type: "Integer"
+      description: "Número de transbordos permitidos con esta tarifa (0 = ninguno, vacío = ilimitado)."
+    - id: field:071
+      name: "agency_id"
+      type: "String"
+      description: "Agencia asociada a esta tarifa (opcional, si las tarifas varían por agencia)."
+    - id: field:072
+      name: "transfer_duration"
+      type: "Integer"
+      description: "Duración en segundos durante la cual un transbordo es válido."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:009
+    name: "Regla de tarifa"
+    presence: "Optional"
+    description: "Reglas para aplicar tarifas a los itinerarios."
+    fields:
+    - id: field:073
+      name: "fare_id"
+      type: "String"
+      description: "Identifies a fare class."
+    - id: field:074
+      name: "route_id"
+      type: "String"
+      description: "Ruta a la que aplica esta regla de tarifa (opcional)."
+    - id: field:075
+      name: "origin_id"
+      type: "String"
+      description: "ID de zona de origen o ID de parada/estación al que aplica la regla de tarifa (opcional)."
+    - id: field:076
+      name: "destination_id"
+      type: "String"
+      description: "ID de zona de destino o ID de parada/estación al que aplica la regla de tarifa (opcional)."
+    - id: field:077
+      name: "contains_id"
+      type: "String"
+      description: "ID de zona por la que debe pasar el itinerario para que se aplique la regla de tarifa (opcional)."
+
+
+
+ #-------------------------------------------------------------------------------
+  - id: data-entity:010
+    name: "Intervalo temporal"
+    presence: "Optional"
+    description: "Periodos de fecha y hora que se usan en reglas de tarifa que dependen de factores de fecha y hora."
+    fields:
+    - id: field:066
+      name: "timeframe_id"
+      type: "String"
+      description: "Identifica el intervalo temporal."
+    - id: field:067
+      name: "start_date"
+      type: "Date"
+      description: "Fecha de inicio en la que el intervalo se vuelve válido."
+    - id: field:068
+      name: "start_time"
+      type: "String"
+      description: "Hora de inicio en la fecha inicial del intervalo."
+    - id: field:069
+      name: "end_date"
+      type: "Date"
+      description: "Fecha de fin en la que el intervalo es válido."
+    - id: field:070
+      name: "end_time"
+      type: "String"
+      description: "Hora de fin en la fecha final del intervalo."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:011
+    name: "Categoría de pasajero"
+    presence: "Optional"
+    description: "Define categorías de personas usuarias (p. ej., personas adultas mayores, estudiantes)."
+    fields:
+    - id: field:071
+      name: "rider_category_id"
+      type: "String"
+      description: "Identificador de la categoría de persona usuaria."
+    - id: field:072
+      name: "rider_category_name"
+      type: "String"
+      description: "Nombre de la categoría de persona usuaria tal como se presenta a las personas usuarias."
+    - id: field:073
+      name: "is_default_fare_category"
+      type: "Integer"
+      description: "Indica si esta categoría es la categoría de tarifa predeterminada (1 = predeterminada)."
+    - id: field:074
+      name: "eligibility_url"
+      type: "String"
+      description: "URL con más información sobre la elegibilidad para la categoría de persona usuaria."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:012
+    name: "Medio de pago"
+    presence: "Optional"
+    description: "Describe los medios de pago que se pueden emplear para utilizar productos de tarifa."
+    fields:
+    - id: field:075
+      name: "fare_media_id"
+      type: "String"
+      description: "Identifica el medio de pago."
+    - id: field:076
+      name: "fare_media_name"
+      type: "String"
+      description: "Nombre del medio de pago."
+    - id: field:077
+      name: "fare_media_type"
+      type: "Integer"
+      description: "Indica el tipo de medio de pago."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:013
+    name: "Producto de tarifa"
+    presence: "Optional"
+    description: "Describe los diferentes tipos de tiquetes o tarifas que pueden adquirir las personas usuarias."
+    fields:
+    - id: field:078
+      name: "fare_product_id"
+      type: "String"
+      description: "Identifica un producto de tarifa."
+    - id: field:079
+      name: "fare_product_name"
+      type: "String"
+      description: "Nombre del producto de tarifa."
+    - id: field:080
+      name: "fare_media_id"
+      type: "String"
+      description: "Identifica el medio de pago asociado con el producto de tarifa."
+    - id: field:081
+      name: "fare_leg_group_id"
+      type: "String"
+      description: "Identifica el grupo de tramos de tarifa al que aplica este producto de tarifa."
+    - id: field:082
+      name: "amount"
+      type: "Float"
+      description: "Valor monetario del producto de tarifa."
+    - id: field:083
+      name: "currency"
+      type: "String"
+      description: "Código de moneda ISO 4217 para el producto de tarifa."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:014
+    name: "Regla de tramo de tarifa"
+    presence: "Optional"
+    description: "Reglas de tarifa para tramos individuales del viaje."
+    fields:
+    - id: field:084
+      name: "leg_group_id"
+      type: "String"
+      description: "Identifica un grupo de entradas en fare_leg_rules.txt."
+    - id: field:085
+      name: "network_id"
+      type: "String"
+      description: "Identifica una red de rutas que aplica para la regla de tramo de tarifa."
+    - id: field:086
+      name: "from_area_id"
+      type: "String"
+      description: "Identifica un área de salida."
+    - id: field:087
+      name: "to_area_id"
+      type: "String"
+      description: "Identifica un área de llegada."
+    - id: field:088
+      name: "from_timeframe_group_id"
+      type: "String"
+      description: "Define el intervalo temporal para el evento de validación de tarifa al inicio del tramo."
+    - id: field:089
+      name: "to_timeframe_group_id"
+      type: "String"
+      description: "Define el intervalo temporal para el evento de validación de tarifa al final del tramo."
+    - id: field:090
+      name: "fare_product_id"
+      type: "String"
+      description: "El producto de tarifa requerido para viajar el tramo."
+    - id: field:091
+      name: "rule_priority"
+      type: "Integer"
+      description: "Define el orden de prioridad con el que se aplican las reglas coincidentes a los tramos, permitiendo que ciertas reglas tengan precedencia sobre otras. Cuando varias entradas en fare_leg_rules.txt coinciden, se seleccionará la regla o conjunto de reglas con el valor más alto de rule_priority."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:015
+    name: "Regla de unión de tramos de tarifa"
+    presence: "Optional"
+    description: "Reglas para definir que dos o más tramos se consideren como un único tramo efectivo de tarifa para efectos de comparación con las reglas en fare_leg_rules.txt."
+    fields:
+    - id: field:092
+      name: "from_network_id"
+      type: "String"
+      description: "Coincide con un tramo previo al transbordo que utiliza la red de rutas especificada. Si se especifica, también se debe especificar el mismo to_network_id."
+    - id: field:093
+      name: "to_network_id"
+      type: "String"
+      description: "Coincide con un tramo posterior al transbordo que utiliza la red de rutas especificada. Si se especifica, también se debe especificar el mismo from_network_id."
+    - id: field:094
+      name: "from_stop_id"
+      type: "String"
+      description: "Coincide con un tramo previo al transbordo que termina en la parada especificada (location_type=0 o vacío) o estación (location_type=1)."
+    - id: field:095
+      name: "to_stop_id"
+      type: "String"
+      description: "Coincide con un tramo posterior al transbordo que inicia en la parada especificada (location_type=0 o vacío) o estación (location_type=1)."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:016
+    name: "Regla de transbordo"
+    presence: "Optional"
+    description: "Reglas de tarifa para transbordos entre tramos de viaje."
+    fields:
+    - id: field:096
+      name: "from_leg_group_id"
+      type: "String"
+      description: "Identifica un grupo de reglas de tramo de tarifa previas al transbordo."
+    - id: field:097
+      name: "to_leg_group_id"
+      type: "String"
+      description: "Identifica un grupo de reglas de tramo de tarifa posteriores al transbordo."
+    - id: field:098
+      name: "transfer_count"
+      type: "Integer"
+      description: "Define a cuántos transbordos consecutivos se puede aplicar la regla de transbordo."
+    - id: field:099
+      name: "duration_limit"
+      type: "Integer"
+      description: "Define el límite de duración del transbordo."
+    - id: field:100
+      name: "duration_limit_type"
+      type: "Integer"
+      description: "Define el inicio y fin relativos de fare_transfer_rules.duration_limit."
+    - id: field:101
+      name: "fare_transfer_type"
+      type: "Integer"
+      description: "Indica el método de procesamiento de costo del transbordo entre tramos en un viaje:"
+    - id: field:102
+      name: "fare_product_id"
+      type: "String"
+      description: "El producto de tarifa requerido para transbordar entre dos tramos de tarifa. Si está vacío, el costo de la regla de transbordo es 0."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:017
+    name: "Área"
+    presence: "Optional"
+    description: "Agrupación por áreas de ubicaciones."
+    fields:
+    - id: field:103
+      name: "area_id"
+      type: "String"
+      description: "Identifica un área. Debe ser único en areas.txt."
+    - id: field:104
+      name: "area_name"
+      type: "String"
+      description: "Nombre del área tal como se muestra a la persona usuaria."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:018
+    name: "Área de parada"
+    presence: "Optional"
+    description: "Reglas para asignar paradas a áreas."
+    fields:
+    - id: field:105
+      name: "area_id"
+      type: "String"
+      description: "Identifica un área a la que pertenecen uno o varios `stop_id`. El mismo `stop_id` puede definirse en muchos `area_id`."
+    - id: field:106
+      name: "stop_id"
+      type: "String"
+      description: "Identifica una parada. Si en este campo se define una estación (es decir, una parada con `stops.location_type=1`), se asume que todas sus plataformas (todas las paradas con `stops.location_type=0` que tienen esa estación como `stops.parent_station`) forman parte de la misma área. Este comportamiento puede modificarse asignando plataformas a otras áreas."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:019
+    name: "Red"
+    presence: "Conditionally Forbidden"
+    description: "Agrupación de rutas por red."
+    fields:
+    - id: field:107
+      name: "network_id"
+      type: "String"
+      description: "Identifica una red. Debe ser único en networks.txt."
+    - id: field:108
+      name: "network_name"
+      type: "String"
+      description: "Nombre de la red que aplica para reglas de tramo de tarifa, según lo usa la agencia local y sus personas usuarias."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:020
+    name: "Red de rutas"
+    presence: "Conditionally Forbidden"
+    description: "Reglas para asignar rutas a redes."
+    fields:
+    - id: field:109
+      name: "route_id"
+      type: "String"
+      description: "Identifica una ruta."
+    - id: field:110
+      name: "network_id"
+      type: "String"
+      description: "Identifica una red a la que pertenece uno o varios route_id."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:021
+    name: "Forma"
+    presence: "Optional"
+    description: "Reglas para mapear los recorridos de los vehículos, a veces denominados alineamientos de ruta."
+    fields:
+    - id: field:111
+      name: "shape_id"
+      type: "String"
+      description: "Identifica una forma."
+    - id: field:112
+      name: "shape_pt_lat"
+      type: "Float"
+      description: "Latitud de un punto de la forma."
+    - id: field:113
+      name: "shape_pt_lon"
+      type: "Float"
+      description: "Longitud de un punto de la forma."
+    - id: field:114
+      name: "shape_pt_sequence"
+      type: "Integer"
+      description: "Secuencia en la que los puntos de la forma se conectan para formar la forma."
+    - id: field:115
+      name: "shape_dist_traveled"
+      type: "Float"
+      description: "Distancia real recorrida a lo largo de la forma asociada, desde la primera parada hasta la parada especificada en este registro."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:022
+    name: "Frecuencia"
+    presence: "Optional"
+    description: "Intervalo (tiempo entre viajes) para servicio basado en intervalos o una representación comprimida del servicio con horario fijo."
+    fields:
+    - id: field:116
+      name: "trip_id"
+      type: "String"
+      description: "Identifica un viaje al que aplica el intervalo de servicio especificado."
+    - id: field:117
+      name: "start_time"
+      type: "String"
+      description: "Hora a la que el primer vehículo parte de la primera parada del viaje con el intervalo especificado."
+    - id: field:118
+      name: "end_time"
+      type: "String"
+      description: "Hora a la que el servicio cambia a un intervalo diferente (o cesa) en la primera parada del viaje."
+    - id: field:119
+      name: "headway_secs"
+      type: "Integer"
+      description: "Tiempo entre salidas desde la misma parada (en segundos)."
+    - id: field:120
+      name: "exact_times"
+      type: "Integer"
+      description: "0 = servicio basado en intervalos; 1 = representación comprimida de servicio basado en horario."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:023
+    name: "Transbordo"
+    presence: "Optional"
+    description: "Reglas para realizar conexiones en puntos de transbordo entre rutas."
+    fields:
+    - id: field:109
+      name: "from_stop_id"
+      type: "String"
+      description: "Identifica una parada desde la cual es posible una conexión."
+    - id: field:110
+      name: "to_stop_id"
+      type: "String"
+      description: "Identifica una parada a la cual es posible una conexión."
+    - id: field:111
+      name: "transfer_type"
+      type: "Integer"
+      description: "Tipo de conexión para el transbordo."
+    - id: field:112
+      name: "min_transfer_time"
+      type: "Integer"
+      description: "Tiempo mínimo necesario para transbordar entre las paradas (en segundos)."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:024
+    name: "Pasarela"
+    presence: "Optional"
+    description: "Pasarelas que conectan ubicaciones dentro de las estaciones."
+    fields:
+    - id: field:113
+      name: "pathway_id"
+      type: "String"
+      description: "Identifica la pasarela."
+    - id: field:114
+      name: "from_stop_id"
+      type: "String"
+      description: "Parada o ubicación donde inicia la pasarela."
+    - id: field:115
+      name: "to_stop_id"
+      type: "String"
+      description: "Parada o ubicación donde termina la pasarela."
+    - id: field:116
+      name: "pathway_mode"
+      type: "Integer"
+      description: "Modo de la pasarela."
+    - id: field:117
+      name: "is_bidirectional"
+      type: "Integer"
+      description: "1 si la pasarela puede usarse en ambos sentidos, 0 en caso contrario."
+    - id: field:118
+      name: "length"
+      type: "Float"
+      description: "Longitud de la pasarela en metros."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:025
+    name: "Nivel"
+    presence: "Conditionally Required"
+    description: "Niveles dentro de las estaciones."
+    fields:
+    - id: field:119
+      name: "level_id"
+      type: "String"
+      description: "Identifica el nivel."
+    - id: field:120
+      name: "level_index"
+      type: "Integer"
+      description: "Índice del nivel relativo a la planta baja."
+    - id: field:121
+      name: "level_name"
+      type: "String"
+      description: "Nombre del nivel (para mostrar a las personas usuarias)."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:026
+    name: "Grupo de ubicaciones"
+    presence: "Optional"
+    description: "Un grupo de paradas que en conjunto indican ubicaciones donde una persona usuaria puede solicitar abordaje o descenso."
+    fields:
+    - id: field:122
+      name: "location_group_id"
+      type: "String"
+      description: "Identifica un grupo de ubicaciones. El ID debe ser único entre todos los valores de `stops.stop_id`, `id` de locations.geojson y `location_groups.location_group_id`."
+    - id: field:123
+      name: "location_group_name"
+      type: "String"
+      description: "Nombre del grupo de ubicaciones tal como se muestra a la persona usuaria."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:027
+    name: "Parada de grupo de ubicaciones"
+    presence: "Optional"
+    description: "Reglas para asignar paradas a grupos de ubicaciones."
+    fields:
+    - id: field:124
+      name: "location_group_id"
+      type: "String"
+      description: "Identifica un grupo de ubicaciones al que pertenecen uno o varios `stop_id`. El mismo `stop_id` puede definirse en muchos `location_group_id`."
+    - id: field:125
+      name: "stop_id"
+      type: "String"
+      description: "Identifica una parada que pertenece al grupo de ubicaciones."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:028
+    name: "Ubicación"
+    presence: "Optional"
+    description: "Zonas para solicitudes de abordaje o descenso de servicios bajo demanda, representadas como polígonos GeoJSON."
+    fields:
+    - id: field:126
+      name: "type"
+      type: "String"
+      description: "\"FeatureCollection\" de ubicaciones."
+    - id: field:127
+      name: "features"
+      type: "Array"
+      description: "Colección de objetos \"Feature\" que describen las ubicaciones."
+    - id: field:128
+      name: "feature.type"
+      type: "String"
+      description: "\"Feature\""
+    - id: field:129
+      name: "feature.id"
+      type: "String"
+      description: "Identifica una ubicación. El ID debe ser único entre todos los valores de `stops.stop_id`, `id` de locations.geojson y `location_groups.location_group_id`."
+    - id: field:130
+      name: "feature.properties.stop_name"
+      type: "String"
+      description: "Indica el nombre de la ubicación tal como se muestra a las personas usuarias."
+    - id: field:131
+      name: "feature.properties.stop_desc"
+      type: "String"
+      description: "Descripción significativa de la ubicación para ayudar a orientar a las personas usuarias."
+    - id: field:132
+      name: "feature.geometry.type"
+      type: "String"
+      description: "Debe ser de tipo: \"Polygon\" o \"MultiPolygon\"."
+    - id: field:133
+      name: "feature.geometry.coordinates"
+      type: "Array"
+      description: "Coordenadas geográficas (latitud y longitud) que definen la geometría de la ubicación."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:029
+    name: "Regla de reserva"
+    presence: "Optional"
+    description: "Información de reserva para servicios solicitados por personas usuarias."
+    fields:
+    - id: field:134
+      name: "booking_rule_id"
+      type: "String"
+      description: "Identifica una regla."
+    - id: field:135
+      name: "booking_type"
+      type: "Integer"
+      description: "Indica con cuánta anticipación se puede realizar la reserva."
+    - id: field:136
+      name: "prior_notice_duration_min"
+      type: "Integer"
+      description: "Número mínimo de minutos antes del viaje para realizar la solicitud."
+    - id: field:137
+      name: "prior_notice_duration_max"
+      type: "Integer"
+      description: "Número máximo de minutos antes del viaje para realizar la solicitud de reserva."
+    - id: field:138
+      name: "prior_notice_last_day"
+      type: "Integer"
+      description: "Último día antes del viaje para realizar la solicitud de reserva."
+    - id: field:139
+      name: "prior_notice_last_time"
+      type: "String"
+      description: "Última hora del último día antes del viaje para realizar la solicitud de reserva."
+    - id: field:140
+      name: "prior_notice_start_day"
+      type: "Integer"
+      description: "Día más temprano antes del viaje para realizar la solicitud de reserva."
+    - id: field:141
+      name: "prior_notice_start_time"
+      type: "String"
+      description: "Hora más temprana del día más temprano antes del viaje para realizar la solicitud de reserva."
+    - id: field:142
+      name: "prior_notice_service_id"
+      type: "String"
+      description: "Indica los días de servicio en los que se cuentan `prior_notice_last_day` o `prior_notice_start_day`."
+    - id: field:143
+      name: "message"
+      type: "String"
+      description: "Mensaje para las personas usuarias que utilizan el servicio en un `stop_time` al reservar abordaje y descenso bajo demanda."
+    - id: field:144
+      name: "pickup_message"
+      type: "String"
+      description: "Funciona de la misma manera que `message`, pero se usa cuando las personas usuarias tienen solo abordaje bajo demanda."
+    - id: field:145
+      name: "drop_off_message"
+      type: "String"
+      description: "Funciona de la misma manera que `message`, pero se usa cuando las personas usuarias tienen solo descenso bajo demanda."
+    - id: field:146
+      name: "phone_number"
+      type: "String"
+      description: "Número de teléfono al que llamar para realizar la solicitud de reserva."
+    - id: field:147
+      name: "info_url"
+      type: "String"
+      description: "URL que proporciona información sobre la regla de reserva."
+    - id: field:148
+      name: "booking_url"
+      type: "String"
+      description: "URL de una interfaz en línea o aplicación donde se puede realizar la solicitud de reserva."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:030
+    name: "Traducción"
+    presence: "Optional"
+    description: "Traducciones de valores del conjunto de datos expuestos al público."
+    fields:
+    - id: field:149
+      name: "table_name"
+      type: "String"
+      description: "Define la tabla que contiene el campo a traducir."
+    - id: field:150
+      name: "field_name"
+      type: "String"
+      description: "Nombre del campo que se va a traducir."
+    - id: field:151
+      name: "language"
+      type: "String"
+      description: "Idioma de la traducción."
+    - id: field:152
+      name: "translation"
+      type: "String"
+      description: "Valor traducido."
+    - id: field:153
+      name: "record_id"
+      type: "String"
+      description: "Define el registro que corresponde al campo a traducir."
+    - id: field:154
+      name: "record_sub_id"
+      type: "String"
+      description: "Ayuda a identificar el registro que contiene el campo a traducir cuando la tabla no tiene un ID único."
+    - id: field:155
+      name: "field_value"
+      type: "String"
+      description: "En lugar de definir qué registro debe traducirse usando `record_id` y `record_sub_id`, este campo se puede usar para definir el valor que debe traducirse."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:031
+    name: "Información del feed"
+    presence: "Conditionally Required"
+    description: "Metadatos del conjunto de datos, incluyendo publicador, versión e información de expiración."
+    fields:
+    - id: field:156
+      name: "feed_publisher_name"
+      type: "String"
+      description: "Nombre completo de la organización que publica el conjunto de datos."
+    - id: field:157
+      name: "feed_publisher_url"
+      type: "String"
+      description: "URL del sitio web de la organización que publica el conjunto de datos."
+    - id: field:158
+      name: "feed_lang"
+      type: "String"
+      description: "Idioma predeterminado utilizado para el texto en este conjunto de datos."
+    - id: field:159
+      name: "default_lang"
+      type: "String"
+      description: "Define el idioma que se debe usar cuando el consumidor de datos no conoce el idioma de la persona usuaria."
+    - id: field:160
+      name: "feed_start_date"
+      type: "Date"
+      description: "El conjunto de datos proporciona información completa y confiable de horarios para el periodo desde el inicio del día `feed_start_date` hasta el final del día `feed_end_date`."
+    - id: field:161
+      name: "feed_end_date"
+      type: "Date"
+      description: "(ver arriba)"
+    - id: field:162
+      name: "feed_version"
+      type: "String"
+      description: "Cadena que indica la versión actual del conjunto de datos GTFS."
+    - id: field:163
+      name: "feed_contact_email"
+      type: "String"
+      description: "Dirección de correo electrónico para comunicación relacionada con el conjunto de datos GTFS y prácticas de publicación de datos."
+    - id: field:164
+      name: "feed_contact_url"
+      type: "String"
+      description: "URL para información de contacto, un formulario web, mesa de ayuda u otras herramientas de comunicación relacionadas con el conjunto de datos GTFS y prácticas de publicación de datos."
+
+#-------------------------------------------------------------------------------
+  - id: data-entity:032
+    name: "Atribución"
+    presence: "Optional"
+    description: "Atribuciones del conjunto de datos."
+    fields:
+    - id: field:165
+      name: "attribution_id"
+      type: "String"
+      description: "Identifica una atribución para el conjunto de datos o un subconjunto del mismo. Esto es especialmente útil para traducciones."
+    - id: field:166
+      name: "agency_id"
+      type: "String"
+      description: "Agencia a la que aplica la atribución."
+    - id: field:167
+      name: "route_id"
+      type: "String"
+      description: "Funciona de la misma manera que `agency_id`, excepto que la atribución aplica a una ruta."
+    - id: field:168
+      name: "trip_id"
+      type: "String"
+      description: "Funciona de la misma manera que `agency_id`, excepto que la atribución aplica a un viaje."
+    - id: field:169
+      name: "organization_name"
+      type: "String"
+      description: "Nombre de la organización a la que se atribuye el conjunto de datos."
+    - id: field:170
+      name: "is_producer"
+      type: "Integer"
+      description: "El rol de la organización es productor."
+    - id: field:171
+      name: "is_operator"
+      type: "Integer"
+      description: "Funciona de la misma manera que `is_producer`, excepto que el rol de la organización es operador."
+    - id: field:172
+      name: "is_authority"
+      type: "Integer"
+      description: "Funciona de la misma manera que `is_producer`, excepto que el rol de la organización es autoridad."
+    - id: field:173
+      name: "attribution_url"
+      type: "String"
+      description: "URL de la organización."
+    - id: field:174
+      name: "attribution_email"
+      type: "String"
+      description: "Correo electrónico de la organización."
+    - id: field:175
+      name: "attribution_phone"
+      type: "String"
+      description: "Número telefónico de la organización."

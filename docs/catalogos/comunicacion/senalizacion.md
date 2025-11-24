@@ -21,7 +21,7 @@
 <span class="catalog-badge" style="--catalog-badge-bg:var(--vp-c-default-soft)"><code style="background:none;padding:0;margin:0;border:0;">signage:001</code></span>
 
 - Type: Señal de parada de autobús
-- Dimensions: {"width":60}; {"height":30}; {"unit":"cm"}
+- Dimensions: 60x90 cm
 - Orientation: Vertical
 - Materials: Aluminio con vinilo reflectivo
 - Typography: Inter
