@@ -61,6 +61,36 @@
 - Estado: Active
 - Documentación: https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
 
+<a id="standard-012"></a>
+## SSE
+
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:012</code></span>
+
+- Descripción: Tecnología web que permite al servidor enviar datos automáticamente al navegador de forma continua a través de una conexión HTTP abierta.
+- Type: Protocol
+- Versión: 1.0
+- Organización: WHATWG
+- Sitio web: https://html.spec.whatwg.org/multipage/server-sent-events.html
+- Uso: Usado para enviar actualizaciones en tiempo real desde el servidor al cliente en el sistema.
+- Tecnologías relacionadas: HTTP, JavaScript
+- Estado: Active
+- Documentación: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events
+
+<a id="standard-013"></a>
+## MQTT
+
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:013</code></span>
+
+- Descripción: Protocolo de mensajería ligero diseñado para conexiones remotas con dispositivos con recursos limitados y redes de ancho de banda limitado.
+- Type: Protocol
+- Versión: 3.1.1
+- Organización: OASIS
+- Sitio web: https://mqtt.org/
+- Uso: Usado para la comunicación eficiente entre dispositivos IoT en el sistema.
+- Tecnologías relacionadas: TCP, TLS
+- Estado: Active
+- Documentación: https://mqtt.org/documentation
+
 <a id="standard-003"></a>
 ## REST
 
@@ -110,20 +140,21 @@
 - Estado: Active
 - Documentación: https://spec.graphql.org/
 
-<a id="standard-006"></a>
-## OAuth
+<a id="standard-010"></a>
+## gRPC
 
-<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:006</code></span>
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:010</code></span>
 
-- Descripción: Un marco de autorización que permite a las aplicaciones obtener acceso limitado a cuentas de usuario.
-- Type: Security Standard
-- Versión: RFC 6749
-- Organización: IETF
-- Sitio web: https://oauth.net/2/
-- Uso: Usado para asegurar el acceso a APIs y la autenticación de usuarios.
-- Tecnologías relacionadas: OpenID Connect, JWT
+- Descripción: Un framework de llamada a procedimiento remoto (RPC) de alto rendimiento que utiliza HTTP/2 para la comunicación entre servicios.
+- Type: API Specification
+- Versión: 1.0
+- Organización: Google
+- Sitio web: https://grpc.io/
+- Uso: Usado para la comunicación eficiente entre microservicios en el sistema.
+- Data formats: Protocol Buffers (protobuf)
+- Tecnologías relacionadas: HTTP/2
 - Estado: Active
-- Documentación: https://tools.ietf.org/html/rfc6749
+- Documentación: https://grpc.io/docs/
 
 <a id="standard-008"></a>
 ## TLS
@@ -170,6 +201,21 @@
 - Estado: Active
 - Documentación: https://tools.ietf.org/html/rfc7519
 
+<a id="standard-006"></a>
+## OAuth
+
+<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:006</code></span>
+
+- Descripción: Un marco de autorización que permite a las aplicaciones obtener acceso limitado a cuentas de usuario.
+- Type: Security Standard
+- Versión: RFC 6749
+- Organización: IETF
+- Sitio web: https://oauth.net/2/
+- Uso: Usado para asegurar el acceso a APIs y la autenticación de usuarios.
+- Tecnologías relacionadas: OpenID Connect, JWT
+- Estado: Active
+- Documentación: https://tools.ietf.org/html/rfc6749
+
 <a id="standard-010"></a>
 ## JSON
 
@@ -184,22 +230,6 @@
 - Tecnologías relacionadas: REST API, GraphQL
 - Estado: Active
 - Documentación: https://www.json.org/json-en.html
-
-<a id="standard-010"></a>
-## gRPC
-
-<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:010</code></span>
-
-- Descripción: Un framework de llamada a procedimiento remoto (RPC) de alto rendimiento que utiliza HTTP/2 para la comunicación entre servicios.
-- Type: API Specification
-- Versión: 1.0
-- Organización: Google
-- Sitio web: https://grpc.io/
-- Uso: Usado para la comunicación eficiente entre microservicios en el sistema.
-- Data formats: Protocol Buffers (protobuf)
-- Tecnologías relacionadas: HTTP/2
-- Estado: Active
-- Documentación: https://grpc.io/docs/
 
 <a id="standard-011"></a>
 ## Protocol Buffers (protobuf)
@@ -216,33 +246,3 @@
 - Tecnologías relacionadas: gRPC
 - Estado: Active
 - Documentación: https://developers.google.com/protocol-buffers/docs/overview
-
-<a id="standard-012"></a>
-## SSE
-
-<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:012</code></span>
-
-- Descripción: Tecnología web que permite al servidor enviar datos automáticamente al navegador de forma continua a través de una conexión HTTP abierta.
-- Type: Protocol
-- Versión: 1.0
-- Organización: WHATWG
-- Sitio web: https://html.spec.whatwg.org/multipage/server-sent-events.html
-- Uso: Usado para enviar actualizaciones en tiempo real desde el servidor al cliente en el sistema.
-- Tecnologías relacionadas: HTTP, JavaScript
-- Estado: Active
-- Documentación: https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events
-
-<a id="standard-013"></a>
-## MQTT
-
-<span class="catalog-badge" style="--catalog-badge-bg:#FFFBE6"><span class="catalog-icon material-symbols-outlined">flag</span><code style="background:none;padding:0;margin:0;border:0;">standard:013</code></span>
-
-- Descripción: Protocolo de mensajería ligero diseñado para conexiones remotas con dispositivos con recursos limitados y redes de ancho de banda limitado.
-- Type: Protocol
-- Versión: 3.1.1
-- Organización: OASIS
-- Sitio web: https://mqtt.org/
-- Uso: Usado para la comunicación eficiente entre dispositivos IoT en el sistema.
-- Tecnologías relacionadas: TCP, TLS
-- Estado: Active
-- Documentación: https://mqtt.org/documentation

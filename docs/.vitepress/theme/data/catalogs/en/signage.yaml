@@ -13,7 +13,7 @@ metadata:
   license: "CC BY-NC 4.0"
 
 signage:
-  - id: signage:001
+  - id: sign:001
     type: "Bus Stop Sign"
     dimensions: "60x90 cm"
     orientation: "Vertical"
@@ -28,3 +28,11 @@ signage:
     location_context: "Urban bus stops"
     standard_reference: "ISO 7001:2023"
     maintenance_interval: "24 months"
+
+# Examples
+
+# - map
+# - directional signage
+# - informational panel
+# - safety signage
+# - wayfinding elements

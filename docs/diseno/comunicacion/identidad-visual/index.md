@@ -7,6 +7,22 @@
 
 :::
 
+## Escenarios de aplicación
+
+### Paradas de bus
+
+Bla bla bla bla, para los usuarios saber cuáles servicios están ahí, bla bla.
+
+![Escenario de parada de bus](/assets/scenarios/bus_stop.jpeg)
+
+### Estaciones de transporte público
+
+### Vehículos
+
+### Páginas web
+
+### Documentación
+
 ## Ejemplo del plan piloto de la Universidad de Costa Rica
 
 ### Logotipo

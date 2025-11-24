@@ -26,7 +26,7 @@
 - Sitio web: https://www.postgresql.org/
 - Uso: Usado para almacenar y gestionar datos relacionales en el sistema.
 - Tecnologías relacionadas: PostGIS, pgAdmin
-- Estado: Activo
+- Estado: Active
 - Documentación: https://www.postgresql.org/docs/13/
 
 <a id="technology-002"></a>
@@ -40,7 +40,7 @@
 - Sitio web: https://nodejs.org/
 - Uso: Usado para construir aplicaciones del lado del servidor escalables.
 - Tecnologías relacionadas: Express.js, npm
-- Estado: Activo
+- Estado: Active
 - Documentación: https://nodejs.org/en/docs/
 
 <a id="technology-003"></a>
@@ -54,5 +54,5 @@
 - Sitio web: https://vuejs.org/
 - Uso: Usado para construir el frontend de aplicaciones web.
 - Tecnologías relacionadas: Vuex, Vue Router
-- Estado: Activo
+- Estado: Active
 - Documentación: https://vuejs.org/v2/guide/

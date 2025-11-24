@@ -12,6 +12,48 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
+logotype:
+  - id: logotype:system
+    name: "System Logotype"
+    description: "Official logotype for the Public Transport Information System."
+    format: "SVG"
+    usage: "Used in official documents, websites, and applications."
+    colors:
+      - "Primary Blue"
+      - "Secondary Yellow"
+  - id: logotype:infotp
+    name: "InfoTP Logotype"
+    description: "Logotype for the Public Transport Information System (InfoTP)."
+    format: "SVG"
+    usage: "Used in official documents, websites, and applications."
+    colors:
+      - "Primary Blue"
+      - "Secondary Yellow"
+  - id: logo:databus
+    name: "Databús Logo"
+    description: "Primary logo for the Databús Public Transport Information System."
+    format: "SVG"
+    usage: "Used in official documents, websites, and applications."
+    colors:
+      - "Primary Blue"
+      - "Secondary Yellow"
+  - id: logo:infobus
+    name: "Infobús Logo"
+    description: "Logo for the Infobús Passenger Information System."
+    format: "SVG"
+    usage: "Used in passenger information displays and related materials."
+    colors:
+      - "Primary Blue"
+      - "Secondary Yellow"
+  - id: logo:simovi
+    name: "SIMOVI Logo"
+    description: "Logo for the Intelligent Mobility Systems Laboratory (SIMOVI)."
+    format: "SVG"
+    usage: "Used in research publications and laboratory materials."
+    colors:
+      - "Primary Blue"
+      - "Secondary Yellow"
+
 colors:
   - id: color:001
     name: "Primary Blue"
