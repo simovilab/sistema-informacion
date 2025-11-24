@@ -21,7 +21,7 @@
           "organization",
           "website",
           "usage",
-          "relatedTechnologies",
+          "related_technologies",
           "status",
           "documentation"
         ],
@@ -61,7 +61,7 @@
             "minLength": 1,
             "description": "Description of how the technology is used within the system"
           },
-          "relatedTechnologies": {
+          "related_technologies": {
             "type": "array",
             "items": {
               "type": "string",

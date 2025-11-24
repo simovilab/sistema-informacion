@@ -47,7 +47,7 @@ interfaces:
     security:
       - "API Keys"
       - "JWT"
-    version: "GraphQL specification 2021"
+    version: "2021.0.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -67,7 +67,7 @@ interfaces:
       - "Binary"
     security:
       - "TLS"
-    version: "mqtt 3.1.1"
+    version: "3.1.1"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -83,13 +83,13 @@ interfaces:
     protocols:
       - "HTTP"
       - "TCP" 
-      - "WebSockets"
+      - "WebSocket"
     data_formats:
       - "JSON"
       - "XML"
     security:
       - "OAuth 2.0"
-    version: "Interbus - S"
+    version: "0.1.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -109,8 +109,8 @@ interfaces:
       - "Text"
       - "XML"
     security:
-      - "TCP"
-    version: "N/A"
+      - "TLS"
+    version: "0.1.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -131,7 +131,7 @@ interfaces:
       - "XML"
     security:
       - "TLS"
-    version: "RFC 6455"
+    version: "0.1.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -153,7 +153,7 @@ interfaces:
     security:
       - "OAuth 2.0"
       - "TLS"
-    version: "SPARQL 1.1"
+    version: "1.1.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -172,9 +172,8 @@ interfaces:
     data_formats:
       - "JSON"
     security:
-      - "MCP"
       - "TLS"
-    version: "N/A"
+    version: "0.1.0"
     owner: "Laboratorio de Sistemas de Movilidad Inteligente (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
