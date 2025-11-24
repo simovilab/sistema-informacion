@@ -9,19 +9,46 @@
 
 ## Escenarios de aplicación
 
-### Paradas de bus
+### Infraestructura
+
+#### Paradas de bus
 
 Bla bla bla bla, para los usuarios saber cuáles servicios están ahí, bla bla.
 
 ![Escenario de parada de bus](/assets/scenarios/bus_stop.jpeg)
 
-### Estaciones de transporte público
+- Poste
+- Techo del parabús
+
+#### Estaciones de bus
+
+(Esta es la importante)
+
+#### Estaciones de tren
+
+#### Estaciones de ferry
+
+#### Edificios administrativos
+
+### Exteriores
+
+#### Publicidad en vallas
+
+(billboards) (outdoor)
 
 ### Vehículos
 
-### Páginas web
+#### Medios digitales
 
-### Documentación
+#### Páginas web
+
+#### Redes sociales
+
+### Otros
+
+#### Documentación
+
+#### Uniformes
 
 ## Ejemplo del plan piloto de la Universidad de Costa Rica
 
