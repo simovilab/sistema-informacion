@@ -23,13 +23,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.72500992"
-     inkscape:cx="-480.68308"
-     inkscape:cy="700.68007"
+     inkscape:zoom="0.24428755"
+     inkscape:cx="747.07042"
+     inkscape:cy="843.26853"
      inkscape:window-width="1472"
      inkscape:window-height="857"
      inkscape:window-x="2049"
-     inkscape:window-y="138"
+     inkscape:window-y="110"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
@@ -38,6 +38,36 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:7.9375;stroke-dasharray:none;stroke-opacity:1"
+       id="ellipse8"
+       cx="365.63544"
+       cy="142.3848"
+       rx="35.71875"
+       ry="35.718758"
+       inkscape:export-filename="BFTb.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:7.9375;stroke-dasharray:none;stroke-opacity:1"
+       id="ellipse16"
+       cx="383.65848"
+       cy="257.97791"
+       rx="35.71875"
+       ry="35.718758"
+       inkscape:export-filename="Tb.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <ellipse
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:7.9375;stroke-dasharray:none;stroke-opacity:1"
+       id="ellipse18"
+       cx="456.4581"
+       cy="151.41547"
+       rx="35.71875"
+       ry="35.718758"
+       inkscape:export-filename="Fb.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
     <g
        id="g10"
        inkscape:export-filename="B.png"
@@ -231,5 +261,74 @@
        cy="135.69733"
        rx="35.71875"
        ry="35.718758" />
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.5875px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke-width:1.32291"
+       x="339.4758"
+       y="147.96831"
+       id="text7"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         style="fill:none;stroke-width:1.32291"
+         x="339.4758"
+         y="147.96831">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:59.6415px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+       x="347.73083"
+       y="164.08057"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Bold';fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+         x="347.73083"
+         y="164.08057">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.5875px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke-width:1.32291"
+       x="357.51804"
+       y="263.5614"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan9"
+         style="fill:none;stroke-width:1.32291"
+         x="357.51804"
+         y="263.5614">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:59.6415px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+       x="364.71475"
+       y="281.79031"
+       id="text16"><tspan
+         sodipodi:role="line"
+         id="tspan16"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Bold';fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+         x="364.71475"
+         y="281.79031">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.5875px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke-width:1.32291"
+       x="430.94376"
+       y="156.99898"
+       id="text17"
+       inkscape:export-filename="F.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan17"
+         style="fill:none;stroke-width:1.32291"
+         x="430.94376"
+         y="156.99898">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:59.6415px;font-family:'Public Sans';-inkscape-font-specification:'Public Sans Heavy';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+       x="439.19879"
+       y="174.16957"
+       id="text18"><tspan
+         sodipodi:role="line"
+         id="tspan18"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Inter;-inkscape-font-specification:'Inter Bold';fill:#ffffff;fill-opacity:1;stroke-width:49.701"
+         x="439.19879"
+         y="174.16957">F</tspan></text>
   </g>
 </svg>
