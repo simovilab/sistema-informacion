@@ -17,17 +17,10 @@
           "id",
           "name",
           "description",
-          "application",
+          "applications",
           "type",
           "priority",
-          "status",
-          "rationale",
-          "stakeholders",
-          "acceptance_criteria",
-          "related_components",
-          "related_interfaces",
-          "related_data_entities",
-          "related_actors"
+          "rationale"
         ],
         "properties": {
           "id": {
@@ -45,11 +38,11 @@
             "minLength": 1,
             "description": "Clear statement of what the system shall do or provide"
           },
-          "application": {
+          "applications": {
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^application:\\d{3}$",
+                "pattern": "^application:[A-Za-z0-9_\\-]+$",
               "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX"
             },
             "minItems": 1,
@@ -64,6 +57,7 @@
               "Technical",
               "Performance",
               "Security",
+              "Safety",
               "Usability",
               "Reliability",
               "Compliance",
@@ -100,19 +94,8 @@
             "type": "array",
             "items": {
               "type": "string",
-              "enum": [
-                "Passengers",
-                "Bus Operators",
-                "Transit Authorities",
-                "Maintenance Teams",
-                "IT Support Staff",
-                "System Administrators",
-                "Government Officials",
-                "Financial Partners",
-                "Technology Vendors",
-                "Civil Society",
-                "International Organizations"
-              ]
+                "pattern": "^stakeholder:[A-Za-z0-9_\\-]+$",
+              "description": "Identifier of the application(s) this requirement applies to, following the pattern application:XXX"
             },
             "minItems": 1,
             "description": "List of stakeholder groups affected by or interested in this requirement"

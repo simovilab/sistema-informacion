@@ -1,7 +1,17 @@
-# Metadata about the catalog
-# ... (omitted for brevity)
+# yaml-language-server: $schema=../schemas/requirements.schema.json
 
-# Requirements catalog
+metadata:
+  title: "Architecture Requirements Catalog"
+  version: "1.0"
+  date: "2025-09-18"
+  description: "A catalog of architectural requirements for a Public Transportation Information System."
+  author:
+    - "César Alvarado Castro"
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
 requirements:
 
 - id: requirement:001
@@ -10,7 +20,7 @@ requirements:
   type: "Performance"
   priority: "Critical"
   rationale: "Garantiza actualizaciones precisas y oportunas en el ecosistema de transporte público."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:001"
@@ -33,7 +43,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Permite la continuidad del servicio durante picos de uso y expansión del sistema."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:006"
@@ -57,7 +67,7 @@ requirements:
   type: "Reliability"
   priority: "High"
   rationale: "Minimiza el tiempo de inactividad y mejora la resiliencia del sistema."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:002"
@@ -79,7 +89,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Asegura que los datos procesados y distribuidos sean confiables y consistentes."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:002"
@@ -103,7 +113,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Garantiza interoperabilidad entre diferentes sistemas de transporte y proveedores."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:002"
@@ -125,7 +135,7 @@ requirements:
   type: "Operational"
   priority: "High"
   rationale: "Permite la detección temprana de fallos y mejora la capacidad de respuesta."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:006"
@@ -148,7 +158,7 @@ requirements:
   type: "Functional"
   priority: "Medium"
   rationale: "Facilita la interoperabilidad y la reutilización de datos entre diferentes plataformas."
-  application:
+  applications:
     - "application:servidor-tiempo-real"
   stakeholders:
     - "stakeholder:002"
@@ -174,7 +184,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Garantiza la confiabilidad y consistencia de los datos almacenados."
-  application:
+  applications:
     - "application:base-datos"
   stakeholders:
     - "stakeholder:006"
@@ -197,7 +207,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Habilita análisis geográficos y consultas de localización esenciales para transporte público."
-  application:
+  applications:
     - "application:base-datos"
   stakeholders:
     - "stakeholder:003"
@@ -220,7 +230,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Permite gestionar datos semiestructurados sin comprometer el rendimiento."
-  application:
+  applications:
     - "application:base-datos"
   stakeholders:
     - "stakeholder:006"
@@ -241,7 +251,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Optimiza el manejo de grandes volúmenes de datos históricos de operación."
-  application:
+  applications:
     - "application:base-datos"
   stakeholders:
     - "stakeholder:006"
@@ -263,7 +273,7 @@ requirements:
   type: "Reliability"
   priority: "High"
   rationale: "Protege contra pérdida de información y facilita la recuperación ante incidentes."
-  application:
+  applications:
     - "application:base-datos"
   stakeholders:
     - "stakeholder:006"
@@ -285,7 +295,7 @@ requirements:
   type: "Performance"
   priority: "Critical"
   rationale: "Asegura respuestas instantáneas durante el procesamiento en tiempo real."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -308,7 +318,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Optimiza el rendimiento en operaciones de búsqueda y filtrado intensivas."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -330,7 +340,7 @@ requirements:
   type: "Functional"
   priority: "Medium"
   rationale: "Evita la acumulación de datos innecesarios y mantiene la eficiencia de memoria."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -350,7 +360,7 @@ requirements:
   type: "Reliability"
   priority: "Medium"
   rationale: "Permite reiniciar el servicio sin pérdida de datos temporales críticos."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -370,7 +380,7 @@ requirements:
   type: "Performance"
   priority: "Medium"
   rationale: "Aumenta la capacidad efectiva del sistema de caché sin degradar el rendimiento."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -389,7 +399,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Facilita la sincronización de sistemas dependientes y la distribución inmediata de eventos."
-  application:
+  applications:
     - "application:base-datos-memoria"
   stakeholders:
     - "stakeholder:006"
@@ -413,7 +423,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Proporciona documentación estandarizada y mejora la interoperabilidad entre sistemas."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:007"
@@ -437,7 +447,7 @@ requirements:
   type: "Security"
   priority: "Critical"
   rationale: "Garantiza el acceso seguro y controlado a los recursos del sistema."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:004"
@@ -464,7 +474,7 @@ requirements:
   type: "Security"
   priority: "High"
   rationale: "Protege contra ataques de denegación de servicio (DoS) y uso excesivo de recursos."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:006"
@@ -487,7 +497,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Garantiza la seguridad y compatibilidad de las peticiones desde diferentes dominios web."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:007"
@@ -506,7 +516,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Reduce la latencia en las respuestas y minimiza la carga de red en el cliente."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:007"
@@ -529,7 +539,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Permite a los desarrolladores recuperar solo los datos necesarios y ejecutar lógica compleja en el servidor."
-  application:
+  applications:
     - "application:api-rest"
   stakeholders:
     - "stakeholder:007"
@@ -552,7 +562,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Optimiza el uso de ancho de banda y mejora la velocidad de respuesta para aplicaciones cliente."
-  application:
+  applications:
     - "application:api-graphql"
   stakeholders:
     - "stakeholder:007"
@@ -574,7 +584,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Permite que los clientes reciban actualizaciones en tiempo real sin polling constante."
-  application:
+  applications:
     - "application:api-graphql"
   stakeholders:
     - "stakeholder:007"
@@ -597,7 +607,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Mejora la calidad del código del cliente y la estabilidad del backend al evitar consultas inválidas."
-  application:
+  applications:
     - "application:api-graphql"
   stakeholders:
     - "stakeholder:007"
@@ -617,7 +627,7 @@ requirements:
   type: "Security"
   priority: "High"
   rationale: "Proporciona control granular sobre los datos accesibles, según el rol del usuario autenticado."
-  application:
+  applications:
     - "application:api-graphql"
   stakeholders:
     - "stakeholder:004"
@@ -639,7 +649,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Evita el overhead del polling periódico y reduce la latencia en las actualizaciones."
-  application:
+  applications:
     - "application:event-streaming"
   stakeholders:
     - "stakeholder:001"
@@ -661,7 +671,7 @@ requirements:
   type: "Reliability"
   priority: "Medium"
   rationale: "Mejora la robustez de la aplicación cliente ante fallos de red transitorios."
-  application:
+  applications:
     - "application:event-streaming"
   stakeholders:
     - "stakeholder:001"
@@ -681,7 +691,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Habilita casos de uso avanzados como control remoto o mensajería en tiempo real."
-  application:
+  applications:
     - "application:event-streaming"
   stakeholders:
     - "stakeholder:002"
@@ -704,7 +714,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Permite gestionar múltiples tópicos y mensajes complejos de manera organizada."
-  application:
+  applications:
     - "application:event-streaming"
   stakeholders:
     - "stakeholder:007"
@@ -724,7 +734,7 @@ requirements:
   type: "Security"
   priority: "Critical"
   rationale: "Protege los datos transmitidos en tiempo real contra la interceptación."
-  application:
+  applications:
     - "application:event-streaming"
   stakeholders:
     - "stakeholder:004"
@@ -745,7 +755,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Extiende la vida útil de la batería de los dispositivos a bordo (trackers)."
-  application:
+  applications:
     - "application:iot-messaging"
   stakeholders:
     - "stakeholder:002"
@@ -766,7 +776,7 @@ requirements:
   type: "Reliability"
   priority: "High"
   rationale: "Garantiza la entrega del mensaje incluso en entornos de red inestables (ej. túneles o zonas rurales)."
-  application:
+  applications:
     - "application:iot-messaging"
   stakeholders:
     - "stakeholder:002"
@@ -787,7 +797,7 @@ requirements:
   type: "Functional"
   priority: "Medium"
   rationale: "Permite al sistema detectar y reaccionar inmediatamente a fallos de hardware o red en los vehículos."
-  application:
+  applications:
     - "application:iot-messaging"
   stakeholders:
     - "stakeholder:002"
@@ -808,7 +818,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Facilita la representación y consulta de datos enlazados (Linked Data) en el sector transporte."
-  application:
+  applications:
     - "application:knowledge-graph"
   stakeholders:
     - "stakeholder:008"
@@ -831,7 +841,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Permite a investigadores y desarrolladores ejecutar análisis complejos y unificar datos de múltiples fuentes semánticas."
-  application:
+  applications:
     - "application:knowledge-graph"
   stakeholders:
     - "stakeholder:008"
@@ -854,7 +864,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Enriquece el grafo de conocimiento permitiendo consultas más inteligentes sobre relaciones no explícitas."
-  application:
+  applications:
     - "application:knowledge-graph"
   stakeholders:
     - "stakeholder:008"
@@ -875,7 +885,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Asegura la compatibilidad con diferentes herramientas de análisis semántico y clientes web."
-  application:
+  applications:
     - "application:knowledge-graph"
   stakeholders:
     - "stakeholder:008"
@@ -894,7 +904,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Facilita el entrenamiento, despliegue y consumo de modelos de Machine Learning."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:008"
@@ -916,7 +926,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Minimiza la latencia en las inferencias al reducir el tiempo de serialización y deserialización."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:008"
@@ -937,7 +947,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Asegura el cumplimiento normativo y permite la asignación eficiente de personal."
-  application:
+  applications:
     - "application:gestion-operativa"
   stakeholders:
     - "stakeholder:002"
@@ -960,7 +970,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Habilita la planificación operativa diaria y la reacción ante imprevistos."
-  application:
+  applications:
     - "application:gestion-operativa"
   stakeholders:
     - "stakeholder:002"
@@ -984,7 +994,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Mejora la comunicación operativa, seguridad y coordinación durante el servicio."
-  application:
+  applications:
     - "application:gestion-operativa"
   stakeholders:
     - "stakeholder:002"
@@ -1007,7 +1017,7 @@ requirements:
   type: "Functional"
   priority: "Critical"
   rationale: "Permite el monitoreo operativo centralizado y la toma de decisiones inmediata."
-  application:
+  applications:
     - "application:gestion-operativa"
   stakeholders:
     - "stakeholder:002"
@@ -1033,7 +1043,7 @@ requirements:
   type: "Security"
   priority: "High"
   rationale: "Necesario para cumplimiento, detección de fraude y forenses post-incidente."
-  application:
+  applications:
     - "application:gestion-operativa"
   stakeholders:
     - "stakeholder:004"
@@ -1055,7 +1065,7 @@ requirements:
   type: "Functional"
   priority: "Critical"
   rationale: "Es el estándar global para la información de transporte estático (rutas, paradas, horarios)."
-  application:
+  applications:
     - "application:gestion-datos-estaticos"
   stakeholders:
     - "stakeholder:002"
@@ -1076,7 +1086,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Asegura la calidad de los datos consumidos por terceros (ej. Google Maps)."
-  application:
+  applications:
     - "application:gestion-datos-estaticos"
   stakeholders:
     - "stakeholder:003"
@@ -1097,7 +1107,7 @@ requirements:
   type: "Functional"
   priority: "Critical"
   rationale: "Permite la distribución masiva de datos en tiempo real bajo un estándar reconocido."
-  application:
+  applications:
     - "application:gestion-datos-estaticos"
   stakeholders:
     - "stakeholder:001"
@@ -1120,7 +1130,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Necesario para el análisis de rendimiento de las rutas y auditoría de servicio."
-  application:
+  applications:
     - "application:analisis-informes"
   stakeholders:
     - "stakeholder:002"
@@ -1146,7 +1156,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Facilita la fiscalización y la gestión del rendimiento sin intervención manual diaria."
-  application:
+  applications:
     - "application:analisis-informes"
   stakeholders:
     - "stakeholder:002"
@@ -1168,7 +1178,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Permite a las autoridades y operadores usar sus propias herramientas de análisis preferidas."
-  application:
+  applications:
     - "application:analisis-informes"
   stakeholders:
     - "stakeholder:003"
@@ -1190,7 +1200,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Permite la toma de decisiones proactiva para minimizar el impacto de la congestión."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:003"
@@ -1213,7 +1223,7 @@ requirements:
   type: "Performance"
   priority: "Critical"
   rationale: "Es un servicio fundamental para las personas usuarias y la información en tiempo real."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:001"
@@ -1237,7 +1247,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Mejora la seguridad y permite la gestión del riesgo de los conductores."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:002"
@@ -1260,7 +1270,7 @@ requirements:
   type: "Performance"
   priority: "Medium"
   rationale: "Optimiza los costos operativos al utilizar recursos solo cuando son necesarios."
-  application:
+  applications:
     - "application:ia-servicios"
   stakeholders:
     - "stakeholder:006"
@@ -1281,7 +1291,7 @@ requirements:
   type: "Reliability"
   priority: "Critical"
   rationale: "Asegura la confianza de los usuarios y la continuidad del servicio esencial."
-  application:
+  applications:
     - "application:general"
   stakeholders:
     - "stakeholder:001"
@@ -1305,7 +1315,7 @@ requirements:
   type: "Security"
   priority: "Critical"
   rationale: "Protege la confidencialidad de los datos contra ataques de 'man-in-the-middle'."
-  application:
+  applications:
     - "application:general"
   stakeholders:
     - "stakeholder:004"
@@ -1334,7 +1344,7 @@ requirements:
   type: "Security"
   priority: "Critical"
   rationale: "Asegura que solo usuarios autorizados puedan realizar cambios o ver información privilegiada."
-  application:
+  applications:
     - "application:general"
   stakeholders:
     - "stakeholder:004"
@@ -1358,10 +1368,10 @@ requirements:
 - id: requirement:061
   name: "Cumplimiento con RGPD/LOPD"
   description: "El sistema deberá implementar mecanismos para garantizar el derecho al olvido y la portabilidad de datos personales (ej. conductor/despachador)."
-  type: "Legal"
+  type: "Compliance"
   priority: "High"
   rationale: "Obligación legal para el manejo de datos de ciudadanos."
-  application:
+  applications:
     - "application:general"
   stakeholders:
     - "stakeholder:004"
@@ -1382,7 +1392,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Mejora la experiencia del usuario y simplifica la gestión de accesos corporativos."
-  application:
+  applications:
     - "application:general"
   stakeholders:
     - "stakeholder:006"
@@ -1405,7 +1415,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Mejora la manetenibilidad, escalabilidad y permite diferentes tecnologías por componente."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1425,7 +1435,7 @@ requirements:
   type: "Operational"
   priority: "High"
   rationale: "Reduce el error humano y acelera el tiempo de lanzamiento de nuevas funcionalidades."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1443,7 +1453,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Facilita la orquestación, la escalabilidad y la gestión de dependencias del software."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1461,7 +1471,7 @@ requirements:
   type: "Operational"
   priority: "High"
   rationale: "Permite diagnosticar problemas rápidamente y medir el rendimiento real del sistema."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1479,7 +1489,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Reduce la necesidad de mantener datos geoespaciales propios y aprovecha la información de tráfico en tiempo real."
-  application:
+  applications:
     - "application:interoperabilidad"
   stakeholders:
     - "stakeholder:003"
@@ -1500,7 +1510,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Obligación de la plataforma para facilitar la labor de la autoridad reguladora del transporte."
-  application:
+  applications:
     - "application:interoperabilidad"
   stakeholders:
     - "stakeholder:003"
@@ -1522,7 +1532,7 @@ requirements:
   type: "Safety"
   priority: "Critical"
   rationale: "Mejora la respuesta ante emergencias y la seguridad de los conductores y pasajeros."
-  application:
+  applications:
     - "application:seguridad"
   stakeholders:
     - "stakeholder:005"
@@ -1542,7 +1552,7 @@ requirements:
   type: "Security"
   priority: "Critical"
   rationale: "Protege los datos contra el acceso no autorizado a la infraestructura de almacenamiento."
-  application:
+  applications:
     - "application:seguridad"
   stakeholders:
     - "stakeholder:004"
@@ -1564,7 +1574,7 @@ requirements:
   type: "Security"
   priority: "High"
   rationale: "Ayuda a detectar intrusiones y malware que intenta alterar el comportamiento del sistema."
-  application:
+  applications:
     - "application:seguridad"
   stakeholders:
     - "stakeholder:006"
@@ -1579,7 +1589,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Facilita el mantenimiento, la corrección de errores y el despliegue de nuevas funcionalidades sin intervención física."
-  application:
+  applications:
     - "application:iot-management"
   stakeholders:
     - "stakeholder:002"
@@ -1601,7 +1611,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Permite optimizar el rendimiento y el consumo de datos de la flota en tiempo real."
-  application:
+  applications:
     - "application:iot-management"
   stakeholders:
     - "stakeholder:002"
@@ -1622,7 +1632,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Esencial para el control de activos y la gestión de la flota."
-  application:
+  applications:
     - "application:iot-management"
   stakeholders:
     - "stakeholder:002"
@@ -1642,7 +1652,7 @@ requirements:
   type: "Usability"
   priority: "High"
   rationale: "Garantiza que personas con discapacidades puedan acceder y usar la información del transporte público."
-  application:
+  applications:
     - "application:front-end"
   stakeholders:
     - "stakeholder:001"
@@ -1664,7 +1674,7 @@ requirements:
   type: "Usability"
   priority: "Medium"
   rationale: "Atiende a la población turística y promueve la adopción internacional."
-  application:
+  applications:
     - "application:front-end"
   stakeholders:
     - "stakeholder:001"
@@ -1684,7 +1694,7 @@ requirements:
   type: "Usability"
   priority: "High"
   rationale: "Garantiza una experiencia de usuario consistente independientemente del dispositivo de acceso."
-  application:
+  applications:
     - "application:front-end"
   stakeholders:
     - "stakeholder:001"
@@ -1703,7 +1713,7 @@ requirements:
   type: "Performance"
   priority: "High"
   rationale: "Mejora la retención de usuarios y el posicionamiento en buscadores (SEO)."
-  application:
+  applications:
     - "application:front-end"
   stakeholders:
     - "stakeholder:001"
@@ -1722,7 +1732,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Informa al usuario sobre el costo exacto del servicio, fomentando la transparencia."
-  application:
+  applications:
     - "application:datos-publicos"
   stakeholders:
     - "stakeholder:001"
@@ -1743,7 +1753,7 @@ requirements:
   type: "Functional"
   priority: "High"
   rationale: "Información básica necesaria para la planificación de viajes por parte del usuario."
-  application:
+  applications:
     - "application:datos-publicos"
   stakeholders:
     - "stakeholder:001"
@@ -1764,7 +1774,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Fomenta la colaboración, la auditoría pública y la creación de ecosistemas por terceros."
-  application:
+  applications:
     - "application:datos-publicos"
   stakeholders:
     - "stakeholder:008"
@@ -1782,7 +1792,7 @@ requirements:
   type: "Reliability"
   priority: "Critical"
   rationale: "Protege contra fallos catastróficos o desastres que afecten la infraestructura principal."
-  application:
+  applications:
     - "application:operaciones"
   stakeholders:
     - "stakeholder:006"
@@ -1803,7 +1813,7 @@ requirements:
   type: "Operational"
   priority: "Critical"
   rationale: "Asegura que la política de copias de seguridad realmente puede recuperarse en caso de necesidad."
-  application:
+  applications:
     - "application:operaciones"
   stakeholders:
     - "stakeholder:006"
@@ -1824,7 +1834,7 @@ requirements:
   type: "Operational"
   priority: "Medium"
   rationale: "Balancea la necesidad de actualizaciones con la continuidad del servicio al usuario."
-  application:
+  applications:
     - "application:operaciones"
   stakeholders:
     - "stakeholder:006"
@@ -1841,7 +1851,7 @@ requirements:
   type: "Operational"
   priority: "Critical"
   rationale: "Minimiza el tiempo de resolución (MTTR) de fallos mayores."
-  application:
+  applications:
     - "application:operaciones"
   stakeholders:
     - "stakeholder:006"
@@ -1859,7 +1869,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Evita que un fallo en la base de datos detenga el flujo de datos de telemetría en tiempo real."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1880,7 +1890,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Aísla el núcleo del sistema de los cambios en formatos de datos externos (ej. GTFS-RT de diferentes fuentes)."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:007"
@@ -1900,7 +1910,7 @@ requirements:
   type: "Technical"
   priority: "High"
   rationale: "Mejora la elasticidad, la tolerancia a fallos y la capacidad de absorber picos de tráfico."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:006"
@@ -1922,7 +1932,7 @@ requirements:
   type: "Technical"
   priority: "Medium"
   rationale: "Facilita la escritura de pruebas unitarias y de integración, mejorando la calidad del software."
-  application:
+  applications:
     - "application:arquitectura"
   stakeholders:
     - "stakeholder:007"
