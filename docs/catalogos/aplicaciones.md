@@ -6,9 +6,9 @@
 
 | Campo | Valor |
 | --- | --- |
-| Versión | 1.0 |
-| Fecha | 2025-09-18 |
-| Descripción | Un catálogo de aplicaciones para un Sistema de Información de Transporte Público. |
+| Versión | 0.1 |
+| Fecha | 2025-11-27 |
+| Descripción | Un catálogo de aplicaciones para el sistema de información de transporte público (InfoTP). |
 | Autores | Pedro Meneses López, Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
@@ -20,16 +20,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:001</code></span>
 
-- Descripción: Monitorea la ubicación actual de los vehículos de tránsito utilizando un sistema de localización automática de vehículos.
+- Descripción: Servicio de monitoreo en tiempo real para vehículos de transporte utilizando datos AVL.
 - Versión: 0.1.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transportation, Real-Time Data, Transit Management
-- Tecnologías: GPS, Mobile App, GPS / GNSS, Automated Vehicle Location (AVL), Wireless communications (3G/4G/5G, DSRC, C-V2X), Centralized fleet management software
-- Partes interesadas: Transit Authorities
-- Estado: Active
-- Entorno despliegue: Cloud
+- Tecnologías: Django
+- Categorías: Real-Time Data, Fleet Management, Backend Services
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: High
 
 <a id="application-002"></a>
@@ -37,16 +37,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:002</code></span>
 
-- Descripción: Construye y distribuye datos de horarios y rutas de tránsito en formato GTFS para aplicaciones de información al viajero.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Una aplicación Django para crear, gestionar y publicar datos GTFS Schedule y GTFS Realtime.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Management
-- Tecnologías: Computer-Aided Dispatch (CAD), AVL, Radio / Cellular communications, Operations control center systems
-- Partes interesadas: Transit Authorities
-- Estado: Active
-- Entorno despliegue: Cloud
+- Tecnologías: Django
+- Categorías: Transit Management, Real-Time Data
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: High
 
 <a id="application-003"></a>
@@ -54,16 +54,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:003</code></span>
 
-- Descripción: Distribuye información en tiempo real sobre el estado de los vehículos de tránsito y permite a los viajeros solicitar viajes y obtener itinerarios utilizando dispositivos personales.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Servicio de distribución de información de transporte en tiempo real para aplicaciones de cara al público.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Management
-- Tecnologías: Mobile apps (smartphone, tablets), Trip planning software, Cloud-based dispatching, APIs for real-time schedule updates
-- Partes interesadas: Passengers, Transit Authorities
-- Estado: Active
-- Entorno despliegue: Cloud
+- Tecnologías: Django
+- Categorías: Traveler Information, Real-Time Data
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: Medium
 
 <a id="application-004"></a>
@@ -71,16 +71,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:004</code></span>
 
-- Descripción: Recopila y analiza datos operativos y de desempeño de los sistemas de tránsito para mejorar la toma de decisiones.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Servicio de recopilación de datos y análisis para el rendimiento operativo del transporte.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Management
-- Tecnologías: Smart cards / RFID, NFC (contactless payment), Mobile payment apps (QR, wallet), Fare collection back-office systems
-- Partes interesadas: Passengers, Transit Authorities
-- Estado: Active
-- Entorno despliegue: Hybrid
+- Tecnologías: Django, Python, Grafana
+- Categorías: Analytics, Real-Time Data, Transit Management
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: High
 
 <a id="application-005"></a>
@@ -88,15 +88,15 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:005</code></span>
 
-- Descripción: Sitio web que proporciona a los usuarios de tránsito acceso a información de tránsito en paradas y vehículos.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Sitio web que ofrece mapas de rutas, información de paradas, horarios y datos de llegada en tiempo real.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Security
-- Tecnologías: CCTV with video analytics, Panic buttons / emergency communication systems, Access control & intrusion detection, Security operation centers
-- Partes interesadas: Passengers, Transit Authorities
-- Estado: Active
+- Tecnologías: Django, Nuxt
+- Categorías: Web, Traveler Information, User Interface
+- Partes interesadas: stakeholder:001
+- Estado: Development
 - Entorno despliegue: On-Premise
 - Criticidad: High
 
@@ -105,16 +105,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:006</code></span>
 
-- Descripción: Ofrece información en tiempo real a los pasajeros de tránsito a través de pantallas instaladas en vehículos y paradas.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Señalización digital que muestra información de transporte en tiempo real en pantallas a bordo y en estaciones.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Management
-- Tecnologías: On-board diagnostics (OBD-II, CAN bus), Predictive maintenance software, Telematics, IoT sensors
-- Partes interesadas: Maintenance Teams, Transit Authorities
-- Estado: Active
-- Entorno despliegue: Cloud
+- Tecnologías: Django, Vue
+- Categorías: Traveler Information, Real-Time Data, Web
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: Medium
 
 <a id="application-007"></a>
@@ -122,16 +122,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:007</code></span>
 
-- Descripción: Aplicación móvil para usuarios del sistema de transporte público.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Aplicación móvil que proporciona información de llegada en tiempo real, navegación de rutas y alertas.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Transit Management
-- Tecnologías: Infrared / ultrasonic sensors, Video analytics with AI, Weight sensors, Wireless data transmission
-- Partes interesadas: Transit Authorities
-- Estado: Active
-- Entorno despliegue: Hybrid
+- Tecnologías: Capacitor, Ionic, Vue
+- Categorías: Traveler Information, Mobile
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: Medium
 
 <a id="application-008"></a>
@@ -139,16 +139,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:008</code></span>
 
-- Descripción: Aplicación móvil operativa para rastreo y gestión de vehículos de tránsito.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Aplicación móvil operativa para conductores, que soporta rastreo de vehículos y reportes.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Traveler Information
-- Tecnologías: Digital signage (LED displays), Mobile apps / web portals, GTFS-Realtime feeds, Cloud-based information dissemination
-- Partes interesadas: Passengers, Transit Authorities
-- Estado: Active
-- Entorno despliegue: Cloud
+- Tecnologías: Capacitor, Ionic, Vue
+- Categorías: Transit Management, Fleet Management, Real-Time Data
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: High
 
 <a id="application-009"></a>
@@ -156,16 +156,16 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:009</code></span>
 
-- Descripción: Editor de datos GTFS para gestionar horarios y rutas de tránsito.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Editor para crear y mantener conjuntos de datos GTFS.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Traffic Management
-- Tecnologías: DSRC / C-V2X communication, Adaptive signal control software, GPS-based priority request, Traffic management centers
-- Partes interesadas: Transit Authorities
-- Estado: Active
-- Entorno despliegue: Hybrid
+- Tecnologías: Nuxt
+- Categorías: Transit Management
+- Partes interesadas: stakeholder:001
+- Estado: Development
+- Entorno despliegue: On-Premise
 - Criticidad: Medium
 
 <a id="application-010"></a>
@@ -173,14 +173,14 @@
 
 <span class="catalog-badge" style="--catalog-badge-bg:#FFF0F6"><span class="catalog-icon material-symbols-outlined">apps</span><code style="background:none;padding:0;margin:0;border:0;">application:010</code></span>
 
-- Descripción: Gestión de contenidos del sistema de información del transporte público.
-- Versión: 1.0.0
-- Proveedor: Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
-- Licencia: Custom
+- Descripción: Backend administrativo para gestionar la configuración y el contenido en el ecosistema de información de transporte.
+- Versión: 0.1.0
+- Proveedor: SIMOVI Intelligent Mobility Systems Lab
+- Licencia: Apache 2.0
 - Contacto de soporte: simovi@ucr.ac.cr
-- Categorías: Traffic Management
-- Tecnologías: Dynamic lane control signals, Roadside sensors & cameras, Traffic monitoring systems, Intelligent lane management software
-- Partes interesadas: Transit Authorities
-- Estado: Active
+- Tecnologías: Django, Nuxt
+- Categorías: Transit Management, Backend Services
+- Partes interesadas: stakeholder:001
+- Estado: Development
 - Entorno despliegue: On-Premise
 - Criticidad: Medium

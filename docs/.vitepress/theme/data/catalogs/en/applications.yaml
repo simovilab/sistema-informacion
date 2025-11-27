@@ -1,12 +1,10 @@
 # yaml-language-server: $schema=../schemas/applications.schema.json
 
-## Metadata about the catalog
-
 metadata:
   title: "Catálogo de portafolio de aplicaciones"
-  version: "1.0"
-  date: "2025-09-18"
-  description: "Un catálogo de aplicaciones para un Sistema de Información de Transporte Público."
+  version: "0.1"
+  date: "2025-11-27"
+  description: "Un catálogo de aplicaciones para el sistema de información de transporte público (InfoTP)."
   author:
     - "Pedro Meneses López"
     - "Fabián Abarca Calderón"
@@ -23,34 +21,33 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
     categories:
-      - "Real-Time Systems"
-      - "Fleet Operations"
+      - "Real-Time Data"
+      - "Fleet Management"
       - "Backend Services"
     stakeholders:
-      - "Fleet Operators"
-      - "System Administrators"
-      - "Drivers"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "High"
 
   - id: "application:002"
     name: "Databús GTFS"
-    description: "System for creating, managing, and publishing GTFS transit schedule data."
+    description: "A Django app for creating, managing, and publishing GTFS Schedule and GTFS Realtime data."
     version: "0.1.0"
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
     categories:
-      - "Data Management"
-      - "Interoperability"
-      - "Transit Planning"
+      - "Transit Management"
+      - "Real-Time Data"
     stakeholders:
-      - "Transit Planners"
-      - "Regulatory Agencies"
-      - "System Administrators"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "High"
 
@@ -61,15 +58,14 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
     categories:
-      - "Public Information Systems"
-      - "Real-Time Data Services"
-      - "APIs"
+      - "Traveler Information"
+      - "Real-Time Data"
     stakeholders:
-      - "Passengers"
-      - "Developers"
-      - "Municipalities"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
@@ -80,15 +76,17 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
+      - "Python"
+      - "Grafana"
     categories:
       - "Analytics"
-      - "Data Processing"
-      - "Operational Monitoring"
+      - "Real-Time Data"
+      - "Transit Management"
     stakeholders:
-      - "Transit Agencies"
-      - "System Administrators"
-      - "Regulators"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "High"
 
@@ -99,15 +97,16 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
+      - "Nuxt"
     categories:
-      - "Web Applications"
-      - "User Information Services"
-      - "Visualization"
+      - "Web"
+      - "Traveler Information"
+      - "User Interface"
     stakeholders:
-      - "Passengers"
-      - "Tourists"
-      - "Municipalities"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "High"
 
@@ -118,15 +117,16 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
+      - "Vue"
     categories:
-      - "Digital Signage"
-      - "Real-Time Systems"
-      - "Passenger Information"
+      - "Traveler Information"
+      - "Real-Time Data"
+      - "Web"
     stakeholders:
-      - "Passengers"
-      - "Transit Operators"
-      - "Municipalities"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
@@ -137,14 +137,16 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Capacitor"
+      - "Ionic"
+      - "Vue"
     categories:
-      - "Mobile Applications"
-      - "User Information Services"
-      - "Notifications"
+      - "Traveler Information"
+      - "Mobile"
     stakeholders:
-      - "Passengers"
-      - "Municipalities"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
@@ -155,15 +157,17 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Capacitor"
+      - "Ionic"
+      - "Vue"
     categories:
-      - "Mobile Applications"
-      - "Fleet Operations"
-      - "Telematics"
+      - "Transit Management"
+      - "Fleet Management"
+      - "Real-Time Data"
     stakeholders:
-      - "Drivers"
-      - "Fleet Operators"
-      - "System Administrators"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "High"
 
@@ -174,14 +178,13 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Nuxt"
     categories:
-      - "Data Editing Tools"
-      - "Transit Planning"
-      - "Data Management"
+      - "Transit Management"
     stakeholders:
-      - "Transit Planners"
-      - "System Administrators"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
@@ -192,14 +195,15 @@ applications:
     vendor: "SIMOVI Intelligent Mobility Systems Lab"
     license: "Apache 2.0"
     support_contact: "simovi@ucr.ac.cr"
+    technologies:
+      - "Django"
+      - "Nuxt"
     categories:
-      - "Administration Tools"
-      - "Content Management"
-      - "Internal Systems"
+      - "Transit Management"
+      - "Backend Services"
     stakeholders:
-      - "SIMOVI Administrators"
-      - "Regulatory Agencies"
-    status: "Active"
+      - "stakeholder:001"
+    status: "Development"
     deployment_environment: "On-Premise"
     criticality: "Medium"
 
