@@ -63,7 +63,7 @@
               "Proprietary",
               "GPL",
               "MIT",
-              "Apache 2.0",
+              "Apache",
               "BSD",
               "Creative Commons"
             ],
@@ -115,7 +115,17 @@
             "type": "array",
             "items": {
               "type": "string",
-              "pattern": "^stakeholder:\\d{3}$"
+              "enum": [
+                "Passengers",
+                "Bus Operators",
+                "Transit Authorities",
+                "Maintenance Teams",
+                "IT Support Staff",
+                "System Administrators",
+                "Government Officials",
+                "Financial Partners",
+                "Technology Vendors"
+              ]
             },
             "minItems": 1,
             "description": "List of stakeholder groups that use or are affected by the application"
