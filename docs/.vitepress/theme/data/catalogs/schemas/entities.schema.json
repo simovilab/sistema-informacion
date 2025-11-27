@@ -21,7 +21,7 @@
             "description": "Unique identifier for the data entity (data-entity:XXX)"
           },
           "name": { "type": "string", "minLength": 1 },
-          "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Conditionally Forbidden", "Recommended"] },
+          "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Conditionally Forbidden", "Operational" ,"Recommended"] },
           "description": { "type": "string", "minLength": 1 },
           "attributes": {
             "type": "array",
@@ -44,7 +44,7 @@
                     "Double","Long","UUID","JSON","Array","Object","Binary","Decimal"
                   ]
                 },
-                "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Conditionally Forbidden", "Recommended"] },
+                "presence": { "type": "string", "enum": ["Required", "Optional", "Conditionally Required", "Operational" ,"Conditionally Forbidden", "Recommended"] },
                 "description": { "type": "string", "minLength": 1 }
               }
             }

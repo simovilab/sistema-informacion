@@ -1,4 +1,5 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/technologies.schema.json
+
 metadata:
   title: "Catálogo de portafolio tecnológico"
   version: "1.0"
@@ -23,7 +24,7 @@ technologies:
     related_technologies:
       - "PostGIS"
       - "pgAdmin"
-    status: "Activo"
+    status: "Active"
     documentation: "https://www.postgresql.org/docs/13/"
   - id: technology:002
     name: "Node.js"
@@ -35,7 +36,7 @@ technologies:
     related_technologies:
       - "Express.js"
       - "npm"
-    status: "Activo"
+    status: "Active"
     documentation: "https://nodejs.org/en/docs/"
   - id: technology:003
     name: "Vue.js"
@@ -47,5 +48,5 @@ technologies:
     related_technologies:
       - "Vuex"
       - "Vue Router"
-    status: "Activo"
+    status: "Active"
     documentation: "https://vuejs.org/v2/guide/"

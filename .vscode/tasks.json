@@ -10,6 +10,13 @@
 				"$eslint-stylish"
 			],
 			"group": "build"
+		},
+		{
+			"label": "build-docs",
+			"type": "shell",
+			"command": "pnpm -s docs:build",
+			"isBackground": false,
+			"group": "build"
 		}
 	]
 }

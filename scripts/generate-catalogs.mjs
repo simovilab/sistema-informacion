@@ -68,20 +68,26 @@ try {
   console.warn("Warning: unable to read format.json:", e?.message || e)
 }
 
-// Map single YAML basenames -> Spanish slugs (folder/file names under docs/catalogos)
-// Basenames correspond to files in docs/.vitepress/theme/data/catalogs/en/*.yaml
-const fileToSlug = {
-  principles: "principios",
-  stakeholders: "partes-interesadas",
-  actors: "actores",
-  organizations: "organizaciones",
-  applications: "aplicaciones",
-  requirements: "requisitos",
-  entities: "entidades-datos",
-  components: "componentes-datos",
-  technologies: "tecnologias",
-  standards: "estandares",
-  interfaces: "interfaces",
+// Map single YAML basenames -> relative output paths under docs/catalogos
+// Basenames correspond to files in docs/.vitepress/theme/data/catalogs/<locale>/*.yaml
+const fileToPath = {
+  principles: "fundamentos/principios.md",
+  stakeholders: "institucional/partes-interesadas.md",
+  actors: "institucional/actores.md",
+  organizations: "institucional/organizaciones.md",
+  applications: "fundamentos/aplicaciones.md",
+  requirements: "fundamentos/requisitos.md",
+  entities: "datos/entidades.md",
+  gtfs: "datos/gtfs.md",
+  components: "datos/componentes.md",
+  technologies: "tecnologia/tecnologias.md",
+  standards: "tecnologia/estandares.md",
+  interfaces: "tecnologia/interfaces.md",
+  brand: "identidad-visual/marca.md",
+  graphics: "identidad-visual/elementos-graficos.md",
+  signage: "identidad-visual/senalizacion.md",
+  gui: "identidad-visual/interfaces-graficas.md",
+  templates: "identidad-visual/plantillas.md",
 }
 
 // Some output pages are composed by merging multiple source files
@@ -96,11 +102,19 @@ const slugDisplayName = {
   organizaciones: "Organizaciones",
   aplicaciones: "Aplicaciones",
   requisitos: "Requisitos",
-  "entidades-datos": "Entidades de datos",
-  "componentes-datos": "Componentes de datos",
+  // New filenames without suffix used in paths below
+  entidades: "Entidades de datos",
+  gtfs: "GTFS",
+  componentes: "Componentes de datos",
   tecnologias: "Tecnologías",
   estandares: "Estándares",
   interfaces: "Interfaces",
+  // Visual identity catalogs
+  marca: "Marca",
+  "elementos-graficos": "Elementos gráficos",
+  senalizacion: "Señalización",
+  "interfaces-graficas": "Interfaces gráficas",
+  plantillas: "Plantillas",
 }
 
 // Translate known section keys to Spanish for nicer headings
@@ -117,6 +131,15 @@ const sectionLabel = {
   organizations: "Organizaciones",
   interfaces: "Interfaces",
   actors: "Actores",
+  brands: "Marcas",
+  governance: "Gobernanza",
+  colors: "Colores",
+  typography: "Tipografía",
+  shapes: "Formas",
+  icons: "Íconos",
+  signage: "Señalización",
+  templates: "Plantillas",
+  components: "Componentes",
 }
 
 const MARKER = "<!-- AUTO-GENERATED FILE - DO NOT EDIT. See scripts/generate-catalogs.mjs -->"
@@ -157,6 +180,23 @@ function formatValue(v) {
   }
 }
 
+function renderAttributesTable(attributes) {
+  if (!Array.isArray(attributes) || attributes.length === 0) return "—"
+  
+  // Build table with columns: name (as code), type, description
+  let table = "\n| Nombre | Tipo | Descripción |\n"
+  table += "| --- | --- | --- |\n"
+  
+  for (const attr of attributes) {
+    const name = attr.name ? `\`${attr.name}\`` : "—"
+    const type = attr.type || "—"
+    const description = attr.description || "—"
+    table += `| ${name} | ${type} | ${description} |\n`
+  }
+  
+  return table + "\n"
+}
+
 function renderMetadata(md) {
   if (!md || typeof md !== "object") return ""
   const rows = []
@@ -176,7 +216,7 @@ function renderMetadata(md) {
   return ["### Metadatos", "", "| Campo | Valor |", "| --- | --- |", ...rows, ""].join("\n")
 }
 
-function renderItem(sectionKey, item, index, labelForKey) {
+function renderItem(sectionKey, item, index, labelForKey, headingLevel = 2) {
   const title = item?.name || item?.id || `${labelForKey(sectionKey)} ${index + 1}`
   // Stable anchor based on the item id (e.g., principles:001 -> #principles-001)
   const anchorId = item?.id
@@ -188,7 +228,8 @@ function renderItem(sectionKey, item, index, labelForKey) {
         .replace(/-+/g, "-")
         .replace(/^-|-$/g, "")
     : null
-  let out = `\n${anchorId ? `<a id="${anchorId}"></a>\n` : ""}## ${title}\n\n`
+  const hashes = "#".repeat(headingLevel)
+  let out = `\n${anchorId ? `<a id="${anchorId}"></a>\n` : ""}${hashes} ${title}\n\n`
   // Render id as a styled badge with optional icon using FORMAT config
   if (item?.id) {
     // Determine catalog key from the id prefix before ':' (e.g., 'actors:001')
@@ -205,6 +246,11 @@ function renderItem(sectionKey, item, index, labelForKey) {
       technology: "technologies",
       interface: "interfaces",
       stakeholder: "stakeholders",
+      brand: "brand",
+      graphics: "graphics",
+      signage: "signage",
+      gui: "gui",
+      templates: "templates",
     }
     const prefix = irregulars[rawPrefix] || (rawPrefix.endsWith("s") ? rawPrefix : `${rawPrefix}s`)
     let fmt = FORMAT[prefix] || null
@@ -222,6 +268,14 @@ function renderItem(sectionKey, item, index, labelForKey) {
     if (k === "id") continue
     const v = item[k]
     const label = labelForKey(k)
+    
+    // Special case: render attributes/fields as a table for data entities and GTFS files
+    if ((k === "attributes" || k === "fields") && Array.isArray(v) && v.length > 0 && v[0]?.name && v[0]?.type) {
+      out += `\n**${label}:**\n`
+      out += renderAttributesTable(v)
+      continue
+    }
+    
     const rendered = formatValue(v)
     if (rendered.startsWith("```json")) {
       out += `- ${label}:\n\n${rendered}\n\n`
@@ -232,16 +286,26 @@ function renderItem(sectionKey, item, index, labelForKey) {
   return out
 }
 
-function renderSection(key, value, labelForKey) {
+function renderSection(key, value, labelForKey, isMultiCategory = false) {
   const title = sectionLabel[key] ? sectionLabel[key] : labelForKey(key)
   let out = ""
-  // For array sections (the main catalog content), omit the section title and render each item as H2
+  
+  // For array sections in multi-category catalogs, add H2 section heading and render items as H3
   if (Array.isArray(value)) {
-    value.forEach((item, i) => {
-      out += renderItem(key, item, i, labelForKey)
-    })
+    if (isMultiCategory) {
+      out += `\n## ${title}\n\n`
+      value.forEach((item, i) => {
+        out += renderItem(key, item, i, labelForKey, 3) // H3 for items in multi-category
+      })
+    } else {
+      // Single-category catalogs: omit section title and render items as H2
+      value.forEach((item, i) => {
+        out += renderItem(key, item, i, labelForKey, 2) // H2 for items in single-category
+      })
+    }
     return out
   }
+  
   const t = typeof value
   if (t === "string" || t === "number" || t === "boolean") {
     return `\n## ${title}\n\n` + String(value) + "\n\n"
@@ -318,11 +382,12 @@ function capitalizeFirstUnicode(s, locale = "es") {
   return first + s.slice(1)
 }
 
-async function generateOneFromFile(basename, slugOverride = null) {
-  const slug = slugOverride || fileToSlug[basename]
-  if (!slug) return { basename, skipped: true, reason: "no-slug" }
+async function generateOneFromFile(basename, pathOverride = null) {
+  const relPath = pathOverride || fileToPath[basename]
+  if (!relPath) return { basename, skipped: true, reason: "no-path" }
   const inFile = path.join(DATA_DIR, `${basename}.yaml`)
-  const outFile = path.join(OUT_DIR, `${slug}.md`)
+  const outFile = path.join(OUT_DIR, relPath)
+  const slug = path.basename(relPath, ".md")
 
   const src = fs.readFileSync(inFile, "utf-8")
   let data = yamlLoad(src)
@@ -352,6 +417,11 @@ async function generateOneFromFile(basename, slugOverride = null) {
   // Render all other sections deterministically (alphabetical keys except metadata first)
   const keys = Object.keys(data).filter(k => k !== "metadata")
   keys.sort()
+  
+  // Detect multi-category catalogs: catalogs with more than one array section
+  const arraySections = keys.filter(k => Array.isArray(data[k]))
+  const isMultiCategory = arraySections.length > 1
+  
   const forward = i18n && desiredLocale && i18n[desiredLocale] ? i18n[desiredLocale].forward : null
   const labelForKey = k => {
     const s = String(k)
@@ -360,11 +430,11 @@ async function generateOneFromFile(basename, slugOverride = null) {
     return capitalizeFirstUnicode(spaced, desiredLocale || "es")
   }
   for (const k of keys) {
-    md += renderSection(k, data[k], labelForKey)
+    md += renderSection(k, data[k], labelForKey, isMultiCategory)
   }
 
-  // Ensure out dir
-  fs.mkdirSync(OUT_DIR, { recursive: true })
+  // Ensure output directory (including nested folders)
+  fs.mkdirSync(path.dirname(outFile), { recursive: true })
 
   if (fs.existsSync(outFile)) {
     const existing = fs.readFileSync(outFile, "utf-8")
@@ -450,7 +520,7 @@ async function main() {
   const entries = fs.readdirSync(DATA_DIR)
   const basenames = entries.filter(f => f.endsWith(".yaml")).map(f => path.basename(f, ".yaml"))
 
-  const targets = basenames.filter(b => fileToSlug[b])
+  const targets = basenames.filter(b => fileToPath[b])
   const results = []
   for (const b of targets) {
     try {

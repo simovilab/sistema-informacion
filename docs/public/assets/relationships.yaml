@@ -1,0 +1,616 @@
+-
+  source_entity: Actor
+  target_entity: Actor
+  relationship: Decomposes
+-
+  source_entity: Actor
+  target_entity: "Business Service"
+  relationship: Consumes
+-
+  source_entity: Actor
+  target_entity: "Data Entity"
+  relationship: "Supplies or consumes"
+-
+  source_entity: Actor
+  target_entity: Event
+  relationship: Generates
+-
+  source_entity: Actor
+  target_entity: Event
+  relationship: Resolves
+-
+  source_entity: Actor
+  target_entity: Function
+  relationship: "Interacts with"
+-
+  source_entity: Actor
+  target_entity: Function
+  relationship: Performs
+-
+  source_entity: Actor
+  target_entity: "Organization Unit"
+  relationship: "Belongs to"
+-
+  source_entity: Actor
+  target_entity: Process
+  relationship: "Participates in"
+-
+  source_entity: Actor
+  target_entity: Process
+  relationship: Triggers
+-
+  source_entity: Actor
+  target_entity: Role
+  relationship: "Performs task in"
+-
+  source_entity: Actor
+  target_entity: "Value Stream"
+  relationship: "Performs a task in"
+-
+  source_entity: "Application Service"
+  target_entity: "Business Service"
+  relationship: "Automates some or all of"
+-
+  source_entity: "Application Service"
+  target_entity: "Data Entity"
+  relationship: "Used by"
+-
+  source_entity: "Application Service"
+  target_entity: "Logical Application Component"
+  relationship: "Is realized through"
+-
+  source_entity: "Application Service"
+  target_entity: "Technology Service"
+  relationship: "Is served by"
+-
+  source_entity: "Business Capability"
+  target_entity: "Business Information"
+  relationship: Uses
+-
+  source_entity: "Business Capability"
+  target_entity: "Course of Action"
+  relationship: "Is influenced by"
+-
+  source_entity: "Business Capability"
+  target_entity: Function
+  relationship: "Is delivered by"
+-
+  source_entity: "Business Capability"
+  target_entity: "Organization Unit"
+  relationship: "Is used by"
+-
+  source_entity: "Business Capability"
+  target_entity: Process
+  relationship: "Is operationalized by"
+-
+  source_entity: "Business Capability"
+  target_entity: "Value Stream"
+  relationship: Enables
+-
+  source_entity: "Business Information"
+  target_entity: "Business Capability"
+  relationship: "Is used by"
+-
+  source_entity: "Business Information"
+  target_entity: "Business Service"
+  relationship: "Used to derive"
+-
+  source_entity: "Business Information"
+  target_entity: "Course of Action"
+  relationship: "Is influenced by"
+-
+  source_entity: "Business Information"
+  target_entity: "Data Entity"
+  relationship: "Is realized by"
+-
+  source_entity: "Business Information"
+  target_entity: Process
+  relationship: Uses
+-
+  source_entity: "Business Service"
+  target_entity: Actor
+  relationship: "Is provided to"
+-
+  source_entity: "Business Service"
+  target_entity: "Application Service"
+  relationship: Uses
+-
+  source_entity: "Business Service"
+  target_entity: "Business Information"
+  relationship: "Is derived from"
+-
+  source_entity: "Business Service"
+  target_entity: "Business Service Quality"
+  relationship: Meets
+-
+  source_entity: "Business Service"
+  target_entity: "Business Service"
+  relationship: Consumes
+-
+  source_entity: "Business Service"
+  target_entity: "Business Service"
+  relationship: Decomposes
+-
+  source_entity: "Business Service"
+  target_entity: Contract
+  relationship: "Is governed and measured by"
+-
+  source_entity: "Business Service"
+  target_entity: "Data Entity"
+  relationship: "Is accessed and updated through"
+-
+  source_entity: "Business Service"
+  target_entity: Event
+  relationship: Resolves
+-
+  source_entity: "Business Service"
+  target_entity: Function
+  relationship: "Provides governed interface to access"
+-
+  source_entity: "Business Service"
+  target_entity: "Logical Technology Component"
+  relationship: "Is implemented on"
+-
+  source_entity: "Business Service"
+  target_entity: "Organization Unit"
+  relationship: "Is owned and governed by"
+-
+  source_entity: "Business Service"
+  target_entity: Process
+  relationship: "Is realized by"
+-
+  source_entity: "Business Service"
+  target_entity: Process
+  relationship: Supports
+-
+  source_entity: Capability
+  target_entity: "Work Package"
+  relationship: "Is delivered by"
+-
+  source_entity: Contract
+  target_entity: "Business Service"
+  relationship: "Governs, measures"
+-
+  source_entity: Contract
+  target_entity: "Service Quality"
+  relationship: Meets
+-
+  source_entity: Control
+  target_entity: Process
+  relationship: "Ensures correct operation of"
+-
+  source_entity: "Course of Action"
+  target_entity: "Business Capability"
+  relationship: Influences
+-
+  source_entity: "Course of Action"
+  target_entity: "Business Information"
+  relationship: Influences
+-
+  source_entity: "Course of Action"
+  target_entity: Function
+  relationship: Influences
+-
+  source_entity: "Course of Action"
+  target_entity: Goal
+  relationship: Realizes
+-
+  source_entity: "Course of Action"
+  target_entity: "Organization Unit"
+  relationship: Influences
+-
+  source_entity: "Course of Action"
+  target_entity: Product
+  relationship: Influences
+-
+  source_entity: "Course of Action"
+  target_entity: "Value Stream"
+  relationship: Influences
+-
+  source_entity: "Data Entity"
+  target_entity: Actor
+  relationship: "Is supplied or consumed by"
+-
+  source_entity: "Data Entity"
+  target_entity: "Application Service"
+  relationship: "Used by"
+-
+  source_entity: "Data Entity"
+  target_entity: "Business Information"
+  relationship: Realizes
+-
+  source_entity: "Data Entity"
+  target_entity: "Business Service"
+  relationship: "Is accessed and updated through"
+-
+  source_entity: "Data Entity"
+  target_entity: "Data Entity"
+  relationship: Decomposes
+-
+  source_entity: "Data Entity"
+  target_entity: "Data Entity"
+  relationship: "Relates to"
+-
+  source_entity: "Data Entity"
+  target_entity: "Logical Data Component"
+  relationship: "Resides within"
+-
+  source_entity: Driver
+  target_entity: Driver
+  relationship: Decomposes
+-
+  source_entity: Driver
+  target_entity: Goal
+  relationship: Creates
+-
+  source_entity: Driver
+  target_entity: "Organization Unit"
+  relationship: Motivates
+-
+  source_entity: Event
+  target_entity: Actor
+  relationship: "Is generated by"
+-
+  source_entity: Event
+  target_entity: Actor
+  relationship: "Is resolved by"
+-
+  source_entity: Event
+  target_entity: "Business Service"
+  relationship: "Is resolved by"
+-
+  source_entity: Event
+  target_entity: Process
+  relationship: "Is generated by"
+-
+  source_entity: Event
+  target_entity: Process
+  relationship: "Is resolved by"
+-
+  source_entity: Function
+  target_entity: Actor
+  relationship: Supports
+-
+  source_entity: Function
+  target_entity: "Business Capability"
+  relationship: Delivers
+-
+  source_entity: Function
+  target_entity: "Business Service"
+  relationship: "Is bounded by"
+-
+  source_entity: Function
+  target_entity: "Course of Action"
+  relationship: "Is influenced by"
+-
+  source_entity: Function
+  target_entity: Function
+  relationship: "Communicates with"
+-
+  source_entity: Function
+  target_entity: Function
+  relationship: Decomposes
+-
+  source_entity: Function
+  target_entity: "Organization Unit"
+  relationship: "Is owned by"
+-
+  source_entity: Function
+  target_entity: Process
+  relationship: Orchestrates
+-
+  source_entity: Function
+  target_entity: Process
+  relationship: Decomposes
+-
+  source_entity: Goal
+  target_entity: "Course of Action"
+  relationship: "Is realized by"
+-
+  source_entity: Goal
+  target_entity: Driver
+  relationship: Addresses
+-
+  source_entity: Goal
+  target_entity: Goal
+  relationship: Decomposes
+-
+  source_entity: Goal
+  target_entity: Objective
+  relationship: "Is made specific"
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Application Service"
+  relationship: Implements
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Logical Application Component"
+  relationship: Decomposes
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Logical Application Component"
+  relationship: "Communicates with"
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Logical Data Component"
+  relationship: "Used by"
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Logical Technology Component"
+  relationship: "Is served by"
+-
+  source_entity: "Logical Application Component"
+  target_entity: "Physical Application Component"
+  relationship: "Is realized by"
+-
+  source_entity: "Logical Data Component"
+  target_entity: "Data Entity"
+  relationship: Encapsulates
+-
+  source_entity: "Logical Data Component"
+  target_entity: "Logical Application Component"
+  relationship: Uses
+-
+  source_entity: "Logical Data Component"
+  target_entity: "Physical Data Component"
+  relationship: "Is realized by"
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Business Service"
+  relationship: "Provides platform for"
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Logical Application Component"
+  relationship: Serves
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Logical Technology Component"
+  relationship: Decomposes
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Logical Technology Component"
+  relationship: "Is dependent on"
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Physical Technology Component"
+  relationship: "Is realized by"
+-
+  source_entity: "Logical Technology Component"
+  target_entity: "Technology Service"
+  relationship: Supplies
+-
+  source_entity: Measure
+  target_entity: Measure
+  relationship: Decomposes
+-
+  source_entity: Measure
+  target_entity: Objective
+  relationship: "Sets performance criteria for"
+-
+  source_entity: Objective
+  target_entity: Goal
+  relationship: Realizes
+-
+  source_entity: Objective
+  target_entity: Measure
+  relationship: "Is tracked against"
+-
+  source_entity: Objective
+  target_entity: Objective
+  relationship: Decomposes
+-
+  source_entity: "Organization Unit"
+  target_entity: Actor
+  relationship: Contains
+-
+  source_entity: "Organization Unit"
+  target_entity: "Business Capability"
+  relationship: Delivers
+-
+  source_entity: "Organization Unit"
+  target_entity: "Business Service"
+  relationship: "Owns and governs"
+-
+  source_entity: "Organization Unit"
+  target_entity: "Course of Action"
+  relationship: "Participates in"
+-
+  source_entity: "Organization Unit"
+  target_entity: Driver
+  relationship: "Is motivated by"
+-
+  source_entity: "Organization Unit"
+  target_entity: Function
+  relationship: Enables
+-
+  source_entity: "Organization Unit"
+  target_entity: "Organization Unit"
+  relationship: Decomposes
+-
+  source_entity: "Organization Unit"
+  target_entity: Product
+  relationship: Delivers
+-
+  source_entity: "Physical Application Component"
+  target_entity: "Logical Application Component"
+  relationship: Realizes
+-
+  source_entity: "Physical Application Component"
+  target_entity: "Physical Application Component"
+  relationship: Decomposes
+-
+  source_entity: "Physical Application Component"
+  target_entity: "Physical Application Component"
+  relationship: "Communicates with"
+-
+  source_entity: "Physical Application Component"
+  target_entity: "Physical Data Component"
+  relationship: "Used by"
+-
+  source_entity: "Physical Application Component"
+  target_entity: "Physical Technology Component"
+  relationship: "Is served by"
+-
+  source_entity: "Physical Data Component"
+  target_entity: "Logical Data Component"
+  relationship: Realizes
+-
+  source_entity: "Physical Data Component"
+  target_entity: "Physical Application Component"
+  relationship: "Used by"
+-
+  source_entity: "Physical Data Component"
+  target_entity: "Physical Data Component"
+  relationship: Decomposes
+-
+  source_entity: "Physical Technology Component"
+  target_entity: "Logical Technology Component"
+  relationship: Realizes
+-
+  source_entity: "Physical Technology Component"
+  target_entity: "Physical Application Component"
+  relationship: Serves
+-
+  source_entity: "Physical Technology Component"
+  target_entity: "Physical Technology Component"
+  relationship: Decomposes
+-
+  source_entity: "Physical Technology Component"
+  target_entity: "Physical Technology Component"
+  relationship: "Is dependent on"
+-
+  source_entity: Process
+  target_entity: Actor
+  relationship: "Is produced by"
+-
+  source_entity: Process
+  target_entity: Actor
+  relationship: Supports
+-
+  source_entity: Process
+  target_entity: "Business Capability"
+  relationship: Operationalizes
+-
+  source_entity: Process
+  target_entity: "Business Information"
+  relationship: "Is used by"
+-
+  source_entity: Process
+  target_entity: "Business Service"
+  relationship: Orchestrates
+-
+  source_entity: Process
+  target_entity: "Business Service"
+  relationship: Decomposes
+-
+  source_entity: Process
+  target_entity: Control
+  relationship: "Is guided by"
+-
+  source_entity: Process
+  target_entity: Event
+  relationship: Generates
+-
+  source_entity: Process
+  target_entity: Event
+  relationship: Resolves
+-
+  source_entity: Process
+  target_entity: Function
+  relationship: Supports
+-
+  source_entity: Process
+  target_entity: Function
+  relationship: "Is realized by"
+-
+  source_entity: Process
+  target_entity: Process
+  relationship: Decomposes
+-
+  source_entity: Process
+  target_entity: Process
+  relationship: "Precedes, follows"
+-
+  source_entity: Process
+  target_entity: Product
+  relationship: Delivers
+-
+  source_entity: Process
+  target_entity: Role
+  relationship: Involves
+-
+  source_entity: Process
+  target_entity: Role
+  relationship: "Is performed by"
+-
+  source_entity: Process
+  target_entity: "Value Stream"
+  relationship: Operationalizes
+-
+  source_entity: Product
+  target_entity: "Course of Action"
+  relationship: "Is produced by"
+-
+  source_entity: Product
+  target_entity: "Organization Unit"
+  relationship: "Is produced by"
+-
+  source_entity: Product
+  target_entity: Process
+  relationship: "Is produced by"
+-
+  source_entity: Role
+  target_entity: Actor
+  relationship: "Is performed by"
+-
+  source_entity: Role
+  target_entity: Process
+  relationship: "Participates in"
+-
+  source_entity: Role
+  target_entity: Process
+  relationship: Performs
+-
+  source_entity: Role
+  target_entity: Role
+  relationship: Decomposes
+-
+  source_entity: "Service Quality"
+  target_entity: Contract
+  relationship: "Applies to"
+-
+  source_entity: "Service Quality"
+  target_entity: Service
+  relationship: "Applies to"
+-
+  source_entity: "Technology Service"
+  target_entity: "Application Service"
+  relationship: Serves
+-
+  source_entity: "Technology Service"
+  target_entity: "Logical Technology Component"
+  relationship: "Is supplied by"
+-
+  source_entity: "Value Stream"
+  target_entity: Actor
+  relationship: Involves
+-
+  source_entity: "Value Stream"
+  target_entity: Actor
+  relationship: "Is triggered by"
+-
+  source_entity: "Value Stream"
+  target_entity: "Business Capability"
+  relationship: "Is enabled by"
+-
+  source_entity: "Value Stream"
+  target_entity: "Course of Action"
+  relationship: "Is influenced by"
+-
+  source_entity: "Value Stream"
+  target_entity: Process
+  relationship: "Is operationalized by"
+-
+  source_entity: "Work Package"
+  target_entity: Capability
+  relationship: Delivers

@@ -60,49 +60,8 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/diseno/" },
+          { text: "Datos abiertos", link: "/diseno/datos-abiertos" },
           { text: "Experiencia del servicio", link: "/diseno/experiencia" },
-          {
-            text: "Canales de comunicación",
-            collapsed: true,
-            items: [
-              {
-                text: "Introducción",
-                link: "/diseno/canales/",
-              },
-              {
-                text: "Datos abiertos",
-                link: "/diseno/canales/datos-abiertos",
-              },
-              {
-                text: "Datos en tiempo real",
-                link: "/diseno/canales/datos-tiempo-real",
-              },
-              {
-                text: "Identidad visual",
-                link: "/diseno/canales/identidad-visual",
-              },
-              {
-                text: "Señalización",
-                link: "/diseno/canales/senalizacion",
-              },
-              {
-                text: "Medios digitales",
-                link: "/diseno/canales/medios-digitales",
-              },
-              {
-                text: "Medios impresos",
-                link: "/diseno/canales/medios-impresos",
-              },
-              {
-                text: "Redes sociales",
-                link: "/diseno/canales/redes-sociales",
-              },
-              {
-                text: "Atención al cliente",
-                link: "/diseno/canales/atencion-cliente",
-              },
-            ],
-          },
           {
             text: "Arquitectura tecnológica",
             collapsed: true,
@@ -112,6 +71,51 @@ export default defineConfig({
               { text: "A2: Distribución", link: "/diseno/arquitectura/a2" },
               { text: "A3: Administración", link: "/diseno/arquitectura/a3" },
               { text: "A4: Operaciones", link: "/diseno/arquitectura/a4" },
+            ],
+          },
+          {
+            text: "Comunicación",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/diseno/comunicacion/" },
+              {
+                text: "Canales",
+                collapsed: true,
+                items: [
+                  {
+                    text: "Introducción",
+                    link: "/diseno/comunicacion/canales/",
+                  },
+                  {
+                    text: "Medios digitales",
+                    link: "/diseno/comunicacion/canales/medios-digitales",
+                  },
+                  {
+                    text: "Medios impresos",
+                    link: "/diseno/comunicacion/canales/medios-impresos",
+                  },
+                  {
+                    text: "Redes sociales",
+                    link: "/diseno/comunicacion/canales/redes-sociales",
+                  },
+                  {
+                    text: "Atención al cliente",
+                    link: "/diseno/canales/atencion-cliente",
+                  },
+                ],
+              },
+              {
+                text: "Identidad visual",
+                collapsed: true,
+                items: [
+                  { text: "Introducción", link: "/diseno/comunicacion/identidad-visual/" },
+                  { text: "Marca", link: "/diseno/comunicacion/identidad-visual/marca" },
+                  { text: "Elementos gráficos", link: "/diseno/comunicacion/identidad-visual/elementos-graficos" },
+                  { text: "Interfaces gráficas", link: "/diseno/comunicacion/identidad-visual/interfaces-graficas" },
+                  { text: "Señalización", link: "/diseno/comunicacion/identidad-visual/senalizacion" },
+                  { text: "Plantillas", link: "/diseno/comunicacion/identidad-visual/plantillas" },
+                ],
+              },
             ],
           },
         ],
@@ -153,6 +157,14 @@ export default defineConfig({
               { text: "Diagrama", link: "/desarrollo/operaciones/diagrama" },
             ],
           },
+          {
+            text: "Herramientas",
+            collapsed: true,
+            items: [
+              { text: "Componentes", link: "/desarrollo/herramientas/" },
+              { text: "Diagrama", link: "/desarrollo/herramientas/diagrama" },
+            ],
+          },
         ],
       },
       {
@@ -179,17 +191,58 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/catalogos/" },
-          { text: "Principios", link: "/catalogos/principios" },
-          { text: "Partes interesadas", link: "/catalogos/partes-interesadas" },
-          { text: "Actores", link: "/catalogos/actores" },
-          { text: "Organizaciones", link: "/catalogos/organizaciones" },
-          { text: "Aplicaciones", link: "/catalogos/aplicaciones" },
-          { text: "Requisitos", link: "/catalogos/requisitos" },
-          { text: "Entidades de datos", link: "/catalogos/entidades-datos" },
-          { text: "Componentes de datos", link: "/catalogos/componentes-datos" },
-          { text: "Tecnologías", link: "/catalogos/tecnologias" },
-          { text: "Estándares", link: "/catalogos/estandares" },
-          { text: "Interfaces", link: "/catalogos/interfaces" },
+          {
+            text: "Fundamentos",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/fundamentos/" },
+              { text: "Principios", link: "/catalogos/fundamentos/principios" },
+              { text: "Aplicaciones", link: "/catalogos/fundamentos/aplicaciones" },
+              { text: "Requisitos", link: "/catalogos/fundamentos/requisitos" },
+            ],
+          },
+          {
+            text: "Institucional",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/institucional/" },
+              { text: "Partes interesadas", link: "/catalogos/institucional/partes-interesadas" },
+              { text: "Actores", link: "/catalogos/institucional/actores" },
+              { text: "Organizaciones", link: "/catalogos/institucional/organizaciones" },
+            ],
+          },
+          {
+            text: "Datos",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/datos/" },
+              { text: "Entidades", link: "/catalogos/datos/entidades" },
+              { text: "Componentes", link: "/catalogos/datos/componentes" },
+              { text: "GTFS", link: "/catalogos/datos/gtfs" },
+            ],
+          },
+          {
+            text: "Tecnología",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/tecnologia/" },
+              { text: "Tecnologías", link: "/catalogos/tecnologia/tecnologias" },
+              { text: "Estándares", link: "/catalogos/tecnologia/estandares" },
+              { text: "Interfaces", link: "/catalogos/tecnologia/interfaces" },
+            ],
+          },
+          {
+            text: "Comunicación",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/comunicacion/" },
+              { text: "Marca", link: "/catalogos/comunicacion/marca" },
+              { text: "Elementos gráficos", link: "/catalogos/comunicacion/elementos-graficos" },
+              { text: "Señalización", link: "/catalogos/comunicacion/senalizacion" },
+              { text: "Interfaces gráficas", link: "/catalogos/comunicacion/interfaces-graficas" },
+              { text: "Plantillas", link: "/catalogos/comunicacion/plantillas" },
+            ],
+          },
         ],
       },
       { text: "Cómo contribuir", link: "/contribuir" },

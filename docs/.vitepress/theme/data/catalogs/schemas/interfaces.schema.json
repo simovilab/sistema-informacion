@@ -19,12 +19,12 @@
           "description",
           "type",
           "protocols",
-          "dataFormats",
+          "data_formats",
           "security",
           "version",
           "owner",
           "contact",
-          "relatedComponents",
+          "related_components",
           "status",
           "documentation"
         ],
@@ -47,15 +47,13 @@
           "type": {
             "type": "string",
             "enum": [
-              "REST API",
-              "GraphQL",
-              "SOAP",
+              "Application Programming Interface (API)",
               "Message Queue",
-              "Database",
               "File Transfer",
-              "WebSocket",
-              "gRPC",
               "Event Stream",
+              "Query Interface",
+              "Data Stream",
+              "Remote Procedure Call (RPC)",
               "Batch Interface"
             ],
             "description": "Type of interface technology used"
@@ -73,13 +71,15 @@
                 "MQTT",
                 "AMQP",
                 "FTP",
+                "SSE",
+                "REST",
                 "SFTP"
               ]
             },
             "minItems": 1,
             "description": "List of communication protocols used by the interface"
           },
-          "dataFormats": {
+          "data_formats": {
             "type": "array",
             "items": {
               "type": "string",
@@ -106,6 +106,7 @@
                 "OAuth 2.0",
                 "API Keys",
                 "JWT",
+                "SSL",
                 "TLS",
                 "mTLS",
                 "Basic Auth",
@@ -132,7 +133,7 @@
             "format": "email",
             "description": "Contact email for interface support"
           },
-          "relatedComponents": {
+          "related_components": {
             "type": "array",
             "items": {
               "type": "string",

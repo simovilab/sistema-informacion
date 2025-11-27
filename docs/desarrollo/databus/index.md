@@ -28,15 +28,6 @@ Application service
 
 T: Django, Celery, Nginx, Daphne, Bytewax
 
-## Databús _GTFS_
-
-(aplicación)
-
-Interfaz de programación de aplicaciones tipo REST.
-
-T: Django REST Framework (no está en el tech stack)
-S: OpenAPI 3.0
-
 ## Databús _API_
 
 (componente de datos)
