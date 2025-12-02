@@ -7,6 +7,120 @@
   "properties": {
     "metadata": {
       "$ref": "./metadata.schema.json"
+    },
+    "signage": {
+      "type": "array",
+      "description": "List of signage and environmental design elements in the public transportation system",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "type",
+          "dimensions",
+          "orientation",
+          "materials",
+          "typography",
+          "color_scheme",
+          "content_elements",
+          "installation_height",
+          "mode_of_transportation",
+          "location_context",
+          "standard_reference",
+          "maintenance_interval"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^sign:\\d{3}$",
+            "description": "Unique identifier for the signage element following the pattern sign:XXX"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The name of the signage element"
+          },
+          "type": {
+            "type": "string",
+            "minLength": 1,
+            "description": "The type or category of signage"
+          },
+          "dimensions": {
+            "type": "array",
+            "description": "Physical dimensions of the signage element",
+            "items": {
+              "type": "object",
+              "additionalProperties": {
+                "type": ["number", "string"]
+              }
+            },
+            "minItems": 1
+          },
+          "orientation": {
+            "type": "string",
+            "enum": ["Vertical", "Horizontal", "Square"],
+            "description": "Orientation of the signage element"
+          },
+          "materials": {
+            "type": "array",
+            "description": "Materials used in the construction of the signage",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "typography": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Font family used in the signage"
+          },
+          "color_scheme": {
+            "type": "array",
+            "description": "Colors used in the signage design",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "content_elements": {
+            "type": "array",
+            "description": "Information elements displayed on the signage",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "installation_height": {
+            "type": "string",
+            "description": "Height at which the signage should be installed"
+          },
+          "mode_of_transportation": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Mode of transportation the signage applies to"
+          },
+          "location_context": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Context or location where the signage is typically installed"
+          },
+          "standard_reference": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Reference to relevant standards (e.g., ISO 7001:2023)"
+          },
+          "maintenance_interval": {
+            "type": "string",
+            "description": "Recommended maintenance interval (e.g., '24 meses')"
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
     }
-  }
+  },
+  "additionalProperties": false
 }
