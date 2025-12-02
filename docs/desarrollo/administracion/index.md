@@ -1,14 +1,10 @@
 # Herramientas de administración
 
-Implementación de la arquitectura A3.
+::: info Descripción
 
-## Databús _SDK_
+Implementación de la arquitectura [A3](../../diseno/arquitectura/a3.md).
 
-(aplicación)
-
-SDK de Python para control de Infobús
-
-T: Python
+:::
 
 ## Databús _Editor_
 
@@ -17,7 +13,7 @@ T: Python
 T: TypeScript, Vue, Nuxt
 S: GTFS vX.0
 
-## Databús _CMS_
+## Infobús _CMS_
 
 (aplicación)
 
@@ -33,11 +29,8 @@ Simulador de datos en tiempo real para pruebas operativas
 
 T: Python
 
-## Databús _MCP_
+## Infobús _Data_
 
-(aplicación)
+(aplicación): servidor e interfaz para análisis y visualización de datos
 
-Servidor y cliente del protocolo de contexto de modelos (MCP, _Model Context Protocol_) para interacción con modelos extensos de lenguaje (LLM, _Large Language Models_)
-
-T: FastMCP
-S: MCP
+T: Grafana

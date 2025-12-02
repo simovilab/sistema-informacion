@@ -1,3 +1,7 @@
 # Desarrollo, monitoreo y control
 
-Implementación de la arquitectura A4.
+::: info Descripción
+
+Implementación de la arquitectura [A4](../../diseno/arquitectura/a4.md).
+
+:::

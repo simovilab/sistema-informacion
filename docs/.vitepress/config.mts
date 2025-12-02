@@ -71,6 +71,7 @@ export default defineConfig({
               { text: "A2: Distribución", link: "/diseno/arquitectura/a2" },
               { text: "A3: Administración", link: "/diseno/arquitectura/a3" },
               { text: "A4: Operaciones", link: "/diseno/arquitectura/a4" },
+              { text: "A5: Herramientas", link: "/diseno/arquitectura/a5" },
             ],
           },
           {
