@@ -2,7 +2,7 @@
 
 ::: info Costo total estimado con deducciones aplicadas
 
-El costo total del proyecto incluyendo las fases de desarrollo, implementación (6 meses), operación (12 meses) y otros costos estratégicos, junto con las deducciones aplicadas -asumiendo la colaboración institucional-, es de aproximadamente **$120.850,00**.
+El costo total del proyecto incluyendo las fases de desarrollo, implementación (6 meses), operación (12 meses) y otros costos estratégicos, junto con las deducciones aplicadas (asumiendo la colaboración institucional), es de aproximadamente **$158.450,00**.
 
 :::
 
@@ -40,7 +40,7 @@ El desglose de los costos asociados con cada una de las fases del proyecto está
 | Software             | Desarrollo de Databús e Infobús            | $330.000 |
 | Preparación de datos | Generación de GTFS, levantamiento de campo | $5.000   |
 
-**Subtotal desarrollo:** **$290.000,00**
+**Subtotal desarrollo:** **$335.000,00**
 
 ## Fase de implementación
 
