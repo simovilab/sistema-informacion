@@ -96,6 +96,10 @@ export default defineConfig({
                     link: "/diseno/comunicacion/canales/medios-impresos",
                   },
                   {
+                    text: "Señalética",
+                    link: "/diseno/comunicacion/canales/senaletica",
+                  },
+                  {
                     text: "Redes sociales",
                     link: "/diseno/comunicacion/canales/redes-sociales",
                   },
