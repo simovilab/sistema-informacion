@@ -88,7 +88,7 @@ export default defineConfig({
                     link: "/diseno/comunicacion/canales/",
                   },
                   {
-                    text: "Medios digitales",
+                    text: "Medios virtuales",
                     link: "/diseno/comunicacion/canales/medios-digitales",
                   },
                   {
