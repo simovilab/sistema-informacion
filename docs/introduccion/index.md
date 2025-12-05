@@ -1,6 +1,6 @@
 # Visión del sistema
 
-Este informe es el resultado de la investigación sobre tecnologías de información y comunicación aplicadas al transporte público, y propone una _arquitectura tecnológica_ junto con una _estrategia de comunicación_ para la creación de **un sistema de información para el transporte público inteligente**, llamado **InfoTP**.
+Este informe es el resultado de la investigación sobre tecnologías de información y comunicación aplicadas al transporte público, y propone una _arquitectura tecnológica_ junto con una _estrategia de comunicación_ para la creación de **un sistema de información para las personas usuarias del transporte público inteligente**, llamado **InfoTP**.
 
 ::: info Nuestras premisas
 
