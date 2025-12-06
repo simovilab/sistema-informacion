@@ -1,18 +1,36 @@
-Convenciones:
-
-- ⁠Tipografía: Inter https://fonts.google.com/specimen/Inter
-- ⁠⁠Tipografía: Bitcount Light https://fonts.google.com/specimen/Bitcount
-- ⁠⁠Colores: UCR
-- ⁠⁠Logos: UCR, EIE, SIMOVI, databús, infobús, infotp, MobilityData
-- ⁠⁠Logos de las tecnologías: https://github.com/simovilab/context/blob/main/tech_stack.md
-- ⁠⁠Logos de tecnologías: https://icones.js.org/collection/simple-icons
-- Tamaño de hoja: US Letter
+---
+typography:
+  - name: "Inter"
+    url: "https://fonts.google.com/specimen/Inter"
+  - name: "Bitcount Light"
+    url: "https://fonts.google.com/specimen/Bitcount"
+color_schema: "UCR"
+logos:
+  - "UCR"
+  - "EIE"
+  - "SIMOVI"
+  - "Databús"
+  - "Infobús"
+  - "InfoTP"
+  - "MobilityData"
+  - "GTFS"
+technologies:
+  stack: "https://github.com/simovilab/context/blob/main/tech_stack.md"
+  logos: "https://icones.js.org/collection/simple-icons"
+dimensions:
+  height: "1000px"
+  width: "1000px"
+---
 
 # infotp
 
 Arquitectura tecnológica y estrategia de comunicación para los sistemas de información del transporte público
 
 _Resumen ejecutivo_
+
+La **arquitectura tecnológica** de InfoTP es una solución _end-to-end_ para los sistemas de información del transporte público, dividida en dos partes: Databús, para la recopilación de datos en tiempo real de rastreo y telemetría y publicación feeds GTFS, e Infobús, para la distribución de información por múltiples canales, interfaces y protocolos para todas las partes del sistema: personas usuarias, operadores, planificadores, reguladores, investigadores, proveedores tecnológicos y otros.
+
+La **estrategia de comunicación** de InfoTP es una visión integral del sistema que procura maximizar el beneficio de la información.
 
 InfoTP es un sistema de principio a fin (_end-to-end_) de información para las personas usuarias del transporte público.
 
@@ -24,6 +42,12 @@ Con dos subsistemas, Databús® e Infobús®, y más de 20 proyectos de código 
 También, el reporte incluye 17 catálogos con una recopilación exhaustiva de actores, organizaciones, principios, tecnologías, estándares, interfaces y otros elementos relevantes para el sistema.
 
 Las tecnologías utilizadas son todas de código abierto, robustas y utilizadas en la industria en aplicaciones críticas como esta.
+
+Somos los especialistas del estándar GTFS en Costa Rica
+
+- Tenemos 5 años de experiencia en su implementación.
+- Somos miembros académicos de MobilityData, la organización internacional que dirige su evolución.
+- Desarrollamos herramientas informáticas especializadas para su procesamiento y análisis.
 
 ## Principios
 
@@ -88,6 +112,12 @@ Utilizamos una cuidadosa selección de tecnologías robustas y de código abiert
 
 [Lista de todas las tecnologías en GitHub en las secciones Backend Technologies, Frontend Technologies y DevOps Monitoring]
 [Cuarta parte]
+
+Lenguajes de programación
+
+- Python: orquestación de procesos, análisis de datos e inteligencia artificial
+- TypeScript: interfaces web y aplicaciones móviles
+- Rust: procesos críticos de alto desempeño
 
 Nuestro sistema permite extender los alcances de la propuesta inicial con un costo adicional marginal.
 
