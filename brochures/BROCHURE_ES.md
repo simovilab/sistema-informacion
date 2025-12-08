@@ -157,10 +157,6 @@ De aquí derivan otros principios importantes:
 - Interoperabilidad
 - Independencia tecnológica
 
----
-
-[ Página 5 ]
-
 ### Somos los especialistas de la especificación GTFS en Costa Rica
 
 <img src="../docs/public/logos/gtfs.png" width="75px" alt="Logo GTFS">
@@ -170,6 +166,10 @@ De aquí derivan otros principios importantes:
 - Desarrollamos herramientas informáticas especializadas para su procesamiento y análisis en el contexto costarricense.
 
 <img src="../docs/public/logos/mobilitydata_purple.png" width="300px" alt="Logo MobilityData">
+
+---
+
+[ Página 5 ]
 
 ### Arquitectura
 
@@ -221,7 +221,7 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 
 [ Página 8 ]
 
-#### A3 | Infobús® Admin
+### A3 | Infobús® Admin
 
 - Editor con interfaz gráfica de usuario para la creación de suministros (_feeds_) GTFS Schedule, con validación y generación automática de estimación de tiempos.
 - Sistema de visualización de métricas de desempeño del sistema.
@@ -233,12 +233,12 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 
 [ Página 9 ]
 
-#### A4 | Databús® Admin
+### A4 | Databús® Admin
 
 - Monitoreo del desempeño del sistema para optimizar el tiempo de operación.
 - Atención de amenazas de seguridad y medidas de contingencia
 
-#### A5 | Herramientas auxiliares
+### A5 | Herramientas auxiliares
 
 - Herramientas de programación para Python
 - Herramientas de programación para TypeScript
@@ -270,36 +270,46 @@ Más información: https://github.com/simovilab/
 
 El Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) de la Escuela de Ingeniería Eléctrica (EIE) de la Universidad de Costa Rica (UCR) realiza investigación y desarrollo en sistemas inteligentes de transporte público. InfoTP es el resultado de la investigación en tecnologías y estándares aplicados al transporte público, el diseño de sistemas de ingeniería y el diseño de servicios, como una guía práctica de diseño e implementación para tomadores de decisiones.
 
-### Ventajas de nuestros servicios
+### Ventajas de InfoTP
 
 **Especialización**
+
 La arquitectura tecnológica de la propuesta está basada en normas, especificaciones, estándares y recomendaciones internacionales en transporte público inteligente. **Somos los únicos expertos en el país**.
 
 **Consistencia y unicidad**
+
 Toda la información del servicio dirigida al público es **consistente** entre sí y con los datos oficiales a partir de una **fuente única**.
 
 **Gestión integral de la comunicación**
+
 El manejo unificado de todos los "puntos de contacto" (**diseño del servicio**) de las personas usuarias con el sistema mejora significativamente su experiencia.
 
 **Flexibilidad de implementación**
+
 Permite la **coexistencia con otros servicios** y proveedores del mercado, facilitando una implementación gradual.
 
 **Soluciones a la medida**
+
 En coordinación estrecha con las autoridades, el sistema implementado puede satisfacer las **demandas específicas** de las partes interesadas.
 
 **Enfoque en seguridad y robustez**
+
 El sistema tiene un diseño orientado a la **seguridad de los datos y la confiabilidad**.
 
 **Respaldo académico**
+
 Esta propuesta está hecha por la Escuela de Ingeniería Eléctrica en alianza con LanammeUCR, ProDUS y otras **instancias especializadas** de la Universidad de Costa Rica.
 
 **Garantía contractual**
+
 Cualquier servicio puede ser brindado mediante un **contrato de las partes interesadas**, con una definición clara de **plazos y entregables**.
 
 **Flexibilidad de financiamiento**
+
 La arquitectura modular puede recibir financiamiento de distintas fuentes. Inclusive, la propuesta incluye varias opciones de monetización que pueden ayudar a financiar parte de los servicios.
 
 **Código abierto**
+
 Uso extendido a la comunidad nacional e internacional, con un impacto positivo en la reputación del transporte público en Costa Rica.
 
 ### Nuestros proyectos
@@ -310,19 +320,21 @@ Durante el año 2026, SIMOVI en conjunto con la Oficina de Servicios Generales (
 
 [ Página 12 (contraportada) ]
 
-#### Contacto
-
-Laboratorio de Sistemas Inteligentes de Movilidad
+**SIMOVI**<br>
+**Laboratorio de Sistemas Inteligentes de Movilidad**<br>
+Escuela de Ingeniería Eléctrica<br>
+Facultad de Ingeniería<br>
+Universidad de Costa Rica<br>
 simovi@ucr.ac.cr
 
-Fabián Abarca Calderón
-Coordinador SIMOVI
-fabian.abarca@ucr.ac.cr
+**Fabián Abarca Calderón**<br>
+Coordinador SIMOVI<br>
+fabian.abarca@ucr.ac.cr<br>
 
 [Logo UCR]
 [Logo EIE]
 [Logo SIMOVI]
 
-Derechos reservados (C) 2025
+Derechos reservados &copy; 2025
 <br>
 Laboratorios de Sistemas Inteligentes de Movilidad
