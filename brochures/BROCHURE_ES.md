@@ -96,19 +96,20 @@ La **arquitectura tecnológica** de InfoTP es una solución de extremo a extremo
 
 Está dividida en dos partes:
 
-Databús®
+#### Databús®
 
 <img src="../docs/public/logos/databus_R.png" height="50px" alt="Logo Databús">
 
-Recopilación de información oficial y datos de rastreo y telemetría de los vehículos del servicio para la publicación de _feeds_ en tiempo real con la especificación GTFS, preparado para el consumo de todas las aplicaciones compatibles, incluyendo Google Maps, Moovit o Transit.
+Recopila la información oficial y los datos de rastreo y telemetría de los vehículos del servicio para la publicación en tiempo real con la especificación GTFS, disponible para todas las aplicaciones compatibles, incluyendo Google Maps, Moovit, Transit y otros proveedores.
 
-Infobús®
+#### Infobús®
 
 <img src="../docs/public/logos/infobus_R.png" height="50px" alt="Logo Infobús">
 
-Consumo de datos GTFS y distribución de información por múltiples canales, interfaces y protocolos para todas las partes interesadas del sistema, como las personas usuarias, operadores, planificadores, reguladores, investigadores y otros proveedores tecnológicos.
+Consume datos GTFS y distribuye la información por múltiples canales, interfaces y protocolos para todas las partes interesadas del sistema, como las personas usuarias, operadores, planificadores, reguladores, investigadores y otros proveedores tecnológicos.
 
-Con más de veinte proyectos de código abierto y una cuidadosa selección de tecnologías robustas –utilizadas en aplicaciones críticas en la industria– este desarrollo pretende ser un referente tecnológico en el sector del transporte público inteligente.
+> [!NOTE]
+> Con más de veinte proyectos de código abierto, subsistemas e interfaces bien delimitados y una selección comprobada de tecnologías robustas usadas en entornos críticos, este desarrollo funciona como mapa tecnológico y columna vertebral de un ecosistema abierto del transporte público inteligente.
 
 ---
 
@@ -118,7 +119,7 @@ Con más de veinte proyectos de código abierto y una cuidadosa selección de te
 
 <img src="../docs/public/logos/infotp_blue.png" height="50px" alt="Logo InfoTP">
 
-La **estrategia de comunicación** de InfoTP es una visión integral del sistema para promover el uso del transporte público y mejorar la satisfacción con el servicio, explotando los beneficios de la información provista.
+La **estrategia de comunicación** de InfoTP es una visión integral del sistema para promover el uso del transporte público y mejorar la satisfacción con el servicio, explotando los beneficios de la información disponible.
 
 Está enfocada en diversos canales:
 
@@ -128,17 +129,15 @@ Está enfocada en diversos canales:
 - Redes sociales
 - Atención al cliente
 
-Su integración con las tecnologías y los datos del servicio permite información siempre actualizada y una mejor experiencia de uso.
+Su íntima integración con las tecnologías y los datos del servicio permite información siempre actualizada y una mejor experiencia de uso.
 
-El sistema que imaginamos y por el que trabajamos
-
-- Nativo digital: Todos los canales digitales de comunicación deben formar parte de la oferta de información del servicio.
-- Nativo móvil: La mayoría de consultas del servicio vienen desde teléfonos celulares, y por eso el diseño debe estar centrado en este medio.
-- Nativo inclusivo: El transporte público es para todos. La información oportuna y con diseño universal puede facilitar la experiencia de todas las personas usuarias.
-- Nativo inteligente: Las nuevas herramientas de inteligencia artificial deben permitir el uso de lenguaje natural para hacer consultas sobre el servicio.
-- Nativo social: Las redes sociales y los medios de atención al cliente son canales primordiales para informar y para crear comunidad alrededor del transporte público.
-- Nativo multilingüe: En un país de vocación turística como Costa Rica, el transporte público no debe poner barreras de lenguaje a quienes nos visitan desde cualquier parte del mundo.
-- Nativo tico: Es parte de nuestros pueblos y es parte de nuestras ciudades. El transporte público debe ser parte de nuestro orgullo tico.
+- **Nativo digital**: Todos los canales digitales de comunicación deben formar parte de la oferta de información del servicio.
+- **Nativo móvil**: La mayoría de consultas del servicio vienen desde teléfonos celulares, y por eso el diseño debe estar centrado en este medio.
+- **Nativo inclusivo**: El transporte público es para todos. La información oportuna y con diseño universal puede facilitar la experiencia de todas las personas usuarias.
+- **Nativo inteligente**: Las nuevas herramientas de inteligencia artificial deben permitir el uso de lenguaje natural para hacer consultas sobre el servicio.
+- **Nativo social**: Las redes sociales y los medios de atención al cliente son canales primordiales para informar y para crear comunidad alrededor del transporte público.
+- **Nativo multilingüe**: En un país de vocación turística como Costa Rica, el transporte público no debe poner barreras de lenguaje a quienes nos visitan desde cualquier parte del mundo.
+- **Nativo tico**: Es parte de nuestros pueblos y es parte de nuestras ciudades. El transporte público debe ser parte de nuestro orgullo tico.
 
 ---
 
@@ -146,7 +145,7 @@ El sistema que imaginamos y por el que trabajamos
 
 ### Principios
 
-Construimos nuestra arquitectura con base en las recomendaciones de los líderes internacionales en sistemas inteligentes de transporte público y arquitecturas empresariales. Está basada en un principio esencial:
+Construimos nuestra arquitectura con base en las recomendaciones de los líderes internacionales en sistemas inteligentes de transporte público y arquitecturas de software. Está basada en un principio esencial:
 
 Unicidad de la información: La información disponible para las personas usuarias es consistente, precisa, actualizada y proviene de una fuente única, a través de la mayor cantidad posible de canales de comunicación.
 
@@ -157,13 +156,13 @@ De aquí derivan otros principios importantes:
 - Interoperabilidad
 - Independencia tecnológica
 
-### Somos los especialistas de la especificación GTFS en Costa Rica
+#### Somos los especialistas de la especificación GTFS en Costa Rica
 
 <img src="../docs/public/logos/gtfs.png" width="75px" alt="Logo GTFS">
 
-- Tenemos más de 5 años de experiencia en su implementación.
+- Tenemos más de 5 años de experiencia en la implementación de GTFS _Schedule_ y GTFS _Realtime_.
 - Somos miembros académicos de MobilityData, la organización internacional que dirige su evolución.
-- Desarrollamos herramientas informáticas especializadas para su procesamiento y análisis en el contexto costarricense.
+- Desarrollamos herramientas informáticas especializadas para su procesamiento y análisis en el transporte público costarricense.
 
 <img src="../docs/public/logos/mobilitydata_purple.png" width="300px" alt="Logo MobilityData">
 
@@ -192,6 +191,8 @@ flowchart TD
 
 Sabemos que el transporte público debe ser parte de las ciudades inteligentes y sentamos las bases para esta interconectividad.
 
+- Desarrollamos las especificaciones de las interfaces entre sistemas siguiendo las recomendaciones de la Arquitectura de Referencia del Transporte Colaborativo e Inteligente (ARC-IT) del Departamento de Transporte de Estados Unidos.
+
 ---
 
 [ Página 6 ]
@@ -201,6 +202,16 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 - Recolección de datos de rastreo de vehículos con la aplicación móvil Databús App, como una solución efectiva y de bajo costo.
 - Recolección y procesamiento de datos en tiempo real de alta frecuencia.
 - Publicación de suministros (feeds) de GTFS Schedule y GTFS Realtime.
+
+```mermaid
+flowchart LR
+  A[Aquí]
+  v[va]
+  u[un]
+  d[diagrama]
+
+  A --> v --> u --> d
+```
 
 ---
 
@@ -217,6 +228,16 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 - Bases de datos especializadas para almacenamiento de datos históricos y análisis de datos para optimización del servicio
 - Búsquedas semánticas
 
+```mermaid
+flowchart LR
+  A[Aquí]
+  v[va]
+  u[un]
+  d[diagrama]
+
+  A --> v --> u --> d
+```
+
 ---
 
 [ Página 8 ]
@@ -228,6 +249,8 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 - Sistema de gestión de contenidos de los canales de comunicación
 - Simulador de datos de transporte para pruebas del sistema
 - Generador automático de rotulación (señalética)
+
+[Aquí van unas imágenes de interfaces web y gráficos en una pantalla]
 
 ---
 
@@ -250,7 +273,7 @@ Sabemos que el transporte público debe ser parte de las ciudades inteligentes y
 
 ### Tecnologías
 
-[Lista de todas las tecnologías en GitHub en las secciones Backend Technologies, Frontend Technologies y DevOps Monitoring]
+[Lista de todas las [tecnologías en GitHub](https://github.com/simovilab/context/blob/main/tech_stack.md) en las secciones Backend Technologies, Frontend Technologies y DevOps Monitoring]
 
 Lenguajes de programación
 
@@ -258,17 +281,12 @@ Lenguajes de programación
 - TypeScript: interfaces web y aplicaciones móviles
 - Rust: procesos críticos de alto desempeño
 
-Nuestro sistema permite extender los alcances de la propuesta inicial con un costo adicional marginal.
-
-Más información: https://github.com/simovilab/
+> [!NOTE]
+> Más información: https://github.com/simovilab/
 
 ---
 
 [ Página 11 ]
-
-### Sobre nosotros
-
-El Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) de la Escuela de Ingeniería Eléctrica (EIE) de la Universidad de Costa Rica (UCR) realiza investigación y desarrollo en sistemas inteligentes de transporte público. InfoTP es el resultado de la investigación en tecnologías y estándares aplicados al transporte público, el diseño de sistemas de ingeniería y el diseño de servicios, como una guía práctica de diseño e implementación para tomadores de decisiones.
 
 ### Ventajas de InfoTP
 
@@ -312,13 +330,17 @@ La arquitectura modular puede recibir financiamiento de distintas fuentes. Inclu
 
 Uso extendido a la comunidad nacional e internacional, con un impacto positivo en la reputación del transporte público en Costa Rica.
 
-### Nuestros proyectos
-
-Durante el año 2026, SIMOVI en conjunto con la Oficina de Servicios Generales (OSG) de la UCR desarrollará el plan piloto de un sistema de información del transporte público para el servicio de bus interno del campus universitario, el cual será el primer sistema inteligente de transporte público del país y permitirá evaluar la propuesta de arquitectura tecnológica y la estrategia de comunicación en un ambiente de aplicación real y controlado.
-
 ---
 
 [ Página 12 (contraportada) ]
+
+### Sobre nosotros
+
+El Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) de la Escuela de Ingeniería Eléctrica (EIE) de la Universidad de Costa Rica (UCR) realiza investigación y desarrollo en sistemas inteligentes de transporte público. InfoTP es el resultado de la investigación en tecnologías y estándares aplicados al transporte público, el diseño de sistemas de ingeniería y el diseño de servicios, como una guía práctica de diseño e implementación para tomadores de decisiones.
+
+### Nuestros proyectos
+
+Durante el año 2026, SIMOVI en conjunto con la Oficina de Servicios Generales (OSG) de la UCR desarrollará el plan piloto de un sistema de información del transporte público para el servicio de bus interno del campus universitario, el cual será el primer sistema inteligente de transporte público del país y permitirá evaluar la propuesta de arquitectura tecnológica y la estrategia de comunicación en un ambiente de aplicación real y controlado.
 
 **SIMOVI**<br>
 **Laboratorio de Sistemas Inteligentes de Movilidad**<br>
