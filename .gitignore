@@ -5,3 +5,4 @@ main.*
 !main.tex
 structurizr-*.json
 **/.structurizr/
+.DS_Store
