@@ -167,3 +167,378 @@
   definition: Time response
   translation: Tiempo de respuesta
   description: Rapidez con la que responde el sistema, debe ser lo más rápida posible
+
+- term: CDR
+  definition: Call Detail Records
+  translation: Registros de Detalle de Llamadas
+  description: Datos generados por operadores que registran eventos de comunicación y sirven para análisis y facturación.
+
+- term: AFC
+  definition: Automated Fare Collection
+  translation: Cobro Automatizado de Tarifas
+  description: Sistemas electrónicos que permiten pagar y recaudar tarifas de transporte sin efectivo.
+
+- term: ARESEP
+  definition: Autoridad Reguladora de los Servicios Públicos
+  translation: Public Services Regulatory Authority
+  description: Ente costarricense encargado de regular tarifas y calidad de los servicios públicos.
+
+- term: APC
+  definition: Automated Passenger Count
+  translation: Conteo Automatizado de Pasajeros
+  description: Tecnologías que registran la cantidad de pasajeros a bordo para análisis operativo.
+
+- term: ARC-IT
+  definition: Architecture Reference for Cooperative and Intelligent Transportation
+  translation: Referencia de Arquitectura para Transporte Cooperativo e Inteligente
+  description: Marco de arquitectura para diseñar y planificar sistemas de transporte cooperativos e inteligentes.
+
+- term: ARIMA
+  definition: Auto-Regressive Integrated Moving Average
+  translation: Modelo Autoregresivo Integrado de Media Móvil
+  description: Modelo estadístico para series temporales que combina componentes autoregresivos y de medias móviles.
+
+- term: ATIS
+  definition: Advanced Traveler Information System
+  translation: Sistema Avanzado de Información al Viajero
+  description: Plataformas que proveen información en tiempo real y planificación para personas viajeras.
+
+- term: ATMS
+  definition: Advanced Transportation Management Systems
+  translation: Sistemas Avanzados de Gestión de Transporte
+  description: Soluciones que monitorean y coordinan infraestructura y flujos de tránsito en tiempo real.
+
+- term: AutoML
+  definition: Automated Machine Learning
+  translation: Aprendizaje Automático Automatizado
+  description: Conjunto de herramientas que automatiza el diseño, ajuste y despliegue de modelos de aprendizaje automático.
+
+- term: AVL
+  definition: Automated Vehicle Location
+  translation: Localización Automática de Vehículos
+  description: Sistemas de rastreo que usan GPS u otros medios para ubicar flotas en tiempo real.
+
+- term: BCCR
+  definition: Banco Central de Costa Rica
+  translation: Central Bank of Costa Rica
+  description: Banco central de Costa Rica, responsable de política monetaria y estabilidad financiera.
+
+- term: BFO
+  definition: Basic Formal Ontology
+  translation: Ontología Formal Básica
+  description: Ontología superior utilizada para estructurar conceptos y relaciones en modelos de conocimiento.
+
+- term: BID
+  definition: Banco Interamericano de Desarrollo
+  translation: Inter-American Development Bank
+  description: Organismo internacional que financia proyectos de desarrollo económico y social en América Latina y el Caribe.
+
+- term: BP
+  definition: Backpropagation
+  translation: Retropropagación
+  description: Algoritmo de entrenamiento de redes neuronales que ajusta pesos mediante gradientes calculados hacia atrás.
+
+- term: BPTT
+  definition: Backpropagation Through Time
+  translation: Retropropagación a Través del Tiempo
+  description: Extensión de retropropagación para entrenar redes recurrentes desplegándolas sobre secuencias temporales.
+
+- term: CAP
+  definition: Common Alerting Protocol
+  translation: Protocolo Común de Alertas
+  description: Estándar para intercambiar mensajes de alerta y emergencia entre sistemas heterogéneos.
+
+- term: CPS
+  definition: Cyber Physical Systems
+  translation: Sistemas Ciberfísicos
+  description: Integración de componentes computacionales y físicos que interactúan de forma coordinada en tiempo real.
+
+- term: CPSS
+  definition: Cyber-Physical-Social Systems
+  translation: Sistemas Ciberfísicos-Sociales
+  description: Sistemas que combinan elementos físicos, digitales y de interacción social para servicios colaborativos.
+
+- term: CTP
+  definition: Consejo de Transporte Público
+  translation: Public Transport Council
+  description: Órgano costarricense encargado de regular y planificar el transporte público.
+
+- term: DAP
+  definition: Data Acquisition and Processing
+  translation: Adquisición y Procesamiento de Datos
+  description: Procesos y tecnologías para capturar, limpiar y preparar datos para análisis posterior.
+
+- term: DDDAS
+  definition: Dynamic Data-Driven Applications Systems
+  translation: Sistemas de Aplicaciones Impulsadas Dinámicamente por Datos
+  description: Arquitectura donde la simulación y los datos en tiempo real se retroalimentan para mejorar decisiones.
+
+- term: DL
+  definition: Deep Learning
+  translation: Aprendizaje Profundo
+  description: Subcampo de aprendizaje automático basado en redes neuronales profundas para representar patrones complejos.
+
+- term: DOT
+  definition: U.S. Department of Transportation
+  translation: Departamento de Transporte de EE. UU.
+  description: Agencia federal de los Estados Unidos encargada de políticas y programas de transporte.
+
+- term: ETSI
+  definition: European Telecommunications Standards Institute
+  translation: Instituto Europeo de Normas de Telecomunicación
+  description: Organismo europeo responsable de definir estándares de telecomunicaciones y tecnologías afines.
+
+- term: FNN
+  definition: Feed-forward Neural Networks
+  translation: Redes Neuronales Feedforward
+  description: Redes neuronales donde la información fluye en una sola dirección sin ciclos.
+
+- term: GIS
+  definition: Geographic Information System
+  translation: Sistema de Información Geográfica
+  description: Sistemas que capturan, almacenan, analizan y visualizan datos geoespaciales.
+
+- term: GIZ
+  definition: Deutsche Gesellschaft für Internationale Zusammenarbeit
+  translation: Agencia Alemana de Cooperación Internacional
+  description: Organización alemana que apoya proyectos de cooperación al desarrollo en varios países.
+
+- term: GPS
+  definition: Global Positioning System
+  translation: Sistema de Posicionamiento Global
+  description: Sistema de navegación satelital para determinar ubicación y tiempo con precisión.
+
+- term: ICT
+  definition: Information and Communication Technologies
+  translation: Tecnologías de Información y Comunicación
+  description: Conjunto de tecnologías usadas para gestionar y transmitir información.
+
+- term: Incofer
+  definition: Instituto Costarricense de Ferrocarriles
+  translation: Costa Rican Railway Institute
+  description: Entidad encargada del transporte ferroviario en Costa Rica.
+
+- term: IoT
+  definition: Internet of Things
+  translation: Internet de las Cosas
+  description: Red de dispositivos físicos conectados que intercambian datos y actúan de manera coordinada.
+
+- term: IPTS
+  definition: Intelligent Public Transportation Systems
+  translation: Sistemas Inteligentes de Transporte Público
+  description: Aplicación de tecnologías inteligentes para optimizar la operación y experiencia en transporte público.
+
+- term: ITS
+  definition: Intelligent Transportation Systems
+  translation: Sistemas de Transporte Inteligente
+  description: Integración de tecnologías de información y comunicación para mejorar movilidad y seguridad vial.
+
+- term: ITSS
+  definition: IEEE Intelligent Transportation Systems Society
+  translation: Sociedad IEEE de Sistemas de Transporte Inteligente
+  description: Sociedad técnica del IEEE dedicada a la investigación y estandarización en ITS.
+
+- term: LiDAR
+  definition: Laser Imaging Detection and Ranging
+  translation: Detección y Medición por Láser
+  description: Tecnología de teledetección que usa pulsos láser para medir distancias y generar modelos 3D.
+
+- term: LSTM
+  definition: Long Short-Term Memory
+  translation: Memoria a Largo-Corto Plazo
+  description: Tipo de red neuronal recurrente diseñada para captar dependencias de largo plazo en secuencias.
+
+- term: MAE
+  definition: Mean Absolute Error
+  translation: Error Absoluto Medio
+  description: Métrica de evaluación que promedia el valor absoluto de los errores de predicción.
+
+- term: MAPE
+  definition: Mean Absolute Percentage Error
+  translation: Error Porcentual Absoluto Medio
+  description: Métrica que promedia el porcentaje absoluto de error respecto al valor real.
+
+- term: MBTA
+  definition: Massachusetts Bay Transportation Authority
+  translation: Autoridad de Transporte de la Bahía de Massachusetts
+  description: Agencia que opera transporte público en el área metropolitana de Boston.
+
+- term: ME
+  definition: Maximum Error
+  translation: Error Máximo
+  description: Métrica que identifica el mayor desvío absoluto entre una predicción y el valor real.
+
+- term: MedAE
+  definition: Median Absolute Error
+  translation: Error Absoluto Mediano
+  description: Métrica basada en la mediana de los errores absolutos, menos sensible a valores atípicos.
+
+- term: MDIP
+  definition: Mobility Data Interoperability Principles
+  translation: Principios de Interoperabilidad de Datos de Movilidad
+  description: Conjunto de principios para estandarizar y facilitar el intercambio de datos de movilidad.
+
+- term: ML
+  definition: Machine Learning
+  translation: Aprendizaje Automático
+  description: Disciplina que desarrolla algoritmos capaces de aprender patrones a partir de datos.
+
+- term: MOPT
+  definition: Ministerio de Obras Públicas y Transportes
+  translation: Ministry of Public Works and Transport
+  description: Ministerio costarricense encargado de infraestructura vial y transporte.
+
+- term: MQTT
+  definition: Message Queuing Telemetry Transport
+  translation: Protocolo de Telemetría de Colas de Mensajes
+  description: Protocolo ligero de mensajería publish/subscribe usado en IoT y entornos con ancho de banda limitado.
+
+- term: MRE
+  definition: Mean Relative Error
+  translation: Error Relativo Medio
+  description: Métrica que promedia el error relativo respecto a los valores observados.
+
+- term: MSE
+  definition: Mean Square Error
+  translation: Error Cuadrático Medio
+  description: Promedio de los cuadrados de los errores, penaliza más los desvíos grandes.
+
+- term: NAS
+  definition: Neural Architecture Search
+  translation: Búsqueda de Arquitecturas Neuronales
+  description: Técnicas automáticas para diseñar topologías de redes neuronales óptimas.
+
+- term: NGSI-LD
+  definition: Next Generation Service Interface with Linked Data
+  translation: Interfaz de Próxima Generación con Datos Enlazados
+  description: Estándar para gestionar datos contextuales con semántica y APIs uniformes.
+
+- term: NeTEx
+  definition: Network Timetable Exchange
+  translation: Intercambio de Horarios de Red
+  description: Estándar europeo para el intercambio de información de horarios y redes de transporte público.
+
+- term: OBE
+  definition: On-Board Equipment
+  translation: Equipo Embarcado
+  description: Dispositivos instalados en vehículos para comunicación, monitoreo o validación de servicios.
+
+- term: ODM
+  definition: Origin-Destination Matrix
+  translation: Matriz Origen-Destino
+  description: Representación matricial de los flujos de viaje entre zonas de origen y destino.
+
+- term: ODS
+  definition: Objetivos de Desarrollo Sostenible
+  translation: Sustainable Development Goals
+  description: Conjunto de metas globales definidas por la ONU para un desarrollo sostenible.
+
+- term: ONU
+  definition: Organización de las Naciones Unidas
+  translation: United Nations
+  description: Organismo internacional dedicado a la cooperación, la paz y el desarrollo global.
+
+- term: TRB
+  definition: Transportation Research Board
+  translation: Junta de Investigación del Transporte
+  description: División del National Academies en EE. UU. que impulsa investigación y estándares de transporte.
+
+- term: RMSE
+  definition: Root Mean Square Error
+  translation: Raíz del Error Cuadrático Medio
+  description: Raíz cuadrada del promedio de los errores cuadrados, medida común de precisión de modelos.
+
+- term: RNN
+  definition: Recurrent Neural Network
+  translation: Red Neuronal Recurrente
+  description: Tipo de red neuronal que mantiene estado interno para procesar secuencias.
+
+- term: RTML
+  definition: Real-Time Machine Learning
+  translation: Aprendizaje Automático en Tiempo Real
+  description: Técnicas y sistemas que entrenan o actualizan modelos mientras procesan flujos de datos en vivo.
+
+- term: SIRI
+  definition: Standard Interface for Real-time Information
+  translation: Interfaz Estándar para Información en Tiempo Real
+  description: Estándar para el intercambio de datos de información en tiempo real en transporte público.
+
+- term: SITGAM
+  definition: Sistema Integrado de Transporte Público Masivo para la GAM
+  translation: Integrated Mass Public Transport System for the GAM
+  description: Proyecto para integrar y modernizar el transporte público masivo en la Gran Área Metropolitana de Costa Rica.
+
+- term: SLR
+  definition: Systematic Literature Review
+  translation: Revisión Sistemática de Literatura
+  description: Metodología estructurada para identificar, evaluar y sintetizar evidencia científica.
+
+- term: SMAPE
+  definition: Symmetric Mean Absolute Percentage Error
+  translation: Error Porcentual Absoluto Medio Simétrico
+  description: Métrica de error porcentual que balancea sobreestimaciones y subestimaciones.
+
+- term: SSN
+  definition: Semantic Sensor Network Ontology
+  translation: Ontología de Redes de Sensores Semánticos
+  description: Ontología del W3C para describir sensores, observaciones y sistemas de monitoreo.
+
+- term: STDM
+  definition: Spatio-Temporal Data Mining
+  translation: Minería de Datos Espacio-Temporal
+  description: Técnicas analíticas aplicadas a datos que varían en el espacio y el tiempo.
+
+- term: SoS
+  definition: System-of-Systems
+  translation: Sistema de Sistemas
+  description: Conjunto de sistemas independientes que se integran para ofrecer capacidades emergentes.
+
+- term: TCIP
+  definition: American Transit Communications Interface Profiles
+  translation: Perfiles de Interfaz de Comunicaciones de Tránsito de EE. UU.
+  description: Estándar estadounidense para la interoperabilidad de sistemas de comunicación en tránsito público.
+
+- term: TCM
+  definition: Technology Compatibility Matrix
+  translation: Matriz de Compatibilidad Tecnológica
+  description: Herramienta que relaciona tecnologías y versiones soportadas para asegurar interoperabilidad.
+
+- term: TP
+  definition: Transporte Público
+  translation: Public Transport
+  description: Servicios de transporte abiertos al público, usualmente con rutas y tarifas reguladas.
+
+- term: UITP
+  definition: Unión Internacional de Transporte Público
+  translation: International Association of Public Transport
+  description: Asociación mundial que reúne a actores del transporte público para promover buenas prácticas y estándares.
+
+- term: V2X
+  definition: Vehicle-to-Everything
+  translation: Vehículo a Todo
+  description: Comunicación vehicular con infraestructura, otros vehículos, peatones y redes para mejorar seguridad y eficiencia.
+
+- term: W3C
+  definition: World Wide Web Consortium
+  translation: Consorcio World Wide Web
+  description: Organismo que desarrolla estándares para la web, como HTML, CSS y RDF.
+
+- term: ELT
+  definition: Extract, Load, Transform
+  translation: Extracción, Carga y Transformación
+  description: Patrón de integración de datos donde la transformación ocurre después de la carga en el destino.
+
+- term: KPI
+  definition: Key Performance Indicator
+  translation: Indicador Clave de Desempeño
+  description: Métricas cuantitativas usadas para medir el progreso hacia objetivos estratégicos.
+
+- term: QoS
+  definition: Quality of Service
+  translation: Calidad de Servicio
+  description: Conjunto de mecanismos para asegurar niveles de desempeño en redes y servicios.
+
+- term: EDA
+  definition: Event-driven Architecture
+  translation: Arquitectura Dirigida por Eventos
+  description: Estilo arquitectónico donde los componentes se comunican y reaccionan mediante eventos.
