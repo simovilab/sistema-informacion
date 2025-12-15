@@ -2,7 +2,7 @@
 /**
  * Pre-generate Markdown pages for catalogs from YAML sources.
  *
- * Inputs (read-only): docs/.vitepress/theme/data/catalogs/<locale>/*.yaml
+ * Inputs (read-only): docs/public/catalogs/<locale>/*.yaml
  * Outputs: docs/catalogos/<slug>.md
  *
  * Locale selection for labels:
@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename)
 
 const ROOT = path.resolve(__dirname, "..")
 // Source YAMLs live under catalogs/<locale>.
-const CATALOGS_DIR = path.join(ROOT, "docs/.vitepress/theme/data/catalogs")
+const CATALOGS_DIR = path.join(ROOT, "docs/public/catalogs")
 
 // Attempt to read the site language from VitePress config (docs/.vitepress/config.mts)
 const CONFIG_PATH = path.join(ROOT, "docs/.vitepress/config.mts")

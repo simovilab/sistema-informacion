@@ -8,7 +8,7 @@
 | --- | --- |
 | Versión | 1.0 |
 | Fecha | 2025-09-18 |
-| Descripción | Un catálogo de principios de arquitectura para un Sistema de Información de Transporte Público. |
+| Descripción | Un catálogo de principios de diseño de la arquitectura para un Sistema de Información del Transporte Público. |
 | Autores | Fabián Abarca Calderón |
 | Organización | Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI) |
 | Contacto | simovi@ucr.ac.cr |
