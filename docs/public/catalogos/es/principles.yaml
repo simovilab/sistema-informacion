@@ -1,4 +1,5 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/principles.schema.json
+
 metadata:
   title: "Catálogo de principios de arquitectura"
   version: "1.0"
