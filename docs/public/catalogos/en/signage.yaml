@@ -11,13 +11,21 @@ metadata:
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
+  base_url: "https://infotp.simovi.org/"
 
 signage:
   - id: sign:001
+    name: "Stop Sign"
     type: "Bus Stop Sign"
-    dimensions: "60x90 cm"
+    description: "Standard signage for urban bus stops indicating route information and stop name."
+    route_types: [3] 
+    dimensions: 
+      height: 60
+      width: 90
+      unit: "cm"
     orientation: "Vertical"
-    materials: "Aluminum with reflective vinyl"
+    materials: 
+      - "Aluminum with reflective vinyl"
     typography: "Inter"
     color_scheme: ["Primary Blue", "White"]
     content_elements:
@@ -27,7 +35,7 @@ signage:
     installation_height: "2.2 m from ground"
     location_context: "Urban bus stops"
     standard_reference: "ISO 7001:2023"
-    maintenance_interval: "24 months"
+    mockup_image: "stop_sign_mockup.png"
 
 # Examples
 

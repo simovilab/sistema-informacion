@@ -21,6 +21,7 @@
     "organization": { "type": "string" },
     "contact": { "type": "string", "format": "email" },
     "license": { "type": "string" },
+    "base_url": { "type": "string", "format": "uri" },
     "references": {
       "type": "array",
       "items": {

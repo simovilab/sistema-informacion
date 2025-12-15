@@ -3,7 +3,7 @@
   "title": "Graphic Elements Catalog Schema",
   "description": "JSON Schema for validating graphic elements catalog YAML files in the Public Transportation Information System architecture",
   "type": "object",
-  "required": ["metadata", "colors", "typography", "icons", "shapes"],
+  "required": ["metadata", "colors", "color_schemes", "typography", "icons", "shapes"],
   "properties": {
     "metadata": {
       "$ref": "./metadata.schema.json"

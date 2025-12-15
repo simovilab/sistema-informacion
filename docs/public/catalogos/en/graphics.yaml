@@ -66,6 +66,18 @@ colors:
     hex: "#FFD500"
     usage: "Accent color for highlights and alerts."
 
+color_schemes:
+  - id: scheme:001
+    name: "Primary Color Scheme"
+    colors:
+      - "Primary Blue"
+      - "White"
+  - id: scheme:002
+    name: "Alert Color Scheme"
+    colors:
+      - "Secondary Yellow"
+      - "Black"
+
 typography:
   - id: font:001
     family: "Inter"

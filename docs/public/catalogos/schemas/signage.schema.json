@@ -24,10 +24,9 @@
           "color_scheme",
           "content_elements",
           "installation_height",
-          "mode_of_transportation",
+          "route_types",
           "location_context",
-          "standard_reference",
-          "maintenance_interval"
+          "standard_reference"
         ],
         "properties": {
           "id": {
@@ -45,16 +44,21 @@
             "minLength": 1,
             "description": "The type or category of signage"
           },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "A brief description of the signage element"
+          },
           "dimensions": {
-            "type": "array",
+            "type": "object",
             "description": "Physical dimensions of the signage element",
-            "items": {
-              "type": "object",
-              "additionalProperties": {
-                "type": ["number", "string"]
-              }
+            "properties": {
+              "height": { "type": "number" },
+              "width": { "type": "number" },
+              "depth": { "type": "number" },
+              "unit": { "type": "string", "enum": ["cm", "m", "mm", "in"] }
             },
-            "minItems": 1
+            "required": ["unit"]
           },
           "orientation": {
             "type": "string",
@@ -97,10 +101,14 @@
             "type": "string",
             "description": "Height at which the signage should be installed"
           },
-          "mode_of_transportation": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Mode of transportation the signage applies to"
+          "route_types": {
+            "type": "array",
+            "description": "GTFS route types the signage applies to (0=Tram, 1=Subway, 2=Rail, 3=Bus, 4=Ferry, 5=Cable tram, 6=Aerial lift, 7=Funicular, 11=Trolleybus, 12=Monorail)",
+            "items": {
+              "type": "integer",
+              "enum": [0, 1, 2, 3, 4, 5, 6, 7, 11, 12]
+            },
+            "minItems": 1
           },
           "location_context": {
             "type": "string",
@@ -112,9 +120,18 @@
             "minLength": 1,
             "description": "Reference to relevant standards (e.g., ISO 7001:2023)"
           },
-          "maintenance_interval": {
+          "example_images": {
+            "type": "array",
+            "description": "List of example image URLs for the signage",
+            "items": {
+              "type": "string",
+              "format": "uri"
+            },
+            "minItems": 1
+          },
+          "mockup_image": {
             "type": "string",
-            "description": "Recommended maintenance interval (e.g., '24 meses')"
+            "description": "URL of a mockup image representing the signage design"
           }
         },
         "additionalProperties": false

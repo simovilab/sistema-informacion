@@ -26,7 +26,7 @@ const __dirname = path.dirname(__filename)
 
 const ROOT = path.resolve(__dirname, "..")
 // Source YAMLs live under catalogs/<locale>.
-const CATALOGS_DIR = path.join(ROOT, "docs/public/catalogs")
+const CATALOGS_DIR = path.join(ROOT, "docs/public/catalogos")
 
 // Attempt to read the site language from VitePress config (docs/.vitepress/config.mts)
 const CONFIG_PATH = path.join(ROOT, "docs/.vitepress/config.mts")
