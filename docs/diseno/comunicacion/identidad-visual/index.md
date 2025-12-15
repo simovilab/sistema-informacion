@@ -15,7 +15,7 @@
 
 Bla bla bla bla, para los usuarios saber cuáles servicios están ahí, bla bla.
 
-![Escenario de parada de bus](/assets/scenarios/train_station_2.jpg)
+![Escenario de parada de bus](/escenarios/train_station_2.jpg)
 
 - Poste
 - Techo del parabús
