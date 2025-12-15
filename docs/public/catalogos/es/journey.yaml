@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=../schemas/journey.schema.json
+
+metadata:
+  title: "Catálogo de Etapas del Recorrido del Pasajero"
+  version: "0.1"
+  date: "2025-09-18"
+  description: "Define las etapas clave en un viaje típico del pasajero utilizando el sistema de información de transporte público."
+  author:
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+steps:
+  - id: step:001
+    domain: "Información Pre-viaje"
+    physical_spaces: 
+      - "Casa"
+      - "Lugar de Trabajo"
+      - "Café"
+    name: "Acceso a Información de Tránsito en Tiempo Real"
+    description: "Los pasajeros acceden a información de tránsito en tiempo real a través de varios canales como aplicaciones móviles, sitios web o pantallas digitales en paradas."
+    touchpoints:
+      - "Aplicación Móvil"
+      - "Sitio Web"
+      - "Pantallas Digitales en Paradas"
+    user_actions:
+      - "Abrir la aplicación de tránsito o el sitio web."
+      - "Verificar los tiempos de llegada en tiempo real para paradas cercanas."
+      - "Planificar el viaje basado en las condiciones de tránsito actuales."
+    goals:
+      - "Obtener información precisa y oportuna sobre opciones de tránsito."
+      - "Tomar decisiones informadas sobre horarios de salida y rutas."
+    pain_points:
+      - "Falta de acceso a datos en tiempo real."
+      - "Dificultad para navegar en aplicaciones o sitios web."
+    metrics:
+      - "Tiempo de carga de la aplicación/sitio web."
+      - "Calificaciones de satisfacción del usuario."
+      - "Frecuencia de actualizaciones de datos en tiempo real."
+    followed_by:
+      - step:002

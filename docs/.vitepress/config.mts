@@ -248,6 +248,14 @@ export default defineConfig({
               { text: "Plantillas", link: "/catalogos/comunicacion/plantillas" },
             ],
           },
+          {
+            text: "Servicio",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/catalogos/servicio/" },
+              { text: "Recorrido", link: "/catalogos/servicio/recorrido" },
+            ],
+          },
         ],
       },
       { text: "Cómo contribuir", link: "/contribuir" },

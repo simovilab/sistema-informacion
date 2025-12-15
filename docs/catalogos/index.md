@@ -4,7 +4,7 @@
 
 Los catálogos de InfoTP son listas de elementos usados en el diseño y desarrollo del sistema. Los catálogos aquí presentados son definidos por TOGAF ADM, un método de desarrollo de arquitecturas tecnológicas organizacionales.
 
-Los catálogos están divididos en cinco dominios: fundamentos, institucional, datos, tecnologías y comunicación.
+Los catálogos están divididos en seis dominios: fundamentos, institucional, datos, tecnologías, comunicación y servicio.
 
 :::
 
@@ -58,3 +58,11 @@ Comprende los catálogos que definen la identidad y coherencia visual del sistem
 | [Señalización](./identidad-visual/senalizacion)                  | _Signage_                   |
 | [Interfaces gráficas](./identidad-visual/interfaces-graficas.md) | _Graphical User Interfaces_ |
 | [Plantillas](./identidad-visual/plantillas.md)                   | _Templates_                 |
+
+## Servicio
+
+Detalla el recorrido del usuario, como criterio central para el diseño de los elementos de información del servicio.
+
+| Catálogo                                      | Descripción         |
+| --------------------------------------------- | ------------------- |
+| [Recorrido del usuario](./servicio/recorrido) | _Passenger Journey_ |

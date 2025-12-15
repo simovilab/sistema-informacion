@@ -88,6 +88,7 @@ const fileToPath = {
   signage: "identidad-visual/senalizacion.md",
   gui: "identidad-visual/interfaces-graficas.md",
   templates: "identidad-visual/plantillas.md",
+  journey: "servicio/recorrido.md",
 }
 
 // Some output pages are composed by merging multiple source files
@@ -115,6 +116,8 @@ const slugDisplayName = {
   senalizacion: "Señalización",
   "interfaces-graficas": "Interfaces gráficas",
   plantillas: "Plantillas",
+  // Service catalogs
+  recorrido: "Etapas del recorrido del pasajero",
 }
 
 // Translate known section keys to Spanish for nicer headings
@@ -139,7 +142,7 @@ const sectionLabel = {
   icons: "Íconos",
   signage: "Señalización",
   templates: "Plantillas",
-  components: "Componentes",
+  steps: "Etapas",
 }
 
 const MARKER = "<!-- AUTO-GENERATED FILE - DO NOT EDIT. See scripts/generate-catalogs.mjs -->"
@@ -292,6 +295,13 @@ function renderSection(key, value, labelForKey, isMultiCategory = false) {
   
   // For array sections in multi-category catalogs, add H2 section heading and render items as H3
   if (Array.isArray(value)) {
+    // Skip arrays that are not item collections (e.g., preceded_by, followed_by which are references)
+    const isItemArray = value.length > 0 && value.every(v => v === null || (typeof v === "object" && (v.name || v.id)))
+    if (!isItemArray) {
+      // Render as a simple list
+      return `\n**${title}:**\n` + formatValue(value) + "\n"
+    }
+    
     if (isMultiCategory) {
       out += `\n## ${title}\n\n`
       value.forEach((item, i) => {
