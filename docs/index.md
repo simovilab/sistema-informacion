@@ -7,8 +7,8 @@ hero:
   text: "Sistemas de información para el transporte público inteligente"
   tagline: Una guía práctica de diseño e implementación para tomadores de decisiones.
   image:
-    light: /i_light.png
-    dark: /i_dark.png
+    light: /logos/i_light.png
+    dark: /logos/i_dark.png
   actions:
     - theme: brand
       text: Introducción

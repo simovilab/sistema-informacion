@@ -54,10 +54,8 @@ Bla bla bla bla, para los usuarios saber cuáles servicios están ahí, bla bla.
 
 ### Logotipo
 
-![Logo b](/b_azul.png)
+![Logo b](/logos/b_azul.png)
 
 b&reg; es una marca registrada de la Universidad de Costa Rica.
 
 ### Rotulación
-
-![Parada vertical simple](/parada_vertical_simple.png)
