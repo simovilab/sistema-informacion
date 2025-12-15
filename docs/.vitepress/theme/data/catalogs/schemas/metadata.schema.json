@@ -19,8 +19,19 @@
     "description": { "type": "string" },
     "author": { "type": "array", "items": { "type": "string" } },
     "organization": { "type": "string" },
-    "contact": { "type": "string" },
-    "license": { "type": "string" }
+    "contact": { "type": "string", "format": "email" },
+    "license": { "type": "string" },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "url"],
+        "properties": {
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
   },
   "additionalProperties": false
 }

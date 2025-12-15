@@ -3,14 +3,19 @@ metadata:
   title: "Catálogo de principios de arquitectura"
   version: "1.0"
   date: "2025-09-18"
-  description: "Un catálogo de principios de arquitectura para un Sistema de Información de Transporte Público."
+  description: "Un catálogo de principios de diseño de la arquitectura para un Sistema de Información del Transporte Público."
   author:
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
-
-# List of architectural principles
+  references:
+    - name: "Artículo académico sobre principios de arquitectura"
+      url: "https://doi.org/10.1109/CONCAPAN63470.2024.10933847"
+    - name: "Principios FAIR para datos"
+      url: "https://www.go-fair.org/fair-principles/"
+    - name: "Mach Alliance - Principios MACH"
+      url: "https://machalliance.org/mach-principles"
 
 principles:
   # ------------------------
