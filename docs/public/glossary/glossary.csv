@@ -1,0 +1,110 @@
+term,definition,translation,description
+AFC,Automated Fare Collection,Cobro Automatizado de Tarifas,Sistemas electrónicos que permiten pagar y recaudar tarifas de transporte sin efectivo.
+APC,Automated Passenger Count,Conteo Automatizado de Pasajeros,Tecnologías que registran la cantidad de pasajeros a bordo para análisis operativo.
+API,Application Programming Interface,Interfaz de Programación de Aplicaciones,Conjunto de reglas y protocolos que permite la comunicación e intercambio de datos entre diferentes sistemas y aplicaciones.
+API REST,Representational State Transfer API,API de Transferencia de Estado Representacional,Estilo de arquitectura para diseñar servicios web que permite la comunicación entre sistemas a través de HTTP
+ARC-IT,Architecture Reference for Cooperative and Intelligent Transportation,Referencia de Arquitectura para Transporte Cooperativo e Inteligente,Marco de arquitectura para diseñar y planificar sistemas de transporte cooperativos e inteligentes.
+ARESEP,Autoridad Reguladora de los Servicios Públicos,Public Services Regulatory Authority,Ente costarricense encargado de regular tarifas y calidad de los servicios públicos.
+ARIMA,Auto-Regressive Integrated Moving Average,Modelo Autoregresivo Integrado de Media Móvil,Modelo estadístico para series temporales que combina componentes autoregresivos y de medias móviles.
+ATIS,Advanced Traveler Information System,Sistema Avanzado de Información al Viajero,Plataformas que proveen información en tiempo real y planificación para personas viajeras.
+ATMS,Advanced Transportation Management Systems,Sistemas Avanzados de Gestión de Transporte,Soluciones que monitorean y coordinan infraestructura y flujos de tránsito en tiempo real.
+AutoML,Automated Machine Learning,Aprendizaje Automático Automatizado,"Conjunto de herramientas que automatiza el diseño, ajuste y despliegue de modelos de aprendizaje automático."
+AVL,Automated Vehicle Location,Localización Automática de Vehículos,Sistemas de rastreo que usan GPS u otros medios para ubicar flotas en tiempo real.
+BCCR,Banco Central de Costa Rica,Central Bank of Costa Rica,"Banco central de Costa Rica, responsable de política monetaria y estabilidad financiera."
+BFO,Basic Formal Ontology,Ontología Formal Básica,Ontología superior utilizada para estructurar conceptos y relaciones en modelos de conocimiento.
+BID,Banco Interamericano de Desarrollo,Inter-American Development Bank,Organismo internacional que financia proyectos de desarrollo económico y social en América Latina y el Caribe.
+BP,Backpropagation,Retropropagación,Algoritmo de entrenamiento de redes neuronales que ajusta pesos mediante gradientes calculados hacia atrás.
+BPTT,Backpropagation Through Time,Retropropagación a Través del Tiempo,Extensión de retropropagación para entrenar redes recurrentes desplegándolas sobre secuencias temporales.
+CAP,Common Alerting Protocol,Protocolo Común de Alertas,Estándar para intercambiar mensajes de alerta y emergencia entre sistemas heterogéneos.
+CDR,Call Detail Records,Registros de Detalle de Llamadas,Datos generados por operadores que registran eventos de comunicación y sirven para análisis y facturación.
+Ciclo ADM,Método de Desarrollo de Arquitectura,Architecture Development Method (ADM),"Marco de trabajo del estándar TOGAF que guía el diseño, planificación, implementación y gobernanza de arquitecturas empresariales."
+Comité Directivo Técnico,Órgano multisectorial para la coordinación técnica y estratégica,Technical Steering Committee,"Grupo formado por representantes de diversos sectores encargado de asesorar, coordinar y supervisar la implementación tecnológica y organizacional en un sistema."
+CPS,Cyber Physical Systems,Sistemas Ciberfísicos,Integración de componentes computacionales y físicos que interactúan de forma coordinada en tiempo real.
+CPSS,Cyber-Physical-Social Systems,Sistemas Ciberfísicos-Sociales,"Sistemas que combinan elementos físicos, digitales y de interacción social para servicios colaborativos."
+CTP,Consejo de Transporte Público,Public Transport Council,Órgano costarricense encargado de regular y planificar el transporte público.
+DAP,Data Acquisition and Processing,Adquisición y Procesamiento de Datos,"Procesos y tecnologías para capturar, limpiar y preparar datos para análisis posterior."
+DDDAS,Dynamic Data-Driven Applications Systems,Sistemas de Aplicaciones Impulsadas Dinámicamente por Datos,Arquitectura donde la simulación y los datos en tiempo real se retroalimentan para mejorar decisiones.
+DL,Deep Learning,Aprendizaje Profundo,Subcampo de aprendizaje automático basado en redes neuronales profundas para representar patrones complejos.
+DOT,U.S. Department of Transportation,Departamento de Transporte de EE. UU.,Agencia federal de los Estados Unidos encargada de políticas y programas de transporte.
+EDA,Event-driven Architecture,Arquitectura Dirigida por Eventos,Estilo arquitectónico donde los componentes se comunican y reaccionan mediante eventos.
+Elicitación,Proceso inicial para recopilar las necesidades y expectativas de las partes interesadas.,Elicitation,"Actividad mediante la cual se recolecta información relevante de personas usuarias y actores clave, usando entrevistas, encuestas, observación y análisis de procesos."
+ELT,"Extract, Load, Transform","Extracción, Carga y Transformación",Patrón de integración de datos donde la transformación ocurre después de la carga en el destino.
+Especificación de requisitos,Formalización escrita y detallada de los requisitos de un sistema.,Requirements Specification,"Documento estructurado que describe los requisitos funcionales, no funcionales y de rendimiento, redactados de forma clara, sin ambigüedades y verificables."
+Estándares abiertos,Normas públicas para asegurar compatibilidad y acceso,Open standards,Conjuntos de especificaciones técnicas disponibles públicamente que facilitan la interoperabilidad y evitan la dependencia de proveedores.
+ETSI,European Telecommunications Standards Institute,Instituto Europeo de Normas de Telecomunicación,Organismo europeo responsable de definir estándares de telecomunicaciones y tecnologías afines.
+FL,Flexibility,Flexibilidad,El sistema debe ser capaz de adaptarse a cambios futuros de cualquier tipo
+FNN,Feed-forward Neural Networks,Redes Neuronales Feedforward,Redes neuronales donde la información fluye en una sola dirección sin ciclos.
+Fragmentación institucional,División y falta de coordinación entre entidades,Institutional fragmentation,"Situación donde diferentes organismos o entidades actúan de forma aislada o descoordinada, afectando la eficiencia y coherencia de políticas y servicios."
+GIS,Geographic Information System,Sistema de Información Geográfica,"Sistemas que capturan, almacenan, analizan y visualizan datos geoespaciales."
+GIZ,Deutsche Gesellschaft für Internationale Zusammenarbeit,Agencia Alemana de Cooperación Internacional,Organización alemana que apoya proyectos de cooperación al desarrollo en varios países.
+Gobernanza,"Gobierno y gestión de sistemas, procesos y decisiones en el ámbito público",Governance,"Conjunto de políticas, procesos y estructuras que aseguran la administración eficaz, transparente y responsable de organizaciones y sistemas públicos."
+GPS,Global Positioning System,Sistema de Posicionamiento Global,Sistema de navegación satelital para determinar ubicación y tiempo con precisión.
+GTFS,General Transit Feed Specification,Especificación General del Suministro de Datos de Transporte Público,Estándar de facto para la distribución de datos abiertos de transporte público dirigidos a las personas usuarias y consumido por aplicaciones de movilidad.
+ICT,Information and Communication Technologies,Tecnologías de Información y Comunicación,Conjunto de tecnologías usadas para gestionar y transmitir información.
+Incofer,Instituto Costarricense de Ferrocarriles,Costa Rican Railway Institute,Entidad encargada del transporte ferroviario en Costa Rica.
+Interoperabilidad,Interoperabilidad,Interoperability,"Capacidad de diferentes sistemas, organizaciones o componentes para trabajar juntos y compartir información de manera efectiva y sin restricciones."
+IoT,Internet of Things,Internet de las Cosas,Red de dispositivos físicos conectados que intercambian datos y actúan de manera coordinada.
+IPTS,Intelligent Public Transportation Systems,Sistemas Inteligentes de Transporte Público,Aplicación de tecnologías inteligentes para optimizar la operación y experiencia en transporte público.
+ITS,Intelligent Transportation Systems,Sistemas de Transporte Inteligente,Integración de tecnologías de información y comunicación para mejorar movilidad y seguridad vial.
+ITSS,IEEE Intelligent Transportation Systems Society,Sociedad IEEE de Sistemas de Transporte Inteligente,Sociedad técnica del IEEE dedicada a la investigación y estandarización en ITS.
+KPI,Key Performance Indicator,Indicador Clave de Desempeño,Métricas cuantitativas usadas para medir el progreso hacia objetivos estratégicos.
+LiDAR,Laser Imaging Detection and Ranging,Detección y Medición por Láser,Tecnología de teledetección que usa pulsos láser para medir distancias y generar modelos 3D.
+LSTM,Long Short-Term Memory,Memoria a Largo-Corto Plazo,Tipo de red neuronal recurrente diseñada para captar dependencias de largo plazo en secuencias.
+MA,Maintainability,Mantenibilidad,Capacidad de brindar un mantenimiento al sistema y realizar actualizaciones funcionales o visuales
+MaaS,Mobility as a Service,Movilidad como Servicio,Enfoque que integra diferentes servicios de transporte en una única plataforma digital accesible bajo demanda.
+MAE,Mean Absolute Error,Error Absoluto Medio,Métrica de evaluación que promedia el valor absoluto de los errores de predicción.
+MAPE,Mean Absolute Percentage Error,Error Porcentual Absoluto Medio,Métrica que promedia el porcentaje absoluto de error respecto al valor real.
+Matriz de trazabilidad,Herramienta que vincula requisitos con sus fuentes y resultados.,Traceability Matrix,"Estructura que permite rastrear el origen, evolución y cumplimiento de cada requisito dentro del proceso de desarrollo de un sistema."
+MBTA,Massachusetts Bay Transportation Authority,Autoridad de Transporte de la Bahía de Massachusetts,Agencia que opera transporte público en el área metropolitana de Boston.
+MDIP,Mobility Data Interoperability Principles,Principios de Interoperabilidad de Datos de Movilidad,Conjunto de principios para estandarizar y facilitar el intercambio de datos de movilidad.
+ME,Maximum Error,Error Máximo,Métrica que identifica el mayor desvío absoluto entre una predicción y el valor real.
+MedAE,Median Absolute Error,Error Absoluto Mediano,"Métrica basada en la mediana de los errores absolutos, menos sensible a valores atípicos."
+ML,Machine Learning,Aprendizaje Automático,Disciplina que desarrolla algoritmos capaces de aprender patrones a partir de datos.
+MOPT,Ministerio de Obras Públicas y Transportes,Ministry of Public Works and Transport,Ministerio costarricense encargado de infraestructura vial y transporte.
+MQTT,Message Queuing Telemetry Transport,Protocolo de Telemetría de Colas de Mensajes,Protocolo ligero de mensajería publish/subscribe usado en IoT y entornos con ancho de banda limitado.
+MRE,Mean Relative Error,Error Relativo Medio,Métrica que promedia el error relativo respecto a los valores observados.
+MSE,Mean Square Error,Error Cuadrático Medio,"Promedio de los cuadrados de los errores, penaliza más los desvíos grandes."
+NAS,Neural Architecture Search,Búsqueda de Arquitecturas Neuronales,Técnicas automáticas para diseñar topologías de redes neuronales óptimas.
+NeTEx,Network Timetable Exchange,Intercambio de Horarios de Red,Estándar europeo para el intercambio de información de horarios y redes de transporte público.
+NGSI-LD,Next Generation Service Interface with Linked Data,Interfaz de Próxima Generación con Datos Enlazados,Estándar para gestionar datos contextuales con semántica y APIs uniformes.
+OBE,On-Board Equipment,Equipo Embarcado,"Dispositivos instalados en vehículos para comunicación, monitoreo o validación de servicios."
+ODM,Origin-Destination Matrix,Matriz Origen-Destino,Representación matricial de los flujos de viaje entre zonas de origen y destino.
+ODS,Objetivos de Desarrollo Sostenible,Sustainable Development Goals,Conjunto de metas globales definidas por la ONU para un desarrollo sostenible.
+ONU,Organización de las Naciones Unidas,United Nations,"Organismo internacional dedicado a la cooperación, la paz y el desarrollo global."
+Open Data,Open Data,Datos Abiertos,"Información que se puede acceder, utilizar, modificar y compartir libremente por cualquier persona para cualquier propósito."
+Personas usuarias,Individuos que utilizan un servicio o sistema,Users (gender-neutral: people users),"Personas que interactúan con un sistema o servicio, siendo el foco principal para el diseño y mejora de experiencias y funcionalidades."
+QFD,Quality Function Deployment,Despliegue de la Función de Calidad,Metodología estructurada para traducir las necesidades de las personas usuarias en requisitos técnicos del sistema o producto.
+QoS,Quality of Service,Calidad de Servicio,Conjunto de mecanismos para asegurar niveles de desempeño en redes y servicios.
+Requisito de rendimiento,Requisito que establece métricas cuantificables sobre el funcionamiento del sistema.,Performance Requirement,"Condición medible que el sistema debe cumplir en términos de eficiencia, tiempo de respuesta, concurrencia o capacidad."
+Requisito funcional,Requisito que describe una función específica que el sistema debe realizar.,Functional Requirement,"Indicación concreta de una acción, proceso o comportamiento que el sistema debe ejecutar para satisfacer las necesidades del usuario."
+Requisito no funcional,Requisito que define cómo debe comportarse el sistema.,Non-functional Requirement,"Especificación que describe atributos como rendimiento, seguridad, escalabilidad o accesibilidad del sistema."
+RMSE,Root Mean Square Error,Raíz del Error Cuadrático Medio,"Raíz cuadrada del promedio de los errores cuadrados, medida común de precisión de modelos."
+RNN,Recurrent Neural Network,Red Neuronal Recurrente,Tipo de red neuronal que mantiene estado interno para procesar secuencias.
+RTML,Real-Time Machine Learning,Aprendizaje Automático en Tiempo Real,Técnicas y sistemas que entrenan o actualizan modelos mientras procesan flujos de datos en vivo.
+SaaS,Software as a Service,Software como Servicio,Modelo de distribución de software en el que las aplicaciones se alojan en la nube y se accede a ellas a través de Internet mediante suscripción.
+SE,Security,Seguridad,"Protección de información y datos sensibles de usuarios, trabajadores o de la empresa"
+SIRI,Standard Interface for Real-time Information,Interfaz Estándar para Información en Tiempo Real,Estándar para el intercambio de datos de información en tiempo real en transporte público.
+SITGAM,Sistema Integrado de Transporte Público Masivo para la GAM,Integrated Mass Public Transport System for the GAM,Proyecto para integrar y modernizar el transporte público masivo en la Gran Área Metropolitana de Costa Rica.
+SLR,Systematic Literature Review,Revisión Sistemática de Literatura,"Metodología estructurada para identificar, evaluar y sintetizar evidencia científica."
+SMAPE,Symmetric Mean Absolute Percentage Error,Error Porcentual Absoluto Medio Simétrico,Métrica de error porcentual que balancea sobreestimaciones y subestimaciones.
+SoS,System-of-Systems,Sistema de Sistemas,Conjunto de sistemas independientes que se integran para ofrecer capacidades emergentes.
+Sostenibilidad financiera,Capacidad de mantener operaciones con recursos económicos adecuados,Financial sustainability,Capacidad de una organización o sistema para financiar sus actividades y mantenerse operativo a largo plazo sin comprometer su viabilidad.
+SSN,Semantic Sensor Network Ontology,Ontología de Redes de Sensores Semánticos,"Ontología del W3C para describir sensores, observaciones y sistemas de monitoreo."
+STDM,Spatio-Temporal Data Mining,Minería de Datos Espacio-Temporal,Técnicas analíticas aplicadas a datos que varían en el espacio y el tiempo.
+SU,Sustainability,Sostenibilidad,El sistema de ser capaz de ser rentable durante su ciclo de vida
+SysML,Systems Modeling Language,Lenguaje de Modelado de Sistemas,"Lenguaje gráfico basado en UML utilizado para especificar, analizar, diseñar y verificar sistemas complejos en ingeniería de sistemas."
+TCIP,American Transit Communications Interface Profiles,Perfiles de Interfaz de Comunicaciones de Tránsito de EE. UU.,Estándar estadounidense para la interoperabilidad de sistemas de comunicación en tránsito público.
+TCM,Technology Compatibility Matrix,Matriz de Compatibilidad Tecnológica,Herramienta que relaciona tecnologías y versiones soportadas para asegurar interoperabilidad.
+TIC,Tecnologías de la Información y la Comunicación,Information and Communication Technologies,Conjunto de tecnologías desarrolladas para gestionar información y enviarla de un lugar a otro.
+TP,Transporte Público,Public Transport,"Servicios de transporte abiertos al público, usualmente con rutas y tarifas reguladas."
+TR,Time response,Tiempo de respuesta,"Rapidez con la que responde el sistema, debe ser lo más rápida posible"
+TRB,Transportation Research Board,Junta de Investigación del Transporte,División del National Academies en EE. UU. que impulsa investigación y estándares de transporte.
+Triaje,Priorización y clasificación de requisitos,Triage,"Proceso de evaluación y clasificación de elementos según su importancia, urgencia o prioridad para optimizar recursos y tiempo."
+UI,User Interface,Interfaz de Usuario,"Medio a través del cual un usuario interactúa con un sistema, incluyendo elementos visuales y controles que facilitan la navegación y operación."
+UITP,Unión Internacional de Transporte Público,International Association of Public Transport,Asociación mundial que reúne a actores del transporte público para promover buenas prácticas y estándares.
+Unicidad de la información,Información consistente y única en el sistema,Data uniqueness,"Garantía de que los datos son uniformes, sin duplicados ni inconsistencias, para asegurar precisión y confianza en la información disponible."
+UX,User Experience,Experiencia del Usuario,"Conjunto de emociones, percepciones y respuestas que un usuario experimenta al interactuar con un producto, sistema o servicio."
+V2X,Vehicle-to-Everything,Vehículo a Todo,"Comunicación vehicular con infraestructura, otros vehículos, peatones y redes para mejorar seguridad y eficiencia."
+Validación,Confirmación de que los requisitos cumplen con las necesidades del usuario,Validation,"Proceso de verificación que asegura que un producto, sistema o proceso satisface los requisitos especificados y las expectativas del usuario final."
+Verificación,Evaluación del cumplimiento de requisitos especificados.,Verification,Proceso mediante el cual se comprueba que los requisitos han sido implementados correctamente y que el sistema funciona de acuerdo con ellos.
+W3C,World Wide Web Consortium,Consorcio World Wide Web,"Organismo que desarrolla estándares para la web, como HTML, CSS y RDF."
