@@ -1,1 +1,0 @@
-# Elementos gráficos

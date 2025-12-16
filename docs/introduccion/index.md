@@ -15,7 +15,7 @@ Este informe es el resultado de la investigación sobre tecnologías de informac
 
 En las siguientes secciones hay una ampliación de estas ideas, con referencias al desarrollo de cada una dentro del informe.
 
-## Principios
+## Motivación
 
 ### "Yo elijo usar el transporte público"
 
@@ -56,7 +56,7 @@ Información en tiempo real
 Colaboración de la comunidad
 Accesibilidad
 
-### Más y mejor información con tecnologías digitales
+### Más y mejores datos con las tecnologías digitales
 
 Los sistemas inteligentes de transporte público son parte de algo más grande. La visión de una ciudad inteligente tiene en su corazón sistemas que son capaces de comunicarse entre sí.
 

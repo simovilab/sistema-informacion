@@ -2,23 +2,26 @@
 
 ::: info Puntos clave
 
-- Lista de conclusiones importantes o mensajes clave (_key takeaways_)
-- Síntesis de toda esta página
+- A nivel tecnológico, un sistema de información para el transporte público tiene dos grandes etapas: recopilación y producción de datos y consumo y distribución de datos.
+- El diseño de la arquitectura debe tomar en cuenta el público meta de estos datos.
+- En InfoTP, el objetivo principal es proveer información oportuna a las personas usuarias. Sin embargo, la infraestructura también habilita el aprovechamiento de estos datos para todos los actores del transporte público: operadores, gestores, planificadores, reguladores, investigadores, sociedad civil, entre otros.
 
 :::
 
-Referencias
+La arquitectura tecnológica de InfoTP está dividida en cuatro componentes principales:
 
-- TOGAF ADM
-- ARC-IT
-
-A nivel tecnológico, un sistema de información para el transporte público tiene dos grandes etapas: recopilación y producción de datos y consumo y distribución de datos. El diseño de la arquitectura debe tomar en cuenta el público meta de estos datos. En InfoTP, el objetivo principal es proveer información oportuna a las personas usuarias. Sin embargo, la infraestructura también habilita el aprovechamiento de estos datos para todos los actores del transporte público: operadores, gestores, planificadores, reguladores, investigadores, sector civil, entre otros.
+| Componente | Descripción                                                    |
+| ---------- | -------------------------------------------------------------- |
+| A1         | Recolección de datos y construcción de suministros (_feeds_)   |
+| A2         | Distribución de información vía múltiples canales y protocolos |
+| A3         | Herramientas de administración de contenidos del sistema       |
+| A4         | Herramientas de monitoreo y control de operación del sistema   |
 
 Con la implementación de un apropiado sistema de información del transporte público –incluyendo los datos en tiempo real provistos por GPS– es esperable, según la literatura, un aumento de la utilización del servicio y una mayor satisfacción con el mismo. Es necesario, sin embargo, un cuidadoso diseño e implementación de las tecnologías y sistemas interconectados.
 
 Es importante recordar que en 2017 fueron instalados cerca de 1700 equipos GPS en autobuses de la GAM, sin que esto significara una mejoría de la información disponible para las personas usuarias. Según entrevistas realizadas, esta información tampoco estuvo fácilmente disponible para CTP, MOPT, ARESEP o la academia, y los dispositivos sufrieron episodios de vandalismo. Este es un importante precedente que demuestra que las tecnologías por sí solas, sin una visión general, no necesariamente cumplen los propósitos trazados. Es crucial, por tanto, realizar este nuevo proceso con objetivos claros y un adecuado plan de implementación.
 
-La “interoperabilidad” de los sistemas tecnológicos asociados con el transporte público es la capacidad de varios subsistemas heterogéneos (diferentes tecnologías, diferentes proveedores, diferentes entidades) de interactuar entre sí. Así, por ejemplo, una pantalla de información en tiempo real en una parada de bus, administrada por una municipalidad, recibe datos de un servidor administrado por CTP, que recibe información de alertas de la CNE, datos meteorológicos del IMN y datos en tiempo real de autobuses provistos por múltiples proveedores distintos de equipos GPS.
+La "interoperabilidad" de los sistemas tecnológicos asociados con el transporte público es la capacidad de varios subsistemas heterogéneos (diferentes tecnologías, diferentes proveedores, diferentes entidades) de interactuar entre sí. Así, por ejemplo, una pantalla de información en tiempo real en una parada de bus, administrada por una municipalidad, recibe datos de un servidor administrado por CTP, que recibe información de alertas de la CNE, datos meteorológicos del IMN y datos en tiempo real de autobuses provistos por múltiples proveedores distintos de equipos GPS.
 
 Este tipo de interoperabilidad es promovido por las principales agencias de transporte de los Estados Unidos, pioneras en el transporte público inteligente, por medio de los “Principios de Interoperabilidad de los Datos de Movilidad” (MDIP, Mobility Data Interoperability Principles).
 
@@ -35,3 +38,8 @@ Esto tiene una primera implicación inmediata: que las empresas autobuseras no d
 Desde los vehículos en carretera, desde las oficinas administrativas o desde otros sistemas interconectados surgen datos
 
 ## Consumo y distribución de datos
+
+Referencias
+
+- TOGAF ADM
+- ARC-IT

@@ -7,12 +7,10 @@
 
 :::
 
-**Asignación**: Jazmín Madrigal Carrera
-
 ## Centro de llamadas
 
 ## Correo electrónico
 
-## Redes sociales
+## Mensajería instantánea
 
-## Ejemplo del plan piloto de la Universidad de Costa Rica
+## Chatbots

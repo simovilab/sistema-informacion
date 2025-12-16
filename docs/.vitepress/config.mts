@@ -31,6 +31,7 @@ export default defineConfig({
         href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0",
       },
     ],
+    ['link', { rel: 'icon', href: '/i.png' }]
   ],
 
   themeConfig: {
@@ -51,8 +52,10 @@ export default defineConfig({
         text: "Introducción",
         collapsed: true,
         items: [
-          { text: "InfoTP", link: "/introduccion/" },
+          { text: "Visión", link: "/introduccion/" },
           { text: "Principios", link: "/introduccion/principios" },
+          { text: "GTFS", link: "/introduccion/gtfs" },
+          { text: "Modelo del servicio", link: "/introduccion/modelo" },
         ],
       },
       {
@@ -60,20 +63,6 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: "Introducción", link: "/diseno/" },
-          { text: "Datos abiertos", link: "/diseno/datos-abiertos" },
-          { text: "Experiencia del servicio", link: "/diseno/experiencia" },
-          {
-            text: "Arquitectura tecnológica",
-            collapsed: true,
-            items: [
-              { text: "Introducción", link: "/diseno/arquitectura/" },
-              { text: "A1: Recolección", link: "/diseno/arquitectura/a1" },
-              { text: "A2: Distribución", link: "/diseno/arquitectura/a2" },
-              { text: "A3: Administración", link: "/diseno/arquitectura/a3" },
-              { text: "A4: Operaciones", link: "/diseno/arquitectura/a4" },
-              { text: "A5: Herramientas", link: "/diseno/arquitectura/a5" },
-            ],
-          },
           {
             text: "Comunicación",
             collapsed: true,
@@ -88,16 +77,16 @@ export default defineConfig({
                     link: "/diseno/comunicacion/canales/",
                   },
                   {
-                    text: "Medios virtuales",
+                    text: "Medios digitales",
                     link: "/diseno/comunicacion/canales/medios-digitales",
-                  },
-                  {
-                    text: "Medios impresos",
-                    link: "/diseno/comunicacion/canales/medios-impresos",
                   },
                   {
                     text: "Señalética",
                     link: "/diseno/comunicacion/canales/senaletica",
+                  },
+                  {
+                    text: "Material impreso",
+                    link: "/diseno/comunicacion/canales/material-impreso",
                   },
                   {
                     text: "Redes sociales",
@@ -105,7 +94,7 @@ export default defineConfig({
                   },
                   {
                     text: "Atención al cliente",
-                    link: "/diseno/canales/atencion-cliente",
+                    link: "/diseno/comunicacion/canales/atencion-cliente",
                   },
                 ],
               },
@@ -114,13 +103,20 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: "Introducción", link: "/diseno/comunicacion/identidad-visual/" },
-                  { text: "Marca", link: "/diseno/comunicacion/identidad-visual/marca" },
-                  { text: "Elementos gráficos", link: "/diseno/comunicacion/identidad-visual/elementos-graficos" },
-                  { text: "Interfaces gráficas", link: "/diseno/comunicacion/identidad-visual/interfaces-graficas" },
-                  { text: "Señalización", link: "/diseno/comunicacion/identidad-visual/senalizacion" },
-                  { text: "Plantillas", link: "/diseno/comunicacion/identidad-visual/plantillas" },
+                  { text: "Elementos", link: "/diseno/comunicacion/identidad-visual/elementos" },
                 ],
               },
+            ],
+          },
+          {
+            text: "Arquitectura tecnológica",
+            collapsed: true,
+            items: [
+              { text: "Introducción", link: "/diseno/arquitectura/" },
+              { text: "A1: Recolección", link: "/diseno/arquitectura/a1" },
+              { text: "A2: Distribución", link: "/diseno/arquitectura/a2" },
+              { text: "A3: Administración", link: "/diseno/arquitectura/a3" },
+              { text: "A4: Operaciones", link: "/diseno/arquitectura/a4" },
             ],
           },
         ],
@@ -162,14 +158,7 @@ export default defineConfig({
               { text: "Diagrama", link: "/desarrollo/operaciones/diagrama" },
             ],
           },
-          {
-            text: "Herramientas",
-            collapsed: true,
-            items: [
-              { text: "Componentes", link: "/desarrollo/herramientas/" },
-              { text: "Diagrama", link: "/desarrollo/herramientas/diagrama" },
-            ],
-          },
+          { text: "Implementación", link: "/desarrollo/implementacion" },
         ],
       },
       {

@@ -11,7 +11,7 @@ Los principios de diseño de InfoTP están construidos a partir de la unión de 
 
 <Ref url="./diseno/principios" icon="directions_bus">Principios de diseño</Ref>
 
-## Tecnologías del transporte público
+## Principios organizacionales
 
 ::: warning Principios organizacionales de los sistemas de información del transporte público
 
@@ -45,7 +45,7 @@ Fuente: [SIMOVI (GitHub)](https://github.com/simovilab/).
 9. **Maximizar beneficios para las personas usuarias**: Un servicio público debe priorizar la mejora continua de la experiencia de sus personas usuarias.
 10. **Sostenibilidad financiera y asequibilidad del servicio**: La implementación de nuevas tecnologías debe asegurar un financiamiento adecuado para minimizar los riesgos financieros de las empresas proveedoras del servicio, manteniendo a la vez costos razonables para las personas usuarias.
 
-## Datos de movilidad
+## Sobre los datos de movilidad
 
 ::: warning Principios de interoperabilidad de datos de movilidad
 
@@ -63,7 +63,7 @@ Fuente: [MDIP (_Mobility Data Interoperability Principles_)](https://www.interop
 1. Las agencias de transporte, otros proveedores de servicios de movilidad y los viajeros deben poder **seleccionar los componentes tecnológicos** de transporte que mejor se adapten a sus necesidades.
 1. Todas las personas y el público en general deben estar empoderados, a través de datos de movilidad de alta calidad y bien distribuidos, para **encontrar, acceder y utilizar opciones de movilidad de calidad** que respondan a sus necesidades según lo consideren conveniente, manteniendo su privacidad.
 
-## Eficacia y equidad
+## Sobre la eficacia y equidad
 
 ::: warning Compromiso por un transporte público eficaz y equitativo
 
@@ -86,7 +86,7 @@ Fuente: [TransitOPS Manifesto: _Pledge for an Effective & Equitable Public Trans
 - **Principio 9.** La participación comercial en la tecnología del transporte público aporta muchos beneficios y es fundamental equilibrar el lucro comercial con el beneficio público.
 - **Principio 10.** Potenciar los aspectos de beneficio público del transporte es un objetivo importante, digno de tiempo, atención y compromiso.
 
-## Sistemas informáticos
+## Sobre la arquitectura tecnológica
 
 ::: warning Principios MACH
 
@@ -104,7 +104,7 @@ Fuente: [The MACH Principles](https://machalliance.org/mach-principles).
 - **Abierto** (_open_): Construya tecnología, equipos y estrategias organizacionales sobre una base de transparencia e intercambio de datos. Las arquitecturas abiertas permiten un flujo de información sin fricciones, generando conocimientos unificados que impulsan objetivos organizacionales más amplios mediante inteligencia colaborativa.
 - **Autónomo** (_autonomous_): Habilite a las organizaciones para responder con rapidez a requisitos internos y externos mediante automatización inteligente y sistemas autogestionados. Los enfoques MACH autónomos reducen la intervención manual mientras mantienen la agilidad y la adaptabilidad en marcos interoperables.
 
-## Interoperabilidad
+## Sobre la interoperabilidad
 
 ::: warning Marco Europeo de Interoperabilidad
 
@@ -129,7 +129,7 @@ Fuente: [EIF (_European Interoperability Framework_)](https://interoperable-euro
 1. Preservación de la información
 1. Evaluación de la eficacia y la eficiencia
 
-## Gestión de datos
+## Sobre la gestión de datos
 
 ::: warning Principios FAIR
 

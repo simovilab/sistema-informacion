@@ -8,6 +8,6 @@ La operación de InfoTP describe la estrategia de operación y gestión técnica
 
 | Sección        | Descripción                                               |
 | -------------- | --------------------------------------------------------- |
-| Gobernanza     | Nuevo modelo de organización del sistema dinámico         |
+| Gobernanza     | Modelo de organización del sistema                        |
 | Unidad técnica | Unidad especializad de tecnologías de información         |
 | Monetización   | Estrategias de monetización de la plataforma y sus medios |

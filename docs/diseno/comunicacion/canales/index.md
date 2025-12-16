@@ -7,24 +7,20 @@
 
 :::
 
-1. Datos abiertos y estandarizados
-1. Datos en tiempo real con tecnologías de rastreo y telemetría en los vehículos
-1. Sistema de identidad visual
 1. Medios digitales para difusión de información
    - Páginas web
    - Aplicaciones móviles
    - Pantallas informativas
    - Chatbots
-1. Medios impresos para difusión de información
-   - Rotulación (señalética)
+1. Rotulación (señalética)
+1. Material impreso para difusión de información
    - Mapas
    - Folletos
    - Vallas
+1. Redes sociales
 1. Medios de atención al cliente
    - Centro de llamadas
    - Correo electrónico
-   - Redes sociales
-1. Estrategia de comunicación y relaciones públicas
 
 ## Aplicaciones
 

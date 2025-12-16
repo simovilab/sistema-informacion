@@ -13,4 +13,6 @@
 
 ## Pantallas informativas
 
-## Ejemplo del plan piloto de la Universidad de Costa Rica
+## Mensajería SMS
+
+## Notificaciones RSS

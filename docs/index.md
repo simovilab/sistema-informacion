@@ -14,26 +14,26 @@ hero:
       text: Introducción
       link: /introduccion/
     - theme: alt
-      text: Plan piloto
-      link: /piloto/
+      text: Presentación
+      link: https://presentacion.infotp.simovi.org/
 
 features:
-  - icon: <span class="material-symbols-outlined">info</span>
-    title: Datos en tiempo real
-    details: Sistema de rastreo y telemetría de vehículos de transporte público.
+  - icon: <span class="material-symbols-outlined">architecture</span>
+    title: Arquitectura tecnológica
+    details: Una solución digital de extremo a extremo para los sistemas de información.
     link: /introduccion/
-  - icon: <span class="material-symbols-outlined">design_services</span>
-    title: Múltiples canales digitales
-    details: Difusión de información para pasajeros en múltiples canales digitales.
-    link: /introduccion/
-  - icon: <span class="material-symbols-outlined">code</span>
+  - icon: <span class="material-symbols-outlined">campaign</span>
     title: Estrategia de comunicación
-    details: Más que solamente tecnologías, una visión integral de la información.
+    details: Una visión integral que promueve el uso del servicio y mejora la satisfacción.
+    link: /introduccion/
+  - icon: <span class="material-symbols-outlined">rule</span>
+    title: Estandarización
+    details: Propuesta basada en las recomendaciones de los líderes de la industria.
     link: /introduccion/
 ---
 
 ::: danger Trabajo en progreso
 
-El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para **febrero de 2026**. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
+El informe en este sitio web es un trabajo en progreso, con una fecha estimada del primer borrador para **marzo de 2026**. Para sugerencias o comentarios, por favor, consultar la sección [Contribuir](contribuir.md).
 
 :::

@@ -6,8 +6,9 @@ El desarrollo de InfoTP describe la implementación tecnológica del servicio de
 
 :::
 
-| Sección | Descripción                          |
-| ------- | ------------------------------------ |
-| Databús | Implementación de la arquitectura A1 |
-| Infobús | Implementación de la arquitectura A2 |
-| Control | Implementación de la arquitectura A3 |
+| Nombre        | Descripción                                  | Implementación |
+| ------------- | -------------------------------------------- | -------------- |
+| Databús       | Recolección y publicación de datos           | A1             |
+| Infobús       | Distribución de información                  | A2             |
+| Infobús Admin | Herramientas de administración de contenidos | A3             |
+| Databús Admin | Herramientas de monitoreo y control          | A4             |

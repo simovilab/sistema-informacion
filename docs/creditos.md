@@ -12,11 +12,13 @@ Universidad de Costa Rica <br>
 
 ### Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)
 
+Contacto: [simovi@ucr.ac.cr](mailto:simovi@ucr.ac.cr)
+
 - Fabián Abarca Calderón, M.Sc. (coordinador)
 - Marvin Coto Jiménez, Ph.D.
 - Gustavo Núñez Segura, Ph.D.
 
-#### Curso IE1003 "Introducción al diseño de sistemas de ingeniería"
+### Curso IE1003 "Introducción al diseño de sistemas de ingeniería"
 
 - Brandon Andrey Alfaro Herrera, _Ingeniería Eléctrica_
 - José Luis Blanco Arias, _Ingeniería Eléctrica_
@@ -33,7 +35,7 @@ Universidad de Costa Rica <br>
 - Oriana Nashira Mora López, _Ingeniería Eléctrica_
 - José Francisco Murillo Vargas, _Ingeniería Eléctrica_
 
-#### Trabajo comunal universitario TC-691 "Tropicalización de la tecnología"
+### Trabajo comunal universitario TC-691 "Tropicalización de la tecnología"
 
 - Paola Alexandra Feng Wu, _Computación e Informática_
 - Gerardo Josué Campos Badilla, _Computación e Informática_
@@ -42,16 +44,23 @@ Universidad de Costa Rica <br>
 - Abel Jesús Gutiérrez Martínez, _Dirección de Empresas_
 - Josué Daniel Barrantes Fonseca, _Dirección de Empresas_
 - Jazmín Madrigal Carrera, _Dirección de Empresas_
-- Santiago Mora Rivas, _Comunicación Colectiva_
 - Jennifer Nicolle Alvarado López, _Dirección de Empresas_
 - Randy Josué Agüero Bermúdez, _Computación e Informática_
+- Juan Diego Soto Castro, _Computación e Informática_
+- Sebastián Arce Flores, _Computación e Informática_
+- Alejandro Jiménez Rojas, _Computación e Informática_
+- Camila Fariñas Ortega, _Computación e Informática_
+- Felipe Quesada Parada, _Computación e Informática_
+- Esteban Isaac Baires Cerdas, _Computación e Informática_
+- Fabian Mora Arias, _Computación e Informática_
+- Brandon Jesús Trigueros Lara, _Computación e Informática_
 
-#### Asistentes de investigación
+### Asistentes de investigación
 
 - Jimena Sancho Céspedes, _Ingeniería Eléctrica_
 - Leonardo Andrey Leiva Vásquez, _Ingeniería Eléctrica_
 
-#### Trabajo final de graduación de licenciatura
+### Trabajo final de graduación de licenciatura
 
 - David Murillo Rodríguez, _Ingeniería Eléctrica_
 - Josué Vargas Céspedes, _Ingeniería Eléctrica_
@@ -62,4 +71,4 @@ Universidad de Costa Rica <br>
 - Mateo Ortigoza Guayazán, _Ingeniería Eléctrica_
 - Ramsés Solís Solórzano, _Ingeniería Eléctrica_
 
-2025 &reg; Universidad de Costa Rica
+2025 &copy; Universidad de Costa Rica

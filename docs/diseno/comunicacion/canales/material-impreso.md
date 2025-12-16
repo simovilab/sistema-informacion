@@ -1,4 +1,4 @@
-# Medios impresos para difusión de información
+# Material impreso para difusión de información
 
 ::: info Puntos clave
 
@@ -7,12 +7,8 @@
 
 :::
 
-## Rotulación (señalética)
-
 ## Mapas
 
 ## Folletos
 
 ## Vallas
-
-## Ejemplo del plan piloto de la Universidad de Costa Rica
