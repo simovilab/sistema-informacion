@@ -1,0 +1,106 @@
+# yaml-language-server: $schema=../schemas/spaces.schema.json
+
+metadata:
+  title: "Catálogo de Espacios Físicos"
+  version: "0.1"
+  date: "2025-12-16"
+  description: "Un catálogo de categorías de espacios físicos en el dominio del transporte público."
+  author:
+    - "Fabián Abarca Calderón"
+  organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
+  contact: "simovi@ucr.ac.cr"
+  license: "CC BY-NC 4.0"
+
+spaces:
+  - id: "space:stop"
+    name: "Parada"
+    description: "Un lugar designado donde los autobuses se detienen para recoger o dejar pasajeros."
+    type: "Physical"
+    is_transit_infrastructure: true
+    route_type: [3]
+
+  - id: "space:station"
+    name: "Estación"
+    description: "Una instalación más grande que sirve como centro para múltiples paradas y rutas."
+    type: "Physical"
+    is_transit_infrastructure: true
+    route_type: [0, 1, 2, 3, 4, 5, 6, 7, 11]
+
+  - id: "space:terminal"
+    name: "Terminal"
+    description: "Un centro de transporte importante donde convergen múltiples rutas, a menudo con comodidades adicionales."
+    type: "Physical"
+    is_transit_infrastructure: true
+    route_type: [0, 1, 2, 3, 4, 5, 6, 7, 11]
+
+  - id: "space:street"
+    name: "Calle"
+    description: "Vías públicas y caminos utilizados por varios modos de transporte."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:airport"
+    name: "Aeropuerto"
+    description: "Una instalación para viajes aéreos, incluyendo pistas, terminales y servicios de apoyo."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:stadium"
+    name: "Estadio"
+    description: "Un lugar grande para eventos deportivos y de entretenimiento, que a menudo requiere arreglos de transporte especiales."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:shopping"
+    name: "Centro Comercial"
+    description: "Un complejo comercial que puede incluir instalaciones de estacionamiento y acceso al transporte público."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:attraction"
+    name: "Atracción"
+    description: "Un lugar de interés que puede atraer visitantes y requerir servicios de transporte."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:hospital"
+    name: "Hospital"
+    description: "Una instalación médica que puede tener necesidades específicas de transporte para pacientes y personal."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:park"
+    name: "Parque"
+    description: "Un área recreativa pública que puede ser servida por opciones de transporte."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:campus"
+    name: "Campus Universitario"
+    description: "Los terrenos de una institución educativa que pueden tener servicios de transporte dedicados."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:condominium"
+    name: "Condominio"
+    description: "Un complejo residencial que puede tener arreglos específicos de transporte para los residentes."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:event"
+    name: "Recinto de Eventos"
+    description: "Un lugar donde se realizan eventos, a menudo requiriendo soluciones de transporte temporales."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:industrial"
+    name: "Zona Industrial"
+    description: "Una zona designada para actividades industriales que puede tener necesidades únicas de transporte."
+    type: "Physical"
+    is_transit_infrastructure: false
+
+  - id: "space:market"
+    name: "Mercado"
+    description: "Un área comercial donde se compran y venden bienes, que potencialmente requiere acceso de transporte."
+    type: "Physical"
+    is_transit_infrastructure: false
