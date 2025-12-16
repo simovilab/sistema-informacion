@@ -26,11 +26,19 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "url"],
+        "required": ["name"],
         "properties": {
           "name": { "type": "string" },
+          "isbn": { "type": "string", "pattern": "^[0-9\\-]{10,}$" },
+          "doi": { "type": "string", "pattern": "^10\\." },
           "url": { "type": "string", "format": "uri" }
-        }
+        },
+        "oneOf": [
+          { "required": ["name", "isbn"] },
+          { "required": ["name", "doi"] },
+          { "required": ["name", "url"] }
+        ],
+        "additionalProperties": false
       }
     }
   },

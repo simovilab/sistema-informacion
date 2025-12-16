@@ -12,35 +12,38 @@ metadata:
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
   base_url: "https://infotp.simovi.org/"
+  references:
+    - name: "Signage and Wayfinding Design (Second Edition) by Chris Calori and David Vanden-Eynden"
+      isbn: "978-1-119-08582-9"
 
 signage:
   - id: sign:001
-    name: "Stop Sign"
-    type: "Bus Stop Sign"
-    description: "Standard signage for urban bus stops indicating route information and stop name."
-    route_types: [3] 
-    dimensions: 
-      height: 60
-      width: 90
-      unit: "cm"
-    orientation: "Vertical"
+    name: "Route Information"
+    type: "static"
+    category: "operational"
+    description: "Standard signage for bus stops indicating route information and stop name."
+    spaces:
+      - "space:stop"
+      - "space:station"
+    typography: "font:inter"
+    color_scheme: "scheme:blue"
+    mounting: 
+      type: "freestanding"
+      form: "single-posted"
+      surface: "ground"
+      zone: "eye-level"
+    lighting: "none"
+    content:
+      text: "Parada"
+      gtfs:
+        - "gtfs:route_short_name"
+        - "gtfs:stop_name"
+      icons:
+        - "icon:bus"
+      logos: 
+        - "logo:system"
+    images:
+      layout: "layout:001"
+      mockup: "https://images.com/mockup_sign_route_info.png"
     materials: 
       - "Aluminum with reflective vinyl"
-    typography: "Inter"
-    color_scheme: ["Primary Blue", "White"]
-    content_elements:
-      - "Route number"
-      - "Stop name"
-      - "QR code"
-    installation_height: "2.2 m from ground"
-    location_context: "Urban bus stops"
-    standard_reference: "ISO 7001:2023"
-    mockup_image: "stop_sign_mockup.png"
-
-# Examples
-
-# - map
-# - directional signage
-# - informational panel
-# - safety signage
-# - wayfinding elements

@@ -17,16 +17,10 @@
           "id",
           "name",
           "type",
-          "dimensions",
-          "orientation",
           "materials",
           "typography",
           "color_scheme",
-          "content_elements",
-          "installation_height",
-          "route_types",
-          "location_context",
-          "standard_reference"
+          "content"
         ],
         "properties": {
           "id": {
@@ -41,29 +35,18 @@
           },
           "type": {
             "type": "string",
-            "minLength": 1,
-            "description": "The type or category of signage"
+            "enum": ["static", "digital", "kiosk"],
+            "description": "The type of signage: static (printed), digital (electronic display), or kiosk (interactive)"
+          },
+          "category": {
+            "type": "string",
+            "enum": ["operational", "wayfinding", "regulatory", "promotional"],
+            "description": "The functional category of signage: operational (routes, schedules, real-time data), wayfinding (navigation and orientation), regulatory (rules, safety, compliance), or promotional (marketing and advertising)"
           },
           "description": {
             "type": "string",
             "minLength": 1,
             "description": "A brief description of the signage element"
-          },
-          "dimensions": {
-            "type": "object",
-            "description": "Physical dimensions of the signage element",
-            "properties": {
-              "height": { "type": "number" },
-              "width": { "type": "number" },
-              "depth": { "type": "number" },
-              "unit": { "type": "string", "enum": ["cm", "m", "mm", "in"] }
-            },
-            "required": ["unit"]
-          },
-          "orientation": {
-            "type": "string",
-            "enum": ["Vertical", "Horizontal", "Square"],
-            "description": "Orientation of the signage element"
           },
           "materials": {
             "type": "array",
@@ -80,40 +63,44 @@
             "description": "Font family used in the signage"
           },
           "color_scheme": {
-            "type": "array",
-            "description": "Colors used in the signage design",
-            "items": {
-              "type": "string",
-              "minLength": 1
-            },
-            "minItems": 1
-          },
-          "content_elements": {
-            "type": "array",
-            "description": "Information elements displayed on the signage",
-            "items": {
-              "type": "string",
-              "minLength": 1
-            },
-            "minItems": 1
-          },
-          "installation_height": {
             "type": "string",
-            "description": "Height at which the signage should be installed"
+            "pattern": "^scheme:[a-z0-9_]+$",
+            "description": "Reference to a color scheme from the Graphics Catalog in the format scheme:[name]"
           },
-          "route_types": {
-            "type": "array",
-            "description": "GTFS route types the signage applies to (0=Tram, 1=Subway, 2=Rail, 3=Bus, 4=Ferry, 5=Cable tram, 6=Aerial lift, 7=Funicular, 11=Trolleybus, 12=Monorail)",
-            "items": {
-              "type": "integer",
-              "enum": [0, 1, 2, 3, 4, 5, 6, 7, 11, 12]
+          "content": {
+            "type": "object",
+            "description": "Content elements displayed on the signage organized by type",
+            "properties": {
+              "text": {"type": "string"},
+              "gtfs": {
+                "type": "array",
+                "description": "GTFS data fields from the GTFS Catalog displayed on the signage",
+                "items": {
+                  "type": "string",
+                  "pattern": "^gtfs:[a-z0-9_]+$"
+                },
+                "minItems": 1
+              },
+              "icons": {
+                "type": "array",
+                "description": "Icon identifiers from the Graphics Catalog",
+                "items": {
+                  "type": "string",
+                  "pattern": "^icon:[a-z0-9_]+$"
+                },
+                "minItems": 1
+              },
+              "logos": {
+                "type": "array",
+                "description": "Logo identifiers from the Graphics Catalog",
+                "items": {
+                  "type": "string",
+                  "pattern": "^logo:[a-z0-9_]+$"
+                },
+                "minItems": 1
+              }
             },
-            "minItems": 1
-          },
-          "location_context": {
-            "type": "string",
-            "minLength": 1,
-            "description": "Context or location where the signage is typically installed"
+            "additionalProperties": false
           },
           "standard_reference": {
             "type": "string",
@@ -129,9 +116,64 @@
             },
             "minItems": 1
           },
-          "mockup_image": {
+          "images": {
+            "type": "object",
+            "description": "Image references for the signage",
+            "properties": {
+              "layout": {
+                "type": "string",
+                "pattern": "^layout:[a-z0-9_]+$",
+                "description": "Reference to a layout from the Graphics Catalog in the format layout:[name]"
+              },
+              "mockup": {
+                "type": "string",
+                "format": "uri",
+                "description": "URL of a mockup image representing the signage design"
+              }
+            },
+            "additionalProperties": false
+          },
+          "mounting": {
+            "type": "object",
+            "description": "Mounting configuration for the signage element",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["freestanding", "suspended", "projecting", "flush"],
+                "description": "Mounting type or method"
+              },
+              "form": {
+                "type": "string",
+                "enum": ["monolith", "single-posted", "multiple-posted", "plaque"],
+                "description": "Mounting form factor"
+              },
+              "surface": {
+                "type": "string",
+                "enum": ["ground", "wall", "ceiling"],
+                "description": "Mounting surface type"
+              },
+              "zone": {
+                "type": "string",
+                "enum": ["eye-level", "overhead"],
+                "description": "Mounting zone or height category"
+              }
+            },
+            "required": ["type", "form", "zone"],
+            "additionalProperties": false
+          },
+          "lighting": {
             "type": "string",
-            "description": "URL of a mockup image representing the signage design"
+            "enum": ["external", "internal", "none"],
+            "description": "The lighting type for the signage element"
+          },
+          "spaces": {
+            "type": "array",
+            "description": "List of space IDs from the Spaces Catalog where this signage can be placed",
+            "items": {
+              "type": "string",
+              "pattern": "^space:[a-z0-9_]+$"
+            },
+            "minItems": 1
           }
         },
         "additionalProperties": false
