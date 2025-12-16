@@ -254,6 +254,7 @@ export default defineConfig({
             items: [
               { text: "Introducción", link: "/catalogos/servicio/" },
               { text: "Recorrido", link: "/catalogos/servicio/recorrido" },
+              { text: "Espacios", link: "/catalogos/servicio/espacios" },
             ],
           },
         ],

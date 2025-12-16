@@ -89,6 +89,7 @@ const fileToPath = {
   gui: "identidad-visual/interfaces-graficas.md",
   templates: "identidad-visual/plantillas.md",
   journey: "servicio/recorrido.md",
+  spaces: "servicio/espacios.md",
 }
 
 // Some output pages are composed by merging multiple source files
@@ -118,6 +119,7 @@ const slugDisplayName = {
   plantillas: "Plantillas",
   // Service catalogs
   recorrido: "Etapas del recorrido del pasajero",
+  espacios: "Espacios físicos y entornos",
 }
 
 // Translate known section keys to Spanish for nicer headings

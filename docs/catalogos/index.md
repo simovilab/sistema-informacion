@@ -63,6 +63,7 @@ Comprende los catálogos que definen la identidad y coherencia visual del sistem
 
 Detalla el recorrido del usuario, como criterio central para el diseño de los elementos de información del servicio.
 
-| Catálogo                                      | Descripción         |
-| --------------------------------------------- | ------------------- |
-| [Recorrido del usuario](./servicio/recorrido) | _Passenger Journey_ |
+| Catálogo                                           | Descripción                        |
+| -------------------------------------------------- | ---------------------------------- |
+| [Recorrido del usuario](./servicio/recorrido)      | _Passenger Journey_                |
+| [Espacios físicos y entornos](./servicio/espacios) | _Physical Spaces and Environments_ |
