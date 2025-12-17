@@ -1,4 +1,4 @@
-# GTFS
+# Especificación GTFS
 
 GTFS (_General Transit Feed Specification_) es la base para el diseño de InfoTP.
 

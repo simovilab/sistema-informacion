@@ -52,9 +52,9 @@ export default defineConfig({
         text: "Introducción",
         collapsed: true,
         items: [
-          { text: "Visión", link: "/introduccion/" },
-          { text: "Principios", link: "/introduccion/principios" },
-          { text: "GTFS", link: "/introduccion/gtfs" },
+          { text: "Resumen ejecutivo", link: "/introduccion/" },
+          { text: "Visión del sistema", link: "/introduccion/vision" },
+          { text: "Especificación GTFS", link: "/introduccion/gtfs" },
           { text: "Modelo del servicio", link: "/introduccion/modelo" },
         ],
       },
@@ -62,7 +62,8 @@ export default defineConfig({
         text: "Diseño",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/diseno/" },
+          { text: "Introducción al diseño", link: "/diseno/" },
+          { text: "Principios", link: "/diseno/principios" },
           {
             text: "Comunicación",
             collapsed: true,
@@ -125,7 +126,7 @@ export default defineConfig({
         text: "Desarrollo",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/desarrollo/" },
+          { text: "Introducción al desarrollo", link: "/desarrollo/" },
           {
             text: "Databús",
             collapsed: true,
@@ -165,7 +166,7 @@ export default defineConfig({
         text: "Gestión",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/gestion/" },
+          { text: "Introducción a la gestión", link: "/gestion/" },
           { text: "Gobernanza", link: "/gestion/gobernanza" },
           { text: "Unidad técnica", link: "/gestion/unidad-tecnica" },
           { text: "Monetización", link: "/gestion/monetizacion" },
@@ -175,7 +176,7 @@ export default defineConfig({
         text: "Plan piloto",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/piloto/" },
+          { text: "Introducción al plan piloto", link: "/piloto/" },
           { text: "Propuesta técnica", link: "/piloto/propuesta-tecnica" },
           { text: "Propuesta financiera", link: "/piloto/propuesta-financiera" },
         ],
@@ -184,7 +185,7 @@ export default defineConfig({
         text: "Catálogos",
         collapsed: true,
         items: [
-          { text: "Introducción", link: "/catalogos/" },
+          { text: "Introducción a los catálogos", link: "/catalogos/" },
           {
             text: "Fundamentos",
             collapsed: true,

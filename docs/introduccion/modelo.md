@@ -10,9 +10,9 @@ Para Costa Rica
 - Tren interurbano (`route_type` 2 en GTFS)
 - Ferry (`route_type` 4 en GTFS)
 
-## Espacios
+## Espacios físicos
 
-Todos los espacios deben estar cubiertos por los canales de comunicación.
+Todos los espacios físicos relacionados con el servicio de transporte público deben estar cubiertos por los canales de comunicación.
 
 ## Recorrido del pasajero
 
