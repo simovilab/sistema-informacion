@@ -4,7 +4,7 @@ metadata:
   title: "Physical Spaces Catalog"
   version: "0.1"
   date: "2025-12-16"
-  description: "A catalog of physical spaces categories in the public transportation domain."
+  description: "A comprehensive catalog of physical spaces within the public transportation domain, including transit infrastructure and other locations that form part of the passenger journey or serve as signage placement points."
   author:
     - "Fabián Abarca Calderón"
   organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
@@ -12,6 +12,9 @@ metadata:
   license: "CC BY-NC 4.0"
 
 spaces:
+
+  # Transit Infrastructure Spaces
+
   - id: "space:stop"
     name: "Stop"
     description: "A designated place where buses stop to pick up or drop off passengers."
@@ -26,12 +29,29 @@ spaces:
     is_transit_infrastructure: true
     route_type: [0, 1, 2, 3, 4, 5, 6, 7, 11]
 
-  - id: "space:terminal"
-    name: "Terminal"
-    description: "A major transportation center where multiple routes converge, often with additional amenities."
+  - id: "space:center"
+    name: "Administration Centers"
+    description: "Offices, buildings or complexes used for the management and operation of transit services."
+    type: "Physical"
+    is_transit_infrastructure: true
+
+  # Transit Vehicles Spaces
+
+  - id: "space:inside_vehicle"
+    name: "Inside Vehicle"
+    description: "The interior space of a transit vehicle where passengers sit or stand."
     type: "Physical"
     is_transit_infrastructure: true
     route_type: [0, 1, 2, 3, 4, 5, 6, 7, 11]
+
+  - id: "space:outside_vehicle"
+    name: "Outside Vehicle"
+    description: "The exterior space of a transit vehicle, including signage and markings."
+    type: "Physical"
+    is_transit_infrastructure: true
+    route_type: [0, 1, 2, 3, 4, 5, 6, 7, 11]
+
+  # Other Physical Spaces
 
   - id: "space:street"
     name: "Street"
