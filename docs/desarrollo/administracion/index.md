@@ -34,3 +34,15 @@ T: Python
 (aplicación): servidor e interfaz para análisis y visualización de datos
 
 T: Grafana
+
+## Infobús _Signage_
+
+(aplicación): para la creación programática de rotulación y señalética
+
+T: Python
+
+## Infobús _CMS_
+
+(aplicación): sistema de gestión de contenidos
+
+T: Strapi

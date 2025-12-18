@@ -159,6 +159,7 @@ export default defineConfig({
               { text: "Diagrama", link: "/desarrollo/operaciones/diagrama" },
             ],
           },
+          { text: "Herramientas", link: "/desarrollo/herramientas" },
           { text: "Implementación", link: "/desarrollo/implementacion" },
         ],
       },
