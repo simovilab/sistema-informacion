@@ -1,4 +1,4 @@
-workspace "Databús" "Recolección de datos y construcción de suministros" {
+workspace "Databús" "Recolección de datos y construcción de suministros (feeds) GTFS" {
 	
 	model {
 		operator = person "Operador" "Chofer o despachador que usa la aplicación móvil para configurar un viaje"
