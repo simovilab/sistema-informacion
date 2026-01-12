@@ -28,8 +28,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^technology:\\d{3}$",
-            "description": "Unique identifier for the technology following the pattern technology:XXX"
+            "pattern": "^tech:[a-z0-9._-]+$",
+            "description": "Unique identifier for the technology following the pattern tech:XXX"
           },
           "name": {
             "type": "string",

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./organizations.schema.json
+# yaml-language-server: $schema=../schemas/organizations.schema.json
 
 metadata:
   title: "Organization Catalog"
@@ -6,8 +6,8 @@ metadata:
   date: "2025-10-23"
   description: "A catalog of specific organizations for the Public Transportation Information System."
   author:
-    - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
+    - "Jose Murillo Vargas"
   organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
@@ -16,7 +16,7 @@ organizations:
   # Government authorities and regulatory bodies
   - id: "organization:001"
     name: "Ministerio de Obras Públicas y Transportes (MOPT)"
-    description: "The government ministry that acts as the supreme authority and rector of the transport sector, establishing national policy."
+    description: "The government ministry that acts as the authority and rector of the transport sector, establishing national policy."
     stakeholder: "stakeholder:003"
     type: "Government Agency"
     contact: "dvagecorrespondencia@mopt.go.cr"

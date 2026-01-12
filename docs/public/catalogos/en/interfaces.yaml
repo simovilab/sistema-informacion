@@ -6,8 +6,8 @@ metadata:
   date: "2025-11-13"
   description: "A catalog of architectural interfaces for a Public Transport Information System."
   author:
-    - "Oriana Mora López"
     - "Fabián Abarca Calderón"
+    - "Oriana Mora López"
   organization: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY 4.0"
@@ -47,7 +47,7 @@ interfaces:
     security:
       - "API Keys"
       - "JWT"
-    version: "GraphQL specification 2021"
+    version: "0.1.0"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -67,7 +67,7 @@ interfaces:
       - "Binary"
     security:
       - "TLS"
-    version: "mqtt 3.1.1"
+    version: "3.1.1"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -77,19 +77,19 @@ interfaces:
     documentation: "https://docs.simovi.ucr.ac.cr/databus/mqtt"
 
   - id: interface:004
-    name: "Infobús"
+    name: "Infobús API"
     description: "RESTful API to access public transport information, routes, schedules and services of the Infobús system. Also called INTERBUS, it is a fieldbus‑type communication system designed to transmit data between controllers and distributed I/O modules (sensors, actuators)."
     type: "Application Programming Interface (API)"
     protocols:
       - "HTTP"
       - "TCP"
-      - "WebSockets"
+      - "WebSocket"
     data_formats:
       - "JSON"
       - "XML"
     security:
       - "OAuth 2.0"
-    version: "Interbus - S"
+    version: "0.0.1"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -100,7 +100,7 @@ interfaces:
 
   - id: interface:005
     name: "Infobús SSE"
-    description: "Server‑Sent Events interface used as a standardized channel for a server to send data to the client in real time over HTTP, to deliver real‑time public transport updates to Infobús web clients."
+    description: "Server-Sent Events interface used as a standardized channel for a server to send data to the client in real time over HTTP, to deliver real‑time public transport updates to Infobús web clients."
     type: "Event Stream"
     protocols:
       - "HTTPS"
@@ -109,8 +109,8 @@ interfaces:
       - "Text"
       - "XML"
     security:
-      - "TCP"
-    version: "N/A"
+      - "TLS"
+    version: "0.1.0"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -120,8 +120,8 @@ interfaces:
     documentation: "https://docs.simovi.ucr.ac.cr/infobus/sse"
 
   - id: interface:006
-    name: "Infobús WebSockets"
-    description: "WebSocket interface for bidirectional real‑time communication between the Infobús system and client applications."
+    name: "Infobús WebSocket"
+    description: "WebSocket interface for bidirectional real-time communication between the Infobús system and client applications."
     type: "Event Stream"
     protocols:
       - "TCP"
@@ -131,7 +131,7 @@ interfaces:
       - "XML"
     security:
       - "TLS"
-    version: "RFC 6455"
+    version: "0.1.0"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -153,7 +153,7 @@ interfaces:
     security:
       - "OAuth 2.0"
       - "TLS"
-    version: "SPARQL 1.1"
+    version: "0.1.0"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:
@@ -172,195 +172,8 @@ interfaces:
     data_formats:
       - "JSON"
     security:
-      - "MCP"
       - "TLS"
-    version: "N/A"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Infobús MCP Server"
-      - "AI Applications"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/infobus/mcp"
-```// filepath: /home/orimora/Escritorio/Temas_Especiales_de_Ingenieria/sistema-informacion/docs/.vitepress/theme/data/catalogs/es/interfaces.yaml
-// ...existing code...
-# yaml-language-server: $schema=../schemas/interfaces.schema.json
-
-metadata:
-  title: "Architecture Interfaces Catalog"
-  version: "0.1"
-  date: "2025-11-13"
-  description: "A catalog of architectural interfaces for a Public Transport Information System."
-  author:
-    - "Oriana Mora López"
-    - "Fabián Abarca Calderón"
-  organization: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-  contact: "simovi@ucr.ac.cr"
-  license: "CC BY 4.0"
-
-# Interface catalog
-
-interfaces:
-  - id: interface:001
-    name: "Databús API"
-    description: "An application programming interface that facilitates real-time data management and distribution between devices and applications. RESTful API to access real-time and historical public transport data from the Databús system."
-    type: "Application Programming Interface (API)"
-    protocols:
-      - "HTTPS"
-      - "REST"
-    data_formats:
-      - "JSON"
-    security:
-      - "API Keys"
-      - "TLS"
-    version: "1.0.0"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Databús Backend"
-      - "Databús Database"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/databus/api"
-
-  - id: interface:002
-    name: "Databús GraphQL"
-    description: "The GraphQL interface is a query language for flexible and efficient queries of public transport data from the Databús system. The client receives exactly what it requests, avoiding data over‑fetching."
-    type: "Query Interface"
-    protocols:
-      - "HTTPS"
-    data_formats:
-      - "JSON"
-    security:
-      - "API Keys"
-      - "JWT"
-    version: "GraphQL specification 2021"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Databús Backend"
-      - "Databús Database"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/databus/graphql"
-
-  - id: interface:003
-    name: "Databús MQTT"
-    description: "MQTT messaging interface, designed for highly efficient communications in networks with low bandwidth, high latency, or unstable environments for transmitting real-time transport data from IoT devices to the Databús system."
-    type: "Message Queue"
-    protocols:
-      - "TCP"
-    data_formats:
-      - "JSON"
-      - "Binary"
-    security:
-      - "TLS"
-    version: "mqtt 3.1.1"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Databús IoT Gateway"
-      - "Databús Backend"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/databus/mqtt"
-
-  - id: interface:004
-    name: "Infobús"
-    description: "RESTful API to access public transport information, routes, schedules and services of the Infobús system. Also called INTERBUS, it is a fieldbus‑type communication system designed to transmit data between controllers and distributed I/O modules (sensors, actuators)."
-    type: "Application Programming Interface (API)"
-    protocols:
-      - "HTTP"
-      - "TCP"
-      - "WebSockets"
-    data_formats:
-      - "JSON"
-      - "XML"
-    security:
-      - "OAuth 2.0"
-    version: "Interbus - S"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Infobús Backend"
-      - "Infobús Database"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/infobus/api"
-
-  - id: interface:005
-    name: "Infobús SSE"
-    description: "Server‑Sent Events interface used as a standardized channel for a server to send data to the client in real time over HTTP, to deliver real‑time public transport updates to Infobús web clients."
-    type: "Event Stream"
-    protocols:
-      - "HTTPS"
-    data_formats:
-      - "JSON"
-      - "Text"
-      - "XML"
-    security:
-      - "TCP"
-    version: "N/A"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Infobús Backend"
-      - "Infobús Web Client"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/infobus/sse"
-
-  - id: interface:006
-    name: "Infobús WebSockets"
-    description: "WebSocket interface for bidirectional real‑time communication between the Infobús system and client applications."
-    type: "Event Stream"
-    protocols:
-      - "TCP"
-      - "HTTPS"
-    data_formats:
-      - "JSON"
-      - "XML"
-    security:
-      - "TLS"
-    version: "RFC 6455"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Infobús Backend"
-      - "Infobús Mobile App"
-      - "Infobús Web Client"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/infobus/websockets"
-
-  - id: interface:007
-    name: "Infobús SPARQL"
-    description: "SPARQL interface for semantic queries over linked public transport data in the Infobús system."
-    type: "Query Interface"
-    protocols:
-      - "HTTPS"
-    data_formats:
-      - "JSON"
-      - "XML"
-    security:
-      - "OAuth 2.0"
-      - "TLS"
-    version: "SPARQL 1.1"
-    owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
-    contact: "simovi@ucr.ac.cr"
-    related_components:
-      - "Infobús Knowledge Graph"
-      - "Infobús RDF Store"
-    status: "Active"
-    documentation: "https://docs.simovi.ucr.ac.cr/infobus/sparql"
-
-  - id: interface:008
-    name: "Infobús MCP"
-    description: "Model Context Protocol (MCP) interface that allows AI applications to access data and tools of the Infobús system."
-    type: "Remote Procedure Call (RPC)"
-    protocols:
-      - "HTTPS"
-      - "WebSocket"
-    data_formats:
-      - "JSON"
-    security:
-      - "MCP"
-      - "TLS"
-    version: "N/A"
+    version: "0.1.0"
     owner: "Laboratory of Intelligent Mobility Systems (SIMOVI)"
     contact: "simovi@ucr.ac.cr"
     related_components:

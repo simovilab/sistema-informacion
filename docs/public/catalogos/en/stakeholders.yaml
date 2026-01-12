@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=./stakeholders.schema.json
+# yaml-language-server: $schema=../schemas/stakeholders.schema.json
 
 metadata:
   title: "Stakeholder Catalog"
@@ -6,8 +6,8 @@ metadata:
   date: "2025-10-23"
   description: "A catalog of stakeholder categories for the Public Transportation Information System."
   author:
-    - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
+    - "Jose Murillo Vargas"
   organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

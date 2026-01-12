@@ -6,8 +6,8 @@ metadata:
   date: "2025-10-23"
   description: "A catalog of the actors (individuals) for the Public Transportation Information System."
   author:
-    - "Jose Murillo Vargas"
     - "Fabián Abarca Calderón"
+    - "Jose Murillo Vargas"
   organization: "Intelligent Mobility Systems Laboratory (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

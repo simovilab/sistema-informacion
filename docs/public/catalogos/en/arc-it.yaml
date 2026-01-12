@@ -8,8 +8,8 @@ metadata:
   date: "2025-09-18"
   description: "Un catálogo de aplicaciones para un Sistema de Información de Transporte Público."
   author:
-    - "Pedro Meneses López"
     - "Fabián Abarca Calderón"
+    - "Pedro Meneses López"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
@@ -35,7 +35,7 @@ applications:
       - "Wireless communications (3G/4G/5G, DSRC, C-V2X)"
       - "Centralized fleet management software"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Active"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -55,7 +55,7 @@ applications:
       - "Radio / Cellular communications"
       - "Operations control center systems"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -75,8 +75,8 @@ applications:
       - "Cloud-based dispatching"
       - "APIs for real-time schedule updates"
     stakeholders:
-      - "Passengers"
-      - "Transit Authorities"
+      - "stakeholder:001" # "Passengers"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Active"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -96,8 +96,8 @@ applications:
       - "Mobile payment apps (QR, wallet)"
       - "Fare collection back-office systems"
     stakeholders:
-      - "Passengers"
-      - "Transit Authorities"
+      - "stakeholder:002" # "Passengers"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -117,8 +117,8 @@ applications:
       - "Access control & intrusion detection"
       - "Security operation centers"
     stakeholders:
-      - "Passengers"
-      - "Transit Authorities"
+      - "stakeholder:002" # "Passengers"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -138,8 +138,8 @@ applications:
       - "Telematics"
       - "IoT sensors"
     stakeholders:
-      - "Maintenance Teams"
-      - "Transit Authorities"
+      - "stakeholder:003" # "Maintenance Teams"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -159,7 +159,7 @@ applications:
       - "Weight sensors"
       - "Wireless data transmission"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -179,8 +179,8 @@ applications:
       - "GTFS-Realtime feeds"
       - "Cloud-based information dissemination"
     stakeholders:
-      - "Passengers"
-      - "Transit Authorities"
+      - "stakeholder:002" # "Passengers"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -200,7 +200,7 @@ applications:
       - "GPS-based priority request"
       - "Traffic management centers"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -220,7 +220,7 @@ applications:
       - "Traffic monitoring systems"
       - "Intelligent lane management software"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -239,7 +239,7 @@ applications:
       - "Smartphones / wearables with apps"
       - "Roadside Units (RSUs) with DSRC / C-V2X"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Low"
@@ -258,7 +258,7 @@ applications:
       - "On-board warning systems"
       - "Roadside connected infrastructure"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Low"
@@ -277,7 +277,7 @@ applications:
       - "Vehicle movement detection (radar, LIDAR, cameras)"
       - "Driver alerting systems"
     stakeholders:
-      - "Bus Operators"
+      - "stakeholder:004" # "Bus Operators"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Low"
@@ -296,7 +296,7 @@ applications:
       - "API integration"
       - "Cloud-based coordination systems"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"
@@ -315,7 +315,7 @@ applications:
       - "Wireless request communication"
       - "Vehicle Human-Machine Interface (HMI)"
     stakeholders:
-      - "Passengers"
+      - "stakeholder:002" # "Passengers"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -335,7 +335,7 @@ applications:
       - "Smartphone accessibility apps"
       - "Haptic feedback devices"
     stakeholders:
-      - "Transit Authorities"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "Medium"
@@ -354,8 +354,8 @@ applications:
       - "Real-time operations coordination"
       - "Communications with traffic control"
     stakeholders:
-      - "Passengers"
-      - "Transit Authorities"
+      - "stakeholder:002" # "Passengers"
+      - "stakeholder:001" # "Transit Authorities"
     status: "Inactive"
     deployment_environment: "On-Premise"
     criticality: "High"

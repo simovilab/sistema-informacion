@@ -6,9 +6,8 @@ metadata:
   date: "2025-09-18"
   description: "Un catálogo de estándares tecnológicos para un Sistema de Información de Transporte Público."
   author:
-    - "Randy Cascante Espinoza"
-    - "Oriana Mora López"
     - "Fabián Abarca Calderón"
+    - "Oriana Mora López"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

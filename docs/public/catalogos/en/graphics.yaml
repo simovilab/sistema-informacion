@@ -6,8 +6,8 @@ metadata:
   date: "2025-11-12"
   description: "Defines core visual elements including colors, typography, shapes, and icons."
   author:
-    - "Ian Gama Oashi"
     - "Fabián Abarca Calderón"
+    - "Ian Gama Oashi"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

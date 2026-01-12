@@ -6,8 +6,8 @@ metadata:
   date: "2025-11-12"
   description: "Defines the conceptual foundation of the public transportation information system's brand identity and governance."
   author:
-    - "Ian Gama Oashi"
     - "Fabián Abarca Calderón"
+    - "Ian Gama Oashi"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

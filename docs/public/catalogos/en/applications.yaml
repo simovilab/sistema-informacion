@@ -6,8 +6,8 @@ metadata:
   date: "2025-11-27"
   description: "Un catálogo de aplicaciones para el sistema de información de transporte público (InfoTP)."
   author:
-    - "Pedro Meneses López"
     - "Fabián Abarca Calderón"
+    - "Pedro Meneses López"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

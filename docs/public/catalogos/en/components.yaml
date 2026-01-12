@@ -7,8 +7,8 @@ metadata:
   date: "2025-09-18"
   description: "Componentes lógicos/físicos que realizan/gestionan entidades de datos en el Sistema de Información de Transporte Público."
   author:
-    - "Jostin Cubero Torres"
     - "Fabián Abarca Calderón"
+    - "Jostin Cubero Torres"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

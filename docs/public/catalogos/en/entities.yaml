@@ -7,8 +7,8 @@ metadata:
   date: "2025-09-18"
   description: "Entidades canónicas del Sistema de Información de Transporte Público (alineadas a GTFS y extensiones operativas)."
   author:
-    - "Jostin Cubero Torres"
     - "Fabián Abarca Calderón"
+    - "Jostin Cubero Torres"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"

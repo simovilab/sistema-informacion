@@ -1,51 +1,531 @@
-# Metadata about the catalog
+# yaml-language-server: $schema=../schemas/technologies.schema.json
+
 metadata:
   title: "Technology Portfolio Catalog"
   version: "1.0"
   date: "2025-09-18"
   description: "A catalog of technologies for a Public Transportation Information System."
   author:
-    - "Randy Cascante Espinoza"
     - "Fabián Abarca Calderón"
   organization: "Laboratorio de Sistemas Inteligentes de Movilidad (SIMOVI)"
   contact: "simovi@ucr.ac.cr"
   license: "CC BY-NC 4.0"
 
-# Technology catalog
 technologies:
-  - id: technology:001
+
+  # Backend Technologies
+
+  - id: tech:python
+    name: "Python"
+    description: "Primary language for backend development, data processing, machine learning models, and research algorithms."
+    version: "3.x"
+    organization: "Python Software Foundation"
+    website: "https://www.python.org/"
+    usage: "Core language for APIs, data pipelines, ML, and research at SIMOVI."
+    related_technologies:
+      - "Django"
+      - "Celery"
+    status: "Active"
+    documentation: "https://docs.python.org/3/"
+
+  - id: tech:django
+    name: "Django"
+    description: "High-level Python web framework for robust APIs and backend services."
+    version: "5.x"
+    organization: "Django Software Foundation"
+    website: "https://www.djangoproject.com/"
+    usage: "Building transportation information backends with ORM, auth, and rapid development."
+    related_technologies:
+      - "Python"
+      - "Django Channels"
+    status: "Active"
+    documentation: "https://docs.djangoproject.com/en/stable/"
+
+  - id: tech:django_channels
+    name: "Django Channels"
+    description: "ASGI-based framework enabling WebSockets, long-lived connections, and pub/sub patterns for Django."
+    version: "4.x"
+    organization: "Django Software Foundation"
+    website: "https://channels.readthedocs.io/"
+    usage: "Real-time vehicle tracking, arrival countdowns, alerts, and operator dashboards with Redis channel layer."
+    related_technologies:
+      - "Django"
+      - "Redis"
+    status: "Active"
+    documentation: "https://channels.readthedocs.io/en/stable/"
+
+  - id: tech:celery
+    name: "Celery Worker / Beat"
+    description: "Distributed task queue and scheduler for asynchronous and periodic workloads."
+    version: "5.x"
+    organization: "Celery Project"
+    website: "https://docs.celeryq.dev/"
+    usage: "Data processing, GTFS updates, real-time ingestion, and scheduled sync jobs."
+    related_technologies:
+      - "RabbitMQ"
+      - "Redis"
+    status: "Active"
+    documentation: "https://docs.celeryq.dev/en/stable/"
+
+  - id: tech:airflow
+    name: "Apache Airflow"
+    description: "Workflow automation and scheduling platform for orchestrating data pipelines."
+    version: "2.x"
+    organization: "Apache Software Foundation"
+    website: "https://airflow.apache.org/"
+    usage: "ETL orchestration, scheduled ingestion, and reproducible pipelines for transit data."
+    related_technologies:
+      - "Python"
+      - "PostgreSQL"
+    status: "Active"
+    documentation: "https://airflow.apache.org/docs/"
+
+  - id: tech:postgresql
     name: "PostgreSQL"
-    description: "An open-source relational database management system."
-    version: "13"
+    description: "Relational database backbone for transactional, analytical, and extensible workloads."
+    version: "16.x"
     organization: "PostgreSQL Global Development Group"
     website: "https://www.postgresql.org/"
-    usage: "Used for storing and managing relational data in the system."
+    usage: "Stores GTFS, routes, stops, schedules, and operational data; base platform for PostGIS and TimescaleDB extensions."
     related_technologies:
       - "PostGIS"
-      - "pgAdmin"
+      - "TimescaleDB"
     status: "Active"
-    documentation: "https://www.postgresql.org/docs/13/"
-  - id: technology:002
-    name: "Node.js"
-    description: "A JavaScript runtime built on Chrome's V8 JavaScript engine."
-    version: "14.x"
-    organization: "OpenJS Foundation"
-    website: "https://nodejs.org/"
-    usage: "Used for building scalable server-side applications."
-    related_technologies:
-      - "Express.js"
-      - "npm"
-    status: "Active"
-    documentation: "https://nodejs.org/en/docs/"
-  - id: technology:003
-    name: "Vue.js"
-    description: "A progressive JavaScript framework for building user interfaces."
+    documentation: "https://www.postgresql.org/docs/"
+
+  - id: tech:postgis
+    name: "PostGIS"
+    description: "Spatial extension for PostgreSQL enabling advanced geospatial data types and queries."
     version: "3.x"
-    organization: "Evan You"
-    website: "https://vuejs.org/"
-    usage: "Used for building the frontend of web applications."
+    organization: "PostGIS Project / OSGeo"
+    website: "https://postgis.net/"
+    usage: "Adds spatial indexing and geospatial functions for proximity, routing, and geometry operations on transit data."
     related_technologies:
-      - "Vuex"
+      - "PostgreSQL"
+      - "GeoJSON"
+    status: "Active"
+    documentation: "https://postgis.net/docs/"
+
+  - id: tech:timescaledb
+    name: "TimescaleDB"
+    description: "Time-series extension providing hypertables, compression, and continuous aggregates."
+    version: "16.x / TimescaleDB 2.x"
+    organization: "Timescale Inc."
+    website: "https://www.timescale.com/"
+    usage: "Persists high-frequency telemetry and vehicle tracking time series with windowed analytics."
+    related_technologies:
+      - "PostgreSQL"
+      - "Grafana"
+    status: "Active"
+    documentation: "https://docs.timescale.com/"
+
+  - id: tech:redis
+    name: "Redis"
+    description: "In-memory data store for caching, sessions, and message brokering."
+    version: "7.x"
+    organization: "Redis Ltd."
+    website: "https://redis.io/"
+    usage: "Caches hot data, stores sessions, and acts as broker/coordination layer for Celery and Channels."
+    related_technologies:
+      - "Redis Streams"
+      - "Celery"
+    status: "Active"
+    documentation: "https://redis.io/docs/"
+
+  - id: tech:redis_streams
+    name: "Redis Streams"
+    description: "Log-structured, append-only streaming data type with persistence and consumer groups."
+    version: "7.x"
+    organization: "Redis Ltd."
+    website: "https://redis.io/docs/data-types/streams/"
+    usage: "Buffers high-frequency telemetry; feeds Channels push, Celery workers, and Airflow/ETL consumers."
+    related_technologies:
+      - "Redis"
+      - "RabbitMQ"
+    status: "Active"
+    documentation: "https://redis.io/docs/data-types/streams/"
+
+  - id: tech:rabbitmq
+    name: "RabbitMQ"
+    description: "Message broker with MQTT support for reliable, scalable messaging."
+    version: "3.x"
+    organization: "VMware / RabbitMQ"
+    website: "https://www.rabbitmq.com/"
+    usage: "MQTT broker for vehicle location ingestion and distribution to downstream real-time services."
+    related_technologies:
+      - "MQTT"
+      - "Celery"
+    status: "Active"
+    documentation: "https://www.rabbitmq.com/documentation.html"
+
+  - id: tech:strawberry
+    name: "Strawberry"
+    description: "Modern GraphQL library for Python enabling typed schemas and efficient data fetching."
+    version: "0.230.x"
+    organization: "Strawberry GraphQL"
+    website: "https://strawberry.rocks/"
+    usage: "Delivers augmented transit data to websites, screens, mobile apps, and other clients."
+    related_technologies:
+      - "GraphQL"
+      - "Django"
+    status: "Active"
+    documentation: "https://strawberry.rocks/docs/"
+
+  - id: tech:bytewax
+    name: "Bytewax"
+    description: "Python-first, Rust-powered framework for stateful stream processing with a dataflow API."
+    version: "0.20.x"
+    organization: "Bytewax"
+    website: "https://bytewax.io/"
+    usage: "Real-time pipelines over telemetry: ingest MQTT/WebSockets, windowed aggregates, joins, and outputs to Redis/TimescaleDB."
+    related_technologies:
+      - "Redis Streams"
+      - "RabbitMQ"
+    status: "Active"
+    documentation: "https://docs.bytewax.io/"
+
+  - id: tech:jena_fuseki
+    name: "Apache Jena Fuseki"
+    description: "SPARQL server and RDF triple store for semantic web data."
+    version: "4.x"
+    organization: "Apache Software Foundation"
+    website: "https://jena.apache.org/documentation/fuseki2/"
+    usage: "Stores and queries transportation ontologies and linked data for semantic interoperability."
+    related_technologies:
+      - "SPARQL"
+      - "RDF"
+    status: "Active"
+    documentation: "https://jena.apache.org/documentation/fuseki2/"
+
+  - id: tech:fastmcp
+    name: "FastMCP"
+    description: "Pythonic implementation of the Model Context Protocol for building MCP servers and clients."
+    version: "0.x"
+    organization: "Community"
+    website: "https://modelcontextprotocol.io/"
+    usage: "Exposes transit tools and resources to LLMs; connects chat agents with Infobús/Databús data."
+    related_technologies:
+      - "MCP"
+      - "Python"
+    status: "Active"
+    documentation: "https://modelcontextprotocol.io/"
+
+  - id: tech:strapi
+    name: "Strapi CMS"
+    description: "Headless CMS for managing dynamic content and configuration."
+    version: "4.x"
+    organization: "Strapi"
+    website: "https://strapi.io/"
+    usage: "Manages documentation, content, and configs for transportation information systems."
+    related_technologies:
+      - "Node.js"
+      - "GraphQL"
+    status: "Active"
+    documentation: "https://docs.strapi.io/"
+
+  - id: tech:rust
+    name: "Rust"
+    description: "Systems language for safe, high-performance, concurrent services."
+    version: "1.75+"
+    organization: "Rust Foundation"
+    website: "https://www.rust-lang.org/"
+    usage: "Performance-critical real-time data processing and streaming components."
+    related_technologies:
+      - "Bytewax"
+      - "Wasm"
+    status: "Active"
+    documentation: "https://doc.rust-lang.org/"
+
+  # Frontend Technologies
+
+  - id: tech:typescript
+    name: "TypeScript"
+    description: "Typed superset of JavaScript for large-scale, maintainable frontends."
+    version: "5.x"
+    organization: "Microsoft"
+    website: "https://www.typescriptlang.org/"
+    usage: "Type-safe frontend applications for transportation interfaces and dashboards."
+    related_technologies:
+      - "Vue"
+      - "Nuxt"
+    status: "Active"
+    documentation: "https://www.typescriptlang.org/docs/"
+
+  - id: tech:vue
+    name: "Vue"
+    description: "Progressive framework for building reactive user interfaces."
+    version: "3.x"
+    organization: "Evan You / Vue Core Team"
+    website: "https://vuejs.org/"
+    usage: "Transit web UIs, admin dashboards, and research visualization tools."
+    related_technologies:
+      - "Nuxt"
       - "Vue Router"
     status: "Active"
-    documentation: "https://vuejs.org/v2/guide/"
+    documentation: "https://vuejs.org/guide/"
+
+  - id: tech:nuxt
+    name: "Nuxt"
+    description: "Vue meta-framework for SSR, SSG, and full-stack development."
+    version: "3.x"
+    organization: "Nuxt Labs"
+    website: "https://nuxt.com/"
+    usage: "Transportation information sites and applications with SEO and performance benefits."
+    related_technologies:
+      - "Vue"
+      - "Nuxt UI"
+    status: "Active"
+    documentation: "https://nuxt.com/docs"
+
+  - id: tech:nuxt_ui
+    name: "Nuxt UI"
+    description: "Open-source Nuxt component library built with Tailwind CSS and Reka UI."
+    version: "2.x"
+    organization: "Nuxt Labs"
+    website: "https://ui.nuxt.com/"
+    usage: "Consistent, accessible, responsive interfaces for Nuxt apps and passenger screens."
+    related_technologies:
+      - "Nuxt"
+      - "Tailwind CSS"
+    status: "Active"
+    documentation: "https://ui.nuxt.com/getting-started"
+
+  - id: tech:capacitor
+    name: "Capacitor"
+    description: "Cross-platform native runtime for deploying web apps to mobile devices."
+    version: "5.x"
+    organization: "Ionic"
+    website: "https://capacitorjs.com/"
+    usage: "Packages transportation web apps for iOS/Android with access to GPS, notifications, and offline storage."
+    related_technologies:
+      - "Ionic UI"
+      - "Nuxt"
+    status: "Active"
+    documentation: "https://capacitorjs.com/docs"
+
+  - id: tech:ionic_ui
+    name: "Ionic UI"
+    description: "Mobile-focused UI component library for consistent cross-platform apps."
+    version: "7.x"
+    organization: "Ionic"
+    website: "https://ionicframework.com/"
+    usage: "Mobile-optimized interfaces for transportation apps with unified UX."
+    related_technologies:
+      - "Capacitor"
+      - "Vue"
+    status: "Active"
+    documentation: "https://ionicframework.com/docs"
+
+  # DevOps & Monitoring
+
+  - id: tech:grafana
+    name: "Grafana"
+    description: "Visualization and monitoring platform for dashboards and analytics."
+    version: "10.x"
+    organization: "Grafana Labs"
+    website: "https://grafana.com/"
+    usage: "Performance dashboards for systems, transit analytics, and research metrics."
+    related_technologies:
+      - "Prometheus"
+      - "OpenTelemetry"
+    status: "Active"
+    documentation: "https://grafana.com/docs/grafana/latest/"
+
+  - id: tech:prometheus
+    name: "Prometheus"
+    description: "Time-series database and monitoring system for metrics collection."
+    version: "2.x"
+    organization: "Cloud Native Computing Foundation"
+    website: "https://prometheus.io/"
+    usage: "Collects metrics from apps and infrastructure; monitors APIs, DB health, and resources."
+    related_technologies:
+      - "Grafana"
+      - "OpenTelemetry"
+    status: "Active"
+    documentation: "https://prometheus.io/docs/"
+
+  - id: tech:docker
+    name: "Docker"
+    description: "Containerization platform for packaging and deploying services."
+    version: "24.x"
+    organization: "Docker Inc."
+    website: "https://www.docker.com/"
+    usage: "Isolated, reproducible environments for backend, frontend, and data pipelines."
+    related_technologies:
+      - "Docker Compose"
+      - "Kubernetes"
+    status: "Active"
+    documentation: "https://docs.docker.com/"
+
+  - id: tech:zabbix
+    name: "Zabbix"
+    description: "Enterprise-grade network and application monitoring platform."
+    version: "7.x"
+    organization: "Zabbix LLC"
+    website: "https://www.zabbix.com/"
+    usage: "Infrastructure monitoring, alerting, and performance tracking for servers and networks."
+    related_technologies:
+      - "Prometheus"
+      - "Grafana"
+    status: "Active"
+    documentation: "https://www.zabbix.com/documentation/current/manual"
+
+  - id: tech:wazuh
+    name: "Wazuh"
+    description: "Security information and event management (SIEM) platform."
+    version: "4.x"
+    organization: "Wazuh"
+    website: "https://wazuh.com/"
+    usage: "Security monitoring, threat detection, and compliance for research and transit systems."
+    related_technologies:
+      - "Elastic Stack"
+      - "OpenTelemetry"
+    status: "Active"
+    documentation: "https://documentation.wazuh.com/"
+
+  - id: tech:opentelemetry
+    name: "OpenTelemetry"
+    description: "Vendor-neutral observability framework for traces, metrics, and logs."
+    version: "1.x"
+    organization: "Cloud Native Computing Foundation"
+    website: "https://opentelemetry.io/"
+    usage: "Instrumenting Django/ASGI, Celery, Airflow, RabbitMQ, PostgreSQL, and Nuxt for end-to-end tracing and metrics."
+    related_technologies:
+      - "Prometheus"
+      - "Jaeger"
+    status: "Active"
+    documentation: "https://opentelemetry.io/docs/"
+
+  # Data Analysis & Research
+
+  - id: tech:polars
+    name: "Polars"
+    description: "Fast, multi-threaded DataFrame library with lazy evaluation and query optimization."
+    version: "0.20.x"
+    organization: "Polars"
+    website: "https://pola.rs/"
+    usage: "High-performance processing of transit datasets, GTFS analysis, and ridership studies."
+    related_technologies:
+      - "Apache Parquet"
+      - "Python"
+    status: "Active"
+    documentation: "https://pola.rs/book/"
+
+  - id: tech:parquet
+    name: "Apache Parquet"
+    description: "Columnar storage format optimized for analytics and compression."
+    version: "1.x"
+    organization: "Apache Software Foundation"
+    website: "https://parquet.apache.org/"
+    usage: "Efficient storage of telemetry archives and historical GTFS data for analytics."
+    related_technologies:
+      - "Polars"
+      - "Apache Arrow"
+    status: "Active"
+    documentation: "https://parquet.apache.org/documentation/latest/"
+
+  - id: tech:numpy
+    name: "NumPy"
+    description: "Core numerical computing library for arrays and math operations."
+    version: "1.26.x"
+    organization: "NumPy Developers"
+    website: "https://numpy.org/"
+    usage: "Mathematical operations and foundations for data science stacks in mobility research."
+    related_technologies:
+      - "SciPy"
+      - "scikit-learn"
+    status: "Active"
+    documentation: "https://numpy.org/doc/"
+
+  - id: tech:scipy
+    name: "SciPy"
+    description: "Scientific computing ecosystem for optimization, statistics, and signal processing."
+    version: "1.11.x"
+    organization: "SciPy Community"
+    website: "https://scipy.org/"
+    usage: "Optimization for routing, statistical analysis, and signal processing on transport data."
+    related_technologies:
+      - "NumPy"
+      - "Matplotlib"
+    status: "Active"
+    documentation: "https://docs.scipy.org/doc/scipy/"
+
+  - id: tech:scikit_learn
+    name: "scikit-learn"
+    description: "Machine learning library for predictive modeling, classification, and clustering."
+    version: "1.4.x"
+    organization: "scikit-learn Community"
+    website: "https://scikit-learn.org/"
+    usage: "Predicting transit demand, mobility pattern classification, and ML model development."
+    related_technologies:
+      - "NumPy"
+      - "SciPy"
+    status: "Active"
+    documentation: "https://scikit-learn.org/stable/documentation.html"
+
+  - id: tech:matplotlib
+    name: "Matplotlib"
+    description: "Visualization library for charts and exploratory data analysis."
+    version: "3.8.x"
+    organization: "Matplotlib Development Team"
+    website: "https://matplotlib.org/"
+    usage: "Charts and figures for research publications and transportation data reports."
+    related_technologies:
+      - "NumPy"
+      - "SciPy"
+    status: "Active"
+    documentation: "https://matplotlib.org/stable/contents.html"
+
+  # Development Tools
+
+  - id: tech:uv
+    name: "uv"
+    description: "Fast Python package and environment manager with lockfiles for reproducible builds."
+    version: "0.1.x"
+    organization: "Astral"
+    website: "https://docs.astral.sh/uv/"
+    usage: "Standardizes Python environments, speeds container builds and CI for Django, Celery, Airflow, and data science."
+    related_technologies:
+      - "Python"
+      - "Docker"
+    status: "Active"
+    documentation: "https://docs.astral.sh/uv/"
+
+  - id: tech:pnpm
+    name: "pnpm"
+    description: "Performant package manager with content-addressable storage and workspace support."
+    version: "9.x"
+    organization: "pnpm"
+    website: "https://pnpm.io/"
+    usage: "Manages dependencies for Vue/Nuxt/Ionic frontends and documentation sites with fast, deterministic installs."
+    related_technologies:
+      - "Node.js"
+      - "TypeScript"
+    status: "Active"
+    documentation: "https://pnpm.io/motivation"
+
+  - id: tech:structurizr
+    name: "Structurizr DSL"
+    description: "Text DSL for authoring C4 model architecture diagrams as code."
+    version: "1.x"
+    organization: "Structurizr Limited"
+    website: "https://structurizr.com/help/dsl"
+    usage: "Maintains C4 diagrams for Databús/Infobús, streaming, storage, and delivery architectures in CI."
+    related_technologies:
+      - "Structurizr Lite"
+      - "Diagrams (Python)"
+    status: "Active"
+    documentation: "https://github.com/structurizr/dsl/blob/master/docs/quickstart.md"
+
+  - id: tech:diagrams_python
+    name: "Diagrams (Python)"
+    description: "Diagram-as-code library using Graphviz to generate architecture visuals."
+    version: "0.23.x"
+    organization: "Community"
+    website: "https://diagrams.mingrammer.com/"
+    usage: "Produces system and data-flow diagrams for Databús/Infobús, MCP integrations, and DevOps topologies."
+    related_technologies:
+      - "Structurizr DSL"
+      - "Graphviz"
+    status: "Active"
+    documentation: "https://diagrams.mingrammer.com/docs/getting-started"
